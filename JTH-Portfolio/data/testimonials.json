@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1",
+    "name": "Pastor Michael Ochieng",
+    "role": "Senior Pastor",
+    "company": "Grace Community Church",
+    "content": "JTH Graphix Production has been instrumental in elevating our church's visual communication. Their flyers and posters for our events always capture the spirit of our message and draw amazing attendance.",
+    "rating": 5
+  },
+  {
+    "id": "2",
+    "name": "Sarah Wanjiku",
+    "role": "Marketing Director",
+    "company": "TechVenture Kenya",
+    "content": "The branding work JTH did for our startup was exceptional. They understood our vision perfectly and delivered a brand identity that truly represents who we are. Professional, creative, and reliable.",
+    "rating": 5
+  },
+  {
+    "id": "3",
+    "name": "David Kimani",
+    "role": "Business Owner",
+    "company": "Kimani & Associates",
+    "content": "Fast turnaround, incredible attention to detail, and designs that actually convert. Our business cards and brochures have helped us make lasting impressions with clients.",
+    "rating": 5
+  },
+  {
+    "id": "4",
+    "name": "Grace Muthoni",
+    "role": "Event Coordinator",
+    "company": "Elite Events Management",
+    "content": "Every event we run with JTH's graphics gets compliments. They understand event marketing and create materials that generate buzz and drive attendance.",
+    "rating": 5
+  },
+  {
+    "id": "5",
+    "name": "James Omondi",
+    "role": "CEO",
+    "company": "Omondi Holdings",
+    "content": "We've worked with many designers, but JTH stands out for their commitment to quality and understanding of what brands need to succeed. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "id": "6",
+    "name": "Mary Akinyi",
+    "role": "NGO Director",
+    "company": "Hope Foundation Kenya",
+    "content": "Our awareness campaigns have seen incredible response thanks to the impactful designs from JTH. They capture emotions and drive action.",
+    "rating": 5
+  },
+  {
+    "id": "7",
+    "name": "Peter Njoroge",
+    "role": "Restaurant Owner",
+    "company": "Savanna Grill",
+    "content": "The social media graphics JTH creates for us have transformed our online presence. Our engagement has tripled since we started working with them.",
+    "rating": 5
+  },
+  {
+    "id": "8",
+    "name": "Elizabeth Wambui",
+    "role": "Founder",
+    "company": "Wambui Fashion House",
+    "content": "JTH designed our entire brand identity and website. The quality of work exceeded our expectations. They truly understand modern branding.",
+    "rating": 5
+  }
+]

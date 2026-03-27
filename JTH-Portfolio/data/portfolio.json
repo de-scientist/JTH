@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "title": "Tech Startup Brand Identity",
+    "category": "Branding",
+    "description": "Complete brand identity system for an innovative tech startup, including logo, color palette, and brand guidelines.",
+    "tags": ["Logo", "Branding", "Identity"],
+    "image": "/images/portfolio/tech-startup-branding.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Church Revival Event Flyer",
+    "category": "Flyers",
+    "description": "Eye-catching promotional flyer design for a church revival event with bold typography and vibrant colors.",
+    "tags": ["Flyer", "Event", "Church"],
+    "image": "/images/portfolio/church-revival-flyer.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Corporate Annual Report",
+    "category": "Print",
+    "description": "Professional annual report design with infographics and data visualization for a financial services company.",
+    "tags": ["Print", "Corporate", "Report"],
+    "image": "/images/portfolio/corporate-annual-report.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Restaurant Social Media Campaign",
+    "category": "Social Media",
+    "description": "Engaging social media content package for a restaurant grand opening, optimized for multiple platforms.",
+    "tags": ["Social Media", "Campaign", "Food"],
+    "image": "/images/portfolio/restaurant-social-media.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Music Festival Poster Series",
+    "category": "Posters",
+    "description": "Bold poster series for a multi-day music festival featuring dynamic typography and vibrant imagery.",
+    "tags": ["Poster", "Event", "Music"],
+    "image": "/images/portfolio/music-festival-poster.jpg"
+  },
+  {
+    "id": "6",
+    "title": "E-commerce Website Redesign",
+    "category": "Web",
+    "description": "Modern, conversion-focused website redesign for an online fashion retailer with improved UX.",
+    "tags": ["Web", "E-commerce", "UI/UX"],
+    "image": "/images/portfolio/ecommerce-website.jpg"
+  },
+  {
+    "id": "7",
+    "title": "Luxury Real Estate Brochure",
+    "category": "Print",
+    "description": "Premium tri-fold brochure design for a luxury real estate development project.",
+    "tags": ["Brochure", "Real Estate", "Luxury"],
+    "image": "/images/portfolio/luxury-real-estate-brochure.jpg"
+  },
+  {
+    "id": "8",
+    "title": "Fitness Brand Logo Design",
+    "category": "Logos",
+    "description": "Dynamic logo design for a fitness brand that conveys energy, strength, and movement.",
+    "tags": ["Logo", "Fitness", "Branding"],
+    "image": "/images/portfolio/fitness-brand-logo.jpg"
+  },
+  {
+    "id": "9",
+    "title": "Political Campaign Materials",
+    "category": "Flyers",
+    "description": "Comprehensive campaign materials including flyers, posters, and social media graphics.",
+    "tags": ["Campaign", "Political", "Print"],
+    "image": "/images/portfolio/political-campaign.jpg"
+  },
+  {
+    "id": "10",
+    "title": "Coffee Shop Brand Package",
+    "category": "Branding",
+    "description": "Complete branding package for an artisan coffee shop including logo, packaging, and signage.",
+    "tags": ["Branding", "Logo", "Packaging"],
+    "image": "/images/portfolio/coffee-shop-branding.jpg"
+  },
+  {
+    "id": "11",
+    "title": "NGO Awareness Poster",
+    "category": "Posters",
+    "description": "Impactful awareness poster design for a non-profit organization's community outreach program.",
+    "tags": ["Poster", "NGO", "Awareness"],
+    "image": "/images/portfolio/ngo-awareness-poster.jpg"
+  },
+  {
+    "id": "12",
+    "title": "Product Launch Social Graphics",
+    "category": "Social Media",
+    "description": "Scroll-stopping social media graphics package for a new product launch campaign.",
+    "tags": ["Social Media", "Launch", "Product"],
+    "image": "/images/portfolio/product-launch-social.jpg"
+  }
+]

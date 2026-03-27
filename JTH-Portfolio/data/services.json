@@ -1,0 +1,352 @@
+[
+  {
+    "id": "flyer-design",
+    "slug": "flyer-design",
+    "title": "Flyer Design",
+    "shortDescription": "Eye-catching flyers for promotions, church events, campaigns, launches, and business marketing.",
+    "description": "Create stunning, attention-grabbing flyers that communicate your message effectively. From church events to product launches, our flyers are designed to convert viewers into customers.",
+    "icon": "FileImage",
+    "category": "Print",
+    "image": "/images/services/flyer-design.jpg",
+    "features": [
+      "Custom layouts tailored to your brand",
+      "Print-ready files in multiple formats",
+      "Quick turnaround times",
+      "Unlimited revisions until satisfied"
+    ],
+    "useCases": [
+      "Church flyers and event announcements",
+      "Political sensitization campaigns",
+      "Product promotions and launches",
+      "Business advertisements",
+      "Community events"
+    ],
+    "deliverables": [
+      "High-resolution print files (PDF, PNG)",
+      "Social media optimized versions",
+      "Editable source files",
+      "Multiple size variations"
+    ]
+  },
+  {
+    "id": "poster-design",
+    "slug": "poster-design",
+    "title": "Poster Design",
+    "shortDescription": "Bold posters for awareness, events, promotions, announcements, and campaigns.",
+    "description": "Make a big impact with bold, professionally designed posters that command attention. Perfect for events, awareness campaigns, and promotional activities.",
+    "icon": "Image",
+    "category": "Print",
+    "image": "/images/services/poster-design.jpg",
+    "features": [
+      "Large format design expertise",
+      "Eye-catching typography",
+      "Strategic visual hierarchy",
+      "Brand-consistent designs"
+    ],
+    "useCases": [
+      "Event posters",
+      "Motivational posters",
+      "Campaign posters",
+      "Promotional posters",
+      "Awareness campaigns"
+    ],
+    "deliverables": [
+      "Multiple size options",
+      "Print-ready files",
+      "Digital versions for online sharing",
+      "Source files included"
+    ]
+  },
+  {
+    "id": "logo-design",
+    "slug": "logo-design",
+    "title": "Logo Design",
+    "shortDescription": "Memorable and professional logos for brands and organizations.",
+    "description": "Your logo is the face of your brand. We create distinctive, memorable logos that capture your brand essence and leave lasting impressions.",
+    "icon": "Palette",
+    "category": "Branding",
+    "image": "/images/services/logo-design.jpg",
+    "features": [
+      "Multiple concept options",
+      "Comprehensive research process",
+      "Versatile formats for all uses",
+      "Brand guidelines included"
+    ],
+    "useCases": [
+      "Startup branding",
+      "Business rebranding",
+      "Organization identity",
+      "Product logos",
+      "Event logos"
+    ],
+    "deliverables": [
+      "Primary logo design",
+      "Logo variations (horizontal, vertical, icon)",
+      "Color and monochrome versions",
+      "Vector files (AI, EPS, SVG)",
+      "Usage guidelines"
+    ]
+  },
+  {
+    "id": "branding-visual-identity",
+    "slug": "branding-visual-identity",
+    "title": "Branding & Visual Identity",
+    "shortDescription": "Colors, fonts, logo systems, and brand consistency tools.",
+    "description": "Build a cohesive brand identity that resonates with your audience. We develop comprehensive branding systems including colors, typography, and visual guidelines.",
+    "icon": "Sparkles",
+    "category": "Branding",
+    "image": "/images/services/branding.jpg",
+    "features": [
+      "Complete brand strategy",
+      "Color palette development",
+      "Typography selection",
+      "Brand guidelines document"
+    ],
+    "useCases": [
+      "New business branding",
+      "Corporate rebrand",
+      "Brand refresh",
+      "Franchise identity",
+      "Personal branding"
+    ],
+    "deliverables": [
+      "Brand guidelines PDF",
+      "Logo suite",
+      "Color specifications",
+      "Typography guidelines",
+      "Brand asset library"
+    ]
+  },
+  {
+    "id": "social-media-graphics",
+    "slug": "social-media-graphics",
+    "title": "Social Media Graphics",
+    "shortDescription": "Clean visuals for Instagram, Facebook, WhatsApp, TikTok, and digital campaigns.",
+    "description": "Stand out on social media with scroll-stopping graphics designed for engagement. We create platform-optimized content that drives results.",
+    "icon": "Share2",
+    "category": "Digital",
+    "image": "/images/services/social-media.jpg",
+    "features": [
+      "Platform-optimized sizing",
+      "Trending design styles",
+      "Brand-consistent templates",
+      "Quick turnaround"
+    ],
+    "useCases": [
+      "Campaign content",
+      "Promotional posts",
+      "Launch creatives",
+      "Social ads",
+      "Story templates"
+    ],
+    "deliverables": [
+      "Multiple platform sizes",
+      "Static and animated options",
+      "Template files for future use",
+      "Content calendar designs"
+    ]
+  },
+  {
+    "id": "business-cards",
+    "slug": "business-cards",
+    "title": "Business Cards",
+    "shortDescription": "Elegant, professional identity cards and networking materials.",
+    "description": "Make memorable first impressions with professionally designed business cards that reflect your brand quality and professionalism.",
+    "icon": "CreditCard",
+    "category": "Print",
+    "image": "/images/services/business-cards.jpg",
+    "features": [
+      "Premium design options",
+      "Multiple finishing suggestions",
+      "Double-sided designs",
+      "Print-ready files"
+    ],
+    "useCases": [
+      "Corporate identity",
+      "Personal branding",
+      "Networking events",
+      "Trade shows",
+      "Professional services"
+    ],
+    "deliverables": [
+      "Front and back designs",
+      "Print-ready PDF files",
+      "Multiple format options",
+      "Printer specifications"
+    ]
+  },
+  {
+    "id": "brochures",
+    "slug": "brochures",
+    "title": "Brochures",
+    "shortDescription": "Informative and persuasive fold designs for marketing and company profiles.",
+    "description": "Tell your story effectively with beautifully designed brochures. From bi-folds to tri-folds, we create marketing materials that inform and persuade.",
+    "icon": "BookOpen",
+    "category": "Print",
+    "image": "/images/services/brochures.jpg",
+    "features": [
+      "Multiple fold options",
+      "Strategic content layout",
+      "High-quality imagery integration",
+      "Print specifications included"
+    ],
+    "useCases": [
+      "Company profiles",
+      "Product catalogs",
+      "Service overviews",
+      "Event programs",
+      "Information guides"
+    ],
+    "deliverables": [
+      "Print-ready files",
+      "Digital PDF version",
+      "Source files",
+      "Multiple size options"
+    ]
+  },
+  {
+    "id": "premium-printing",
+    "slug": "premium-printing",
+    "title": "Premium Printing",
+    "shortDescription": "Print-ready assets designed with quality and production standards in mind.",
+    "description": "We ensure your designs translate perfectly to print with proper specifications, color management, and production-ready files.",
+    "icon": "Printer",
+    "category": "Print",
+    "image": "/images/services/printing.jpg",
+    "features": [
+      "CMYK color optimization",
+      "Bleed and trim specifications",
+      "Paper stock recommendations",
+      "Quality assurance checks"
+    ],
+    "useCases": [
+      "Brochure printing",
+      "Business card production",
+      "Banner printing",
+      "Rollup banners",
+      "Marketing materials"
+    ],
+    "deliverables": [
+      "Print-ready PDF files",
+      "Color proofs",
+      "Printer coordination",
+      "Quality specifications"
+    ]
+  },
+  {
+    "id": "website-design",
+    "slug": "website-design",
+    "title": "Website Design",
+    "shortDescription": "Clean, responsive websites for modern businesses and brands.",
+    "description": "Get online with a stunning, mobile-responsive website that showcases your brand and converts visitors into customers.",
+    "icon": "Globe",
+    "category": "Digital",
+    "image": "/images/services/website-design.jpg",
+    "features": [
+      "Mobile-first responsive design",
+      "SEO optimization",
+      "Fast loading speeds",
+      "Modern UI/UX practices"
+    ],
+    "useCases": [
+      "Company websites",
+      "Portfolio sites",
+      "Landing pages",
+      "Small business sites",
+      "Personal brands"
+    ],
+    "deliverables": [
+      "Fully functional website",
+      "Mobile optimization",
+      "Basic SEO setup",
+      "Training documentation"
+    ]
+  },
+  {
+    "id": "banner-design",
+    "slug": "banner-design",
+    "title": "Banner Design",
+    "shortDescription": "Promotional and branded banners for business visibility and events.",
+    "description": "Create impactful banners that capture attention and communicate your message effectively, whether for digital or physical display.",
+    "icon": "Flag",
+    "category": "Print",
+    "image": "/images/services/banner-design.jpg",
+    "features": [
+      "Multiple size options",
+      "Indoor/outdoor specifications",
+      "Weather-resistant recommendations",
+      "Installation guidance"
+    ],
+    "useCases": [
+      "Trade show displays",
+      "Storefront banners",
+      "Event signage",
+      "Promotional displays",
+      "Roll-up banners"
+    ],
+    "deliverables": [
+      "Print-ready files",
+      "Size specifications",
+      "Material recommendations",
+      "Mounting instructions"
+    ]
+  },
+  {
+    "id": "event-publicity-graphics",
+    "slug": "event-publicity-graphics",
+    "title": "Event & Publicity Graphics",
+    "shortDescription": "Designs for launches, church gatherings, conferences, promotions, and public messaging.",
+    "description": "Make your events unforgettable with comprehensive graphic packages that create buzz and drive attendance.",
+    "icon": "Calendar",
+    "category": "Digital",
+    "image": "/images/services/event-graphics.jpg",
+    "features": [
+      "Complete event packages",
+      "Multi-platform designs",
+      "Consistent branding",
+      "Timeline coordination"
+    ],
+    "useCases": [
+      "Product launches",
+      "Church gatherings",
+      "Corporate conferences",
+      "Community events",
+      "Promotional campaigns"
+    ],
+    "deliverables": [
+      "Social media package",
+      "Print materials",
+      "Digital invitations",
+      "Event signage designs"
+    ]
+  },
+  {
+    "id": "corporate-branding-materials",
+    "slug": "corporate-branding-materials",
+    "title": "Corporate Branding Materials",
+    "shortDescription": "Stationery, presentation visuals, profiles, and branded communication tools.",
+    "description": "Present a unified, professional image with comprehensive corporate materials that reinforce your brand at every touchpoint.",
+    "icon": "Building2",
+    "category": "Branding",
+    "image": "/images/services/corporate-materials.jpg",
+    "features": [
+      "Complete stationery suite",
+      "Presentation templates",
+      "Document templates",
+      "Brand consistency"
+    ],
+    "useCases": [
+      "Letterheads and envelopes",
+      "PowerPoint templates",
+      "Company profiles",
+      "Invoice templates",
+      "Email signatures"
+    ],
+    "deliverables": [
+      "Stationery package",
+      "Presentation templates",
+      "Document templates",
+      "Digital assets"
+    ]
+  }
+]
