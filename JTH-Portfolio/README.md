@@ -77,3 +77,27 @@ This app deploys well to Vercel or any platform that supports Next.js. Push to y
 - Keep content-driven data in `data/` so the UI stays reusable.
 
 If you want, I can also add a short developer guide or scripts for previewing content locally.
+
+## CI / Deployment
+
+1) Vercel (recommended)
+
+- Connect this repository to Vercel for automatic deployments on push. Vercel detects Next.js projects and will handle builds and previews automatically.
+- For environment variables (if any), add them to the Vercel project settings.
+
+2) GitHub Actions (example)
+
+- An example workflow is added at `.github/workflows/ci.yml`. It runs on pushes and pull requests to `main`, installs dependencies, lints, builds and — optionally — deploys to Vercel when a `VERCEL_TOKEN` secret is provided.
+
+To enable automatic deploy from the workflow:
+
+```text
+1. Create a Vercel token (Account Settings → Tokens).
+2. Add the token to your GitHub repo secrets as `VERCEL_TOKEN`.
+3. Push to `main` (the workflow will run and deploy with the token).
+```
+
+3) Notes
+
+- CI uses `pnpm` by default; if you prefer `npm` or `yarn` adjust `.github/workflows/ci.yml` accordingly.
+- You can also use other CI/CD providers (GitLab CI, CircleCI) or deploy targets (Netlify) — the app is a standard Next.js build.
