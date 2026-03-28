@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, FileImage, Image as ImageIcon, Palette, Sparkles, Share2, CreditCard, BookOpen, Printer, Globe, Flag, Calendar, Building2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import services from '@/data/services.json'
+import siteConfig from '@/data/site-config.json'
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   FileImage,
@@ -66,7 +67,7 @@ export function ServicesPreview() {
                     {/* Service Image */}
                     <div className="relative aspect-[16/10] overflow-hidden">
                       <Image
-                        src={service.image}
+                        src={service.coverImage || service.image}
                         alt={service.title}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -97,6 +98,12 @@ export function ServicesPreview() {
                         {service.shortDescription}
                       </p>
 
+                      {service.priceLabel && (
+                        <div className="mt-2 text-sm text-muted-foreground">
+                          <span className="font-medium">{service.priceLabel}</span>
+                        </div>
+                      )}
+
                       {/* Arrow */}
                       <div className="mt-3 flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                         Learn More
@@ -110,6 +117,18 @@ export function ServicesPreview() {
           })}
         </div>
 
+        {/* Training Teaser */}
+        <div className="mt-12 max-w-4xl mx-auto text-center">
+          <h3 className="text-2xl font-bold text-foreground mb-3">{siteConfig.trainingTeaser.title}</h3>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{siteConfig.trainingTeaser.text}</p>
+          <div className="flex items-center justify-center gap-3">
+            {siteConfig.trainingTeaser.buttons.map((b: string) => (
+              <Button key={b} asChild size="md" variant="outline">
+                <Link href={b === 'Book a Session' ? '/contact' : '/services'}>{b}</Link>
+              </Button>
+            ))}
+          </div>
+        </div>
         {/* View All Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

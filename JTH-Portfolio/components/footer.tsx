@@ -20,6 +20,7 @@ const quickLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
+  { href: '/services-pricing', label: 'Services & Pricing' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/testimonials', label: 'Testimonials' },
   { href: '/contact', label: 'Contact' },
@@ -33,6 +34,7 @@ const services = [
   { href: '/services/social-media-graphics', label: 'Social Media Graphics' },
   { href: '/services/premium-printing', label: 'Premium Printing' },
   { href: '/services/website-design', label: 'Website Design' },
+  { href: '/services/virtual-training-sessions', label: 'Training' },
 ]
 
 const socialLinks = [
@@ -64,7 +66,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm">
-              {siteConfig.description}
+              {siteConfig.premiumDescription || siteConfig.description}
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild variant="outline" size="sm" className="gap-2">

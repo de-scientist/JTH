@@ -22,9 +22,12 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 }
 
 const categoryColors: Record<string, string> = {
-  'Print': 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
+  'Design': 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
   'Digital': 'bg-blue-500/10 text-blue-600 dark:text-blue-400',
   'Branding': 'bg-amber-500/10 text-amber-600 dark:text-amber-400',
+  'Web': 'bg-sky-500/10 text-sky-600 dark:text-sky-400',
+  'Training': 'bg-violet-500/10 text-violet-600 dark:text-violet-400',
+  'Print': 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
 }
 
 export function ServicesGrid() {
@@ -36,7 +39,7 @@ export function ServicesGrid() {
           <span className="px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium">
             All Services
           </span>
-          {['Print', 'Digital', 'Branding'].map((category) => (
+          {['Design', 'Branding', 'Digital', 'Web', 'Training'].map((category) => (
             <span
               key={category}
               className={`px-4 py-2 rounded-full text-sm font-medium ${categoryColors[category]} cursor-pointer hover:opacity-80 transition-opacity`}
@@ -63,7 +66,7 @@ export function ServicesGrid() {
                     {/* Service Image */}
                     <div className="relative aspect-[16/9] overflow-hidden">
                       <Image
-                        src={service.image}
+                        src={service.coverImage || service.image}
                         alt={service.title}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -94,6 +97,11 @@ export function ServicesGrid() {
                       <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                         {service.title}
                       </h3>
+                      {service.priceLabel && (
+                        <div className="text-sm text-muted-foreground mb-3">
+                          <span className="font-medium">{service.priceLabel}</span>
+                        </div>
+                      )}
                       <p className="text-muted-foreground mb-4 line-clamp-2">
                         {service.shortDescription}
                       </p>

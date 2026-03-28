@@ -32,7 +32,7 @@ jobs:
         run: pnpm build
 
       - name: Vercel Deploy (optional)
-        if: secrets.VERCEL_TOKEN != ''
+        if: ${{ secrets.VERCEL_TOKEN }}
         uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}

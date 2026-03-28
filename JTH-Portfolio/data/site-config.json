@@ -2,7 +2,7 @@
   "brandName": "JTH Graphix Production",
   "tagline": "Designs That Sell. Branding That Speaks.",
   "description": "Bold design. Strong branding. Premium visual solutions for print and digital.",
-  "phone": "+254 117 537015",
+  "phone": "+254117537015",
   "whatsapp": "+254117537015",
   "email": "jthproduction254@gmail.com",
   "socialLinks": {
@@ -11,5 +11,32 @@
     "tiktok": "https://tiktok.com/@jthgraphix",
     "linkedin": "https://linkedin.com/company/jthgraphix",
     "x": "https://x.com/jthgraphix"
+  },
+  "premiumDescription": "JTH Graphix Production is a modern creative agency delivering bold design, strategic branding, digital visuals, premium print communication, and practical training solutions for businesses, institutions, events, and growing brands.",
+  "serviceCategories": [
+    "Design",
+    "Branding",
+    "Digital",
+    "Web",
+    "Training"
+  ],
+  "defaultCTAs": [
+    "Start a Project",
+    "Request a Quote",
+    "Chat on WhatsApp",
+    "Call Now",
+    "Book Training"
+  ],
+  "homepagePricingHighlights": [
+    { "label": "Flyer Design", "price": "KSh 1,500" },
+    { "label": "Logo Design", "price": "KSh 3,000" },
+    { "label": "Brand Identity", "price": "KSh 30,000" },
+    { "label": "Social Media Management", "price": "From KSh 70,000" },
+    { "label": "Virtual Training", "price": "KSh 50 per person" }
+  ],
+  "trainingTeaser": {
+    "title": "Training That Builds Creative Confidence",
+    "text": "JTH Graphix Production delivers practical digital and creative training for individuals, schools, institutions, and teams through virtual sessions, workshops, and recorded learning resources.",
+    "buttons": ["Explore Training", "Book a Session"]
   }
 }

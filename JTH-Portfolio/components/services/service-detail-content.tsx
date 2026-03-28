@@ -5,6 +5,7 @@ import NextImage from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowRight, ArrowLeft, Check, FileImage, Image, Palette, Sparkles, Share2, CreditCard, BookOpen, Printer, Globe, Flag, Calendar, Building2, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import siteConfig from '@/data/site-config.json'
 
@@ -31,7 +32,9 @@ interface Service {
   description: string
   icon: string
   category: string
-  image: string
+  image?: string
+  coverImage?: string
+  galleryImages?: string[]
   features: string[]
   useCases: string[]
   deliverables: string[]
@@ -64,13 +67,15 @@ const faqs = [
 export function ServiceDetailContent({ service, relatedServices }: Props) {
   const Icon = iconMap[service.icon] || FileImage
 
+  const heroImage = service.coverImage || service.image || '/images/placeholder.jpg'
+
   return (
     <>
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-background relative overflow-hidden">
         <div className="absolute inset-0">
           <NextImage
-            src={service.image}
+            src={heroImage}
             alt={service.title}
             fill
             className="object-cover opacity-10"
@@ -111,7 +116,7 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
                 {service.title}
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
-                {service.description}
+                {service.fullDescription || service.description || service.shortDescription}
               </p>
 
               {/* CTA Buttons */}
@@ -137,6 +142,29 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Featured visual / gallery */}
+      {service.galleryImages && service.galleryImages.length > 0 && (
+        <section className="py-12 lg:py-16 bg-background">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <Carousel>
+                <CarouselContent className="grid grid-flow-col auto-cols-[100%]">
+                  {service.galleryImages.map((src, i) => (
+                    <CarouselItem key={i} className="px-0">
+                      <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-card">
+                        <NextImage src={src} alt={`${service.title} ${i + 1}`} fill className="object-cover" />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Features & Deliverables */}
       <section className="py-16 lg:py-24 bg-muted/30">

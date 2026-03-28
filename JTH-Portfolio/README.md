@@ -2,7 +2,8 @@
 
 JTH-Portfolio is a marketing and portfolio website for JTH Graphix Production. It's built with Next.js and a component-driven UI using the shadcn/ui patterns and Tailwind CSS. The site is content-driven using small JSON files in `data/` and static assets in `public/`.
 
-**Quick links**
+## Quick links
+
 - **Site config:** [data/site-config.json](data/site-config.json)
 - **Main app entry:** [app/page.tsx](app/page.tsx)
 - **Layout:** [app/layout.tsx](app/layout.tsx)

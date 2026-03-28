@@ -1,0 +1,46 @@
+{
+  "heroTitle": "Services & Pricing",
+  "heroSubtitle": "Explore JTH Graphix Production’s premium design, branding, digital, web, and training services with clear pricing guidance and custom quote options tailored to different client needs.",
+  "categoryLabels": ["Design","Branding","Digital","Web","Training"],
+  "pricedServices": [
+    { "label": "Flyers & Posters", "price": "KSh 1,500", "slug": "flyer-design" },
+    { "label": "Logo Design", "price": "KSh 3,000", "slug": "logo-design" },
+    { "label": "Brand Identity", "price": "KSh 30,000", "slug": "branding-identity" },
+    { "label": "Business Profile", "price": "KSh 5,000", "slug": "business-profile-design" },
+    { "label": "Social Media Management", "price": "Starting from KSh 70,000", "slug": "social-media-management" },
+    { "label": "Virtual Training Session", "price": "KSh 50 per person per session", "slug": "virtual-training-sessions" }
+  ],
+  "customQuoteServices": [
+    "business-card-design",
+    "brochure-design",
+    "website-design",
+    "banner-design",
+    "social-media-graphics",
+    "event-publicity-graphics",
+    "corporate-branding-materials",
+    "institutional-training",
+    "design-skill-training",
+    "digital-skills-workshops",
+    "premium-printing"
+  ],
+  "comingSoonServices": ["recorded-courses"],
+  "trainingPricingFactors": [
+    "Number of participants",
+    "Training mode (online or physical)",
+    "Duration of the training",
+    "Content scope",
+    "Location of training",
+    "Certification requirements"
+  ],
+  "creativePricingFactors": [
+    "Project complexity",
+    "Number of deliverables",
+    "Revision scope",
+    "Turnaround time",
+    "Print or digital output requirements",
+    "Strategy depth"
+  ],
+  "ctaTitle": "Need a custom quote for your project?",
+  "ctaText": "Tell us what you need and JTH Graphix Production will recommend the right service path, pricing direction, and delivery approach for your goals.",
+  "ctaButtons": ["Request a Quote","Chat on WhatsApp","Call Now"]
+}
