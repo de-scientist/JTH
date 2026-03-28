@@ -1,35 +1,79 @@
 # JTH-Portfolio
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+JTH-Portfolio is a marketing and portfolio website for JTH Graphix Production. It's built with Next.js and a component-driven UI using the shadcn/ui patterns and Tailwind CSS. The site is content-driven using small JSON files in `data/` and static assets in `public/`.
 
-## Built with v0
+**Quick links**
+- **Site config:** [data/site-config.json](data/site-config.json)
+- **Main app entry:** [app/page.tsx](app/page.tsx)
+- **Layout:** [app/layout.tsx](app/layout.tsx)
+- **Components:** [components/](components)
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+## Features
+- Clean, responsive portfolio and services pages
+- Component library under `components/ui/` (shadcn + Radix + Tailwind)
+- Content stored in JSON files (`data/portfolio.json`, `data/services.json`, `data/testimonials.json`)
+- Theme support via `next-themes`
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_ympqR0VJsLz3CPnqD5uqDkOy6U2p)
+## Tech stack
+- Next.js 16 (App Router)
+- React 19
+- Tailwind CSS
+- shadcn/ui + Radix primitives
+- TypeScript
 
-## Getting Started
+## Setup
+Prerequisites: Node 18+ and a package manager (pnpm recommended — repo includes `pnpm-lock.yaml`).
 
-First, run the development server:
+Install dependencies:
 
 ```bash
-npm run dev
+pnpm install
 # or
-yarn dev
-# or
-pnpm dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+# or
+npm run dev
+```
 
-## Learn More
+Build for production:
 
-To learn more, take a look at the following resources:
+```bash
+pnpm build
+# or
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+Start the production server:
 
-<a href="https://v0.app/chat/api/kiro/clone/jthproductionke-lab/JTH-Portfolio" alt="Open in Kiro"><img src="https://pdgvvgmkdvyeydso.public.blob.vercel-storage.com/open%20in%20kiro.svg?sanitize=true" /></a>
+```bash
+pnpm start
+# or
+npm start
+```
+
+## Project structure (high level)
+- `app/` — Next.js App Router pages and layout
+- `components/` — UI components and page-specific component groups
+- `components/ui/` — shared UI primitives (shadcn + Radix)
+- `data/` — JSON content for portfolio, services, testimonials, and site config
+- `public/` — static images and assets
+- `styles/` — global CSS and Tailwind entry
+
+## Customizing content
+- Edit `data/site-config.json` to change brand, contact and social links.
+- Update `data/portfolio.json` and `data/services.json` to change displayed items.
+- Replace images in `public/images/` to update visuals.
+
+## Deployment
+This app deploys well to Vercel or any platform that supports Next.js. Push to your Git provider and connect the repo to Vercel for automatic builds and previews.
+
+## Notes for contributors
+- Follow the component patterns in `components/ui/` when adding new UI primitives.
+- Keep content-driven data in `data/` so the UI stays reusable.
+
+If you want, I can also add a short developer guide or scripts for previewing content locally.
