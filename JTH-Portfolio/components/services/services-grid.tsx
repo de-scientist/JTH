@@ -108,7 +108,7 @@ export function ServicesGrid() {
 
                       {/* Features Preview */}
                       <ul className="space-y-2 mb-6">
-                        {service.features.slice(0, 2).map((feature, i) => (
+                        {((service.features ?? service.benefits ?? service.deliverables) as string[] ?? []).slice(0, 2).map((feature, i) => (
                           <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
                             <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                             {feature}

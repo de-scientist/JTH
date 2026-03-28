@@ -35,7 +35,7 @@ interface Service {
   image?: string
   coverImage?: string
   galleryImages?: string[]
-  features: string[]
+  features?: string[]
   useCases: string[]
   deliverables: string[]
 }
@@ -68,6 +68,7 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
   const Icon = iconMap[service.icon] || FileImage
 
   const heroImage = service.coverImage || service.image || '/images/placeholder.jpg'
+  const features = service.features ?? service.benefits ?? service.deliverables ?? []
 
   return (
     <>
@@ -179,7 +180,7 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
             >
               <h2 className="text-2xl font-bold text-foreground mb-6">What You Get</h2>
               <div className="space-y-4">
-                {service.features.map((feature, index) => (
+                {features.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3 p-4 rounded-xl bg-card border border-border">
                     <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-4 h-4 text-primary" />
