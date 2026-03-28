@@ -53,7 +53,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-4">
               <div className="relative w-10 h-10">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo (3).png"
                   alt="JTH Graphix Production Logo"
                   fill
                   className="object-contain"
