@@ -11,7 +11,7 @@
     "priceValue": 1500,
     "pricingType": "fixed",
     "pricingNotes": "Standard flyer design pricing. Final quote may vary based on complexity, number of concepts, and urgency.",
-    "coverImage": "/images/services/flyer-design/cover.svg",
+    "coverImage": "/images/services/flyer-design/1.jpeg",
     "galleryImages": [
       "/images/services/flyer-design/1.jpeg",
       "/images/services/flyer-design/2.jpeg",
@@ -59,7 +59,7 @@
     "priceValue": 1500,
     "pricingType": "fixed",
     "pricingNotes": "Standard poster design pricing. Large-scale campaign or premium concept work may require a custom quote.",
-    "coverImage": "/images/services/poster-design/cover.svg",
+    "coverImage": "/images/services/poster-design/2.jpeg",
     "galleryImages": [
       "/images/services/poster-design/1.jpeg",
       "/images/services/poster-design/2.jpeg",
@@ -93,7 +93,7 @@
     "priceValue": 3000,
     "pricingType": "fixed",
     "pricingNotes": "Standard logo package pricing. Expanded identity systems may require branding package pricing.",
-    "coverImage": "/images/services/logo-design/cover.svg",
+    "coverImage": "/images/services/logo-design/3.jpeg",
     "galleryImages": [
       "/images/services/logo-design/1.jpeg",
       "/images/services/logo-design/2.jpeg",
@@ -127,7 +127,7 @@
     "priceValue": 30000,
     "pricingType": "fixed",
     "pricingNotes": "Full identity work with strategic brand direction and multiple branded assets.",
-    "coverImage": "/images/services/branding-identity/cover.svg",
+    "coverImage": "/images/services/branding-identity/4.jpeg",
     "galleryImages": [
       "/images/services/branding-identity/1.jpeg",
       "/images/services/branding-identity/2.jpeg",
@@ -161,7 +161,7 @@
     "priceValue": 5000,
     "pricingType": "fixed",
     "pricingNotes": "Pricing may vary based on number of pages, content readiness, and presentation complexity.",
-    "coverImage": "/images/services/business-profile-design/cover.svg",
+    "coverImage": "/images/services/business-profile-design/1.jpeg",
     "galleryImages": [
       "/images/services/business-profile-design/1.jpeg",
       "/images/services/business-profile-design/2.jpeg",
@@ -195,7 +195,7 @@
     "priceValue": null,
     "pricingType": "custom_quote",
     "pricingNotes": "Price depends on concept complexity, number of variants, print specs, and finishing requirements.",
-    "coverImage": "/images/services/business-card-design/cover.svg",
+    "coverImage": "/images/services/business-card-design/2.jpeg",
     "galleryImages": [
       "/images/services/business-card-design/1.jpeg",
       "/images/services/business-card-design/2.jpeg",
@@ -229,7 +229,7 @@
     "priceValue": null,
     "pricingType": "custom_quote",
     "pricingNotes": "Pricing depends on size, number of pages or folds, content preparation, and print requirements.",
-    "coverImage": "/images/services/brochure-design/cover.svg",
+    "coverImage": "/images/services/brochure-design/3.jpeg",
     "galleryImages": [
       "/images/services/brochure-design/1.jpeg",
       "/images/services/brochure-design/2.jpeg",
@@ -263,7 +263,7 @@
     "priceValue": null,
     "pricingType": "custom_quote",
     "pricingNotes": "Pricing depends on number of designs, campaign scope, platform mix, and content requirements.",
-    "coverImage": "/images/services/social-media-graphics/cover.svg",
+    "coverImage": "/images/services/social-media-graphics/4.jpeg",
     "galleryImages": [
       "/images/services/social-media-graphics/1.jpeg",
       "/images/services/social-media-graphics/2.jpeg",
@@ -297,7 +297,7 @@
     "priceValue": 70000,
     "pricingType": "starting_from",
     "pricingNotes": "Final pricing depends on number of posts, content type, strategy depth, reporting scope, and engagement level.",
-    "coverImage": "/images/services/social-media-management/cover.svg",
+    "coverImage": "/images/services/social-media-management/1.jpeg",
     "galleryImages": [
       "/images/services/social-media-management/1.jpeg",
       "/images/services/social-media-management/2.jpeg",
@@ -331,7 +331,7 @@
     "priceValue": null,
     "pricingType": "custom_quote",
     "pricingNotes": "Pricing depends on number of pages, features, integrations, content readiness, and timeline.",
-    "coverImage": "/images/services/website-design/cover.svg",
+    "coverImage": "/images/services/website-design/4.jpeg",
     "galleryImages": [
       "/images/services/website-design/1.jpeg",
       "/images/services/website-design/2.jpeg",
@@ -365,7 +365,7 @@
     "priceValue": null,
     "pricingType": "custom_quote",
     "pricingNotes": "Pricing depends on dimensions, print requirements, layout complexity, and output use.",
-    "coverImage": "/images/services/banner-design/cover.svg",
+    "coverImage": "/images/services/banner-design/3.jpeg",
     "galleryImages": [
       "/images/services/banner-design/1.jpeg",
       "/images/services/banner-design/2.jpeg",
@@ -394,12 +394,12 @@
     "priceValue": null,
     "pricingType": "custom_quote",
     "pricingNotes": "Pricing varies by campaign scope, number of deliverables, event visibility needs, and turnaround.",
-    "coverImage": "/images/services/event-publicity-graphics/cover.svg",
+    "coverImage": "/images/services/event-publicity-graphics/1.jpeg",
     "galleryImages": [
-      "/images/services/event-publicity-graphics/1.svg",
-      "/images/services/event-publicity-graphics/2.svg",
-      "/images/services/event-publicity-graphics/3.svg",
-      "/images/services/event-publicity-graphics/4.svg"
+      "/images/services/event-publicity-graphics/1.jpeg",
+      "/images/services/event-publicity-graphics/2.jpeg",
+      "/images/services/event-publicity-graphics/3.jpeg",
+      "/images/services/event-publicity-graphics/4.jpeg"
     ],
     "videos": [],
     "featured": false,
@@ -423,7 +423,7 @@
     "priceValue": null,
     "pricingType": "custom_quote",
     "pricingNotes": "Quote depends on the set of branded assets required and depth of identity application.",
-    "coverImage": "/images/services/corporate-branding-materials/cover.svg",
+    "coverImage": "/images/services/corporate-branding-materials/2.jpeg",
     "galleryImages": [
       "/images/services/corporate-branding-materials/1.jpeg",
       "/images/services/corporate-branding-materials/2.jpeg",
@@ -452,7 +452,7 @@
     "priceValue": null,
     "pricingType": "custom_quote",
     "pricingNotes": "Pricing depends on quantity, material, finishing, size, and print requirements.",
-    "coverImage": "/images/services/premium-printing/cover.svg",
+    "coverImage": "/images/services/premium-printing/1.jpeg",
     "galleryImages": [
       "/images/services/premium-printing/1.jpeg",
       "/images/services/premium-printing/2.jpeg",
@@ -481,7 +481,7 @@
     "priceValue": 50,
     "pricingType": "fixed",
     "pricingNotes": "Base price applies per participant per session. Final structure may vary depending on group size and session scope.",
-    "coverImage": "/images/services/virtual-training-sessions/cover.svg",
+    "coverImage": "/images/services/virtual-training-sessions/3.jpeg",
     "galleryImages": [
       "/images/services/virtual-training-sessions/1.jpeg",
       "/images/services/virtual-training-sessions/2.jpeg",
@@ -519,7 +519,7 @@
     "priceValue": null,
     "pricingType": "coming_soon",
     "pricingNotes": "Pre-recorded learning resources will be available through the JTH platform after launch.",
-    "coverImage": "/images/services/recorded-courses/cover.svg",
+    "coverImage": "/images/services/recorded-courses/2.jpeg",
     "galleryImages": [
       "/images/services/recorded-courses/1.jpeg",
       "/images/services/recorded-courses/2.jpeg",
@@ -548,7 +548,7 @@
     "priceValue": null,
     "pricingType": "custom_quote",
     "pricingNotes": "Pricing depends on number of participants, training mode, duration, content scope, location, and certification requirements.",
-    "coverImage": "/images/services/institutional-training/cover.svg",
+    "coverImage": "/images/services/institutional-training/4.jpeg",
     "galleryImages": [
       "/images/services/institutional-training/1.jpeg",
       "/images/services/institutional-training/2.jpeg",
@@ -577,7 +577,7 @@
     "priceValue": null,
     "pricingType": "custom_quote",
     "pricingNotes": "Pricing depends on level, duration, participant count, and outcomes expected.",
-    "coverImage": "/images/services/design-skill-training/cover.svg",
+    "coverImage": "/images/services/design-skill-training/1.jpeg",
     "galleryImages": [
       "/images/services/design-skill-training/1.jpeg",
       "/images/services/design-skill-training/2.jpeg",
@@ -606,11 +606,11 @@
     "priceValue": null,
     "pricingType": "custom_quote",
     "pricingNotes": "Quote depends on workshop scope, audience, delivery mode, and required outcomes.",
-    "coverImage": "/images/services/digital-skills-workshops/cover.svg",
+    "coverImage": "/images/services/digital-skills-workshops/3.jpeg",
     "galleryImages": [
       "/images/services/digital-skills-workshops/1.jpeg",
       "/images/services/digital-skills-workshops/2.jpeg",
-      "/images/services/digital-skills-workshops/3.jpegg",
+      "/images/services/digital-skills-workshops/3.jpeg",
       "/images/services/digital-skills-workshops/4.jpeg"
     ],
     "videos": [],
