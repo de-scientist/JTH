@@ -163,10 +163,10 @@
     "pricingNotes": "Pricing may vary based on number of pages, content readiness, and presentation complexity.",
     "coverImage": "/images/services/business-profile-design/cover.svg",
     "galleryImages": [
-      "/images/services/business-profile-design/1.svg",
-      "/images/services/business-profile-design/2.svg",
-      "/images/services/business-profile-design/3.svg",
-      "/images/services/business-profile-design/4.svg"
+      "/images/services/business-profile-design/1.jpeg",
+      "/images/services/business-profile-design/2.jpeg",
+      "/images/services/business-profile-design/3.jpeg",
+      "/images/services/business-profile-design/4.jpeg"
     ],
     "videos": [],
     "featured": false,
@@ -197,10 +197,10 @@
     "pricingNotes": "Price depends on concept complexity, number of variants, print specs, and finishing requirements.",
     "coverImage": "/images/services/business-card-design/cover.svg",
     "galleryImages": [
-      "/images/services/business-card-design/1.svg",
-      "/images/services/business-card-design/2.svg",
-      "/images/services/business-card-design/3.svg",
-      "/images/services/business-card-design/4.svg"
+      "/images/services/business-card-design/1.jpeg",
+      "/images/services/business-card-design/2.jpeg",
+      "/images/services/business-card-design/3.jpeg",
+      "/images/services/business-card-design/4.jpeg"
     ],
     "videos": [],
     "featured": false,
@@ -231,10 +231,10 @@
     "pricingNotes": "Pricing depends on size, number of pages or folds, content preparation, and print requirements.",
     "coverImage": "/images/services/brochure-design/cover.svg",
     "galleryImages": [
-      "/images/services/brochure-design/1.svg",
-      "/images/services/brochure-design/2.svg",
-      "/images/services/brochure-design/3.svg",
-      "/images/services/brochure-design/4.svg"
+      "/images/services/brochure-design/1.jpeg",
+      "/images/services/brochure-design/2.jpeg",
+      "/images/services/brochure-design/3.jpeg",
+      "/images/services/brochure-design/4.jpeg"
     ],
     "videos": [],
     "featured": false,
@@ -265,10 +265,10 @@
     "pricingNotes": "Pricing depends on number of designs, campaign scope, platform mix, and content requirements.",
     "coverImage": "/images/services/social-media-graphics/cover.svg",
     "galleryImages": [
-      "/images/services/social-media-graphics/1.svg",
-      "/images/services/social-media-graphics/2.svg",
-      "/images/services/social-media-graphics/3.svg",
-      "/images/services/social-media-graphics/4.svg"
+      "/images/services/social-media-graphics/1.jpeg",
+      "/images/services/social-media-graphics/2.jpeg",
+      "/images/services/social-media-graphics/3.jpeg",
+      "/images/services/social-media-graphics/4.jpeg"
     ],
     "videos": [],
     "featured": true,
@@ -299,10 +299,10 @@
     "pricingNotes": "Final pricing depends on number of posts, content type, strategy depth, reporting scope, and engagement level.",
     "coverImage": "/images/services/social-media-management/cover.svg",
     "galleryImages": [
-      "/images/services/social-media-management/1.svg",
-      "/images/services/social-media-management/2.svg",
-      "/images/services/social-media-management/3.svg",
-      "/images/services/social-media-management/4.svg"
+      "/images/services/social-media-management/1.jpeg",
+      "/images/services/social-media-management/2.jpeg",
+      "/images/services/social-media-management/3.jpeg",
+      "/images/services/social-media-management/4.jpeg"
     ],
     "videos": [],
     "featured": true,
@@ -333,10 +333,10 @@
     "pricingNotes": "Pricing depends on number of pages, features, integrations, content readiness, and timeline.",
     "coverImage": "/images/services/website-design/cover.svg",
     "galleryImages": [
-      "/images/services/website-design/1.svg",
-      "/images/services/website-design/2.svg",
-      "/images/services/website-design/3.svg",
-      "/images/services/website-design/4.svg"
+      "/images/services/website-design/1.jpeg",
+      "/images/services/website-design/2.jpeg",
+      "/images/services/website-design/3.jpeg",
+      "/images/services/website-design/4.jpeg"
     ],
     "videos": [],
     "featured": true,
@@ -367,10 +367,10 @@
     "pricingNotes": "Pricing depends on dimensions, print requirements, layout complexity, and output use.",
     "coverImage": "/images/services/banner-design/cover.svg",
     "galleryImages": [
-      "/images/services/banner-design/1.svg",
-      "/images/services/banner-design/2.svg",
-      "/images/services/banner-design/3.svg",
-      "/images/services/banner-design/4.svg"
+      "/images/services/banner-design/1.jpeg",
+      "/images/services/banner-design/2.jpeg",
+      "/images/services/banner-design/3.jpeg",
+      "/images/services/banner-design/4.jpeg"
     ],
     "videos": [],
     "featured": false,
@@ -425,10 +425,10 @@
     "pricingNotes": "Quote depends on the set of branded assets required and depth of identity application.",
     "coverImage": "/images/services/corporate-branding-materials/cover.svg",
     "galleryImages": [
-      "/images/services/corporate-branding-materials/1.svg",
-      "/images/services/corporate-branding-materials/2.svg",
-      "/images/services/corporate-branding-materials/3.svg",
-      "/images/services/corporate-branding-materials/4.svg"
+      "/images/services/corporate-branding-materials/1.jpeg",
+      "/images/services/corporate-branding-materials/2.jpeg",
+      "/images/services/corporate-branding-materials/3.jpeg",
+      "/images/services/corporate-branding-materials/4.jpeg"
     ],
     "videos": [],
     "featured": false,
@@ -454,10 +454,10 @@
     "pricingNotes": "Pricing depends on quantity, material, finishing, size, and print requirements.",
     "coverImage": "/images/services/premium-printing/cover.svg",
     "galleryImages": [
-      "/images/services/premium-printing/1.svg",
-      "/images/services/premium-printing/2.svg",
-      "/images/services/premium-printing/3.svg",
-      "/images/services/premium-printing/4.svg"
+      "/images/services/premium-printing/1.jpeg",
+      "/images/services/premium-printing/2.jpeg",
+      "/images/services/premium-printing/3.jpeg",
+      "/images/services/premium-printing/4.jpeg"
     ],
     "videos": [],
     "featured": false,
@@ -483,10 +483,10 @@
     "pricingNotes": "Base price applies per participant per session. Final structure may vary depending on group size and session scope.",
     "coverImage": "/images/services/virtual-training-sessions/cover.svg",
     "galleryImages": [
-      "/images/services/virtual-training-sessions/1.svg",
-      "/images/services/virtual-training-sessions/2.svg",
-      "/images/services/virtual-training-sessions/3.svg",
-      "/images/services/virtual-training-sessions/4.svg"
+      "/images/services/virtual-training-sessions/1.jpeg",
+      "/images/services/virtual-training-sessions/2.jpeg",
+      "/images/services/virtual-training-sessions/3.jpeg",
+      "/images/services/virtual-training-sessions/4.jpeg"
     ],
     "videos": [],
     "featured": true,
@@ -521,10 +521,10 @@
     "pricingNotes": "Pre-recorded learning resources will be available through the JTH platform after launch.",
     "coverImage": "/images/services/recorded-courses/cover.svg",
     "galleryImages": [
-      "/images/services/recorded-courses/1.svg",
-      "/images/services/recorded-courses/2.svg",
-      "/images/services/recorded-courses/3.svg",
-      "/images/services/recorded-courses/4.svg"
+      "/images/services/recorded-courses/1.jpeg",
+      "/images/services/recorded-courses/2.jpeg",
+      "/images/services/recorded-courses/3.jpeg",
+      "/images/services/recorded-courses/4.jpeg"
     ],
     "videos": [],
     "featured": false,
@@ -550,10 +550,10 @@
     "pricingNotes": "Pricing depends on number of participants, training mode, duration, content scope, location, and certification requirements.",
     "coverImage": "/images/services/institutional-training/cover.svg",
     "galleryImages": [
-      "/images/services/institutional-training/1.svg",
-      "/images/services/institutional-training/2.svg",
-      "/images/services/institutional-training/3.svg",
-      "/images/services/institutional-training/4.svg"
+      "/images/services/institutional-training/1.jpeg",
+      "/images/services/institutional-training/2.jpeg",
+      "/images/services/institutional-training/3.jpeg",
+      "/images/services/institutional-training/4.jpeg"
     ],
     "videos": [],
     "featured": false,
@@ -579,10 +579,10 @@
     "pricingNotes": "Pricing depends on level, duration, participant count, and outcomes expected.",
     "coverImage": "/images/services/design-skill-training/cover.svg",
     "galleryImages": [
-      "/images/services/design-skill-training/1.svg",
-      "/images/services/design-skill-training/2.svg",
-      "/images/services/design-skill-training/3.svg",
-      "/images/services/design-skill-training/4.svg"
+      "/images/services/design-skill-training/1.jpeg",
+      "/images/services/design-skill-training/2.jpeg",
+      "/images/services/design-skill-training/3.jpeg",
+      "/images/services/design-skill-training/4.jpeg"
     ],
     "videos": [],
     "featured": false,
@@ -608,10 +608,10 @@
     "pricingNotes": "Quote depends on workshop scope, audience, delivery mode, and required outcomes.",
     "coverImage": "/images/services/digital-skills-workshops/cover.svg",
     "galleryImages": [
-      "/images/services/digital-skills-workshops/1.svg",
-      "/images/services/digital-skills-workshops/2.svg",
-      "/images/services/digital-skills-workshops/3.svg",
-      "/images/services/digital-skills-workshops/4.svg"
+      "/images/services/digital-skills-workshops/1.jpeg",
+      "/images/services/digital-skills-workshops/2.jpeg",
+      "/images/services/digital-skills-workshops/3.jpegg",
+      "/images/services/digital-skills-workshops/4.jpeg"
     ],
     "videos": [],
     "featured": false,
