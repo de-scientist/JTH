@@ -66,7 +66,7 @@ export function ServicesGrid() {
                     {/* Service Image */}
                     <div className="relative aspect-[16/9] overflow-hidden">
                       <Image
-                        src={service.coverImage || service.image}
+                        src={(service as any).coverImage || (service as any).image || ''}
                         alt={service.title}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -108,7 +108,7 @@ export function ServicesGrid() {
 
                       {/* Features Preview */}
                       <ul className="space-y-2 mb-6">
-                        {((service.features ?? service.benefits ?? service.deliverables) as string[] ?? []).slice(0, 2).map((feature, i) => (
+                        {(((service as any).features ?? (service as any).benefits ?? (service as any).deliverables) as string[] ?? []).slice(0, 2).map((feature, i) => (
                           <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
                             <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                             {feature}
