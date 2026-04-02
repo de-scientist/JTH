@@ -109,7 +109,7 @@ export function AboutContent() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-square rounded-3xl overflow-hidden">
+              <div className="relative aspect-square rounded-3xl overflow-hidden">
                 <Image
                   src="/images/about-studio.jpg"
                   alt="JTH Graphix Production Studio"
