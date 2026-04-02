@@ -29,6 +29,8 @@ export function HeroSection() {
             className="object-cover opacity-5 dark:opacity-10"
             priority
           />
+          {/* subtle overlay to improve text contrast */}
+          <div className="absolute inset-0 bg-black/10 dark:bg-black/20" />
         </div>
         
         {/* Gradient Orbs */}

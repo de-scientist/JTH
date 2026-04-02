@@ -116,6 +116,7 @@ export function AboutContent() {
                   fill
                   className="object-cover"
                 />
+                <div className="absolute inset-0 bg-black/10 dark:bg-black/20" />
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-2xl -z-10" />

@@ -85,6 +85,7 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+          <div className="absolute inset-0 bg-black/10 dark:bg-black/20" />
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
         </div>
