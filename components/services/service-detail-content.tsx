@@ -202,7 +202,7 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
             >
               <h2 className="text-2xl font-bold text-foreground mb-6">Deliverables</h2>
               <div className="space-y-4">
-                {service.deliverables.map((deliverable: string, index: number) => (
+                {(service.deliverables ?? []).map((deliverable: string, index: number) => (
                   <div key={index} className="flex items-start gap-3 p-4 rounded-xl bg-card border border-border">
                     <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 rounded-full bg-accent" />
@@ -233,7 +233,7 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-4xl mx-auto">
-            {service.useCases.map((useCase: string, index: number) => (
+            {(service.useCases ?? []).map((useCase: string, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
