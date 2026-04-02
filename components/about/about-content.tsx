@@ -30,10 +30,10 @@ const values = [
 ]
 
 const milestones = [
-  { year: '2018', title: 'Founded', description: 'JTH Graphix Production was established with a vision to transform visual communication.' },
-  { year: '2019', title: 'First 100 Clients', description: 'Reached our first major milestone, serving businesses across multiple industries.' },
-  { year: '2021', title: 'Digital Expansion', description: 'Expanded services to include web design and comprehensive digital solutions.' },
-  { year: '2024', title: 'Growing Strong', description: 'Continuing to grow with 500+ projects completed and counting.' },
+  { year: '2022', title: 'Founded', description: 'JTH Graphix Production was established with a vision to transform visual communication.' },
+  { year: '2024', title: 'First 100 Clients', description: 'Reached our first major milestone, serving businesses across multiple industries.' },
+  { year: '2025', title: 'Digital Expansion', description: 'Expanded services to include web design and comprehensive digital solutions.' },
+  { year: '2026', title: 'Growing Strong', description: 'Continuing to grow with 500+ projects completed and counting.' },
 ]
 
 export function AboutContent() {
