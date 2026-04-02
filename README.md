@@ -1,29 +1,48 @@
+<!-- Updated README: professional summary, badges, and repo stats -->
 # JTH-Portfolio
 
-JTH-Portfolio is a marketing and portfolio website for JTH Graphix Production. It's built with Next.js and a component-driven UI using the shadcn/ui patterns and Tailwind CSS. The site is content-driven using small JSON files in `data/` and static assets in `public/`.
+[![Version](https://img.shields.io/badge/Version-0.1.0-blue)](https://github.com)
+[![Next.js](https://img.shields.io/badge/Next.js-16.2.0-black?logo=next.js&logoColor=white)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7.3-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.2.0-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![pnpm](https://img.shields.io/badge/Package%20Manager-pnpm-blue?logo=pnpm&logoColor=white)](https://pnpm.io)
+[![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com)
+[![Private](https://img.shields.io/badge/Private-true-lightgrey)]()
 
-## Quick links
+Professional portfolio and marketing website for JTH Graphix Production. Built with Next.js (App Router), TypeScript, Tailwind CSS and a component-driven UI inspired by shadcn/ui and Radix primitives.
 
-- **Site config:** [data/site-config.json](data/site-config.json)
-- **Main app entry:** [app/page.tsx](app/page.tsx)
-- **Layout:** [app/layout.tsx](app/layout.tsx)
-- **Components:** [components/](components)
+**Project stats**
 
-## Features
-- Clean, responsive portfolio and services pages
-- Component library under `components/ui/` (shadcn + Radix + Tailwind)
-- Content stored in JSON files (`data/portfolio.json`, `data/services.json`, `data/testimonials.json`)
-- Theme support via `next-themes`
+- **Components:** 75
+- **Pages / Routes:** 9
+- **Images & assets:** 237
 
-## Tech stack
+These numbers come from the repository layout and give a quick sense of scale — components are modular and content is stored as JSON under `data/`.
+
+**Quick links**
+
+- Site config: [data/site-config.json](data/site-config.json)
+- Main entry: [app/page.tsx](app/page.tsx)
+- Layout: [app/layout.tsx](app/layout.tsx)
+- Components directory: [components/](components)
+
+**Why this repo**
+
+- Clean, responsive portfolio with reusable UI primitives.
+- Content-first approach: editable JSON under `data/` keeps the UI flexible.
+- Easy to deploy to Vercel or any Next.js-compatible host.
+
+**Tech stack**
+
 - Next.js 16 (App Router)
 - React 19
-- Tailwind CSS
-- shadcn/ui + Radix primitives
 - TypeScript
+- Tailwind CSS
+- Radix primitives + shadcn-style component patterns
 
-## Setup
-Prerequisites: Node 18+ and a package manager (pnpm recommended — repo includes `pnpm-lock.yaml`).
+**Local development**
+
+Prerequisites: Node 18+ and a package manager (pnpm recommended — this repo includes `pnpm-lock.yaml`).
 
 Install dependencies:
 
@@ -33,7 +52,7 @@ pnpm install
 npm install
 ```
 
-Run development server:
+Run development server (hot reload):
 
 ```bash
 pnpm dev
@@ -49,7 +68,7 @@ pnpm build
 npm run build
 ```
 
-Start the production server:
+Start production server:
 
 ```bash
 pnpm start
@@ -57,48 +76,38 @@ pnpm start
 npm start
 ```
 
-## Project structure (high level)
-- `app/` — Next.js App Router pages and layout
-- `components/` — UI components and page-specific component groups
-- `components/ui/` — shared UI primitives (shadcn + Radix)
-- `data/` — JSON content for portfolio, services, testimonials, and site config
+**Project structure (high level)**
+
+- `app/` — Next.js App Router pages and route-level layouts
+- `components/` — page components and shared UI primitives
+- `components/ui/` — design-system primitives and shadcn-style components
+- `data/` — content JSON (portfolio, services, testimonials, site-config)
 - `public/` — static images and assets
-- `styles/` — global CSS and Tailwind entry
+- `styles/` — global CSS & Tailwind
 
-## Customizing content
-- Edit `data/site-config.json` to change brand, contact and social links.
-- Update `data/portfolio.json` and `data/services.json` to change displayed items.
-- Replace images in `public/images/` to update visuals.
+**Content & customization**
 
-## Deployment
-This app deploys well to Vercel or any platform that supports Next.js. Push to your Git provider and connect the repo to Vercel for automatic builds and previews.
+- Edit `data/site-config.json` to update brand, contact and social links.
+- Update `data/portfolio.json` / `data/services.json` to change displayed items.
+- Replace images in `public/images/` to refresh visuals.
 
-## Notes for contributors
-- Follow the component patterns in `components/ui/` when adding new UI primitives.
-- Keep content-driven data in `data/` so the UI stays reusable.
+**Deployment**
 
-If you want, I can also add a short developer guide or scripts for previewing content locally.
+- Recommended: Vercel — connect the repo for automatic builds & previews.
+- CI: add a `VERCEL_TOKEN` secret to enable automated deployments from workflows.
 
-## CI / Deployment
+**Contributing / notes for developers**
 
-1) Vercel (recommended)
+- Follow patterns in `components/ui/` to keep components consistent.
+- Keep page content in `data/` for separation of content and presentation.
+- Run `pnpm lint` to check the codebase before committing.
 
-- Connect this repository to Vercel for automatic deployments on push. Vercel detects Next.js projects and will handle builds and previews automatically.
-- For environment variables (if any), add them to the Vercel project settings.
+If you'd like, I can also add:
 
-2) GitHub Actions (example)
+- a `CONTRIBUTING.md` and PR template,
+- a small developer guide for the component library,
+- or a GitHub Actions workflow for linting and preview deploys.
 
-- An example workflow is added at `.github/workflows/ci.yml`. It runs on pushes and pull requests to `main`, installs dependencies, lints, builds and — optionally — deploys to Vercel when a `VERCEL_TOKEN` secret is provided.
+---
 
-To enable automatic deploy from the workflow:
-
-```text
-1. Create a Vercel token (Account Settings → Tokens).
-2. Add the token to your GitHub repo secrets as `VERCEL_TOKEN`.
-3. Push to `main` (the workflow will run and deploy with the token).
-```
-
-3) Notes
-
-- CI uses `pnpm` by default; if you prefer `npm` or `yarn` adjust `.github/workflows/ci.yml` accordingly.
-- You can also use other CI/CD providers (GitLab CI, CircleCI) or deploy targets (Netlify) — the app is a standard Next.js build.
+_Maintained by JTH Graphix Production — for questions or customization requests, update `data/site-config.json` or open an issue._
