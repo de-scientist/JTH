@@ -60,10 +60,7 @@ export function Navbar() {
             </div>
             <div className="hidden sm:block">
               <span className="text-lg lg:text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                JTH Graphix
-              </span>
-              <span className="hidden lg:inline text-lg lg:text-xl font-light text-muted-foreground ml-1">
-                Production
+                JTH Graphix Production
               </span>
             </div>
           </Link>
