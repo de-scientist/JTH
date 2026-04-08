@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
 import { Facebook, Instagram, Linkedin, Phone, Mail, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import siteConfig from '@/data/site-config.json'
