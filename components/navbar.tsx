@@ -51,7 +51,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-10 h-10 lg:w-12 lg:h-12">
               <Image
-                src="/images/logo (2).png"
+                src="/images/logo (3).png"
                 alt="JTH Graphix Production Logo"
                 fill
                 className="object-contain"
