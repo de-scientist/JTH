@@ -50,7 +50,7 @@ export function WhatsAppButton() {
               className="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap"
             >
               <div className="bg-card text-foreground px-4 py-2 rounded-lg shadow-lg border border-border text-sm font-medium">
-                Make an Order
+                Request a Quote on WhatsApp
               </div>
             </motion.div>
           )}
