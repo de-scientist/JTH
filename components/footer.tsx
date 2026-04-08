@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useTheme } from 'next-themes'
 import { Facebook, Instagram, Linkedin, Phone, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import siteConfig from '@/data/site-config.json'
@@ -49,7 +48,6 @@ const socialLinks = [
 ]
 
 export function Footer() {
-   const { resolvedTheme } = useTheme()
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-16">
@@ -59,14 +57,19 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-4">
               <div className="relative w-10 h-10">
                 <Image
-                               src={
-                                 resolvedTheme === 'dark' ? '/images/LOGO (3).png' : '/images/logo (2).png'
-                               }
-                               alt="JTH Graphix Production Logo"
-                               fill
-                               className="object-contain"
-                               priority
-                             />
+                  src="/images/logo (2).png"
+                  alt="JTH Graphix Production Logo - blue"
+                  fill
+                  className="object-contain block dark:hidden"
+                  priority
+                />
+                <Image
+                  src="/images/LOGO (3).png"
+                  alt="JTH Graphix Production Logo - white"
+                  fill
+                  className="object-contain hidden dark:block"
+                  priority
+                />
               </div>
               <span className="text-xl font-bold text-foreground">
                 JTH Graphix Production

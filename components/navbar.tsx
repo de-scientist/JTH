@@ -1,7 +1,6 @@
  'use client'
 
 import { useState, useEffect } from 'react'
-import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -21,7 +20,6 @@ const navLinks = [
 ]
 
 export function Navbar() {
-  const { resolvedTheme } = useTheme()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
@@ -53,12 +51,17 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-10 h-10 lg:w-12 lg:h-12">
               <Image
-                src={
-                  resolvedTheme === 'dark' ? '/images/LOGO (3).png' : '/images/logo (2).png'
-                }
-                alt="JTH Graphix Production Logo"
+                src="/images/logo (2).png"
+                alt="JTH Graphix Production Logo - blue"
                 fill
-                className="object-contain"
+                className="object-contain block dark:hidden"
+                priority
+              />
+              <Image
+                src="/images/LOGO (3).png"
+                alt="JTH Graphix Production Logo - white"
+                fill
+                className="object-contain hidden dark:block"
                 priority
               />
             </div>
