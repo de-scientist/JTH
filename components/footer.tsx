@@ -57,14 +57,14 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-4">
               <div className="relative w-10 h-10">
                 <Image
-                  src="/images/logo (2).png"
+                  src="/images/logo-blue.png"
                   alt="JTH Graphix Production Logo - blue"
                   fill
                   className="object-contain block dark:hidden"
                   priority
                 />
                 <Image
-                  src="/images/LOGO (3).png"
+                  src="/images/logo-black.png"
                   alt="JTH Graphix Production Logo - white"
                   fill
                   className="object-contain hidden dark:block"
