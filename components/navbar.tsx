@@ -14,10 +14,10 @@ import { cn } from '@/lib/utils'
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
   { href: '/services', label: 'Services' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/testimonials', label: 'Testimonials' },
-  { href: '/contact', label: 'Contact' },
 ]
 
 export function Navbar() {
