@@ -19,11 +19,11 @@ const XIcon = () => (
 const quickLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
   { href: '/services', label: 'Services' },
   { href: '/services-pricing', label: 'Services & Pricing' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/testimonials', label: 'Testimonials' },
-  { href: '/contact', label: 'Contact' },
 ]
 
 const services = [
