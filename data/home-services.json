@@ -1,0 +1,58 @@
+[
+  {
+    "id": "graphic-design",
+    "title": "Graphic Design",
+    "description": "Striking visual assets that capture attention and communicate your message with clarity and impact.",
+    "icon": "Palette",
+    "slug": "flyer-design"
+  },
+  {
+    "id": "branding",
+    "title": "Branding",
+    "description": "Strategic brand identities that differentiate your business and build lasting recognition.",
+    "icon": "Sparkles",
+    "slug": "branding-identity"
+  },
+  {
+    "id": "ui-ux",
+    "title": "UI/UX Design",
+    "description": "Intuitive digital experiences designed around user needs and conversion goals.",
+    "icon": "Layout",
+    "slug": "website-design"
+  },
+  {
+    "id": "website-design",
+    "title": "Website Design",
+    "description": "Beautiful, modern websites that reflect your brand and engage your audience.",
+    "icon": "Monitor",
+    "slug": "website-design"
+  },
+  {
+    "id": "website-development",
+    "title": "Website Development",
+    "description": "Fast, scalable web solutions built with performance and growth in mind.",
+    "icon": "Code",
+    "slug": "website-design"
+  },
+  {
+    "id": "digital-marketing",
+    "title": "Digital Marketing",
+    "description": "Data-driven campaigns that amplify your reach and drive measurable results.",
+    "icon": "TrendingUp",
+    "slug": "social-media-management"
+  },
+  {
+    "id": "motion-graphics",
+    "title": "Motion Graphics",
+    "description": "Dynamic animations and video content that bring your brand story to life.",
+    "icon": "Clapperboard",
+    "slug": "event-publicity-graphics"
+  },
+  {
+    "id": "social-media",
+    "title": "Social Media Design",
+    "description": "Scroll-stopping content tailored for every platform and audience.",
+    "icon": "Share2",
+    "slug": "social-media-graphics"
+  }
+]

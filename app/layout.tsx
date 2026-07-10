@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Geist_Mono } from 'next/font/google'
+import { Inter, Sora } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Navbar } from '@/components/navbar'
@@ -7,38 +7,49 @@ import { Footer } from '@/components/footer'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 import './globals.css'
 
-// JTH Graphix Production - Premium Creative Studio
-
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-inter'
+  variable: '--font-inter',
+  display: 'swap',
 })
 
-const geistMono = Geist_Mono({ 
+const sora = Sora({
   subsets: ['latin'],
-  variable: '--font-geist-mono'
+  variable: '--font-sora',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: {
-    default: 'JTH Graphix Production | Bold Design. Strong Branding.',
-    template: '%s | JTH Graphix Production'
+    default: 'JTH Graphix Production | Digital Experiences That Drive Results',
+    template: '%s | JTH Graphix Production',
   },
-  description: 'JTH Graphix Production creates bold, clean, and impactful visuals for businesses, organizations, and individuals — from flyers and logos to full branding systems, premium print materials, social media graphics, and modern websites.',
-  keywords: ['graphic design', 'branding', 'logo design', 'flyer design', 'poster design', 'social media graphics', 'Kenya', 'Nairobi'],
+  description:
+    'JTH Graphix Production is a premium creative agency building brands, experiences, and digital solutions that drive measurable business growth.',
+  keywords: [
+    'graphic design',
+    'branding',
+    'UI/UX design',
+    'website design',
+    'digital marketing',
+    'creative agency',
+    'Kenya',
+    'Nairobi',
+  ],
   authors: [{ name: 'JTH Graphix Production' }],
   creator: 'JTH Graphix Production',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     siteName: 'JTH Graphix Production',
-    title: 'JTH Graphix Production | Bold Design. Strong Branding.',
-    description: 'Premium visual solutions for print and digital. Branding, design, and creative services.',
+    title: 'JTH Graphix Production | Digital Experiences That Drive Results',
+    description:
+      'We build brands, experiences, and digital solutions that drive measurable business growth.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'JTH Graphix Production',
-    description: 'Bold design. Strong branding. Premium visual solutions.',
+    description: 'Premium creative agency. Strategy, design, and digital excellence.',
   },
 }
 
@@ -58,18 +69,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <body className={`${inter.variable} ${sora.variable} font-sans antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="relative min-h-screen flex flex-col">
             <Navbar />
-            <main className="flex-1">
-              {children}
-            </main>
+            <main className="flex-1">{children}</main>
             <Footer />
             <WhatsAppButton />
           </div>
