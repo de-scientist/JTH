@@ -9,15 +9,7 @@
 [![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com)
 [![Private](https://img.shields.io/badge/Private-true-lightgrey)]()
 
-Professional portfolio and marketing website for JTH Graphix Production. Built with Next.js (App Router), TypeScript, Tailwind CSS and a component-driven UI inspired by shadcn/ui and Radix primitives.
 
-**Project stats**
-
-- **Components:** 75
-- **Pages / Routes:** 9
-- **Images & assets:** 237
-
-These numbers come from the repository layout and give a quick sense of scale — components are modular and content is stored as JSON under `data/`.
 
 **Quick links**
 
