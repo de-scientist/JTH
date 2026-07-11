@@ -98,8 +98,3 @@ If you'd like, I can also add:
 
 - a `CONTRIBUTING.md` and PR template,
 - a small developer guide for the component library,
-- or a GitHub Actions workflow for linting and preview deploys.
-
----
-
-_Maintained by JTH Graphix Production — for questions or customization requests, update `data/site-config.json` or open an issue._
