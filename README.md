@@ -91,10 +91,4 @@ npm start
 **Contributing / notes for developers**
 
 - Follow patterns in `components/ui/` to keep components consistent.
-- Keep page content in `data/` for separation of content and presentation.
-- Run `pnpm lint` to check the codebase before committing.
-
-If you'd like, I can also add:
-
-- a `CONTRIBUTING.md` and PR template,
-- a small developer guide for the component library,
+- Keep page content in `data/` for separation of content and pr
