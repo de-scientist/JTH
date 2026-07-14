@@ -29,7 +29,6 @@ interface Service {
   slug: string
   title: string
   shortDescription: string
-  description: string
   fullDescription?: string
   icon: string
   category: string
@@ -38,8 +37,8 @@ interface Service {
   galleryImages?: string[]
   features?: string[]
   benefits?: string[]
-  useCases: string[]
-  deliverables: string[]
+  useCases?: string[]
+  deliverables?: string[]
 }
 
 interface Props {
@@ -120,7 +119,7 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
                 {service.title}
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
-                {service.fullDescription || service.description || service.shortDescription}
+                {service.fullDescription || service.shortDescription}
               </p>
 
               {/* CTA Buttons */}
