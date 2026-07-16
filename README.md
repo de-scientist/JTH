@@ -207,7 +207,7 @@ All Framer Motion variants are centralized in `lib/animations.ts`:
 │   ├── navbar.tsx                # Main navigation bar (glass effect, mobile menu)
 │   ├── footer.tsx                # Site footer with newsletter signup
 │   ├── theme-provider.tsx        # next-themes provider wrapper
-│   ├── theme-toggle.tsx          # Dark/light mode toggle button
+│   ├── theme-toggle.tsx          # System/Dark/light mode toggle button
 │   └── whatsapp-button.tsx       # Floating WhatsApp CTA button
 │
 ├── data/                         # Editable JSON content files
