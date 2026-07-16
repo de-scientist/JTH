@@ -33,9 +33,9 @@ A **production-ready portfolio and business website** for **JTH Graphix Producti
 
 ## Project Overview
 
-JTH-Portfolio is a **fully static, content-driven website** built entirely with modern frontend technologies. It showcases the agency's work, services, and expertise while providing multiple avenues for potential clients to get in touch. The site follows a **content-first architecture** — all text, images, and structured data are stored as editable JSON files in the `data/` directory, completely decoupled from the UI components. This means anyone can update the site content without touching React code.
+JTH-Portfolio is a **fully static, content-driven website** built entirely with modern frontend technologies. It showcases the agency's work, services, and expertise while providing multiple avenues for potential clients to get in touch. The site follows a **content-first architecture** — all text, images, and structured data are stored as editable JSON files in the `data/` directory, completely decoupled from the UI components. This means anyone can update the site content without touching React code
 
-The website includes a comprehensive service catalog of 18 services across 5 categories, a filterable portfolio gallery with lightbox detail views, an animated testimonial carousel, a multi-field contact form with service selection, WhatsApp integration for instant communication, a blog section, and a pricing page — all wrapped in a polished, responsive design with dark/light theme support.
+The website includes a comprehensive service catalog of 18 services across 5 categories, a filterable portfolio gallery with lightbox detail views, an animated testimonial carousel, a multi-field contact form with service selection, WhatsApp integration for instant communication, a blog section, and a pricing page — all wrapped in a polished, responsive design with system/dark/light theme support.
 
 ---
 
