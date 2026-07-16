@@ -43,7 +43,7 @@ The website includes a comprehensive service catalog of 18 services across 5 cat
 
 ### Visual & UX
 - **Responsive Design** — Mobile-first layouts with breakpoints at `sm:`, `md:`, `lg:`, `xl:` using Tailwind CSS
-- **Dark / Light Theme** — System-aware theme switching via `next-themes` with a manual toggle and smooth CSS transitions
+- **System / Dark / Light Theme** — System-aware theme switching via `next-themes` with a manual toggle and smooth CSS transitions
 - **Scroll-Triggered Animations** — Framer Motion-powered fade-in, slide-in, scale, and stagger animations across all sections
 - **Animated Stats Counters** — Number counters (e.g., "100+ Projects") that animate on scroll into view
 - **Glassmorphism Navbar** — Fixed navigation bar with scroll-aware glass effect and backdrop blur
