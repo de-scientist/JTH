@@ -20,6 +20,7 @@ const sora = Sora({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://jthgraphixproduction.com'),
   title: {
     default: 'JTH Graphix Production | Digital Experiences That Drive Results',
     template: '%s | JTH Graphix Production',
