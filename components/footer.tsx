@@ -68,9 +68,9 @@ export function Footer() {
                 <Image
                   src="/images/logo-white.png"
                   alt="JTH Graphix Production"
-                  width={40}
-                  height={40}
-                  className="object-contain"
+                  fill
+                  className="object-contain p-1.5"
+                  sizes="48px"
                 />
               </div>
               <div>

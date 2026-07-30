@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -39,7 +39,12 @@ function matchesFilter(itemCategory: string, filter: Filter): boolean {
 
 export function PortfolioPreview() {
   const [activeFilter, setActiveFilter] = useState<Filter>('All')
+  const [isMounted, setIsMounted] = useState(false)
   const filtered = portfolio.filter((item) => matchesFilter(item.category, activeFilter)).slice(0, 6)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   return (
     <section id="portfolio" className="py-20 lg:py-32 bg-background relative overflow-hidden">
@@ -94,15 +99,14 @@ export function PortfolioPreview() {
           transition={defaultTransition}
           className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8"
         >
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence>
             {filtered.map((item, index) => (
               <motion.div
                 key={item.id}
-                layout
-                initial={{ opacity: 0, y: 30, scale: 0.98 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
+                initial={isMounted ? { opacity: 0, y: 20 } : false}
+                animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="group"
               >
                 <Link href="/portfolio" className="block">

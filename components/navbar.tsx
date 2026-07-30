@@ -11,6 +11,7 @@ import { cn } from '@/lib/utils'
 
 const navLinks = [
   { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
   {
     href: '/services',
     label: 'Services',
@@ -23,7 +24,6 @@ const navLinks = [
     ],
   },
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -76,10 +76,10 @@ export function Navbar() {
               <Image
                 src="/images/logo-white.png"
                 alt="JTH Graphix Production"
-                width={36}
-                height={36}
-                className="object-contain"
+                fill
+                className="object-contain p-1.5"
                 priority
+                sizes="44px"
               />
             </div>
             <div className="flex flex-col">
