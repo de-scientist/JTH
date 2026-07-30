@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "5 Branding Mistakes That Cost Businesses Growth",
+    "excerpt": "Learn how inconsistent branding silently erodes trust and what to fix first.",
+    "category": "Branding",
+    "date": "2026-05-12",
+    "image": "/images/blog/branding-tips.svg"
+  },
+  {
+    "id": "2",
+    "title": "How Strategic Design Drives Measurable ROI",
+    "excerpt": "Why design isn't decoration — it's a business lever for conversion and retention.",
+    "category": "Strategy",
+    "date": "2026-04-28",
+    "image": "/images/blog/design-roi.svg"
+  },
+  {
+    "id": "3",
+    "title": "Building a Website That Converts in 2026",
+    "excerpt": "Essential UX patterns and visual hierarchy principles for high-performing sites.",
+    "category": "Web Design",
+    "date": "2026-04-15",
+    "image": "/images/blog/web-convert.svg"
+  }
+]

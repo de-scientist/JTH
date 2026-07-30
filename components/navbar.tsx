@@ -1,157 +1,166 @@
- 'use client'
+'use client'
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { ThemeToggle } from '@/components/theme-toggle'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/about', label: 'About Us' },
   { href: '/services', label: 'Services' },
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/testimonials', label: 'Testimonials' },
+  { href: '/#blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
   const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
+
+      if (pathname !== '/') return
+
+      const sections = ['hero', 'trust', 'services', 'about', 'portfolio', 'testimonials', 'process', 'blog', 'cta']
+      const scrollPos = window.scrollY + 120
+
+      for (const id of [...sections].reverse()) {
+        const el = document.getElementById(id)
+        if (el && el.offsetTop <= scrollPos) {
+          setActiveSection(id)
+          break
+        }
+      }
     }
-    window.addEventListener('scroll', handleScroll)
+
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [pathname])
 
   useEffect(() => {
     setIsOpen(false)
   }, [pathname])
 
+  const isActive = (href: string) => {
+    if (href === '/#blog') return pathname === '/' && activeSection === 'blog'
+    if (href.startsWith('/#')) return false
+    if (href === '/') return pathname === '/' && !activeSection
+    return pathname === href || pathname.startsWith(`${href}/`)
+  }
+
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled
-          ? 'bg-background/80 backdrop-blur-xl border-b border-border shadow-sm'
-          : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
+        isScrolled ? 'glass-nav' : 'bg-transparent'
       )}
     >
-      <nav className="container mx-auto px-4 lg:px-8">
+      <nav className="container mx-auto px-4 lg:px-8" aria-label="Main navigation">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 lg:w-12 lg:h-12">
+          <Link href="/" className="flex items-center gap-3 group" aria-label="JTH Graphix Production home">
+            <div className="relative w-10 h-10 lg:w-11 lg:h-11 rounded-xl bg-primary flex items-center justify-center overflow-hidden shadow-lg shadow-primary/20 group-hover:shadow-primary/30 transition-shadow">
               <Image
-                src="/images/logo (2).png"
-                alt="JTH Graphix Production Logo - blue"
-                fill
-                className="object-contain block dark:hidden"
-                priority
-              />
-              <Image
-                src="/images/LOGO (3).png"
-                alt="JTH Graphix Production Logo - white"
-                fill
-                className="object-contain hidden dark:block"
+                src="/images/logo-white.png"
+                alt="JTH Graphix Production"
+                width={36}
+                height={36}
+                className="object-contain"
                 priority
               />
             </div>
-            <div className="hidden sm:block">
-              <span className="text-lg lg:text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                JTH Graphix Production
-              </span>
-            </div>
+            <span className="hidden sm:block text-base lg:text-lg font-display font-bold text-foreground group-hover:text-primary transition-colors">
+              JTH Graphix
+            </span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'px-4 py-2 text-sm font-medium rounded-lg transition-colors',
-                  pathname === link.href
-                    ? 'text-primary bg-primary/10'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                  'relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300',
+                  isActive(link.href)
+                    ? 'text-primary'
+                    : 'text-muted-foreground hover:text-foreground'
                 )}
               >
                 {link.label}
+                {isActive(link.href) && (
+                  <motion.span
+                    layoutId="nav-indicator"
+                    className="absolute inset-0 bg-primary/10 rounded-lg -z-10"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
               </Link>
             ))}
           </div>
 
-          {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-3">
-            <ThemeToggle />
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25">
-              <Link href="/contact">
-                Start a Project
-              </Link>
+            <Button
+              asChild
+              className="bg-gradient-brand hover:opacity-90 text-white shadow-lg shadow-primary/25 rounded-xl px-6 h-11 font-medium"
+            >
+              <Link href="/contact">Let&apos;s Talk</Link>
             </Button>
           </div>
 
-          {/* Mobile Actions */}
-          <div className="flex lg:hidden items-center gap-2">
-            <a
-              href="tel:+254117537015"
-              className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-              aria-label="Call us"
-            >
-              <Phone className="w-5 h-5" />
-            </a>
-            <ThemeToggle />
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2.5 rounded-xl text-foreground hover:bg-muted transition-colors"
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="lg:hidden bg-background/95 backdrop-blur-xl border-b border-border"
+            transition={{ duration: 0.25 }}
+            className="lg:hidden glass border-b border-border overflow-hidden"
           >
-            <div className="container mx-auto px-4 py-4">
+            <div className="container mx-auto px-4 py-5">
               <div className="flex flex-col gap-1">
-                {navLinks.map((link) => (
-                  <Link
+                {navLinks.map((link, i) => (
+                  <motion.div
                     key={link.href}
-                    href={link.href}
-                    className={cn(
-                      'px-4 py-3 text-base font-medium rounded-lg transition-colors',
-                      pathname === link.href
-                        ? 'text-primary bg-primary/10'
-                        : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                    )}
+                    initial={{ opacity: 0, x: -16 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.05 }}
                   >
-                    {link.label}
-                  </Link>
+                    <Link
+                      href={link.href}
+                      className={cn(
+                        'block px-4 py-3.5 text-base font-medium rounded-xl transition-colors',
+                        isActive(link.href)
+                          ? 'text-primary bg-primary/10'
+                          : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                      )}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
                 ))}
                 <div className="pt-4 mt-2 border-t border-border">
-                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                    <Link href="/contact">
-                      Start a Project
-                    </Link>
+                  <Button asChild className="w-full bg-gradient-brand text-white h-12 rounded-xl">
+                    <Link href="/contact">Let&apos;s Talk</Link>
                   </Button>
                 </div>
               </div>
