@@ -2,8 +2,10 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Target, Eye, Heart, TrendingUp, CheckCircle2 } from 'lucide-react'
+import { Target, Eye, Heart, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/section-header'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 import { fadeUp, slideInLeft, slideInRight, defaultTransition, viewportOnce } from '@/lib/animations'
 
 const values = [
@@ -22,14 +24,15 @@ const timeline = [
 
 const aboutStats = [
   { value: '100+', label: 'Projects' },
-  { value: '50+', label: 'Brands' },
+  { value: '50+', label: 'Clients' },
   { value: '5+', label: 'Years' },
 ]
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 lg:py-28 bg-muted/30 relative overflow-hidden">
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-[100px] pointer-events-none" />
+    <section id="about" className="py-20 lg:py-32 bg-muted/30 relative overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <SectionHeader
@@ -37,10 +40,10 @@ export function AboutSection() {
           title={
             <>
               We Build Brands That{' '}
-              <span className="text-primary">Drive Growth</span>
+              <span className="text-gradient">Drive Growth</span>
             </>
           }
-          description="We don't just create designs. We build brands, experiences, and digital solutions that drive measurable business growth."
+          description="We do not just create designs. We build brands, experiences, and digital solutions that drive measurable business growth."
         />
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
@@ -60,12 +63,13 @@ export function AboutSection() {
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
             </div>
-            <div className="absolute -bottom-6 -right-4 lg:right-6 glass rounded-2xl p-5 shadow-xl">
+            <div className="absolute -bottom-6 -right-4 lg:right-6 glass rounded-2xl p-5 shadow-xl backdrop-blur-xl">
               <div className="flex gap-6">
                 {aboutStats.map((stat) => (
                   <div key={stat.label} className="text-center">
-                    <p className="font-display text-2xl font-bold text-primary">{stat.value}</p>
+                    <p className="font-display text-2xl font-bold text-gradient-accent">{stat.value}</p>
                     <p className="text-xs text-muted-foreground">{stat.label}</p>
                   </div>
                 ))}
@@ -81,9 +85,11 @@ export function AboutSection() {
             transition={defaultTransition}
             className="space-y-8"
           >
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <Target className="w-5 h-5 text-primary" />
+            <div className="card-glass p-6 lg:p-8 rounded-2xl">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Target className="w-5 h-5 text-primary" />
+                </div>
                 <h3 className="font-display text-xl font-semibold text-foreground">Our Mission</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
@@ -92,9 +98,11 @@ export function AboutSection() {
               </p>
             </div>
 
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <Eye className="w-5 h-5 text-secondary" />
+            <div className="card-glass p-6 lg:p-8 rounded-2xl">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center">
+                  <Eye className="w-5 h-5 text-secondary" />
+                </div>
                 <h3 className="font-display text-xl font-semibold text-foreground">Our Vision</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
@@ -114,15 +122,27 @@ export function AboutSection() {
                     viewport={viewportOnce}
                     variants={fadeUp}
                     transition={{ ...defaultTransition, delay: i * 0.08 }}
-                    className="p-4 rounded-xl bg-card border border-border hover:border-primary/20 transition-colors"
+                    className="card-premium p-4 rounded-xl hover:border-primary/20 transition-all"
                   >
-                    <value.icon className="w-5 h-5 text-primary mb-2" />
+                    <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
+                      <value.icon className="w-4 h-4 text-primary" />
+                    </div>
                     <p className="font-medium text-foreground text-sm">{value.title}</p>
                     <p className="text-xs text-muted-foreground mt-1">{value.description}</p>
                   </motion.div>
                 ))}
               </div>
             </div>
+
+            <Link href="/about">
+              <Button
+                variant="outline"
+                className="rounded-xl gap-2 border-primary/20 hover:border-primary/40 transition-all"
+              >
+                Learn More About Us
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
 
@@ -145,8 +165,9 @@ export function AboutSection() {
                 viewport={viewportOnce}
                 variants={fadeUp}
                 transition={{ ...defaultTransition, delay: i * 0.1 }}
-                className="relative p-6 rounded-2xl card-premium"
+                className="relative card-premium p-6 rounded-2xl overflow-hidden group"
               >
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-brand" />
                 <span className="font-display text-3xl font-bold text-gradient-accent">{item.year}</span>
                 <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{item.event}</p>
                 {i < timeline.length - 1 && (
