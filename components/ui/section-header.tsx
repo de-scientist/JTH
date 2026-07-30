@@ -28,19 +28,19 @@ export function SectionHeader({
       transition={defaultTransition}
       className={cn(
         'mb-14 lg:mb-16',
-        align === 'center' ? 'text-center mx-auto max-w-3xl' : 'text-left max-w-2xl',
+        align === 'center' ? 'text-center mx-auto max-w-4xl' : 'text-left max-w-2xl',
         className
       )}
     >
-      <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-5">
+      <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
         <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
         {badge}
       </span>
-      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance tracking-tight">
+      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 text-balance tracking-tight leading-[1.1]">
         {title}
       </h2>
       {description && (
-        <p className="text-muted-foreground text-lg leading-relaxed text-pretty">
+        <p className="text-muted-foreground text-lg lg:text-xl leading-relaxed text-pretty max-w-3xl mx-auto">
           {description}
         </p>
       )}

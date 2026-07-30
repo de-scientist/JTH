@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { SectionHeader } from '@/components/ui/section-header'
 import testimonials from '@/data/testimonials.json'
 import { fadeUp, defaultTransition, viewportOnce } from '@/lib/animations'
+import { cn } from '@/lib/utils'
 
 function ClientAvatar({ name }: { name: string }) {
   const initials = name
