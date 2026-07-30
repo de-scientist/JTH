@@ -3,6 +3,11 @@ export const fadeUp = {
   visible: { opacity: 1, y: 0 },
 }
 
+export const fadeDown = {
+  hidden: { opacity: 0, y: -24 },
+  visible: { opacity: 1, y: 0 },
+}
+
 export const fadeIn = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
@@ -15,21 +20,40 @@ export const staggerContainer = {
   },
 }
 
+export const staggerSlow = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+  },
+}
+
 export const scaleIn = {
   hidden: { opacity: 0, scale: 0.95 },
   visible: { opacity: 1, scale: 1 },
 }
 
+export const scaleInLight = {
+  hidden: { opacity: 0, scale: 0.98 },
+  visible: { opacity: 1, scale: 1 },
+}
+
 export const slideInRight = {
-  hidden: { opacity: 0, x: 40 },
+  hidden: { opacity: 0, x: 60 },
   visible: { opacity: 1, x: 0 },
 }
 
 export const slideInLeft = {
-  hidden: { opacity: 0, x: -40 },
+  hidden: { opacity: 0, x: -60 },
   visible: { opacity: 1, x: 0 },
 }
 
-export const defaultTransition = { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const }
+export const slideUp = {
+  hidden: { opacity: 0, y: 60 },
+  visible: { opacity: 1, y: 0 },
+}
+
+export const defaultTransition = { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }
+
+export const springTransition = { type: 'spring' as const, stiffness: 100, damping: 20 }
 
 export const viewportOnce = { once: true, margin: '-80px' as const }
