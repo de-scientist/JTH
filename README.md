@@ -506,3 +506,19 @@ A GitHub Actions workflow is configured at `.github/workflows/ci.yml` for automa
 - Ensure new components are accessible (ARIA attributes, keyboard navigation, semantic HTML)
 - Run `pnpm lint` before committing to catch code quality issues
 - Test responsive behavior across mobile, tablet, and desktop breakpoints
+
+## 📬 Contact
+
+Mark Kinyanjui Gitau
+
+Website:
+https://jthgraphixproduction.com
+
+Portfolio:
+https://descientist.vercel.app
+
+Email:
+info@jthgraphixproduction.com
+
+GitHub:
+https://github.com/yourusername  
