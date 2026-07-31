@@ -435,6 +435,21 @@ The website was designed around five principles:
 
 Every component exists to improve communication rather than distract from it.
 
+## 💡 Why this Project?
+
+JTH Graphix Production needed more than a brochure website.
+
+The goal was to create a platform that:
+
+- generates leads
+- showcases creative work
+- markets services
+- supports future online learning
+- scales without a backend
+- remains easy to update through JSON content
+
+This project demonstrates how modern frontend technologies can deliver a premium business website without the complexity of a traditional CMS.
+
 **Build settings (auto-detected):**
 - Framework: Next.js
 - Build command: `next build`
