@@ -461,6 +461,17 @@ This project demonstrates how modern frontend technologies can deliver a premium
 - Static Generation
 - Modular Architecture
 
+## 🚀 Roadmap
+
+- [ ] Admin Dashboard
+- [ ] CMS Integration
+- [ ] AI Chat Assistant
+- [ ] Payment Integration
+- [ ] Booking System
+- [ ] Email Automation
+- [ ] Analytics Dashboard
+- [ ] Client Portal
+
 **Build settings (auto-detected):**
 - Framework: Next.js
 - Build command: `next build`
