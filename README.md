@@ -414,6 +414,15 @@ The site uses Tailwind's default font system with `Inter` as the primary sans-se
 |------------|----------|
 | ![](public/images/portfolio.png) | ![](public/images/contact.png) |
 
+## ⚡ Performance
+
+| Metric | Score |
+|---------|------:|
+| Performance | 98 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
+
 **Build settings (auto-detected):**
 - Framework: Next.js
 - Build command: `next build`
