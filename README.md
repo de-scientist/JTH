@@ -9,7 +9,17 @@
 [![pnpm](https://img.shields.io/badge/Package_Manager-pnpm-blue?logo=pnpm&logoColor=white)](https://pnpm.io)
 [![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com)
 
-A **production-ready portfolio and business website** for **JTH Graphix Production**, a Nairobi-based creative agency specializing in graphic design, branding, digital marketing, web design, and creative skills training. The site serves as a full marketing and lead-generation platform.
+<p align="center">
+  <img src="public/images/github-banner.png" alt="JTH Graphix Production Banner" />
+</p>
+
+<h1 align="center">
+JTH Graphix Production
+</h1>
+
+<p align="center">
+Creative Agency • Branding • Web Design • Digital Marketing • Training
+</p>
 
 ---
 
