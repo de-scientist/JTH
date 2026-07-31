@@ -397,6 +397,13 @@ The site uses Tailwind's default font system with `Inter` as the primary sans-se
 3. Vercel automatically detects Next.js and uses the correct build settings
 4. Environment variables (if any) can be configured in the Vercel dashboard
 
+## 🌐 Live Website
+
+| Version | Link |
+|----------|------|
+| Production | https://jthgraphixproduction.com |
+| Preview | https://your-vercel-url.vercel.app |
+
 **Build settings (auto-detected):**
 - Framework: Next.js
 - Build command: `next build`
