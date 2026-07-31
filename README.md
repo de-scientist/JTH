@@ -404,6 +404,16 @@ The site uses Tailwind's default font system with `Inter` as the primary sans-se
 | Production | https://jthgraphixproduction.com |
 | Preview | https://your-vercel-url.vercel.app |
 
+## 📸 Preview
+
+| Home | Services |
+|------|----------|
+| ![](public/images/home.png) | ![](public/images/services.png) |
+
+| Portfolio | Contact |
+|------------|----------|
+| ![](public/images/portfolio.png) | ![](public/images/contact.png) |
+
 **Build settings (auto-detected):**
 - Framework: Next.js
 - Build command: `next build`
