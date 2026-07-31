@@ -522,3 +522,19 @@ info@jthgraphixproduction.com
 
 GitHub:
 https://github.com/yourusername  
+
+---
+
+<div align="center">
+
+# Built with ❤️
+
+by
+
+## Mark Kinyanjui Gitau
+
+*"Learn. Earn. Return. Iterate."*
+
+⭐ If you enjoyed this project, consider starring the repository.
+
+</div>
