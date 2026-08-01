@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { ThemeToggle } from '@/components/theme-toggle'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
@@ -148,6 +149,7 @@ export function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
+            <ThemeToggle />
             <Button
               asChild
               className="bg-gradient-brand hover:opacity-90 text-white shadow-lg shadow-primary/25 rounded-xl px-6 h-11 font-medium transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
