@@ -22,8 +22,6 @@ const themeOptions = [
   { value: 'system', label: 'System', icon: Laptop },
 ] as const
 
-type ThemeValue = (typeof themeOptions)[number]['value']
-
 const iconTransition = {
   duration: 0.3,
   ease: [0.22, 1, 0.36, 1] as const,
