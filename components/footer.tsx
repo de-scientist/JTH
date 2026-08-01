@@ -163,7 +163,7 @@ export function Footer() {
               <li>
                 <div className="flex items-center gap-3 text-sm text-white/60">
                   <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center shrink-0">
-                    <MapPin className="w-4 h-4 text-secondary" />
+                    <MapPin className="w-4 h-4 text-footer-accent" />
                   </div>
                   Nairobi, Kenya
                 </div>
@@ -178,8 +178,8 @@ export function Footer() {
             </p>
             {subscribed ? (
               <div className="flex items-center gap-3 p-4 rounded-xl bg-white/8">
-                <Send className="w-5 h-5 text-secondary" />
-                <p className="text-sm text-secondary font-medium">Thank you for subscribing!</p>
+                <Send className="w-5 h-5 text-footer-accent" />
+                <p className="text-sm text-footer-accent font-medium">Thank you for subscribing!</p>
               </div>
             ) : (
               <form onSubmit={handleNewsletter} className="space-y-3">
@@ -189,12 +189,12 @@ export function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="bg-white/8 border-white/15 text-white placeholder:text-white/40 h-11 rounded-xl focus:border-primary/50 transition-colors"
+                  className="bg-white/8 border-white/15 text-white placeholder:text-white/40 h-11 rounded-xl focus:border-footer-accent/60 transition-colors"
                   aria-label="Email address for newsletter"
                 />
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-brand hover:opacity-90 text-white rounded-xl h-11 gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                  className="w-full bg-footer-accent hover:bg-footer-accent-hover text-white rounded-xl h-11 gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-footer-accent/20"
                 >
                   Subscribe
                   <ArrowRight className="w-4 h-4" />
