@@ -11,7 +11,7 @@ export function WhatsAppButton() {
     <div className="fixed bottom-6 right-6 z-50">
       <a
        href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
-  "Hello JTH Graphix Production! I would like to make an order. Kindly guide me on the pricing, requirements, and next steps."
+  "Hello JTH Graphix Production. I would like to request a custom quotation. Please guide me on the requirements and next steps."
 )}`}
         target="_blank"
         rel="noopener noreferrer"

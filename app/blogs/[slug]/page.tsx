@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import blogPosts from '@/data/blog.json'
+import type { BlogPost } from '@/lib/blog-types'
 import { BlogArticle } from '@/components/blog/blog-article'
 import { BlogNewsletter } from '@/components/blog/blog-newsletter'
+
+const posts = blogPosts as BlogPost[]
 
 const BASE_URL = 'https://jthgraphixproduction.com'
 
@@ -11,12 +14,12 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }))
+  return posts.map((post) => ({ slug: post.slug }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
-  const post = blogPosts.find((p) => p.slug === slug)
+  const post = posts.find((p) => p.slug === slug)
 
   if (!post) {
     return {
@@ -64,20 +67,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params
-  const post = blogPosts.find((p) => p.slug === slug)
+  const post = posts.find((p) => p.slug === slug)
 
   if (!post) {
     notFound()
   }
 
-  const sortedPosts = [...blogPosts].sort(
+  const sortedPosts = [...posts].sort(
     (a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
   )
   const currentIndex = sortedPosts.findIndex((p) => p.slug === post.slug)
 
   const relatedPosts = post.relatedPosts
-    .map((relatedSlug) => blogPosts.find((p) => p.slug === relatedSlug))
-    .filter((p): p is (typeof blogPosts)[number] => Boolean(p))
+    .map((relatedSlug) => posts.find((p) => p.slug === relatedSlug))
+    .filter((p): p is BlogPost => Boolean(p))
 
   const prevPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null
   const nextPost = currentIndex >= 0 && currentIndex < sortedPosts.length - 1 ? sortedPosts[currentIndex + 1] : null

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import blogPosts from '@/data/blog.json'
+import type { BlogPost } from '@/lib/blog-types'
 import { BlogBrowser } from '@/components/blog/blog-browser'
 
 export const metadata: Metadata = {
@@ -22,5 +23,5 @@ export const metadata: Metadata = {
 }
 
 export default function BlogsPage() {
-  return <BlogBrowser posts={blogPosts} />
+  return <BlogBrowser posts={blogPosts as BlogPost[]} />
 }
