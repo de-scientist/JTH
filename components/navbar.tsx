@@ -212,6 +212,12 @@ export function Navbar() {
                   transition={{ delay: 0.3 }}
                   className="pt-6 mt-4 border-t border-border"
                 >
+                  <div className="flex items-center justify-between gap-4 px-2 mb-4">
+                    <span className="text-sm font-medium text-muted-foreground">
+                      Appearance
+                    </span>
+                    <ThemeToggle />
+                  </div>
                   <Button asChild className="w-full bg-gradient-brand text-white h-14 rounded-2xl text-base font-semibold">
                     <Link href="/contact">Start Your Project</Link>
                   </Button>

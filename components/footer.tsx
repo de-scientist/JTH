@@ -55,10 +55,11 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-foreground text-background relative overflow-hidden">
+    <footer className="bg-footer-bg text-footer-foreground relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-dark pointer-events-none" />
       <div className="absolute inset-0 bg-grid opacity-[0.03] pointer-events-none" />
-      <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute -top-24 -right-24 w-[500px] h-[500px] bg-footer-accent/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-footer-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
@@ -91,7 +92,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded-xl bg-white/8 text-white/60 hover:bg-primary hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                  className="p-2.5 rounded-xl bg-white/8 text-white/60 hover:bg-footer-accent hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-footer-accent/20"
                   aria-label={`Follow us on ${social.label}`}
                 >
                   <social.icon />
