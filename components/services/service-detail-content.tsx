@@ -126,18 +126,20 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
               <div className="flex flex-wrap gap-4 mt-8">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 gap-2">
                   <Link href="/contact">
-                    Get a Quote
+                    Request a Custom Quote
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="gap-2">
-                  <a 
-                    href={`https://wa.me/${siteConfig.whatsapp}?text=Hello!%20I'm%20interested%20in%20your%20${encodeURIComponent(service.title)}%20service.`}
+                  <a
+                    href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
+                      `Hello JTH Graphix Production. I would like to request a custom quotation for your ${service.title} service.`
+                    )}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <MessageCircle className="w-4 h-4" />
-                    WhatsApp Us
+                    Request via WhatsApp
                   </a>
                 </Button>
               </div>
@@ -337,12 +339,12 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
               Ready to Get Started?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Let&apos;s discuss your {service.title.toLowerCase()} project and create something amazing together.
+              Request a custom quote for your {service.title.toLowerCase()} project and let&apos;s create something amazing together.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 gap-2 h-12 px-8">
                 <Link href="/contact">
-                  Start Your Project
+                  Request a Custom Quote
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>

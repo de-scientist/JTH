@@ -97,11 +97,12 @@ export function ServicesGrid() {
                       <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                         {service.title}
                       </h3>
-                      {service.priceLabel && (
-                        <div className="text-sm text-muted-foreground mb-3">
-                          <span className="font-medium">{service.priceLabel}</span>
-                        </div>
-                      )}
+                      <div className="text-sm text-muted-foreground mb-3">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">
+                          <Sparkles className="w-3.5 h-3.5" />
+                          Custom Quote
+                        </span>
+                      </div>
                       <p className="text-muted-foreground mb-4 line-clamp-2">
                         {service.shortDescription}
                       </p>
