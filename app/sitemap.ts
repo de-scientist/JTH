@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import services from '@/data/services.json'
+import blogPosts from '@/data/blog.json'
 
 const BASE_URL = 'https://jthgraphixproduction.com'
 
@@ -9,6 +10,7 @@ const staticRoutes: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/services', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/services-pricing', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/portfolio', priority: 0.8, changeFrequency: 'weekly' },
+  { path: '/blogs', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/testimonials', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/contact', priority: 0.6, changeFrequency: 'monthly' },
 ]
@@ -28,5 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticEntries, ...serviceEntries]
+  const blogEntries = blogPosts.map((post) => ({
+    url: `${BASE_URL}/blogs/${post.slug}`,
+    lastModified: new Date(post.updatedDate),
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  return [...staticEntries, ...serviceEntries, ...blogEntries]
 }
