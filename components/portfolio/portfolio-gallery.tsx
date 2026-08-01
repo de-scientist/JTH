@@ -12,13 +12,13 @@ import siteConfig from '@/data/site-config.json'
 const categories = ['All', 'Branding', 'Flyers', 'Posters', 'Logos', 'Social Media', 'Print', 'Web']
 
 const categoryColors: Record<string, string> = {
-  'Branding': 'bg-blue-500/10 text-blue-500',
-  'Flyers': 'bg-green-500/10 text-green-500',
-  'Posters': 'bg-purple-500/10 text-purple-500',
-  'Logos': 'bg-amber-500/10 text-amber-500',
-  'Social Media': 'bg-pink-500/10 text-pink-500',
-  'Print': 'bg-cyan-500/10 text-cyan-500',
-  'Web': 'bg-indigo-500/10 text-indigo-500',
+  'Branding': 'bg-primary/10 text-primary',
+  'Flyers': 'bg-brand-light/15 text-primary',
+  'Posters': 'bg-brand-lighter/20 text-primary',
+  'Logos': 'bg-primary/15 text-primary',
+  'Social Media': 'bg-brand-light/10 text-primary',
+  'Print': 'bg-brand-lighter/15 text-primary',
+  'Web': 'bg-brand-light/15 text-primary',
 }
 
 export function PortfolioGallery() {

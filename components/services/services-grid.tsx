@@ -22,12 +22,12 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 }
 
 const categoryColors: Record<string, string> = {
-  'Design': 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
-  'Digital': 'bg-blue-500/10 text-blue-600 dark:text-blue-400',
-  'Branding': 'bg-amber-500/10 text-amber-600 dark:text-amber-400',
-  'Web': 'bg-sky-500/10 text-sky-600 dark:text-sky-400',
-  'Training': 'bg-violet-500/10 text-violet-600 dark:text-violet-400',
-  'Print': 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
+  'Design': 'bg-primary/10 text-primary',
+  'Digital': 'bg-brand-light/15 text-primary',
+  'Branding': 'bg-primary/15 text-primary',
+  'Web': 'bg-brand-lighter/20 text-primary',
+  'Training': 'bg-brand-light/10 text-primary',
+  'Print': 'bg-primary/10 text-primary',
 }
 
 export function ServicesGrid() {
