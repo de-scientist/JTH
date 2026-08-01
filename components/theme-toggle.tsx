@@ -81,7 +81,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
       <DropdownMenuContent
         align="end"
         sideOffset={10}
-        className="w-60 rounded-2xl border border-border/70 bg-popover/90 p-2 shadow-2xl shadow-primary/10 backdrop-blur-2xl"
+        className="w-60 overflow-hidden rounded-2xl border border-border/70 bg-popover/90 p-2 shadow-2xl shadow-primary/10 backdrop-blur-2xl"
       >
         <DropdownMenuLabel className="px-2.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
           Appearance
