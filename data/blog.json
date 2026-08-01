@@ -1,26 +1,302 @@
 [
   {
-    "id": "1",
+    "id": "branding-mistakes-that-cost-growth",
+    "slug": "branding-mistakes-that-cost-growth",
     "title": "5 Branding Mistakes That Cost Businesses Growth",
-    "excerpt": "Learn how inconsistent branding silently erodes trust and what to fix first.",
+    "subtitle": "Inconsistent branding silently erodes trust. Learn the five most expensive mistakes and exactly what to fix first.",
     "category": "Branding",
-    "date": "2026-05-12",
-    "image": "/images/blog/branding-tips.svg"
+    "tags": ["branding", "brand identity", "logo", "business growth", "marketing"],
+    "featuredImage": "/images/blog/branding-tips.svg",
+    "gallery": ["/images/blog/branding-tips.svg"],
+    "author": {
+      "name": "JTH Graphix Production Team",
+      "avatar": "/images/logo.png"
+    },
+    "publishDate": "2026-05-12",
+    "updatedDate": "2026-05-12",
+    "readingTime": 6,
+    "excerpt": "Learn how inconsistent branding silently erodes trust and what to fix first.",
+    "featured": true,
+    "seoTitle": "5 Branding Mistakes That Cost Businesses Growth | JTH Blog",
+    "metaDescription": "Discover the five branding mistakes that quietly cost businesses growth and trust, plus practical fixes to build a consistent, credible brand.",
+    "keywords": "branding mistakes, brand consistency, logo design, brand identity, business growth",
+    "content": [
+      {
+        "type": "heading",
+        "id": "introduction",
+        "text": "Introduction"
+      },
+      {
+        "type": "paragraph",
+        "text": "Your brand is the sum of every impression people have of your business. A logo, a color palette, a font choice — on their own they seem small. But when they clash, change, or disappear between touchpoints, something bigger happens: customers quietly lose trust."
+      },
+      {
+        "type": "paragraph",
+        "text": "In this article we break down the five branding mistakes that cost businesses real growth — and the practical steps you can take to fix each one, starting today."
+      },
+      {
+        "type": "heading",
+        "id": "mistake-1",
+        "text": "Mistake 1: Inconsistent Visual Identity"
+      },
+      {
+        "type": "paragraph",
+        "text": "Using different colors, fonts, and logo variations across your flyers, website, social media, and print materials fragments your brand. Every inconsistency forces customers to re-learn who you are — and most won't bother."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Create a simple brand guideline document",
+          "Standardize your primary and secondary colors",
+          "Use the same typography everywhere",
+          "Keep one approved logo and its clear-space rules"
+        ]
+      },
+      {
+        "type": "heading",
+        "id": "mistake-2",
+        "text": "Mistake 2: Designing for Trends, Not Strategy"
+      },
+      {
+        "type": "paragraph",
+        "text": "Trendy designs date fast. A brand built around a passing fad must be redesigned every year, which is expensive and confusing. Strategic branding — built on your audience, positioning, and values — stays relevant for a decade."
+      },
+      {
+        "type": "quote",
+        "text": "A brand is not a logo. A brand is a promise kept consistently over time."
+      },
+      {
+        "type": "heading",
+        "id": "mistake-3",
+        "text": "Mistake 3: Ignoring Your Target Audience"
+      },
+      {
+        "type": "paragraph",
+        "text": "Designing what you like instead of what your audience responds to is one of the fastest ways to miss the mark. Visual language should speak the dialect of the people you want to serve — their colors, their tone, their context."
+      },
+      {
+        "type": "heading",
+        "id": "mistake-4",
+        "text": "Mistake 4: Cheap-Looking Diy Branding"
+      },
+      {
+        "type": "paragraph",
+        "text": "Template logos and generic fonts signal that you don't invest in your own credibility. In a crowded market, presentation is often the only differentiator a customer sees before they decide to engage with you."
+      },
+      {
+        "type": "heading",
+        "id": "mistake-5",
+        "text": "Mistake 5: No Brand Guidelines"
+      },
+      {
+        "type": "paragraph",
+        "text": "Without guidelines, anyone who touches your brand — staff, freelancers, printers — will improvise. That improvisation becomes inconsistency, and inconsistency becomes invisible but expensive brand decay."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Logo usage and clear space",
+          "Color codes (HEX, CMYK, RGB)",
+          "Typography hierarchy",
+          "Tone of voice examples",
+          "Do's and don'ts for imagery"
+        ]
+      },
+      {
+        "type": "heading",
+        "id": "conclusion",
+        "text": "Start With the Audit"
+      },
+      {
+        "type": "paragraph",
+        "text": "Audit your brand today. Collect every asset you use, compare them side by side, and note every place they disagree. Then fix the gaps one by one — starting with a consistent logo and color system."
+      },
+      {
+        "type": "paragraph",
+        "text": "At JTH Graphix Production we help businesses build and enforce consistent visual identities. If you'd like a professional review of your brand, reach out — we'll show you exactly where the leaks are and how to fix them."
+      }
+    ],
+    "relatedPosts": ["how-strategic-design-drives-roi"]
   },
   {
-    "id": "2",
+    "id": "how-strategic-design-drives-roi",
+    "slug": "how-strategic-design-drives-roi",
     "title": "How Strategic Design Drives Measurable ROI",
-    "excerpt": "Why design isn't decoration — it's a business lever for conversion and retention.",
+    "subtitle": "Design is not decoration — it's a business lever for conversion, retention, and growth.",
     "category": "Strategy",
-    "date": "2026-04-28",
-    "image": "/images/blog/design-roi.svg"
+    "tags": ["design", "roi", "conversion", "brand strategy", "marketing"],
+    "featuredImage": "/images/blog/design-roi.svg",
+    "gallery": ["/images/blog/design-roi.svg"],
+    "author": {
+      "name": "JTH Graphix Production Team",
+      "avatar": "/images/logo.png"
+    },
+    "publishDate": "2026-04-28",
+    "updatedDate": "2026-04-28",
+    "readingTime": 7,
+    "excerpt": "Why design isn't decoration — it's a business lever for conversion and retention.",
+    "featured": false,
+    "seoTitle": "How Strategic Design Drives Measurable ROI | JTH Blog",
+    "metaDescription": "Understand how strategic design improves conversion, retention, and revenue — and how to measure the ROI of your design investment.",
+    "keywords": "design roi, strategic design, conversion rate, brand investment, marketing ROI",
+    "content": [
+      {
+        "type": "heading",
+        "id": "introduction",
+        "text": "Introduction"
+      },
+      {
+        "type": "paragraph",
+        "text": "Many businesses treat design as a last-mile expense — something you 'polish' after the strategy is set. The most successful brands treat design as an investment with measurable returns. Here's how design actually moves business numbers."
+      },
+      {
+        "type": "heading",
+        "id": "first-impressions",
+        "text": "First Impressions Are Conversion Events"
+      },
+      {
+        "type": "paragraph",
+        "text": "Visitors form a judgment about your brand in a matter of seconds. A clean, professional visual experience makes that judgment positive — which directly raises the likelihood that a visitor becomes a lead, and a lead becomes a customer."
+      },
+      {
+        "type": "heading",
+        "id": "clarity-sells",
+        "text": "Clarity Sells More Than Decoration"
+      },
+      {
+        "type": "paragraph",
+        "text": "Strategic design prioritizes clarity: a clear headline, an obvious call-to-action, and a visual hierarchy that guides the eye. When users understand what you offer and what to do next, conversion rates climb."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Reduce cognitive load with clear hierarchy",
+          "Place one primary action per screen or page",
+          "Use contrast to draw attention to key offers",
+          "Remove elements that don't serve a goal"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Good design is obvious. Great design is transparent."
+      },
+      {
+        "type": "heading",
+        "id": "retention",
+        "text": "Consistency Builds Retention"
+      },
+      {
+        "type": "paragraph",
+        "text": "Consistent branding across email, social, and product surfaces makes your business feel reliable. Reliability breeds trust, and trust is the foundation of repeat customers and referrals — both of which are cheaper than acquisition."
+      },
+      {
+        "type": "heading",
+        "id": "measuring-roi",
+        "text": "How to Measure Design ROI"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Conversion rate before and after a redesign",
+          "Time on page and engagement metrics",
+          "Brand recall and recognition surveys",
+          "Customer acquisition cost trends",
+          "Repeat-purchase and retention rates"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Track these numbers for a quarter after any design investment. The results are almost always a clearer picture of your brand's real performance — and the business case for investing more in strategy-led design."
+      }
+    ],
+    "relatedPosts": ["building-a-website-that-converts"]
   },
   {
-    "id": "3",
+    "id": "building-a-website-that-converts",
+    "slug": "building-a-website-that-converts",
     "title": "Building a Website That Converts in 2026",
-    "excerpt": "Essential UX patterns and visual hierarchy principles for high-performing sites.",
+    "subtitle": "Essential UX patterns and visual hierarchy principles for high-performing sites.",
     "category": "Web Design",
-    "date": "2026-04-15",
-    "image": "/images/blog/web-convert.svg"
+    "tags": ["web design", "ux", "conversion", "website", "ui"],
+    "featuredImage": "/images/blog/web-convert.svg",
+    "gallery": ["/images/blog/web-convert.svg"],
+    "author": {
+      "name": "JTH Graphix Production Team",
+      "avatar": "/images/logo.png"
+    },
+    "publishDate": "2026-04-15",
+    "updatedDate": "2026-04-15",
+    "readingTime": 8,
+    "excerpt": "Essential UX patterns and visual hierarchy principles for high-performing sites.",
+    "featured": false,
+    "seoTitle": "Building a Website That Converts in 2026 | JTH Blog",
+    "metaDescription": "Learn the essential UX patterns and visual hierarchy principles behind websites that convert visitors into customers in 2026.",
+    "keywords": "website design, ux patterns, conversion optimization, visual hierarchy, landing page",
+    "content": [
+      {
+        "type": "heading",
+        "id": "introduction",
+        "text": "Introduction"
+      },
+      {
+        "type": "paragraph",
+        "text": "A beautiful website that doesn't convert is just an expensive brochure. In 2026, users expect speed, clarity, and instant answers. Here are the patterns that separate high-performing websites from the rest."
+      },
+      {
+        "type": "heading",
+        "id": "speed",
+        "text": "Speed Is a Feature"
+      },
+      {
+        "type": "paragraph",
+        "text": "Every extra second of load time costs you visitors. Compress images, lazy-load below-the-fold content, and keep your core layout lightweight. Fast sites rank better and convert better."
+      },
+      {
+        "type": "heading",
+        "id": "visual-hierarchy",
+        "text": "Design a Clear Visual Hierarchy"
+      },
+      {
+        "type": "paragraph",
+        "text": "Structure every page around one primary goal. The headline states the value, supporting visuals build trust, and a single, unmissable call-to-action closes the loop. The eye should never be confused about what to do next."
+      },
+      {
+        "type": "list",
+        "items": [
+          "One hero message per page",
+          "One primary CTA per viewport",
+          "Scannable headings and short paragraphs",
+          "Whitespace that separates ideas"
+        ]
+      },
+      {
+        "type": "heading",
+        "id": "social-proof",
+        "text": "Use Social Proof Early"
+      },
+      {
+        "type": "paragraph",
+        "text": "Testimonials, client logos, and real results reduce the risk a visitor feels before they commit. Place social proof near your primary call-to-action, not buried in a footer."
+      },
+      {
+        "type": "heading",
+        "id": "mobile-first",
+        "text": "Design Mobile-First"
+      },
+      {
+        "type": "paragraph",
+        "text": "Most of your traffic is mobile. Design for the smallest screen first, then scale up. Test tap targets, thumb reach, and readability before you worry about desktop polish."
+      },
+      {
+        "type": "heading",
+        "id": "conclusion",
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "Conversion-friendly design isn't complicated — it's disciplined. Focus on speed, clarity, one goal per page, and proof. If your website needs a professional audit or redesign, the JTH team builds conversion-focused websites backed by strategy and strong visual design."
+      }
+    ],
+    "relatedPosts": ["how-strategic-design-drives-roi"]
   }
 ]
