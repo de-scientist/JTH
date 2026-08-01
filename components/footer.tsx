@@ -108,7 +108,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 hover:text-secondary transition-colors duration-300 inline-flex items-center gap-2 group"
+                    className="text-sm text-white/60 hover:text-footer-accent transition-colors duration-300 inline-flex items-center gap-2 group"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
                     {link.label}
@@ -125,7 +125,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 hover:text-secondary transition-colors duration-300 inline-flex items-center gap-2 group"
+                    className="text-sm text-white/60 hover:text-footer-accent transition-colors duration-300 inline-flex items-center gap-2 group"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
                     {link.label}
@@ -143,8 +143,8 @@ export function Footer() {
                   href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors group"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center group-hover:bg-primary transition-colors">
-                    <Phone className="w-4 h-4 text-secondary" />
+                  <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center group-hover:bg-footer-accent transition-colors">
+                    <Phone className="w-4 h-4 text-footer-accent" />
                   </div>
                   {siteConfig.phone}
                 </a>
@@ -154,8 +154,8 @@ export function Footer() {
                   href={`mailto:${siteConfig.email}`}
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors group"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center group-hover:bg-primary transition-colors">
-                    <Mail className="w-4 h-4 text-secondary" />
+                  <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center group-hover:bg-footer-accent transition-colors">
+                    <Mail className="w-4 h-4 text-footer-accent" />
                   </div>
                   {siteConfig.email}
                 </a>
