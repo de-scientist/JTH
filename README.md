@@ -1,5 +1,6 @@
 # JTH Graphix Production — Portfolio Website
 
+
 [![Version](https://img.shields.io/badge/Version-0.1.0-blue)](https://github.com)
 [![Next.js](https://img.shields.io/badge/Next.js-16.2.0-black?logo=next.js&logoColor=white)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19.2.4-61DAFB?logo=react&logoColor=white)](https://react.dev)
