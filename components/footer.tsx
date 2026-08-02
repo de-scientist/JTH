@@ -76,9 +76,9 @@ export function Footer() {
               </div>
               <div>
                 <span className="text-lg font-display font-bold text-white">
-                  JTH Graphix
+                  JTH GraphixProduction
                 </span>
-                <p className="text-xs text-white/50 tracking-wider uppercase">Production</p>
+                <p className="text-xs text-white/50 tracking-wider uppercase"> Creative Solutions</p>
               </div>
             </Link>
             <p className="text-white/60 mb-6 max-w-sm leading-relaxed text-sm">
