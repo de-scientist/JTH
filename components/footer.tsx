@@ -342,7 +342,7 @@ export function Footer() {
           </nav>
           <p className="text-sm text-white/40 text-center lg:text-right">
             Designed &amp; Developed by{' '}
-            <span className="text-secondary font-medium">Mark Kinyanjui Gitau</span>
+            <span className="text-secondary font-medium">JTH Graphix Production</span>
           </p>
         </div>
       </div>
