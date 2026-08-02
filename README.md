@@ -519,7 +519,7 @@ Portfolio:
 https://descientist.vercel.app
 
 Email:
-info@jthgraphixproduction.com
+jthgraphixproduction@gmail.com
 
 GitHub:
 https://github.com/yourusername  
