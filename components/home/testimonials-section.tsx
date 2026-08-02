@@ -69,11 +69,11 @@ export function TestimonialsSection() {
           badge="Client Success Stories"
           title={
             <>
-              Trusted by Brands{' '}
-              <span className="text-gradient-accent">Worldwide</span>
+              Why Businesses{' '}
+              <span className="text-gradient-accent">Trust JTH</span>
             </>
           }
-          description="Real stories from businesses and organizations we have helped grow through strategic design and branding."
+          description="Real results from churches, startups, restaurants, NGOs and established companies across Kenya who grew their brands with our design and branding services."
         />
 
         <motion.div
@@ -115,9 +115,19 @@ export function TestimonialsSection() {
                         ))}
                       </div>
                     </div>
-                    <div className="hidden md:block ml-auto">
-                      <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-                        <Quote className="w-7 h-7 text-primary/40" />
+                    <div className="hidden md:flex flex-col gap-2 ml-auto">
+                      <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary/10">
+                        <span className="text-[11px] font-semibold text-primary">
+                          {testimonials[current].industry}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-secondary/10">
+                        <span className="text-[11px] font-semibold text-secondary">
+                          {testimonials[current].project}
+                        </span>
+                      </div>
+                      <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+                        <Quote className="w-6 h-6 text-primary/40" />
                       </div>
                     </div>
                   </div>
