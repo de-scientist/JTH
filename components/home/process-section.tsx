@@ -99,11 +99,9 @@ export function ProcessSection() {
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {step.description}
                     </p>
-
-                    <div className="mt-5 flex items-center gap-2 text-sm text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <span>Learn more</span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                    </div>
+                    <p className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-primary/8 px-3 py-1.5 text-xs font-medium text-primary">
+                      {step.detail}
+                    </p>
                   </div>
                 </div>
 
