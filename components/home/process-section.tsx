@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Search, Lightbulb, PenTool, Code, Rocket, TrendingUp, ArrowRight } from 'lucide-react'
+import { Search, Compass, PenTool, Eye, Rocket, Headphones, ArrowRight } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/section-header'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 
@@ -10,31 +10,37 @@ const steps = [
     icon: Search,
     title: 'Discover',
     description: 'We learn your brand, goals, audience, and competitive landscape.',
+    detail: 'Free consultation to understand what you want to achieve.',
   },
   {
-    icon: Lightbulb,
-    title: 'Research',
-    description: 'Deep market and user research informs every strategic decision.',
+    icon: Compass,
+    title: 'Strategy',
+    description: 'We define a clear creative direction that supports your business goals.',
+    detail: 'A roadmap that keeps your brand consistent and focused.',
   },
   {
     icon: PenTool,
     title: 'Design',
     description: 'Concepts refined into stunning visuals aligned with your vision.',
+    detail: 'High-quality design tailored to your audience and industry.',
   },
   {
-    icon: Code,
-    title: 'Develop',
-    description: 'Designs brought to life with precision and performance in mind.',
+    icon: Eye,
+    title: 'Review',
+    description: 'You give feedback, we refine until every detail is perfect.',
+    detail: 'Clear revisions and honest communication at every step.',
   },
   {
     icon: Rocket,
-    title: 'Launch',
-    description: 'Seamless deployment with quality assurance at every touchpoint.',
+    title: 'Delivery',
+    description: 'Production-ready files delivered on time, in every format you need.',
+    detail: 'Print and digital files prepared to professional standards.',
   },
   {
-    icon: TrendingUp,
-    title: 'Grow',
-    description: 'Ongoing optimization to maximize impact and drive results.',
+    icon: Headphones,
+    title: 'Long-Term Support',
+    description: 'Ongoing help so your brand keeps growing and stays consistent.',
+    detail: 'We stay available long after launch for tweaks and new work.',
   },
 ]
 
@@ -47,14 +53,14 @@ export function ProcessSection() {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <SectionHeader
-          badge="Our Process"
+          badge="How We Work"
           title={
             <>
-              From Vision to{' '}
-              <span className="text-gradient">Victory</span>
+              A Simple Process.{' '}
+              <span className="text-gradient">Premium Results.</span>
             </>
           }
-          description="A proven six-step framework that transforms ideas into impactful brand experiences."
+          description="From first conversation to final delivery — here's exactly what happens when you work with JTH. No guesswork, no surprises, just a clear path to a brand you're proud of."
         />
 
         <div className="relative">
