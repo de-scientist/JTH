@@ -2,13 +2,15 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Phone, Mail, MessageCircle, Send, MapPin, Clock, Facebook, Instagram, Linkedin } from 'lucide-react'
+import { Phone, Mail, MessageCircle, Send, MapPin, Clock, Facebook, Instagram, Linkedin, MailCheck } from 'lucide-react'
+import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { FieldGroup, Field, FieldLabel } from '@/components/ui/field'
 import siteConfig from '@/data/site-config.json'
+import { buildContactMailtoUrl, openEmailClient, type ContactFormData } from '@/lib/contact'
 
 const TikTokIcon = () => (
   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -45,18 +47,109 @@ const socialLinks = [
   { href: siteConfig.socialLinks.x, icon: XIcon, label: 'X' },
 ]
 
+const initialForm: ContactFormData = {
+  fullName: '',
+  email: '',
+  phone: '',
+  company: '',
+  service: '',
+  subject: '',
+  message: '',
+}
+
+type FormErrors = Partial<Record<keyof ContactFormData, string>>
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+function validate(form: ContactFormData): FormErrors {
+  const errors: FormErrors = {}
+
+  if (!form.fullName.trim()) {
+    errors.fullName = 'Please enter your full name.'
+  }
+
+  if (!form.email.trim()) {
+    errors.email = 'Please enter your email address.'
+  } else if (!emailPattern.test(form.email.trim())) {
+    errors.email = 'Please enter a valid email address (e.g. name@example.com).'
+  }
+
+  if (!form.service) {
+    errors.service = 'Please select a service.'
+  }
+
+  if (!form.subject.trim()) {
+    errors.subject = 'Please enter a subject for your message.'
+  }
+
+  if (!form.message.trim()) {
+    errors.message = 'Please tell us a little about your project.'
+  } else if (form.message.trim().length < 10) {
+    errors.message = 'Please provide a bit more detail (at least 10 characters).'
+  }
+
+  return errors
+}
+
 export function ContactContent() {
+  const [form, setForm] = useState<ContactFormData>(initialForm)
+  const [errors, setErrors] = useState<FormErrors>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
+  const handleChange = (field: keyof ContactFormData, value: string) => {
+    setForm((prev) => ({ ...prev, [field]: value }))
+    if (errors[field]) {
+      setErrors((prev) => ({ ...prev, [field]: undefined }))
+    }
+  }
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
+    const nextErrors = validate(form)
+    setErrors(nextErrors)
+
+    if (Object.values(nextErrors).some(Boolean)) {
+      toast.error('Please fix the highlighted fields and try again.')
+      const firstInvalid = (Object.keys(nextErrors) as (keyof ContactFormData)[]).find(
+        (key) => nextErrors[key]
+      )
+      if (firstInvalid) {
+        document.getElementById(`contact-${firstInvalid}`)?.focus()
+      }
+      return
+    }
+
     setIsSubmitting(true)
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
+
+    const mailtoUrl = buildContactMailtoUrl(form)
+
+    const loadingToast = toast.loading('Opening your email application...', {
+      duration: 8000,
+    })
+
+    await new Promise((resolve) => setTimeout(resolve, 600))
+
+    openEmailClient(mailtoUrl)
+
+    toast.success('Your email draft is ready — just press send!', {
+      id: loadingToast,
+    })
+
     setIsSubmitting(false)
     setIsSubmitted(true)
   }
+
+  const resetForm = () => {
+    setForm(initialForm)
+    setErrors({})
+    setIsSubmitted(false)
+  }
+
+  const inputClasses = 'h-12'
+  const inputErrorClasses = (field: keyof ContactFormData) =>
+    errors[field] ? 'border-destructive focus-visible:border-destructive' : ''
 
   return (
     <>
@@ -107,6 +200,7 @@ export function ContactContent() {
                 <a 
                   href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
                   className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors"
+                  aria-label={`Call us on ${siteConfig.phone}`}
                 >
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <Phone className="w-6 h-6 text-primary" />
@@ -122,17 +216,10 @@ export function ContactContent() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-[#25D366]/30 transition-colors"
+                  aria-label={`Chat with us on WhatsApp at ${siteConfig.phone}`}
                 >
                   <div className="w-12 h-12 rounded-xl bg-[#25D366]/10 flex items-center justify-center">
-                    <svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  className="w-7 h-7"
-  fill="currentColor"
-  aria-hidden="true"
->
-  <path d="M12.04 2C6.58 2 2.15 6.43 2.15 11.89c0 1.93.5 3.83 1.45 5.5L2 22l4.73-1.24a9.86 9.86 0 005.31 1.55h.01c5.46 0 9.89-4.43 9.89-9.89A9.9 9.9 0 0012.04 2zm0 17.94a8.03 8.03 0 01-4.1-1.13l-.3-.18-2.81.74.75-2.73-.2-.28a8.01 8.01 0 01-1.23-4.25c0-4.43 3.6-8.03 8.03-8.03a8.04 8.04 0 018.03 8.03c0 4.43-3.6 8.03-8.03 8.03zm4.43-6.04c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12s-.62.78-.76.94c-.14.16-.28.18-.52.06-1.41-.7-2.33-1.25-3.27-2.83-.25-.43.25-.4.72-1.32.08-.15.04-.28 0-.4-.04-.12-.55-1.34-.75-1.83-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.41.06-.62.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.7 2.75 4.12 3.75 1.15.5 2.05.79 2.76 1.01.8.24 1.21.2 1.66.12.51-.1 1.53-.63 1.75-1.25.22-.62.22-1.15.15-1.25-.06-.1-.22-.16-.46-.28z"/>
-</svg>
+                    <MessageCircle className="w-6 h-6 text-[#25D366]" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">WhatsApp</p>
@@ -143,6 +230,7 @@ export function ContactContent() {
                 <a 
                   href={`mailto:${siteConfig.email}`}
                   className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors"
+                  aria-label={`Email us at ${siteConfig.email}`}
                 >
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <Mail className="w-6 h-6 text-primary" />
@@ -154,15 +242,21 @@ export function ContactContent() {
                 </a>
               </div>
 
-              {/* Additional Info */}
+              {/* Business Hours & Location */}
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Clock className="w-5 h-5 text-primary" />
-                  <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+                  <div>
+                    <p className="font-medium text-foreground">Business Hours</p>
+                    <p className="text-sm">Mon - Sat: 8:00 AM - 6:00 PM</p>
+                  </div>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <MapPin className="w-5 h-5 text-primary" />
-                  <span>Nairobi, Kenya</span>
+                  <div>
+                    <p className="font-medium text-foreground">Location</p>
+                    <p className="text-sm">Nairobi, Kenya</p>
+                  </div>
                 </div>
               </div>
 
@@ -196,22 +290,23 @@ export function ContactContent() {
             >
               <div className="bg-card rounded-3xl border border-border p-6 lg:p-8">
                 {isSubmitted ? (
-                  <div className="text-center py-12">
+                  <div className="text-center py-12" role="status" aria-live="polite">
                     <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-6">
-                      <Send className="w-8 h-8 text-green-500" />
+                      <MailCheck className="w-8 h-8 text-green-500" />
                     </div>
                     <h3 className="text-2xl font-bold text-foreground mb-2">
-                      Message Sent!
+                      Your Email Draft Is Ready!
                     </h3>
-                    <p className="text-muted-foreground mb-6">
-                      Thank you for reaching out. We&apos;ll get back to you within 24 hours.
+                    <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+                      We&apos;ve opened your email application with your message pre-filled.
+                      Just press send — we&apos;ll get back to you within 24 hours.
                     </p>
-                    <Button onClick={() => setIsSubmitted(false)} variant="outline">
+                    <Button onClick={resetForm} variant="outline">
                       Send Another Message
                     </Button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit}>
+                  <form onSubmit={handleSubmit} noValidate>
                     <h3 className="text-xl font-bold text-foreground mb-6">
                       Send us a Message
                     </h3>
@@ -219,57 +314,153 @@ export function ContactContent() {
                     <FieldGroup className="space-y-5">
                       <div className="grid md:grid-cols-2 gap-5">
                         <Field>
-                          <FieldLabel>Your Name</FieldLabel>
-                          <Input 
-                            placeholder="John Doe" 
-                            required 
-                            className="h-12"
+                          <FieldLabel htmlFor="contact-fullName">Full Name</FieldLabel>
+                          <Input
+                            id="contact-fullName"
+                            name="fullName"
+                            placeholder="John Doe"
+                            value={form.fullName}
+                            onChange={(e) => handleChange('fullName', e.target.value)}
+                            className={`${inputClasses} ${inputErrorClasses('fullName')}`}
+                            required
+                            autoComplete="name"
+                            aria-required="true"
+                            aria-invalid={Boolean(errors.fullName)}
+                            aria-describedby={errors.fullName ? 'contact-fullName-error' : undefined}
+                          />
+                          {errors.fullName && (
+                            <p id="contact-fullName-error" className="text-sm text-destructive" role="alert">
+                              {errors.fullName}
+                            </p>
+                          )}
+                        </Field>
+                        <Field>
+                          <FieldLabel htmlFor="contact-email">Email Address</FieldLabel>
+                          <Input
+                            id="contact-email"
+                            name="email"
+                            type="email"
+                            placeholder="john@example.com"
+                            value={form.email}
+                            onChange={(e) => handleChange('email', e.target.value)}
+                            className={`${inputClasses} ${inputErrorClasses('email')}`}
+                            required
+                            autoComplete="email"
+                            aria-required="true"
+                            aria-invalid={Boolean(errors.email)}
+                            aria-describedby={errors.email ? 'contact-email-error' : undefined}
+                          />
+                          {errors.email && (
+                            <p id="contact-email-error" className="text-sm text-destructive" role="alert">
+                              {errors.email}
+                            </p>
+                          )}
+                        </Field>
+                      </div>
+
+                      <div className="grid md:grid-cols-2 gap-5">
+                        <Field>
+                          <FieldLabel htmlFor="contact-phone">
+                            Phone Number <span className="text-muted-foreground font-normal">(optional)</span>
+                          </FieldLabel>
+                          <Input
+                            id="contact-phone"
+                            name="phone"
+                            type="tel"
+                            placeholder="+254 700 000000"
+                            value={form.phone}
+                            onChange={(e) => handleChange('phone', e.target.value)}
+                            className={inputClasses}
+                            autoComplete="tel"
                           />
                         </Field>
                         <Field>
-                          <FieldLabel>Email Address</FieldLabel>
-                          <Input 
-                            type="email" 
-                            placeholder="john@example.com" 
-                            required 
-                            className="h-12"
+                          <FieldLabel htmlFor="contact-company">
+                            Company Name <span className="text-muted-foreground font-normal">(optional)</span>
+                          </FieldLabel>
+                          <Input
+                            id="contact-company"
+                            name="company"
+                            placeholder="ABC Limited"
+                            value={form.company}
+                            onChange={(e) => handleChange('company', e.target.value)}
+                            className={inputClasses}
+                            autoComplete="organization"
                           />
                         </Field>
                       </div>
 
                       <div className="grid md:grid-cols-2 gap-5">
                         <Field>
-                          <FieldLabel>Phone Number</FieldLabel>
-                          <Input 
-                            type="tel" 
-                            placeholder="+254 700 000000" 
-                            className="h-12"
-                          />
-                        </Field>
-                        <Field>
-                          <FieldLabel>Service Needed</FieldLabel>
-                          <Select>
-                            <SelectTrigger className="h-12">
+                          <FieldLabel htmlFor="contact-service">Selected Service</FieldLabel>
+                          <Select
+                            value={form.service}
+                            onValueChange={(value) => handleChange('service', value)}
+                          >
+                            <SelectTrigger
+                              id="contact-service"
+                              className={`${inputClasses} w-full ${inputErrorClasses('service')}`}
+                              aria-required="true"
+                              aria-invalid={Boolean(errors.service)}
+                              aria-describedby={errors.service ? 'contact-service-error' : undefined}
+                            >
                               <SelectValue placeholder="Select a service" />
                             </SelectTrigger>
                             <SelectContent>
                               {services.map((service) => (
-                                <SelectItem key={service} value={service.toLowerCase().replace(/\s+/g, '-')}>
+                                <SelectItem key={service} value={service}>
                                   {service}
                                 </SelectItem>
                               ))}
                             </SelectContent>
                           </Select>
+                          {errors.service && (
+                            <p id="contact-service-error" className="text-sm text-destructive" role="alert">
+                              {errors.service}
+                            </p>
+                          )}
+                        </Field>
+                        <Field>
+                          <FieldLabel htmlFor="contact-subject">Subject</FieldLabel>
+                          <Input
+                            id="contact-subject"
+                            name="subject"
+                            placeholder="Website Design Inquiry"
+                            value={form.subject}
+                            onChange={(e) => handleChange('subject', e.target.value)}
+                            className={`${inputClasses} ${inputErrorClasses('subject')}`}
+                            required
+                            aria-required="true"
+                            aria-invalid={Boolean(errors.subject)}
+                            aria-describedby={errors.subject ? 'contact-subject-error' : undefined}
+                          />
+                          {errors.subject && (
+                            <p id="contact-subject-error" className="text-sm text-destructive" role="alert">
+                              {errors.subject}
+                            </p>
+                          )}
                         </Field>
                       </div>
 
                       <Field>
-                        <FieldLabel>Project Details</FieldLabel>
-                        <Textarea 
+                        <FieldLabel htmlFor="contact-message">Message</FieldLabel>
+                        <Textarea
+                          id="contact-message"
+                          name="message"
                           placeholder="Tell us about your project, timeline, and any specific requirements..."
-                          className="min-h-32 resize-none"
+                          value={form.message}
+                          onChange={(e) => handleChange('message', e.target.value)}
+                          className={`min-h-32 resize-none ${inputErrorClasses('message')}`}
                           required
+                          aria-required="true"
+                          aria-invalid={Boolean(errors.message)}
+                          aria-describedby={errors.message ? 'contact-message-error' : undefined}
                         />
+                        {errors.message && (
+                          <p id="contact-message-error" className="text-sm text-destructive" role="alert">
+                            {errors.message}
+                          </p>
+                        )}
                       </Field>
 
                       <Button 
@@ -279,7 +470,7 @@ export function ContactContent() {
                         disabled={isSubmitting}
                       >
                         {isSubmitting ? (
-                          <>Sending...</>
+                          <>Preparing Email...</>
                         ) : (
                           <>
                             Send Inquiry
@@ -287,6 +478,10 @@ export function ContactContent() {
                           </>
                         )}
                       </Button>
+
+                      <p className="text-xs text-muted-foreground text-center">
+                        Submitting opens your email application with your message pre-filled, sent to {siteConfig.email}.
+                      </p>
                     </FieldGroup>
                   </form>
                 )}
@@ -325,16 +520,14 @@ export function ContactContent() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                   <svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  className="w-7 h-7"
-  fill="currentColor"
-  aria-hidden="true"
->
-  <path d="M12.04 2C6.58 2 2.15 6.43 2.15 11.89c0 1.93.5 3.83 1.45 5.5L2 22l4.73-1.24a9.86 9.86 0 005.31 1.55h.01c5.46 0 9.89-4.43 9.89-9.89A9.9 9.9 0 0012.04 2zm0 17.94a8.03 8.03 0 01-4.1-1.13l-.3-.18-2.81.74.75-2.73-.2-.28a8.01 8.01 0 01-1.23-4.25c0-4.43 3.6-8.03 8.03-8.03a8.04 8.04 0 018.03 8.03c0 4.43-3.6 8.03-8.03 8.03zm4.43-6.04c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12s-.62.78-.76.94c-.14.16-.28.18-.52.06-1.41-.7-2.33-1.25-3.27-2.83-.25-.43.25-.4.72-1.32.08-.15.04-.28 0-.4-.04-.12-.55-1.34-.75-1.83-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.41.06-.62.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.7 2.75 4.12 3.75 1.15.5 2.05.79 2.76 1.01.8.24 1.21.2 1.66.12.51-.1 1.53-.63 1.75-1.25.22-.62.22-1.15.15-1.25-.06-.1-.22-.16-.46-.28z"/>
-</svg>
+                  <MessageCircle className="w-5 h-5" />
                   Chat on WhatsApp
+                </a>
+              </Button>
+              <Button asChild size="lg" className="gap-2 h-12 px-8 bg-gradient-brand hover:opacity-90 text-white">
+                <a href={`mailto:${siteConfig.email}`}>
+                  <Mail className="w-5 h-5" />
+                  Email Us
                 </a>
               </Button>
             </div>
