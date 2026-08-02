@@ -8,6 +8,7 @@ import { PortfolioPreview } from '@/components/home/portfolio-preview'
 import { TestimonialsSection } from '@/components/home/testimonials-section'
 import { ProcessSection } from '@/components/home/process-section'
 import { BlogSection } from '@/components/home/blog-section'
+import { FAQSection } from '@/components/home/faq-section'
 import { CTASection } from '@/components/home/cta-section'
 
 export default function HomePage() {
@@ -22,6 +23,7 @@ export default function HomePage() {
       <TestimonialsSection />
       <ProcessSection />
       <BlogSection />
+      <FAQSection />
       <CTASection />
     </>
   )
