@@ -86,10 +86,10 @@ export function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="hidden sm:block text-sm lg:text-base font-display font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
-                JTH Graphix
+                JTH Graphix Production
               </span>
               <span className="hidden sm:block text-[10px] text-muted-foreground tracking-wider uppercase">
-                Production
+                Creative Solutions
               </span>
             </div>
           </Link>
