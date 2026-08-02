@@ -7,7 +7,7 @@ import { ArrowRight, ArrowLeft, Check, FileImage, Image, Palette, Sparkles, Shar
 import { Button } from '@/components/ui/button'
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import siteConfig from '@/data/site-config.json'
+import { siteConfig } from '@/lib/site-config'
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   FileImage,

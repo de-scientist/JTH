@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { Star, Quote, ArrowRight, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import testimonials from '@/data/testimonials.json'
-import siteConfig from '@/data/site-config.json'
+import { siteConfig } from '@/lib/site-config'
 
 export function TestimonialsContent() {
   return (

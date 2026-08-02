@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Phone, Sparkles, MessageCircle, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { fadeUp, defaultTransition, viewportOnce } from '@/lib/animations'
-import siteConfig from '@/data/site-config.json'
+import { siteConfig } from '@/lib/site-config'
 
 export function CTASection() {
   return (

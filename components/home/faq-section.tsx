@@ -11,7 +11,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { fadeUp, defaultTransition, viewportOnce } from '@/lib/animations'
-import siteConfig from '@/data/site-config.json'
+import { siteConfig } from '@/lib/site-config'
 
 const faqs = [
   {

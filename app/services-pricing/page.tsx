@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import pricing from '@/data/services-pricing.json'
-import siteConfig from '@/data/site-config.json'
+import { siteConfig } from '@/lib/site-config'
 import Link from 'next/link'
 import {
   ClipboardList,
