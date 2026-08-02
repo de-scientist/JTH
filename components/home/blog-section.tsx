@@ -3,8 +3,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowRight, Calendar } from 'lucide-react'
+import { ArrowRight, Calendar, Clock } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/section-header'
+import { Button } from '@/components/ui/button'
 import blogPosts from '@/data/blog.json'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 
@@ -41,17 +42,17 @@ export function BlogSection() {
           variants={staggerContainer}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
-          {blogPosts.map((post, index) => (
+          {blogPosts.slice(0, 3).map((post, index) => (
             <motion.article
               key={post.id}
               variants={fadeUp}
               transition={{ ...defaultTransition, delay: index * 0.1 }}
             >
-              <Link href="/contact" className="group block h-full">
+              <Link href={`/blogs/${post.slug}`} className="group block h-full">
                 <div className="card-premium overflow-hidden h-full group-hover:-translate-y-2 transition-all duration-500">
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <Image
-                      src={post.image}
+                      src={post.featuredImage}
                       alt={post.title}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -66,9 +67,15 @@ export function BlogSection() {
                   </div>
 
                   <div className="p-6 lg:p-7">
-                    <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
-                      <Calendar className="w-3.5 h-3.5" />
-                      {formatDate(post.date)}
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-muted-foreground mb-3">
+                      <span className="inline-flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {formatDate(post.publishDate)}
+                      </span>
+                      <span className="inline-flex items-center gap-1.5">
+                        <Clock className="w-3.5 h-3.5" />
+                        {post.readingTime} min
+                      </span>
                     </div>
 
                     <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
@@ -87,6 +94,27 @@ export function BlogSection() {
               </Link>
             </motion.article>
           ))}
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={fadeUp}
+          transition={defaultTransition}
+          className="text-center mt-14"
+        >
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="rounded-xl gap-2 h-12 px-8 border-primary/20 hover:border-primary/40 transition-all duration-300"
+          >
+            <Link href="/blogs">
+              View All Articles
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </Button>
         </motion.div>
       </div>
     </section>

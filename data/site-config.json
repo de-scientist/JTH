@@ -27,13 +27,6 @@
     "Call Now",
     "Book Training"
   ],
-  "homepagePricingHighlights": [
-    { "label": "Flyer Design", "price": "KSh 1,500" },
-    { "label": "Logo Design", "price": "KSh 3,000" },
-    { "label": "Brand Identity", "price": "KSh 30,000" },
-    { "label": "Social Media Management", "price": "From KSh 70,000" },
-    { "label": "Virtual Training", "price": "KSh 50 per person" }
-  ],
   "trainingTeaser": {
     "title": "Training That Builds Creative Confidence",
     "text": "JTH Graphix Production delivers practical digital and creative training for individuals, schools, institutions, and teams through virtual sessions, workshops, and recorded learning resources.",

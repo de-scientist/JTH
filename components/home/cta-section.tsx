@@ -16,7 +16,7 @@ export function CTASection() {
         className="absolute inset-0 opacity-30"
         style={{
           backgroundImage:
-            'radial-gradient(circle at 30% 40%, rgba(79, 184, 255, 0.4) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(255, 122, 0, 0.3) 0%, transparent 50%)',
+            'radial-gradient(circle at 30% 40%, rgba(0, 74, 173, 0.5) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(26, 111, 227, 0.4) 0%, transparent 50%)',
         }}
         aria-hidden="true"
       />

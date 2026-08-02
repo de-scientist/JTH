@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { ThemeToggle } from '@/components/theme-toggle'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
@@ -24,6 +25,7 @@ const navLinks = [
     ],
   },
   { href: '/portfolio', label: 'Portfolio' },
+  { href: '/blogs', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -148,6 +150,7 @@ export function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
+            <ThemeToggle />
             <Button
               asChild
               className="bg-gradient-brand hover:opacity-90 text-white shadow-lg shadow-primary/25 rounded-xl px-6 h-11 font-medium transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
@@ -210,6 +213,12 @@ export function Navbar() {
                   transition={{ delay: 0.3 }}
                   className="pt-6 mt-4 border-t border-border"
                 >
+                  <div className="flex items-center justify-between gap-4 px-2 mb-4">
+                    <span className="text-sm font-medium text-muted-foreground">
+                      Appearance
+                    </span>
+                    <ThemeToggle />
+                  </div>
                   <Button asChild className="w-full bg-gradient-brand text-white h-14 rounded-2xl text-base font-semibold">
                     <Link href="/contact">Start Your Project</Link>
                   </Button>

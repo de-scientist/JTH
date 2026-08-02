@@ -10,37 +10,31 @@ const steps = [
     icon: Search,
     title: 'Discover',
     description: 'We learn your brand, goals, audience, and competitive landscape.',
-    color: 'from-blue-500 to-cyan-500',
   },
   {
     icon: Lightbulb,
     title: 'Research',
     description: 'Deep market and user research informs every strategic decision.',
-    color: 'from-cyan-500 to-primary',
   },
   {
     icon: PenTool,
     title: 'Design',
     description: 'Concepts refined into stunning visuals aligned with your vision.',
-    color: 'from-primary to-purple-500',
   },
   {
     icon: Code,
     title: 'Develop',
     description: 'Designs brought to life with precision and performance in mind.',
-    color: 'from-purple-500 to-secondary',
   },
   {
     icon: Rocket,
     title: 'Launch',
     description: 'Seamless deployment with quality assurance at every touchpoint.',
-    color: 'from-secondary to-orange-500',
   },
   {
     icon: TrendingUp,
     title: 'Grow',
     description: 'Ongoing optimization to maximize impact and drive results.',
-    color: 'from-orange-500 to-accent',
   },
 ]
 

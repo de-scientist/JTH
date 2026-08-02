@@ -55,10 +55,11 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-foreground text-background relative overflow-hidden">
+    <footer className="bg-footer-bg text-footer-foreground relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-dark pointer-events-none" />
       <div className="absolute inset-0 bg-grid opacity-[0.03] pointer-events-none" />
-      <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute -top-24 -right-24 w-[500px] h-[500px] bg-footer-accent/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-footer-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
@@ -91,7 +92,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded-xl bg-white/8 text-white/60 hover:bg-primary hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                  className="p-2.5 rounded-xl bg-white/8 text-white/60 hover:bg-footer-accent hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-footer-accent/20"
                   aria-label={`Follow us on ${social.label}`}
                 >
                   <social.icon />
@@ -107,7 +108,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 hover:text-secondary transition-colors duration-300 inline-flex items-center gap-2 group"
+                    className="text-sm text-white/60 hover:text-footer-accent transition-colors duration-300 inline-flex items-center gap-2 group"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
                     {link.label}
@@ -124,7 +125,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 hover:text-secondary transition-colors duration-300 inline-flex items-center gap-2 group"
+                    className="text-sm text-white/60 hover:text-footer-accent transition-colors duration-300 inline-flex items-center gap-2 group"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
                     {link.label}
@@ -142,8 +143,8 @@ export function Footer() {
                   href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors group"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center group-hover:bg-primary transition-colors">
-                    <Phone className="w-4 h-4 text-secondary" />
+                  <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center group-hover:bg-footer-accent transition-colors">
+                    <Phone className="w-4 h-4 text-footer-accent" />
                   </div>
                   {siteConfig.phone}
                 </a>
@@ -153,8 +154,8 @@ export function Footer() {
                   href={`mailto:${siteConfig.email}`}
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors group"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center group-hover:bg-primary transition-colors">
-                    <Mail className="w-4 h-4 text-secondary" />
+                  <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center group-hover:bg-footer-accent transition-colors">
+                    <Mail className="w-4 h-4 text-footer-accent" />
                   </div>
                   {siteConfig.email}
                 </a>
@@ -162,7 +163,7 @@ export function Footer() {
               <li>
                 <div className="flex items-center gap-3 text-sm text-white/60">
                   <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center shrink-0">
-                    <MapPin className="w-4 h-4 text-secondary" />
+                    <MapPin className="w-4 h-4 text-footer-accent" />
                   </div>
                   Nairobi, Kenya
                 </div>
@@ -177,8 +178,8 @@ export function Footer() {
             </p>
             {subscribed ? (
               <div className="flex items-center gap-3 p-4 rounded-xl bg-white/8">
-                <Send className="w-5 h-5 text-secondary" />
-                <p className="text-sm text-secondary font-medium">Thank you for subscribing!</p>
+                <Send className="w-5 h-5 text-footer-accent" />
+                <p className="text-sm text-footer-accent font-medium">Thank you for subscribing!</p>
               </div>
             ) : (
               <form onSubmit={handleNewsletter} className="space-y-3">
@@ -188,12 +189,12 @@ export function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="bg-white/8 border-white/15 text-white placeholder:text-white/40 h-11 rounded-xl focus:border-primary/50 transition-colors"
+                  className="bg-white/8 border-white/15 text-white placeholder:text-white/40 h-11 rounded-xl focus:border-footer-accent/60 transition-colors"
                   aria-label="Email address for newsletter"
                 />
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-brand hover:opacity-90 text-white rounded-xl h-11 gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                  className="w-full bg-footer-accent hover:bg-footer-accent-hover text-white rounded-xl h-11 gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-footer-accent/20"
                 >
                   Subscribe
                   <ArrowRight className="w-4 h-4" />

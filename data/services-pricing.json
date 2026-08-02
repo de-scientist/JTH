@@ -1,29 +1,76 @@
 {
-  "heroTitle": "Services & Pricing",
-  "heroSubtitle": "Explore JTH Graphix Production’s premium design, branding, digital, web, and training services with clear pricing guidance and custom quote options tailored to different client needs.",
-  "categoryLabels": ["Design","Branding","Digital","Web","Training"],
-  "pricedServices": [
-    { "label": "Flyers & Posters", "price": "KSh 1,500", "slug": "flyer-design" },
-    { "label": "Logo Design", "price": "KSh 3,000", "slug": "logo-design" },
-    { "label": "Brand Identity", "price": "KSh 30,000", "slug": "branding-identity" },
-    { "label": "Business Profile", "price": "KSh 5,000", "slug": "business-profile-design" },
-    { "label": "Social Media Management", "price": "Starting from KSh 70,000", "slug": "social-media-management" },
-    { "label": "Virtual Training Session", "price": "KSh 50 per person per session", "slug": "virtual-training-sessions" }
+  "heroTitle": "Request a Custom Quote",
+  "heroSubtitle": "Every project is unique. Tell us what you need and JTH Graphix Production will prepare a tailored custom quotation that fits your goals, scope, and budget.",
+  "heroBadge": "Custom Quotes, Tailored to You",
+  "categoryLabels": ["Design", "Branding", "Digital", "Web", "Training"],
+  "quoteIntroTitle": "How Custom Quoting Works",
+  "quoteIntroText": "We don't use one-size-fits-all pricing. Each quote is prepared based on your specific project scope, complexity, and requirements — so you only ever pay for what your project truly needs.",
+  "quoteProcess": [
+    {
+      "step": "01",
+      "title": "Submit Your Request",
+      "description": "Tell us about your project — the service you need, your goals, and any requirements or references you have.",
+      "icon": "ClipboardList"
+    },
+    {
+      "step": "02",
+      "title": "Consultation",
+      "description": "We review your brief and reach out to clarify scope, timelines, and expectations before preparing your quote.",
+      "icon": "MessagesSquare"
+    },
+    {
+      "step": "03",
+      "title": "Receive Your Quote",
+      "description": "You get a clear, itemized custom quotation tailored to your project scope — no hidden fees, no surprises.",
+      "icon": "FileText"
+    },
+    {
+      "step": "04",
+      "title": "Project Approval",
+      "description": "Review the quote, confirm your approval, and we kick off the project on an agreed timeline.",
+      "icon": "CheckCircle"
+    },
+    {
+      "step": "05",
+      "title": "Project Delivery",
+      "description": "We deliver quality work with revisions built into the process, and we stay available after handover.",
+      "icon": "Rocket"
+    }
   ],
-  "customQuoteServices": [
-    "business-card-design",
-    "brochure-design",
-    "website-design",
-    "banner-design",
-    "social-media-graphics",
-    "event-publicity-graphics",
-    "corporate-branding-materials",
-    "institutional-training",
-    "design-skill-training",
-    "digital-skills-workshops",
-    "premium-printing"
+  "pricingFactorsTitle": "What Affects Your Quote",
+  "pricingFactors": [
+    {
+      "label": "Project Complexity",
+      "description": "Simple one-off designs cost less than multi-asset or multi-platform projects.",
+      "icon": "Layers"
+    },
+    {
+      "label": "Number of Deliverables",
+      "description": "The more assets, pages, or materials you need, the more tailored your quote becomes.",
+      "icon": "Package"
+    },
+    {
+      "label": "Revision Scope",
+      "description": "Clear revision rounds are scoped up front so you know exactly what's included.",
+      "icon": "RefreshCw"
+    },
+    {
+      "label": "Turnaround Time",
+      "description": "Urgent timelines may require expedited scheduling, which we discuss transparently.",
+      "icon": "Timer"
+    },
+    {
+      "label": "Print or Digital Output",
+      "description": "Print-ready production specs and digital optimization are factored into your quote.",
+      "icon": "MonitorSmartphone"
+    },
+    {
+      "label": "Strategy Depth",
+      "description": "Brand strategy, research, and planning add depth to projects that need more than visuals.",
+      "icon": "Lightbulb"
+    }
   ],
-  "comingSoonServices": ["recorded-courses"],
+  "trainingPricingTitle": "Training & Workshop Factors",
   "trainingPricingFactors": [
     "Number of participants",
     "Training mode (online or physical)",
@@ -32,15 +79,8 @@
     "Location of training",
     "Certification requirements"
   ],
-  "creativePricingFactors": [
-    "Project complexity",
-    "Number of deliverables",
-    "Revision scope",
-    "Turnaround time",
-    "Print or digital output requirements",
-    "Strategy depth"
-  ],
-  "ctaTitle": "Need a custom quote for your project?",
-  "ctaText": "Tell us what you need and JTH Graphix Production will recommend the right service path, pricing direction, and delivery approach for your goals.",
-  "ctaButtons": ["Request a Quote","Chat on WhatsApp","Call Now"]
+  "allCustomNote": "All services are quoted per project — no hidden fees, no surprises.",
+  "ctaTitle": "Ready for a Free Custom Quote?",
+  "ctaText": "Tell us what you need and JTH Graphix Production will prepare a tailored quotation — transparent, itemized, and aligned with your goals.",
+  "ctaButtons": ["Request a Quote", "Chat on WhatsApp", "Call Now"]
 }

@@ -1,5 +1,17 @@
 # JTH Graphix Production — Portfolio Website
 
+<p align="center">
+
+![GitHub Stars](https://img.shields.io/github/stars/YOUR_USERNAME/JTH-Portfolio?style=for-the-badge)
+
+![GitHub Forks](https://img.shields.io/github/forks/YOUR_USERNAME/JTH-Portfolio?style=for-the-badge)
+
+![Issues](https://img.shields.io/github/issues/YOUR_USERNAME/JTH-Portfolio?style=for-the-badge)
+
+![License](https://img.shields.io/github/license/YOUR_USERNAME/JTH-Portfolio?style=for-the-badge)
+
+</p>
+
 
 [![Version](https://img.shields.io/badge/Version-0.1.0-blue)](https://github.com)
 [![Next.js](https://img.shields.io/badge/Next.js-16.2.0-black?logo=next.js&logoColor=white)](https://nextjs.org)
@@ -10,7 +22,17 @@
 [![pnpm](https://img.shields.io/badge/Package_Manager-pnpm-blue?logo=pnpm&logoColor=white)](https://pnpm.io)
 [![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com)
 
-A **production-ready portfolio and business website** for **JTH Graphix Production**, a Nairobi-based creative agency specializing in graphic design, branding, digital marketing, web design, and creative skills training. The site serves as a full marketing and lead-generation platform.
+<p align="center">
+  <img src="public/images/github-banner.png" alt="JTH Graphix Production Banner" />
+</p>
+
+<h1 align="center">
+JTH Graphix Production
+</h1>
+
+<p align="center">
+Creative Agency • Branding • Web Design • Digital Marketing • Training
+</p>
 
 ---
 
@@ -376,6 +398,81 @@ The site uses Tailwind's default font system with `Inter` as the primary sans-se
 3. Vercel automatically detects Next.js and uses the correct build settings
 4. Environment variables (if any) can be configured in the Vercel dashboard
 
+## 🌐 Live Website
+
+| Version | Link |
+|----------|------|
+| Production | https://jthgraphixproduction.com |
+| Preview | https://your-vercel-url.vercel.app |
+
+## 📸 Preview
+
+| Home | Services |
+|------|----------|
+| ![](public/images/home.png) | ![](public/images/services.png) |
+
+| Portfolio | Contact |
+|------------|----------|
+| ![](public/images/portfolio.png) | ![](public/images/contact.png) |
+
+## ⚡ Performance
+
+| Metric | Score |
+|---------|------:|
+| Performance | 98 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
+
+## 🎨 Design Philosophy
+
+The website was designed around five principles:
+
+- Simplicity
+- Accessibility
+- Scalability
+- Performance
+- Beautiful interactions
+
+Every component exists to improve communication rather than distract from it.
+
+## 💡 Why this Project?
+
+JTH Graphix Production needed more than a brochure website.
+
+The goal was to create a platform that:
+
+- generates leads
+- showcases creative work
+- markets services
+- supports future online learning
+- scales without a backend
+- remains easy to update through JSON content
+
+This project demonstrates how modern frontend technologies can deliver a premium business website without the complexity of a traditional CMS.
+
+## 👨‍💻 Developer Experience
+
+- TypeScript
+- ESLint
+- Reusable Components
+- JSON-driven Content
+- Dark Mode
+- Responsive Design
+- Static Generation
+- Modular Architecture
+
+## 🚀 Roadmap
+
+- [ ] Admin Dashboard
+- [ ] CMS Integration
+- [ ] AI Chat Assistant
+- [ ] Payment Integration
+- [ ] Booking System
+- [ ] Email Automation
+- [ ] Analytics Dashboard
+- [ ] Client Portal
+
 **Build settings (auto-detected):**
 - Framework: Next.js
 - Build command: `next build`
@@ -410,3 +507,35 @@ A GitHub Actions workflow is configured at `.github/workflows/ci.yml` for automa
 - Ensure new components are accessible (ARIA attributes, keyboard navigation, semantic HTML)
 - Run `pnpm lint` before committing to catch code quality issues
 - Test responsive behavior across mobile, tablet, and desktop breakpoints
+
+## 📬 Contact
+
+Mark Kinyanjui Gitau
+
+Website:
+https://jthgraphixproduction.com
+
+Portfolio:
+https://descientist.vercel.app
+
+Email:
+info@jthgraphixproduction.com
+
+GitHub:
+https://github.com/yourusername  
+
+---
+
+<div align="center">
+
+# Built with ❤️
+
+by
+
+## Mark Kinyanjui Gitau
+
+*"Learn. Earn. Return. Iterate."*
+
+⭐ If you enjoyed this project, consider starring the repository.
+
+</div>
