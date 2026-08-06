@@ -2,30 +2,45 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Target, Eye, Heart, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react'
+import { TrendingUp, Target, Heart, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/section-header'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { fadeUp, slideInLeft, slideInRight, defaultTransition, viewportOnce } from '@/lib/animations'
 
-const values = [
-  { icon: Heart, title: 'Integrity', description: 'Honest partnerships built on transparency and trust.' },
-  { icon: Target, title: 'Excellence', description: 'Relentless pursuit of quality in every deliverable.' },
-  { icon: TrendingUp, title: 'Innovation', description: 'Forward-thinking solutions that keep brands ahead.' },
-  { icon: CheckCircle2, title: 'Results', description: 'Design decisions driven by measurable outcomes.' },
+const transformations = [
+  {
+    icon: Target,
+    from: 'Invisible to competitors',
+    to: 'Unforgettable brand people remember',
+  },
+  {
+    icon: TrendingUp,
+    from: 'Quiet social pages',
+    to: 'Engaging content that grows reach',
+  },
+  {
+    icon: CheckCircle2,
+    from: 'Generic, dated materials',
+    to: 'Professional assets that build trust',
+  },
+  {
+    icon: Heart,
+    from: 'Inconsistent identity',
+    to: 'One strong brand across every touchpoint',
+  },
 ]
 
-const timeline = [
-  { year: '2020', event: 'Founded with a vision to elevate African brands' },
-  { year: '2022', event: 'Expanded into digital and web solutions' },
-  { year: '2024', event: '100+ projects delivered across industries' },
-  { year: '2026', event: 'Full-service creative agency with global reach' },
+const steps = [
+  { icon: Sparkles, title: 'Share your vision', text: 'A short call or brief is all we need to get started.' },
+  { icon: Target, title: 'We build your brand', text: 'Strategy-led design tailored to your goals and audience.' },
+  { icon: TrendingUp, title: 'You grow your business', text: 'Launch a brand that wins attention and converts customers.' },
 ]
 
 const aboutStats = [
-  { value: '100+', label: 'Projects' },
-  { value: '50+', label: 'Clients' },
-  { value: '5+', label: 'Years' },
+  { value: '200+', label: 'Projects' },
+  { value: '100+', label: 'Clients' },
+  { value: '98%', label: 'Satisfaction' },
 ]
 
 export function AboutSection() {
@@ -36,14 +51,14 @@ export function AboutSection() {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <SectionHeader
-          badge="About JTH"
+          badge="Your Growth Partner"
           title={
             <>
-              We Build Brands That{' '}
-              <span className="text-gradient">Drive Growth</span>
+              We Don&apos;t Just Design — We Help{' '}
+              <span className="text-gradient">Businesses Grow</span>
             </>
           }
-          description="We do not just create designs. We build brands, experiences, and digital solutions that drive measurable business growth."
+          description="Most businesses don't fail because they lack talent — they fail because they're invisible. JTH helps you get noticed, trusted and chosen with strategic design and branding."
         />
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
@@ -57,11 +72,15 @@ export function AboutSection() {
           >
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden card-premium">
               <Image
-                src="/images/hero-showcase.svg"
-                alt="JTH Graphix Production creative team at work"
+                src="/images/about-studio.jpg"
+                alt="JTH Graphix Production creative studio and design workspace"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement
+                  target.src = '/images/hero-showcase.jpg'
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
             </div>
@@ -85,98 +104,80 @@ export function AboutSection() {
             transition={defaultTransition}
             className="space-y-8"
           >
-            <div className="card-glass p-6 lg:p-8 rounded-2xl">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Target className="w-5 h-5 text-primary" />
-                </div>
-                <h3 className="font-display text-xl font-semibold text-foreground">Our Mission</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed">
-                To empower businesses with strategic design and digital solutions that communicate
-                value, build trust, and accelerate growth.
-              </p>
-            </div>
-
-            <div className="card-glass p-6 lg:p-8 rounded-2xl">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center">
-                  <Eye className="w-5 h-5 text-secondary" />
-                </div>
-                <h3 className="font-display text-xl font-semibold text-foreground">Our Vision</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed">
-                To be the leading creative agency in East Africa — recognized globally for innovation,
-                excellence, and transformative brand experiences.
-              </p>
-            </div>
-
             <div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-4">Core Values</h3>
-              <div className="grid grid-cols-2 gap-3">
-                {values.map((value, i) => (
+              <h3 className="font-display text-2xl font-bold text-foreground mb-5">
+                The Transformation Our Clients Experience
+              </h3>
+              <div className="grid grid-cols-1 gap-3">
+                {transformations.map((item, i) => (
                   <motion.div
-                    key={value.title}
+                    key={item.from}
                     initial="hidden"
                     whileInView="visible"
                     viewport={viewportOnce}
                     variants={fadeUp}
                     transition={{ ...defaultTransition, delay: i * 0.08 }}
-                    className="card-premium p-4 rounded-xl hover:border-primary/20 transition-all"
+                    className="card-premium p-4 rounded-xl group hover:border-primary/20 transition-all"
                   >
-                    <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
-                      <value.icon className="w-4 h-4 text-primary" />
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <item.icon className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-xs text-muted-foreground line-through opacity-70">
+                          {item.from}
+                        </p>
+                        <p className="font-medium text-foreground text-sm">{item.to}</p>
+                      </div>
                     </div>
-                    <p className="font-medium text-foreground text-sm">{value.title}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{value.description}</p>
                   </motion.div>
                 ))}
               </div>
             </div>
 
-            <Link href="/about">
+            <div className="card-glass p-6 lg:p-8 rounded-2xl">
+              <h3 className="font-display text-lg font-semibold text-foreground mb-4">
+                How We Get You There — In Three Steps
+              </h3>
+              <div className="space-y-4">
+                {steps.map((step, i) => (
+                  <div key={step.title} className="flex items-start gap-4">
+                    <div className="flex items-center gap-3 shrink-0">
+                      <div className="w-9 h-9 rounded-xl bg-secondary/10 flex items-center justify-center">
+                        <step.icon className="w-4 h-4 text-secondary" />
+                      </div>
+                      <span className="font-display text-lg font-bold text-gradient-accent">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                    </div>
+                    <div>
+                      <p className="font-medium text-foreground text-sm">{step.title}</p>
+                      <p className="text-xs text-muted-foreground">{step.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
               <Button
-                variant="outline"
-                className="rounded-xl gap-2 border-primary/20 hover:border-primary/40 transition-all"
+                asChild
+                className="bg-gradient-brand text-white rounded-xl gap-2 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
               >
-                Learn More About Us
-                <ArrowRight className="w-4 h-4" />
+                <Link href="/contact">
+                  Start Your Project
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </Button>
-            </Link>
+              <Button asChild variant="outline" className="rounded-xl gap-2 border-primary/20 hover:border-primary/40 transition-all">
+                <Link href="/about">
+                  Learn More About JTH
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
           </motion.div>
         </div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOnce}
-          variants={fadeUp}
-          transition={defaultTransition}
-        >
-          <h3 className="font-display text-2xl font-bold text-foreground text-center mb-10">
-            Our Growth Journey
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {timeline.map((item, i) => (
-              <motion.div
-                key={item.year}
-                initial="hidden"
-                whileInView="visible"
-                viewport={viewportOnce}
-                variants={fadeUp}
-                transition={{ ...defaultTransition, delay: i * 0.1 }}
-                className="relative card-premium p-6 rounded-2xl overflow-hidden group"
-              >
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-brand" />
-                <span className="font-display text-3xl font-bold text-gradient-accent">{item.year}</span>
-                <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{item.event}</p>
-                {i < timeline.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-2 w-4 h-0.5 bg-gradient-brand" />
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   )

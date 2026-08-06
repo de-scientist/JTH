@@ -4,17 +4,94 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
-import { ArrowRight, Play, Star, Shield, Zap } from 'lucide-react'
+import {
+  ArrowRight,
+  Star,
+  CheckCircle2,
+  Radio,
+  PackageCheck,
+  Code,
+  UtensilsCrossed,
+  Shirt,
+  PartyPopper,
+  Church,
+  Building2,
+  HeartHandshake,
+  Briefcase,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { fadeUp, slideInRight, slideInLeft, defaultTransition } from '@/lib/animations'
 
-const stats = [
-  { icon: Star, value: '100+', label: 'Projects Delivered' },
-  { icon: Shield, value: '98%', label: 'Client Satisfaction' },
-  { icon: Zap, value: '5+', label: 'Years Experience' },
+const trustIndicators = [
+  { value: '200+', label: 'Projects Delivered' },
+  { value: '100+', label: 'Happy Clients' },
+  { value: '98%', label: 'Client Satisfaction' },
 ]
 
-const clientLogos = ['/images/hero-showcase.svg', '/images/hero-showcase.svg', '/images/hero-showcase.svg', '/images/hero-showcase.svg']
+const floatingCards = [
+  {
+    icon: CheckCircle2,
+    iconClass: 'text-emerald-400',
+    title: 'Corporate Branding',
+    subtitle: 'ABC Holdings Ltd',
+    status: 'Completed',
+    image: '/images/portfolio/tech-startup-branding.jpg',
+    position: 'top-6 -right-3 lg:-right-6',
+    delay: 0.6,
+  },
+  {
+    icon: Radio,
+    iconClass: 'text-secondary',
+    title: 'Website Design',
+    subtitle: 'Tech Startup',
+    status: 'Live',
+    image: '/images/portfolio/ecommerce-website.jpg',
+    position: '-bottom-6 -left-3 lg:-left-6',
+    delay: 0.9,
+  },
+  {
+    icon: PackageCheck,
+    iconClass: 'text-accent',
+    title: 'Logo Design',
+    subtitle: 'Restaurant Brand',
+    status: 'Delivered',
+    image: '/images/portfolio/fitness-brand-logo.jpg',
+    position: 'top-1/3 -right-4 lg:-right-8',
+    delay: 1.2,
+  },
+]
+
+const polaroids = [
+  {
+    image: '/images/services/branding-identity/1.jpeg',
+    label: 'Brand Identity',
+    sub: 'Logo & Guidelines',
+    position: 'top-0 -left-4 lg:-left-8 rotate-[-5deg] z-10 w-28 lg:w-36',
+    delay: 0.7,
+    float: { y: [0, -6, 0] },
+    floatDuration: 5,
+  },
+  {
+    image: '/images/services/business-card-design/1.jpeg',
+    label: 'Business Cards',
+    sub: 'Premium Print',
+    position: 'bottom-16 -right-3 lg:-right-7 rotate-6 z-10 w-28 lg:w-36',
+    delay: 1,
+    float: { y: [0, 6, 0] },
+    floatDuration: 6,
+  },
+]
+
+const clients = [
+  { name: 'TechVenture Kenya', icon: Code },
+  { name: 'Savanna Grill', icon: UtensilsCrossed },
+  { name: 'Wambui Fashion', icon: Shirt },
+  { name: 'Elite Events', icon: PartyPopper },
+  { name: 'Grace Community', icon: Church },
+  { name: 'Omondi Holdings', icon: Building2 },
+  { name: 'Hope Foundation', icon: HeartHandshake },
+  { name: 'Kimani & Associates', icon: Briefcase },
+]
 
 export function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -51,7 +128,7 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 lg:px-8 py-12 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-16 items-center">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -65,7 +142,9 @@ export function HeroSection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8"
             >
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-              <span className="text-sm font-medium text-primary">Premium Creative Agency</span>
+              <span className="text-sm font-medium text-primary">
+                Graphic Design &amp; Branding Agency in Nairobi, Kenya
+              </span>
             </motion.div>
 
             <motion.h1
@@ -73,10 +152,9 @@ export function HeroSection() {
               transition={{ ...defaultTransition, delay: 0.2 }}
               className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground mb-6 leading-[1.05] text-balance"
             >
-              We Build{' '}
-              <span className="text-gradient">Digital Excellence</span>{' '}
-              That Drives{' '}
-              <span className="text-gradient-accent">Growth</span>
+              Kenya&apos;s Creative Agency for{' '}
+              <span className="text-gradient">Graphic Design &amp; Branding</span>{' '}
+              That Builds Brands That <span className="text-gradient-accent">Sell</span>
             </motion.h1>
 
             <motion.p
@@ -84,7 +162,10 @@ export function HeroSection() {
               transition={{ ...defaultTransition, delay: 0.3 }}
               className="text-lg lg:text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0"
             >
-              From brand identity to digital experiences — we craft premium creative solutions that elevate your business and captivate your audience.
+              JTH Graphix Production is a full-service creative agency in Kenya offering logo
+              design, website design, social media design, business branding, and premium
+              printing services. From your first idea to a brand customers trust — we design
+              visuals that win attention and turn visitors into clients.
             </motion.p>
 
             <motion.div
@@ -97,8 +178,8 @@ export function HeroSection() {
                 size="lg"
                 className="bg-gradient-brand hover:opacity-90 text-white shadow-lg shadow-primary/25 h-14 px-10 rounded-2xl gap-2 text-base font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
               >
-                <Link href="/portfolio">
-                  View Our Work
+                <Link href="/contact">
+                  Start Your Project
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
@@ -109,10 +190,8 @@ export function HeroSection() {
                 className="h-14 px-8 rounded-2xl gap-2 text-base border-border hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
               >
                 <Link href="/portfolio">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Play className="w-4 h-4 fill-primary text-primary ml-0.5" />
-                  </div>
-                  Watch Showreel
+                  View Our Portfolio
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
             </motion.div>
@@ -120,15 +199,20 @@ export function HeroSection() {
             <motion.div
               variants={fadeUp}
               transition={{ ...defaultTransition, delay: 0.5 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-8 mt-12"
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-4 mt-10"
             >
-              {stats.map((stat) => (
-                <div key={stat.label} className="flex items-center gap-2">
-                  <stat.icon className="w-4 h-4 text-accent" />
-                  <div>
-                    <span className="font-display font-bold text-foreground">{stat.value}</span>
-                    <span className="text-sm text-muted-foreground ml-1">{stat.label}</span>
-                  </div>
+              <div className="flex items-center gap-2">
+                <div className="flex gap-0.5" aria-label="Rated 5 stars">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+                  ))}
+                </div>
+                <span className="text-sm font-medium text-foreground">Rated 5.0</span>
+              </div>
+              {trustIndicators.map((item) => (
+                <div key={item.label} className="flex items-center gap-2">
+                  <span className="font-display font-bold text-foreground">{item.value}</span>
+                  <span className="text-sm text-muted-foreground">{item.label}</span>
                 </div>
               ))}
             </motion.div>
@@ -141,7 +225,7 @@ export function HeroSection() {
             transition={{ ...defaultTransition, delay: 0.2 }}
             className="relative mx-auto w-full max-w-lg lg:max-w-none"
           >
-            <div className="relative aspect-[4/5] max-h-[600px]">
+            <div className="relative aspect-[4/5] max-h-[680px]">
               <motion.div
                 className="absolute inset-0 rounded-3xl overflow-hidden card-premium"
                 style={{
@@ -152,8 +236,8 @@ export function HeroSection() {
                 transition={{ duration: 0.4 }}
               >
                 <Image
-                  src="/images/hero-showcase.svg"
-                  alt="Premium agency creative work showcase"
+                  src="/images/hero-showcase.jpg"
+                  alt="Premium portfolio of JTH Graphix Production creative work — brand identities, print design and website design"
                   fill
                   className="object-cover"
                   priority
@@ -166,61 +250,73 @@ export function HeroSection() {
               <div className="absolute -inset-2 rounded-[2rem] border border-primary/10 pointer-events-none" />
               <div className="absolute -inset-4 rounded-[2.25rem] border border-accent/5 pointer-events-none" />
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="absolute -top-4 -right-4 lg:-top-6 lg:-right-6 z-20"
-              >
+              {polaroids.map((card) => (
                 <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
-                  className="glass rounded-2xl px-5 py-4 shadow-xl shadow-primary/20"
+                  key={card.label}
+                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ delay: card.delay, duration: 0.6 }}
+                  className={`absolute ${card.position}`}
                 >
-                  <p className="text-sm font-semibold text-foreground leading-snug text-balance">
-                    Building Brands That Stand Out
-                  </p>
+                  <motion.div
+                    animate={{ y: card.float.y }}
+                    transition={{ repeat: Infinity, duration: card.floatDuration, ease: 'easeInOut' }}
+                    className="glass rounded-2xl p-2 shadow-xl shadow-primary/20"
+                  >
+                    <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                      <Image
+                        src={card.image}
+                        alt={card.label}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 40vw, 20vw"
+                      />
+                    </div>
+                    <div className="px-2 py-1.5">
+                      <p className="text-xs font-semibold text-foreground leading-tight">{card.label}</p>
+                      <p className="text-[10px] text-muted-foreground">{card.sub}</p>
+                    </div>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
+              ))}
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                className="absolute -bottom-4 -left-4 lg:-bottom-6 lg:-left-6 z-20"
-              >
+              {floatingCards.map((card) => (
                 <motion.div
-                  animate={{ y: [0, 8, 0] }}
-                  transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
-                  className="glass rounded-2xl px-5 py-4 shadow-xl shadow-accent/20"
+                  key={card.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: card.delay, duration: 0.6 }}
+                  className={`absolute ${card.position} z-20`}
                 >
-                  <p className="text-sm font-semibold text-foreground leading-snug text-balance">
-                    Creative. Strategic. Impactful.
-                  </p>
-                </motion.div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1, duration: 0.5 }}
-                className="absolute bottom-12 right-4 lg:right-8 z-20"
-              >
-                <motion.div
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
-                  className="flex items-center gap-2 glass-dark rounded-2xl px-4 py-3 shadow-xl"
-                >
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="w-6 h-6 rounded-full bg-gradient-brand border-2 border-background flex items-center justify-center text-[8px] font-bold text-white">
-                        {i === 1 ? 'J' : i === 2 ? 'T' : 'H'}
+                  <motion.div
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+                    className="glass rounded-2xl p-2.5 shadow-xl shadow-primary/20 w-44"
+                  >
+                    <div className="flex items-start gap-2.5">
+                      <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0">
+                        <Image
+                          src={card.image}
+                          alt={card.title}
+                          fill
+                          className="object-cover"
+                          sizes="64px"
+                        />
                       </div>
-                    ))}
-                  </div>
-                  <span className="text-xs font-medium text-white/80">Active Now</span>
+                      <div className="min-w-0">
+                        <p className="text-xs font-semibold text-foreground leading-tight">
+                          {card.title}
+                        </p>
+                        <p className="text-[10px] text-muted-foreground truncate">{card.subtitle}</p>
+                        <p className="flex items-center gap-1 text-[10px] font-medium text-emerald-500 mt-0.5">
+                          <card.icon className="w-3 h-3" />
+                          {card.status}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
@@ -232,19 +328,23 @@ export function HeroSection() {
           className="mt-16 lg:mt-20"
         >
           <p className="text-center text-sm text-muted-foreground tracking-wider uppercase mb-6">
-            Trusted by innovative brands
+            Trusted by growing brands across Kenya
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12 opacity-50">
-            {clientLogos.map((logo, i) => (
-              <div key={i} className="h-8 w-24 relative grayscale hover:grayscale-0 transition-all duration-500">
-                <Image
-                  src={logo}
-                  alt={`Client ${i + 1}`}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            ))}
+          <div className="relative overflow-hidden mask-fade-edges">
+            <div className="flex w-max animate-marquee gap-16 lg:gap-20 items-center">
+              {[...clients, ...clients].map((client, i) => (
+                <div
+                  key={`${client.name}-${i}`}
+                  className="flex items-center gap-2.5 opacity-55 hover:opacity-100 transition-opacity duration-300"
+                  aria-hidden={i >= clients.length}
+                >
+                  <client.icon className="w-5 h-5 text-primary" />
+                  <span className="font-display font-semibold text-foreground/70 text-base whitespace-nowrap">
+                    {client.name}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>

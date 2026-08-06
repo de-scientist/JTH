@@ -1,58 +1,47 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Sparkles, Zap, BadgeCheck, Eye, Lightbulb, HeadphonesIcon, Trophy, Palette } from 'lucide-react'
+import { Zap, BadgeCheck, Eye, HeadphonesIcon, Trophy, Lightbulb, Star } from 'lucide-react'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 
 const values = [
   {
-    icon: Sparkles,
-    title: 'Creative & Modern Design',
-    description: 'Fresh, contemporary designs that capture attention and communicate your brand message effectively.',
-    size: 'lg',
-  },
-  {
     icon: Zap,
-    title: 'Fast Turnaround',
-    description: 'Quick delivery without compromising on quality.',
-    size: 'sm',
+    title: 'Fast, Reliable Turnaround',
+    description: 'Most projects delivered within 24–72 hours, with clear timelines from day one.',
   },
   {
     icon: BadgeCheck,
-    title: 'Quality Output',
-    description: 'Production-ready files optimized for both print and digital platforms.',
-    size: 'sm',
+    title: 'Production-Ready Quality',
+    description: 'Print and digital files prepared to professional standards — ready when you need them.',
   },
   {
     icon: Eye,
-    title: 'Attention to Detail',
-    description: 'Every pixel matters. We obsess over the small details.',
-    size: 'sm',
+    title: 'Detail-Obsessed Design',
+    description: 'Every pixel, color and alignment is intentional. Nothing is left to chance.',
   },
   {
     icon: Trophy,
-    title: 'Award-Winning Team',
-    description: 'Recognized for excellence in design and innovation.',
-    size: 'sm',
+    title: 'Results That Convert',
+    description: 'Design decisions driven by business goals — not just aesthetics.',
   },
   {
     icon: Lightbulb,
-    title: 'Brand-Focused Thinking',
-    description: 'We design with your brand strategy in mind, ensuring consistency across all touchpoints.',
-    size: 'sm',
-  },
-  {
-    icon: Palette,
-    title: 'Custom Illustrations',
-    description: 'Unique visual assets that set your brand apart from competitors.',
-    size: 'lg',
+    title: 'Strategy-First Thinking',
+    description: 'We design with your brand strategy in mind, so every touchpoint stays consistent.',
   },
   {
     icon: HeadphonesIcon,
-    title: 'Professional Support',
-    description: 'Dedicated support throughout your project with clear communication.',
-    size: 'sm',
+    title: 'Dedicated Client Support',
+    description: 'Direct communication throughout your project and support long after delivery.',
   },
+]
+
+const outcomes = [
+  { value: '5.0', label: 'Average client rating' },
+  { value: '200+', label: 'Projects delivered' },
+  { value: '98%', label: 'Clients who come back' },
 ]
 
 export function WhyChooseUs() {
@@ -62,90 +51,100 @@ export function WhyChooseUs() {
       <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOnce}
-          variants={fadeUp}
-          transition={defaultTransition}
-          className="text-center mb-16"
-        >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
-            Why Choose Us
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 text-balance">
-            The{' '}
-            <span className="text-gradient">JTH Difference</span>
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            We combine creative excellence with professional reliability to deliver
-            exceptional results for every project.
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOnce}
-          variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6"
-        >
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
           <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
             variants={fadeUp}
             transition={defaultTransition}
-            className="col-span-1 md:col-span-2 lg:col-span-2"
+            className="relative order-2 lg:order-1"
           >
-            <div className="card-premium p-8 lg:p-10 h-full relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-brand-subtle opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative z-10">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-brand flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
-                  <Sparkles className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-display text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                  Creative & Modern Design
-                </h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  Fresh, contemporary designs that capture attention and communicate your brand message effectively. We blend aesthetics with strategy to create visuals that resonate.
-                </p>
-                <div className="mt-6 flex items-center gap-4">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="w-10 h-10 rounded-full bg-gradient-brand border-2 border-card flex items-center justify-center text-xs font-bold text-white">
-                        {['JD', 'MK', 'AL'][i - 1]}
-                      </div>
-                    ))}
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden card-premium">
+              <Image
+                src="/images/services/branding-identity/2.jpeg"
+                alt="Brand identity design and logo presentation by JTH Graphix Production"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement
+                  target.src = '/images/services/branding-identity/1.jpeg'
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
+            </div>
+
+            <div className="absolute -bottom-6 -right-4 lg:right-6 glass rounded-2xl p-5 shadow-xl backdrop-blur-xl">
+              <div className="flex gap-6">
+                {outcomes.map((stat) => (
+                  <div key={stat.label} className="text-center">
+                    <p className="flex items-center justify-center gap-1 font-display text-2xl font-bold text-gradient-accent">
+                      {stat.label === 'Average client rating' && (
+                        <Star className="w-5 h-5 fill-secondary text-secondary" />
+                      )}
+                      {stat.value}
+                    </p>
+                    <p className="text-xs text-muted-foreground max-w-[90px]">{stat.label}</p>
                   </div>
-                  <span className="text-sm text-muted-foreground">Trusted by 50+ brands</span>
-                </div>
+                ))}
               </div>
             </div>
           </motion.div>
 
-          {values.slice(1).map((value, index) => (
-            <motion.div
-              key={value.title}
-              variants={fadeUp}
-              transition={{ ...defaultTransition, delay: index * 0.05 }}
-              className={value.size === 'lg' ? 'col-span-1 md:col-span-2 lg:col-span-2' : ''}
-            >
-              <div className="card-premium p-6 lg:p-7 h-full relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-brand scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
-                    <value.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={fadeUp}
+            transition={defaultTransition}
+            className="order-1 lg:order-2"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
+              Why Choose JTH
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
+              Why Clients Grow With{' '}
+              <span className="text-gradient">JTH Graphix Production</span>
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-xl">
+              Businesses choose us because great design pays for itself. We combine creative
+              excellence with professional reliability so every project — from a single flyer
+              to a full brand identity — helps you look credible, win trust and sell more.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {values.map((value, index) => (
+                <motion.div
+                  key={value.title}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={viewportOnce}
+                  variants={fadeUp}
+                  transition={{ ...defaultTransition, delay: index * 0.05 }}
+                >
+                  <div className="card-premium p-5 h-full relative overflow-hidden group">
+                    <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-brand scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
+                        <value.icon className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+                      </div>
+                      <div>
+                        <h3 className="font-display text-sm font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
+                          {value.title}
+                        </h3>
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                          {value.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {value.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {value.description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   )

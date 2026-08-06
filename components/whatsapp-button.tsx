@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import siteConfig from '@/data/site-config.json'
+import { siteConfig } from '@/lib/site-config'
 
 export function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false)

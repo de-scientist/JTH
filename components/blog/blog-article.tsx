@@ -18,7 +18,7 @@ import { TableOfContents } from '@/components/blog/table-of-contents'
 import { SocialShare } from '@/components/blog/social-share'
 import { BlogCard } from '@/components/blog/blog-card'
 import { fadeUp, defaultTransition, viewportOnce } from '@/lib/animations'
-import siteConfig from '@/data/site-config.json'
+import { siteConfig } from '@/lib/site-config'
 import type { BlogContentBlock, BlogPost } from '@/lib/blog-types'
 
 function formatDate(dateStr: string) {

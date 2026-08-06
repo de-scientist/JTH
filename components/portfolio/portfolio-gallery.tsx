@@ -7,7 +7,7 @@ import { X, ExternalLink, ArrowRight, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import portfolio from '@/data/portfolio.json'
-import siteConfig from '@/data/site-config.json'
+import { siteConfig } from '@/lib/site-config'
 
 const categories = ['All', 'Branding', 'Flyers', 'Posters', 'Logos', 'Social Media', 'Print', 'Web']
 

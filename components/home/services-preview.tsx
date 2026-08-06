@@ -2,17 +2,20 @@
 
 import { useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import {
   ArrowRight,
   Palette,
   Sparkles,
-  Layout,
   Monitor,
-  Code,
-  TrendingUp,
-  Clapperboard,
+  PenTool,
   Share2,
+  FileImage,
+  Clapperboard,
+  TrendingUp,
+  Clock,
+  BadgeCheck,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { SectionHeader } from '@/components/ui/section-header'
@@ -22,12 +25,12 @@ import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Palette,
   Sparkles,
-  Layout,
   Monitor,
-  Code,
-  TrendingUp,
-  Clapperboard,
+  PenTool,
   Share2,
+  FileImage,
+  Clapperboard,
+  TrendingUp,
 }
 
 function ServiceCard({ service, index }: { service: typeof homeServices[0]; index: number }) {
@@ -36,8 +39,8 @@ function ServiceCard({ service, index }: { service: typeof homeServices[0]; inde
   const y = useMotionValue(0)
   const springX = useSpring(x, { stiffness: 150, damping: 15 })
   const springY = useSpring(y, { stiffness: 150, damping: 15 })
-  const rotateX = useTransform(springY, [-0.5, 0.5], [8, -8])
-  const rotateY = useTransform(springX, [-0.5, 0.5], [-8, 8])
+  const rotateX = useTransform(springY, [-0.5, 0.5], [6, -6])
+  const rotateY = useTransform(springX, [-0.5, 0.5], [-6, 6])
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const rect = ref.current?.getBoundingClientRect()
@@ -70,27 +73,58 @@ function ServiceCard({ service, index }: { service: typeof homeServices[0]; inde
         >
           <motion.div
             style={{ rotateX, rotateY }}
-            className="card-premium h-full p-6 lg:p-7 flex flex-col relative overflow-hidden group-hover:-translate-y-1 transition-transform duration-300"
+            className="card-premium h-full overflow-hidden flex flex-col relative group-hover:-translate-y-1 transition-transform duration-300"
           >
-            <div className="absolute inset-0 bg-gradient-brand-subtle opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-brand scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-
-            <div className="relative z-10">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-brand-subtle flex items-center justify-center mb-5 group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300 group-hover:scale-110">
-                <Icon className="w-7 h-7 text-primary group-hover:text-primary transition-colors" />
+            <div className="relative aspect-[16/10] overflow-hidden">
+              <Image
+                src={service.image}
+                alt={`${service.title} by JTH Graphix Production`}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement
+                  target.src = '/images/hero-showcase.svg'
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent" />
+              <div className="absolute top-3 left-3 flex items-center gap-2">
+                <span className="px-3 py-1.5 rounded-full text-[11px] font-semibold bg-white/90 text-primary backdrop-blur-sm shadow-lg">
+                  <Icon className="w-3.5 h-3.5 inline-block mr-1 -mt-0.5" />
+                  {service.deliveryTime}
+                </span>
               </div>
+              <div className="absolute bottom-3 left-3 right-3">
+                <div className="flex items-center gap-2 text-white">
+                  <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-md border border-white/20 flex items-center justify-center shrink-0">
+                    <Clock className="w-4 h-4" />
+                  </div>
+                  <p className="text-xs font-medium text-white/90">Estimated delivery: {service.deliveryTime}</p>
+                </div>
+              </div>
+            </div>
 
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-6">
-                {service.description}
-              </p>
+            <div className="p-6 lg:p-7 flex flex-col flex-1 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-brand-subtle opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-brand scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
-              <span className="inline-flex items-center text-sm font-medium text-primary gap-2 opacity-70 group-hover:opacity-100 transition-all duration-300">
-                Learn More
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
-              </span>
+              <div className="relative z-10 flex flex-col flex-1">
+                <h3 className="font-display text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                  {service.description}
+                </p>
+                <p className="flex items-start gap-1.5 text-sm font-medium text-primary mb-5">
+                  <BadgeCheck className="w-4 h-4 mt-0.5 shrink-0" />
+                  {service.benefit}
+                </p>
+
+                <span className="inline-flex items-center text-sm font-medium text-primary gap-2 mt-auto opacity-70 group-hover:opacity-100 transition-all duration-300">
+                  Get a Free Quote
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                </span>
+              </div>
             </div>
           </motion.div>
         </motion.div>
@@ -110,11 +144,11 @@ export function ServicesPreview() {
           badge="Our Services"
           title={
             <>
-              Strategic Solutions for{' '}
-              <span className="text-gradient">Every Challenge</span>
+              Design Services That{' '}
+              <span className="text-gradient">Grow Your Business</span>
             </>
           }
-          description="From brand identity to digital campaigns — we deliver end-to-end creative services that elevate your business."
+          description="From logo design and branding to websites, social media graphics and premium printing — everything your business needs to look professional and sell more, delivered fast."
         />
 
         <motion.div
