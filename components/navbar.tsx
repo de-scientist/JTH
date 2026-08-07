@@ -40,7 +40,7 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
       if (pathname !== '/') return
-      const sections = ['hero', 'trust', 'services', 'about', 'portfolio', 'testimonials', 'process', 'blog', 'cta']
+      const sections = ['hero', 'trust', 'services', 'about', 'portfolio', 'partners', 'testimonials', 'process', 'blog', 'cta']
       const scrollPos = window.scrollY + 120
       for (const id of [...sections].reverse()) {
         const el = document.getElementById(id)
@@ -85,12 +85,12 @@ export function Navbar() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="hidden sm:block text-sm lg:text-base font-display font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
-                JTH Graphix Production
-              </span>
-              <span className="hidden sm:block text-[10px] text-muted-foreground tracking-wider uppercase">
-                Creative Solutions
-              </span>
+               <span className="hidden sm:block text-sm lg:text-base font-display font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
+                 JTH Graphix Production
+               </span>
+               <span className="hidden sm:block text-[10px] text-muted-foreground tracking-wider uppercase">
+                 Quality is our Priority
+               </span>
             </div>
           </Link>
 

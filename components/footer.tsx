@@ -201,9 +201,9 @@ export function Footer() {
               </div>
               <div>
                 <span className="text-lg font-display font-bold text-white">
-                  JTH GraphixProduction
-                </span>
-                <p className="text-xs text-white/50 tracking-wider uppercase">Creative Solutions</p>
+                   JTH Graphix Production
+                 </span>
+                 <p className="text-xs text-white/50 tracking-wider uppercase">Quality is our Priority</p>
               </div>
             </Link>
             <p className="text-white/60 mb-4 max-w-sm leading-relaxed text-sm">

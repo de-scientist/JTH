@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
@@ -20,7 +20,7 @@ import {
   Briefcase,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { fadeUp, slideInRight, slideInLeft, defaultTransition } from '@/lib/animations'
+import { fadeUp, slideInRight, slideInLeft, defaultTransition, viewportOnce } from '@/lib/animations'
 
 const trustIndicators = [
   { value: '200+', label: 'Projects Delivered' },
@@ -82,16 +82,98 @@ const polaroids = [
   },
 ]
 
-const clients = [
-  { name: 'TechVenture Kenya', icon: Code },
-  { name: 'Savanna Grill', icon: UtensilsCrossed },
-  { name: 'Wambui Fashion', icon: Shirt },
-  { name: 'Elite Events', icon: PartyPopper },
-  { name: 'Grace Community', icon: Church },
-  { name: 'Omondi Holdings', icon: Building2 },
-  { name: 'Hope Foundation', icon: HeartHandshake },
-  { name: 'Kimani & Associates', icon: Briefcase },
+const clientLogos = [
+  { name: 'TechVenture Kenya', src: '/images/bank1.png' },
+  { name: 'Savanna Grill', src: '/images/bank3.png' },
+  { name: 'Wambui Fashion', src: '/images/bank4.png' },
+  { name: 'Elite Events', src: '/images/G-F.png' },
+  { name: 'Grace Community', src: '/images/bank7.1.png' },
+  { name: 'Omondi Holdings', src: '/images/bank8.png' },
+  { name: 'Hope Foundation', src: '/images/bank9.png' },
+  { name: 'Kimani & Associates', src: '/images/nike5.jpg' },
 ]
+
+function ParticleField() {
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const [particles, setParticles] = useState<Array<{ x: number; y: number; vx: number; vy: number; r: number; alpha: number }>>([])
+
+  useEffect(() => {
+    const count = Math.min(40, Math.floor(window.innerWidth / 30))
+    const newParticles = Array.from({ length: count }, () => ({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      r: Math.random() * 2 + 1,
+      alpha: Math.random() * 0.3 + 0.1,
+    }))
+    setParticles(newParticles)
+  }, [])
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    let animationId: number
+    const resize = () => {
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+    }
+    resize()
+    window.addEventListener('resize', resize)
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      for (const p of particles) {
+        p.x += p.vx
+        p.y += p.vy
+        if (p.x < 0) p.x = canvas.width
+        if (p.x > canvas.width) p.x = 0
+        if (p.y < 0) p.y = canvas.height
+        if (p.y > canvas.height) p.y = 0
+
+        ctx.beginPath()
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(0, 74, 173, ${p.alpha})`
+        ctx.fill()
+      }
+
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x
+          const dy = particles[i].y - particles[j].y
+          const dist = Math.sqrt(dx * dx + dy * dy)
+          if (dist < 120) {
+            ctx.beginPath()
+            ctx.moveTo(particles[i].x, particles[i].y)
+            ctx.lineTo(particles[j].x, particles[j].y)
+            ctx.strokeStyle = `rgba(0, 74, 173, ${0.06 * (1 - dist / 120)})`
+            ctx.lineWidth = 0.5
+            ctx.stroke()
+          }
+        }
+      }
+
+      animationId = requestAnimationFrame(animate)
+    }
+    animate()
+    return () => {
+      cancelAnimationFrame(animationId)
+      window.removeEventListener('resize', resize)
+    }
+  }, [particles])
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 pointer-events-none"
+      aria-hidden="true"
+      style={{ opacity: 0.6 }}
+    />
+  )
+}
 
 export function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -100,18 +182,19 @@ export function HeroSection() {
   const springX = useSpring(mouseX, { stiffness: 50, damping: 20 })
   const springY = useSpring(mouseY, { stiffness: 50, damping: 20 })
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = containerRef.current?.getBoundingClientRect()
-      if (!rect) return
-      const x = (e.clientX - rect.left) / rect.width - 0.5
-      const y = (e.clientY - rect.top) / rect.height - 0.5
-      mouseX.set(x * 30)
-      mouseY.set(y * 30)
-    }
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+    const rect = containerRef.current?.getBoundingClientRect()
+    if (!rect) return
+    const x = (e.clientX - rect.left) / rect.width - 0.5
+    const y = (e.clientY - rect.top) / rect.height - 0.5
+    mouseX.set(x * 30)
+    mouseY.set(y * 30)
   }, [mouseX, mouseY])
+
+  useEffect(() => {
+    window.addEventListener('mousemove', handleMouseMove, { passive: true })
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [handleMouseMove])
 
   return (
     <section
@@ -123,8 +206,28 @@ export function HeroSection() {
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] animate-pulse-glow" />
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[120px] animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px]" />
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[100px] animate-pulse-glow" style={{ animationDelay: '3s' }} />
+        <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-accent/10 rounded-full blur-[80px] animate-pulse-glow" style={{ animationDelay: '2s' }} />
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/50" />
+        <div className="absolute top-0 left-1/4 w-1/2 h-1/2 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
+        <div className="absolute bottom-0 right-1/4 w-1/2 h-1/2 bg-gradient-to-tl from-accent/5 via-transparent to-transparent" />
+      </div>
+
+      <ParticleField />
+
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ perspective: '1000px' }}>
+        <motion.div
+          className="absolute top-[20%] left-[10%] w-64 h-64 rounded-full bg-primary/5 border border-primary/10 glass"
+          style={{ x: springX, y: springY }}
+          animate={{ rotateY: [0, 5, 0, -5, 0] }}
+          transition={{ repeat: Infinity, duration: 20, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute bottom-[30%] right-[10%] w-48 h-48 rounded-full bg-accent/5 border border-accent/10 glass"
+          animate={{ rotateY: [0, -8, 0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 25, ease: 'easeInOut' }}
+        />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 lg:px-8 py-12 lg:py-20">
@@ -143,18 +246,17 @@ export function HeroSection() {
             >
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
               <span className="text-sm font-medium text-primary">
-                Graphic Design &amp; Branding Agency in Nairobi, Kenya
+                Transforming Businesses Through Technology, Creativity &amp; Innovation
               </span>
             </motion.div>
 
             <motion.h1
               variants={fadeUp}
               transition={{ ...defaultTransition, delay: 0.2 }}
-              className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground mb-6 leading-[1.05] text-balance"
+              className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 leading-[1.05] text-balance"
             >
-              Kenya&apos;s Creative Agency for{' '}
-              <span className="text-gradient">Graphic Design &amp; Branding</span>{' '}
-              That Builds Brands That <span className="text-gradient-accent">Sell</span>
+              Transforming Businesses Through{' '}
+              <span className="text-gradient">Technology, Creativity &amp; Innovation</span>
             </motion.h1>
 
             <motion.p
@@ -162,10 +264,7 @@ export function HeroSection() {
               transition={{ ...defaultTransition, delay: 0.3 }}
               className="text-lg lg:text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0"
             >
-              JTH Graphix Production is a full-service creative agency in Kenya offering logo
-              design, website design, social media design, business branding, and premium
-              printing services. From your first idea to a brand customers trust — we design
-              visuals that win attention and turn visitors into clients.
+              We help businesses grow through branding, software development, website development, digital marketing, business automation, and creative solutions that deliver measurable results.
             </motion.p>
 
             <motion.div
@@ -328,18 +427,30 @@ export function HeroSection() {
           className="mt-16 lg:mt-20"
         >
           <p className="text-center text-sm text-muted-foreground tracking-wider uppercase mb-6">
-            Trusted by growing brands across Kenya
+            Trusted By
           </p>
           <div className="relative overflow-hidden mask-fade-edges">
-            <div className="flex w-max animate-marquee gap-16 lg:gap-20 items-center">
-              {[...clients, ...clients].map((client, i) => (
+            <div className="flex w-max animate-marquee gap-8 lg:gap-12 items-center">
+              {[...clientLogos, ...clientLogos].map((client, i) => (
                 <div
                   key={`${client.name}-${i}`}
-                  className="flex items-center gap-2.5 opacity-55 hover:opacity-100 transition-opacity duration-300"
-                  aria-hidden={i >= clients.length}
+                  className="flex items-center gap-2 opacity-55 hover:opacity-100 transition-opacity duration-300"
+                  aria-hidden={i >= clientLogos.length}
                 >
-                  <client.icon className="w-5 h-5 text-primary" />
-                  <span className="font-display font-semibold text-foreground/70 text-base whitespace-nowrap">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center overflow-hidden">
+                    <Image
+                      src={client.src}
+                      alt={client.name}
+                      width={40}
+                      height={40}
+                      className="object-contain"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement
+                        target.style.display = 'none'
+                      }}
+                    />
+                  </div>
+                  <span className="font-display font-semibold text-foreground/70 text-sm whitespace-nowrap hidden sm:block">
                     {client.name}
                   </span>
                 </div>

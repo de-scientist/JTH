@@ -7,6 +7,7 @@ import { ArrowRight, Calendar, Clock } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/section-header'
 import { Button } from '@/components/ui/button'
 import blogPosts from '@/data/blog.json'
+import { useIsMobile } from '@/components/ui/use-mobile'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 
 function formatDate(dateStr: string) {
@@ -18,6 +19,9 @@ function formatDate(dateStr: string) {
 }
 
 export function BlogSection() {
+  const isMobile = useIsMobile()
+  const displayedPosts = isMobile ? blogPosts.slice(0, 3) : blogPosts.slice(0, 6)
+
   return (
     <section id="blog" className="py-20 lg:py-32 bg-background relative overflow-hidden">
       <div className="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
@@ -42,7 +46,7 @@ export function BlogSection() {
           variants={staggerContainer}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
-          {blogPosts.slice(0, 3).map((post, index) => (
+          {displayedPosts.map((post, index) => (
             <motion.article
               key={post.id}
               variants={fadeUp}
@@ -96,26 +100,51 @@ export function BlogSection() {
           ))}
         </motion.div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOnce}
-          variants={fadeUp}
-          transition={defaultTransition}
-          className="text-center mt-14"
-        >
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="rounded-xl gap-2 h-12 px-8 border-primary/20 hover:border-primary/40 transition-all duration-300"
+        {isMobile && (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={fadeUp}
+            transition={defaultTransition}
+            className="text-center mt-10"
           >
-            <Link href="/blogs">
-              View All Articles
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </Button>
-        </motion.div>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-xl gap-2 h-12 px-8 border-primary/20 hover:border-primary/40 transition-all duration-300"
+            >
+              <Link href="/blogs">
+                View All Articles
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+          </motion.div>
+        )}
+
+        {!isMobile && blogPosts.length > 6 && (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={fadeUp}
+            transition={defaultTransition}
+            className="text-center mt-14"
+          >
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-xl gap-2 h-12 px-8 border-primary/20 hover:border-primary/40 transition-all duration-300"
+            >
+              <Link href="/blogs">
+                View All Articles
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+          </motion.div>
+        )}
       </div>
     </section>
   )

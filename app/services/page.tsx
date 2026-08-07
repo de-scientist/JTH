@@ -23,12 +23,13 @@ export default function ServicesPage() {
               Our Services
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              Creative Solutions for{' '}
+              Quality is our Priority for{' '}
               <span className="text-primary">Your Brand</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              From eye-catching flyers to complete brand identities, we deliver premium 
-              visual solutions that help your business stand out and succeed.
+              From eye-catching flyers to complete brand identities, software development,
+              and digital marketing — we deliver premium solutions that help your business
+              stand out and succeed.
             </p>
           </div>
         </div>

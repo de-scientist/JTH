@@ -5,6 +5,7 @@ import { ServicesPreview } from '@/components/home/services-preview'
 import { WhyChooseUs } from '@/components/home/why-choose-us'
 import { AboutSection } from '@/components/home/about-section'
 import { PortfolioPreview } from '@/components/home/portfolio-preview'
+import { PartnersSection } from '@/components/home/partners-section'
 import { TestimonialsSection } from '@/components/home/testimonials-section'
 import { ProcessSection } from '@/components/home/process-section'
 import { BlogSection } from '@/components/home/blog-section'
@@ -20,6 +21,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <AboutSection />
       <PortfolioPreview />
+      <PartnersSection />
       <TestimonialsSection />
       <ProcessSection />
       <BlogSection />

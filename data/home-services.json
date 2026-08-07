@@ -78,5 +78,45 @@
     "image": "/images/services/social-media-management/1.jpeg",
     "icon": "TrendingUp",
     "slug": "social-media-management"
+  },
+  {
+    "id": "social-media-management",
+    "title": "Social Media Management",
+    "description": "Ongoing social media content and management support for brands that need consistency, visibility, and growth.",
+    "benefit": "A stronger digital presence that drives engagement and conversions.",
+    "deliveryTime": "Monthly",
+    "image": "/images/services/social-media-management/1.jpeg",
+    "icon": "Share2",
+    "slug": "social-media-management"
+  },
+  {
+    "id": "trainings-mentorships",
+    "title": "Trainings & Mentorships",
+    "description": "Practical digital and creative training for individuals, schools, institutions, and teams.",
+    "benefit": "Build creative confidence and practical skills that drive business growth.",
+    "deliveryTime": "Flexible",
+    "image": "/images/services/virtual-training-sessions/1.jpeg",
+    "icon": "GraduationCap",
+    "slug": "virtual-training-sessions"
+  },
+  {
+    "id": "photography-videography",
+    "title": "Photography & Videography",
+    "description": "Professional visual storytelling that captures your brand's essence and brings it to life.",
+    "benefit": "High-impact visuals that elevate your brand across every platform.",
+    "deliveryTime": "3–7 days",
+    "image": "/images/portfolio/product-launch-social.jpg",
+    "icon": "Camera",
+    "slug": "photography-videography"
+  },
+  {
+    "id": "software-systems-development",
+    "title": "Software & Systems Development",
+    "description": "Custom software solutions and systems that automate processes and scale your business.",
+    "benefit": "Streamlined operations and measurable efficiency gains.",
+    "deliveryTime": "4–8 weeks",
+    "image": "/images/portfolio/ecommerce-website.jpg",
+    "icon": "Code",
+    "slug": "software-development"
   }
 ]

@@ -6,12 +6,14 @@ import { motion } from 'framer-motion'
 import { ArrowRight, TrendingUp, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { SectionHeader } from '@/components/ui/section-header'
+import { useIsMobile } from '@/components/ui/use-mobile'
 import { fadeUp, defaultTransition, viewportOnce } from '@/lib/animations'
 
 const caseStudies = [
   {
     id: '1',
     title: 'Tech Startup Brand Identity',
+    category: 'Brand Identity',
     industry: 'Technology',
     tags: ['Logo', 'Brand Identity'],
     image: '/images/portfolio/tech-startup-branding.jpg',
@@ -23,6 +25,7 @@ const caseStudies = [
   {
     id: '2',
     title: 'E-commerce Website Redesign',
+    category: 'Web Development',
     industry: 'Retail / E-commerce',
     tags: ['Web Design', 'UI/UX'],
     image: '/images/portfolio/ecommerce-website.jpg',
@@ -34,6 +37,7 @@ const caseStudies = [
   {
     id: '3',
     title: 'Coffee Shop Brand Package',
+    category: 'Brand Identity',
     industry: 'Food & Hospitality',
     tags: ['Branding', 'Packaging', 'Signage'],
     image: '/images/portfolio/coffee-shop-branding.jpg',
@@ -45,6 +49,7 @@ const caseStudies = [
   {
     id: '4',
     title: 'Restaurant Social Media Campaign',
+    category: 'Social Media',
     industry: 'Food & Hospitality',
     tags: ['Social Media', 'Campaign'],
     image: '/images/portfolio/restaurant-social-media.jpg',
@@ -56,6 +61,7 @@ const caseStudies = [
   {
     id: '5',
     title: 'Church Revival Event Campaign',
+    category: 'Graphic Design',
     industry: 'Church & Community',
     tags: ['Flyers', 'Posters', 'Events'],
     image: '/images/portfolio/church-revival-flyer.jpg',
@@ -67,6 +73,7 @@ const caseStudies = [
   {
     id: '6',
     title: 'Fitness Brand Logo & Identity',
+    category: 'Brand Identity',
     industry: 'Fitness & Wellness',
     tags: ['Logo', 'Branding'],
     image: '/images/portfolio/fitness-brand-logo.jpg',
@@ -78,6 +85,9 @@ const caseStudies = [
 ]
 
 export function PortfolioPreview() {
+  const isMobile = useIsMobile()
+  const displayedProjects = isMobile ? caseStudies.slice(0, 4) : caseStudies
+
   return (
     <section id="portfolio" className="py-20 lg:py-32 bg-background relative overflow-hidden">
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
@@ -96,7 +106,7 @@ export function PortfolioPreview() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {caseStudies.map((item, index) => (
+          {displayedProjects.map((item, index) => (
             <motion.article
               key={item.id}
               initial="hidden"
@@ -180,25 +190,49 @@ export function PortfolioPreview() {
           ))}
         </div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOnce}
-          variants={fadeUp}
-          transition={defaultTransition}
-          className="text-center mt-14"
-        >
-          <Button
-            asChild
-            size="lg"
-            className="bg-gradient-brand text-white rounded-xl gap-2 h-12 px-8 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
+        {isMobile && (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={fadeUp}
+            transition={defaultTransition}
+            className="text-center mt-10"
           >
-            <Link href="/portfolio">
-              View Full Portfolio
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </Button>
-        </motion.div>
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-brand text-white rounded-xl gap-2 h-12 px-8 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
+            >
+              <Link href="/portfolio">
+                View Portfolio
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+          </motion.div>
+        )}
+
+        {!isMobile && (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={fadeUp}
+            transition={defaultTransition}
+            className="text-center mt-14"
+          >
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-brand text-white rounded-xl gap-2 h-12 px-8 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
+            >
+              <Link href="/portfolio">
+                View Full Portfolio
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+          </motion.div>
+        )}
       </div>
     </section>
   )

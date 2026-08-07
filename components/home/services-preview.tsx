@@ -16,10 +16,14 @@ import {
   TrendingUp,
   Clock,
   BadgeCheck,
+  GraduationCap,
+  Camera,
+  Code,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { SectionHeader } from '@/components/ui/section-header'
 import homeServices from '@/data/home-services.json'
+import { useIsMobile } from '@/components/ui/use-mobile'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -31,6 +35,9 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   FileImage,
   Clapperboard,
   TrendingUp,
+  GraduationCap,
+  Camera,
+  Code,
 }
 
 function ServiceCard({ service, index }: { service: typeof homeServices[0]; index: number }) {
@@ -134,6 +141,9 @@ function ServiceCard({ service, index }: { service: typeof homeServices[0]; inde
 }
 
 export function ServicesPreview() {
+  const isMobile = useIsMobile()
+  const displayedServices = isMobile ? homeServices.slice(0, 6) : homeServices
+
   return (
     <section id="services" className="py-20 lg:py-32 bg-muted/30 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
@@ -158,31 +168,56 @@ export function ServicesPreview() {
           variants={staggerContainer}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6"
         >
-          {homeServices.map((service, index) => (
+          {displayedServices.map((service, index) => (
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
         </motion.div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOnce}
-          variants={fadeUp}
-          transition={defaultTransition}
-          className="text-center mt-14"
-        >
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="rounded-xl gap-2 h-12 px-8 border-primary/20 hover:border-primary/40 transition-all duration-300"
+        {isMobile && (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={fadeUp}
+            transition={defaultTransition}
+            className="text-center mt-10"
           >
-            <Link href="/services">
-              Explore All Services
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </Button>
-        </motion.div>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-xl gap-2 h-12 px-8 border-primary/20 hover:border-primary/40 transition-all duration-300"
+            >
+              <Link href="/services">
+                View All Services
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+          </motion.div>
+        )}
+
+        {!isMobile && (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={fadeUp}
+            transition={defaultTransition}
+            className="text-center mt-14"
+          >
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-xl gap-2 h-12 px-8 border-primary/20 hover:border-primary/40 transition-all duration-300"
+            >
+              <Link href="/services">
+                Explore All Services
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+          </motion.div>
+        )}
       </div>
     </section>
   )
