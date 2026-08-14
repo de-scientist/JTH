@@ -69,7 +69,7 @@ export function WhyChooseUs() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement
-                  target.src = '/images/services/branding-identity/1.jpeg'
+                  target.src = '/images/services/branding-identity/ASH Global Initiatives.png'
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
