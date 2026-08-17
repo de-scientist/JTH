@@ -83,14 +83,14 @@ const polaroids = [
 ]
 
 const clientLogos = [
-  { name: 'TechVenture Kenya', src: '/images/bank1.png' },
-  { name: 'Savanna Grill', src: '/images/bank3.png' },
-  { name: 'Wambui Fashion', src: '/images/bank4.png' },
-  { name: 'Elite Events', src: '/images/G-F.png' },
-  { name: 'Grace Community', src: '/images/bank7.1.png' },
-  { name: 'Omondi Holdings', src: '/images/bank8.png' },
-  { name: 'Hope Foundation', src: '/images/bank9.png' },
-  { name: 'Kimani & Associates', src: '/images/nike5.jpg' },
+  { name: 'NovaTech Global Technologies', src: '/images/novatech.jpg' },
+  { name: 'Savanna Grill', src: '/images/grill.jpg' },
+  { name: 'Wambui Fashion', src: '/images/fashion.jpg' },
+  { name: 'Elite Events', src: '/images/tents.jpg' },
+  { name: 'Grace Community', src: '/images/grace.jpg' },
+  { name: 'Omondi Holdings', src: '/images/hold.jpg' },
+  { name: 'Hope Foundation', src: '/images/hope.jpg' },
+  { name: 'Kimani & Associates', src: '/images/law.jpg' },
 ]
 
 function ParticleField() {
