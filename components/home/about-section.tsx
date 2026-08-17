@@ -54,11 +54,12 @@ export function AboutSection() {
           badge="Your Growth Partner"
           title={
             <>
-              We Don&apos;t Just Design — We Help{' '}
-              <span className="text-gradient">Businesses Grow</span>
+              Technology.{' '}
+              <span className="text-gradient">Creativity.</span>{' '}
+              Results.
             </>
           }
-          description="Most businesses don't fail because they lack talent — they fail because they're invisible. JTH helps you get noticed, trusted and chosen with strategic design and branding."
+          description="JTH Graphix Production is a creative agency + technology partner. We transform how businesses are perceived and operate through strategic branding, world-class digital solutions, and creative excellence that drives real business results."
         />
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
