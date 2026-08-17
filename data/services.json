@@ -437,6 +437,98 @@
     "icon": "Share2"
   },
   {
+    "id": "seo-optimization",
+    "slug": "seo-optimization",
+    "title": "SEO Optimization",
+    "tagline": "Get found by the right customers at the right moment.",
+    "shortDescription": "Search engine optimization that improves visibility, rankings, and organic growth for your brand.",
+    "fullDescription": "JTH Graphix Production helps businesses and organizations improve their search visibility through technical, on-page, and local SEO — so the right customers find you when they are actively searching for your products or services.",
+    "category": "Digital",
+    "coverImage": "/images/services/social-media-graphics/1.jpeg",
+    "galleryImages": [
+      "/images/services/social-media-graphics/1.jpeg",
+      "/images/services/social-media-graphics/2.jpeg",
+      "/images/services/social-media-graphics/3.jpeg",
+      "/images/services/social-media-graphics/4.jpeg"
+    ],
+    "featured": false,
+    "benefits": [
+      "Higher visibility in search results",
+      "More qualified organic traffic",
+      "Stronger local discovery",
+      "Better return on marketing spend"
+    ],
+    "deliverables": [
+      "Technical SEO audit",
+      "On-page optimization",
+      "Local SEO setup",
+      "Performance and ranking reporting"
+    ],
+    "useCases": [
+      "Business websites",
+      "Local service providers",
+      "Institutional pages",
+      "E-commerce stores"
+    ],
+    "relatedServices": [
+      "geo-optimization",
+      "social-media-management",
+      "website-design"
+    ],
+    "ctaPrimary": "Request SEO Quote",
+    "ctaSecondary": "Book Discovery",
+    "badge": "Visibility",
+    "metaTitle": "SEO Optimization | JTH Graphix Production",
+    "metaDescription": "Search engine optimization that grows organic visibility for Kenyan businesses.",
+    "icon": "Search"
+  },
+  {
+    "id": "geo-optimization",
+    "slug": "geo-optimization",
+    "title": "GEO Optimization",
+    "tagline": "Be the answer when AI assistants recommend solutions.",
+    "shortDescription": "Generative-engine optimization that helps AI search tools surface your business accurately.",
+    "fullDescription": "JTH Graphix Production prepares your brand and content for the age of AI search. GEO (Generative Engine Optimization) ensures tools like ChatGPT, Gemini, and Copilot cite your business accurately when people ask for creative, branding, web, and software partners in Kenya and beyond.",
+    "category": "Digital",
+    "coverImage": "/images/services/social-media-graphics/2.jpeg",
+    "galleryImages": [
+      "/images/services/social-media-graphics/2.jpeg",
+      "/images/services/social-media-graphics/1.jpeg",
+      "/images/services/social-media-graphics/3.jpeg",
+      "/images/services/social-media-graphics/4.jpeg"
+    ],
+    "featured": false,
+    "benefits": [
+      "Accurate brand representation in AI answers",
+      "Discovery through generative search",
+      "Structured, machine-readable content",
+      "Future-proof visibility strategy"
+    ],
+    "deliverables": [
+      "Content and entity optimization",
+      "Structured data implementation",
+      "Knowledge-panel readiness",
+      "AI-search visibility reporting"
+    ],
+    "useCases": [
+      "Forward-thinking brands",
+      "Service businesses",
+      "Institutions",
+      "International clients"
+    ],
+    "relatedServices": [
+      "seo-optimization",
+      "social-media-management",
+      "website-design"
+    ],
+    "ctaPrimary": "Request GEO Audit",
+    "ctaSecondary": "Book Discovery",
+    "badge": "AI Search",
+    "metaTitle": "GEO Optimization | JTH Graphix Production",
+    "metaDescription": "Generative-engine optimization so AI search tools recommend your business.",
+    "icon": "Sparkles"
+  },
+  {
     "id": "website-design",
     "slug": "website-design",
     "title": "Website Design",
