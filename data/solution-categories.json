@@ -1,0 +1,72 @@
+[
+  {
+    "id": "creative-branding",
+    "title": "Creative & Branding",
+    "description": "Strategic brand identities and compelling creative visuals",
+    "icon": "Sparkles",
+    "color": "from-purple-500 to-pink-500",
+    "services": [
+      "Graphic Design",
+      "Brand Identity",
+      "Logo Design",
+      "Printing",
+      "Packaging Design"
+    ]
+  },
+  {
+    "id": "technology-development",
+    "title": "Technology & Development",
+    "description": "Modern websites, software systems, and digital solutions",
+    "icon": "Code",
+    "color": "from-blue-500 to-cyan-500",
+    "services": [
+      "Website Development",
+      "Software & Systems Development",
+      "Business Automation",
+      "UI/UX Design",
+      "Web Performance"
+    ]
+  },
+  {
+    "id": "digital-growth",
+    "title": "Digital Growth",
+    "description": "Marketing, visibility, and audience engagement strategies",
+    "icon": "TrendingUp",
+    "color": "from-orange-500 to-red-500",
+    "services": [
+      "Digital Marketing",
+      "Social Media Management",
+      "SEO Optimization",
+      "GEO Optimization",
+      "Content Strategy"
+    ]
+  },
+  {
+    "id": "media-content",
+    "title": "Media & Content",
+    "description": "Visual and video storytelling that captivates audiences",
+    "icon": "Camera",
+    "color": "from-rose-500 to-orange-500",
+    "services": [
+      "Photography",
+      "Videography",
+      "Motion Graphics",
+      "Video Editing",
+      "Content Production"
+    ]
+  },
+  {
+    "id": "learning-development",
+    "title": "Learning & Development",
+    "description": "Skills training, mentorship, and professional development",
+    "icon": "GraduationCap",
+    "color": "from-emerald-500 to-teal-500",
+    "services": [
+      "Digital Skills Training",
+      "Creative Training",
+      "Mentorship Programs",
+      "Workshops",
+      "Corporate Training"
+    ]
+  }
+]

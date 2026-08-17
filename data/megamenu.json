@@ -1,0 +1,152 @@
+[
+  {
+    "category": "Creative & Branding",
+    "description": "Strategic visual identities and brand solutions",
+    "items": [
+      {
+        "title": "Graphic Design",
+        "description": "Striking visual assets that capture attention",
+        "href": "/services/flyer-design",
+        "icon": "Palette"
+      },
+      {
+        "title": "Brand Identity",
+        "description": "Strategic brand identities that differentiate",
+        "href": "/services/branding-identity",
+        "icon": "Sparkles"
+      },
+      {
+        "title": "Logo Design",
+        "description": "Memorable logos that capture your essence",
+        "href": "/services/logo-design",
+        "icon": "PenTool"
+      },
+      {
+        "title": "Printing & Packaging",
+        "description": "Premium print materials and packaging design",
+        "href": "/services/premium-printing",
+        "icon": "FileImage"
+      }
+    ]
+  },
+  {
+    "category": "Technology & Development",
+    "description": "Modern digital solutions and systems",
+    "items": [
+      {
+        "title": "Website Development",
+        "description": "Beautiful, modern websites that convert",
+        "href": "/services/website-design",
+        "icon": "Monitor"
+      },
+      {
+        "title": "Software Development",
+        "description": "Custom software and business systems",
+        "href": "/services/software-development",
+        "icon": "Code"
+      },
+      {
+        "title": "Business Automation",
+        "description": "Smart automation solutions for efficiency",
+        "href": "/services/business-automation",
+        "icon": "Zap"
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "User-focused interface design",
+        "href": "/services/ux-design",
+        "icon": "Layout"
+      }
+    ]
+  },
+  {
+    "category": "Digital Growth",
+    "description": "Marketing and visibility strategies",
+    "items": [
+      {
+        "title": "Digital Marketing",
+        "description": "Data-driven campaigns that amplify reach",
+        "href": "/services/social-media-management",
+        "icon": "TrendingUp"
+      },
+      {
+        "title": "Social Media Management",
+        "description": "Consistent presence and community growth",
+        "href": "/services/social-media-management",
+        "icon": "Share2"
+      },
+      {
+        "title": "SEO Optimization",
+        "description": "Search visibility and organic growth",
+        "href": "/services/seo-optimization",
+        "icon": "Search"
+      },
+      {
+        "title": "Content Strategy",
+        "description": "Strategic content that drives engagement",
+        "href": "/services/content-strategy",
+        "icon": "FileText"
+      }
+    ]
+  },
+  {
+    "category": "Media & Content",
+    "description": "Visual and video storytelling",
+    "items": [
+      {
+        "title": "Photography",
+        "description": "Professional photography for all occasions",
+        "href": "/services/photography",
+        "icon": "Camera"
+      },
+      {
+        "title": "Videography",
+        "description": "Cinematic video production and editing",
+        "href": "/services/videography",
+        "icon": "Clapperboard"
+      },
+      {
+        "title": "Motion Graphics",
+        "description": "Dynamic animations and video content",
+        "href": "/services/event-publicity-graphics",
+        "icon": "Play"
+      },
+      {
+        "title": "Social Media Graphics",
+        "description": "Scroll-stopping content for every platform",
+        "href": "/services/social-media-graphics",
+        "icon": "Image"
+      }
+    ]
+  },
+  {
+    "category": "Learning & Development",
+    "description": "Skill building and mentorship",
+    "items": [
+      {
+        "title": "Digital Skills Training",
+        "description": "Practical digital and creative training",
+        "href": "/services/virtual-training-sessions",
+        "icon": "GraduationCap"
+      },
+      {
+        "title": "Mentorship Programs",
+        "description": "One-on-one guidance and support",
+        "href": "/services/mentorship",
+        "icon": "Users"
+      },
+      {
+        "title": "Corporate Workshops",
+        "description": "Team training and skill development",
+        "href": "/services/workshops",
+        "icon": "BookOpen"
+      },
+      {
+        "title": "Recorded Learning",
+        "description": "On-demand courses and resources",
+        "href": "/services/learning-resources",
+        "icon": "Video"
+      }
+    ]
+  }
+]
