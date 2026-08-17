@@ -177,6 +177,7 @@ function ParticleField() {
 
 export function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
   const springX = useSpring(mouseX, { stiffness: 50, damping: 20 })
@@ -202,16 +203,43 @@ export function HeroSection() {
       ref={containerRef}
       className="relative min-h-screen flex items-center overflow-hidden bg-background pt-20"
     >
+      {/* Cinematic Video Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        {/* Video Background with Fallback */}
+        <div className="absolute inset-0">
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            poster="/images/hero-showcase.jpg"
+          >
+            <source src="/videos/hero-cinematic.mp4" type="video/mp4" />
+            <source src="/videos/hero-cinematic.webm" type="video/webm" />
+          </video>
+          
+          {/* Darkened Overlay with Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+          
+          {/* JTH Blue Gradient Overlay */}
+          <div className="absolute inset-0 mix-blend-multiply" style={{
+            background: 'linear-gradient(135deg, rgba(0, 74, 173, 0.2) 0%, rgba(0, 74, 173, 0.05) 50%, rgba(255, 122, 26, 0.05) 100%)'
+          }} />
+        </div>
+      </div>
+
+      {/* Existing Gradient Blobs & Effects */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] animate-pulse-glow" />
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[120px] animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px]" />
         <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[100px] animate-pulse-glow" style={{ animationDelay: '3s' }} />
         <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-accent/10 rounded-full blur-[80px] animate-pulse-glow" style={{ animationDelay: '2s' }} />
-        <div className="absolute inset-0 bg-grid opacity-30" />
+        <div className="absolute inset-0 bg-grid opacity-20" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/50" />
-        <div className="absolute top-0 left-1/4 w-1/2 h-1/2 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
-        <div className="absolute bottom-0 right-1/4 w-1/2 h-1/2 bg-gradient-to-tl from-accent/5 via-transparent to-transparent" />
       </div>
 
       <ParticleField />
