@@ -55,7 +55,7 @@ export function StatsSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="trust" ref={ref} className="py-20 lg:py-28 bg-background relative overflow-hidden">
+    <section id="stats" ref={ref} className="py-20 lg:py-28 bg-background relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-brand-subtle pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">

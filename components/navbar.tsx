@@ -5,12 +5,61 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown, Mail, MessageCircle } from 'lucide-react'
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Mail,
+  MessageCircle,
+  Palette,
+  Sparkles,
+  PenTool,
+  FileImage,
+  Monitor,
+  Code,
+  Zap,
+  Layout,
+  TrendingUp,
+  Share2,
+  Search,
+  FileText,
+  Camera,
+  Clapperboard,
+  Play,
+  Image as ImageIcon,
+  GraduationCap,
+  Users,
+  BookOpen,
+  Video,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { cn } from '@/lib/utils'
 import megamenuData from '@/data/megamenu.json'
 import { siteConfig } from '@/lib/site-config'
+
+const megamenuIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+  Palette,
+  Sparkles,
+  PenTool,
+  FileImage,
+  Monitor,
+  Code,
+  Zap,
+  Layout,
+  TrendingUp,
+  Share2,
+  Search,
+  FileText,
+  Camera,
+  Clapperboard,
+  Play,
+  Image: ImageIcon,
+  GraduationCap,
+  Users,
+  BookOpen,
+  Video,
+}
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -65,24 +114,36 @@ export function Navbar() {
         <div className="container mx-auto px-8">
           <div className="flex items-center justify-between h-10 text-xs font-medium text-muted-foreground">
             <div className="flex items-center gap-6">
-              <span>Welcome to JTH Graphix Production</span>
+              <span className="hidden xl:inline">Welcome to JTH Graphix Production</span>
+              <span className="xl:hidden">JTH Graphix Production</span>
             </div>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-5">
               <Link href="/portfolio" className="hover:text-foreground transition-colors">
                 Portfolio
               </Link>
               <Link href="/blogs" className="hover:text-foreground transition-colors">
                 Blogs
               </Link>
-              <span>|</span>
-              <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2 hover:text-foreground transition-colors">
+              <Link href="/services-pricing" className="hover:text-foreground transition-colors">
+                Resources
+              </Link>
+              <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-1.5 hover:text-foreground transition-colors">
                 <Mail className="w-3.5 h-3.5" />
-                {siteConfig.email}
+                <span className="hidden xl:inline">{siteConfig.email}</span>
+                <span className="xl:hidden">Email</span>
               </a>
-              <a href={siteConfig.whatsappHref} className="flex items-center gap-2 hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href={siteConfig.whatsappHref} className="flex items-center gap-1.5 hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-3.5 h-3.5" />
                 WhatsApp
               </a>
+              <ThemeToggle />
+              <Button
+                asChild
+                size="sm"
+                className="h-7 px-3 rounded-lg bg-gradient-brand hover:opacity-90 text-white text-xs font-semibold"
+              >
+                <Link href="/contact">Request a Quote</Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -183,22 +244,30 @@ export function Navbar() {
                                 {column.description}
                               </p>
                             </div>
-                            <div className="space-y-2">
-                              {column.items.map((item, i) => (
-                                <Link
-                                  key={i}
-                                  href={item.href}
-                                  className="block p-3 rounded-xl hover:bg-primary/10 transition-colors group"
-                                >
-                                  <p className="text-xs font-semibold text-foreground group-hover:text-primary transition-colors">
-                                    {item.title}
-                                  </p>
-                                  <p className="text-xs text-muted-foreground group-hover:text-muted-foreground/80 mt-0.5">
-                                    {item.description}
-                                  </p>
-                                </Link>
-                              ))}
-                            </div>
+                             <div className="space-y-2">
+                               {column.items.map((item, i) => {
+                                 const ItemIcon = megamenuIcons[item.icon]
+                                 return (
+                                   <Link
+                                     key={i}
+                                     href={item.href}
+                                     className="flex items-start gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors group"
+                                   >
+                                     <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                                       {ItemIcon ? <ItemIcon className="w-4 h-4" /> : null}
+                                     </div>
+                                     <div className="min-w-0">
+                                       <p className="text-xs font-semibold text-foreground group-hover:text-primary transition-colors">
+                                         {item.title}
+                                       </p>
+                                       <p className="text-xs text-muted-foreground mt-0.5 leading-snug">
+                                         {item.description}
+                                       </p>
+                                     </div>
+                                   </Link>
+                                 )
+                               })}
+                             </div>
                           </div>
                         ))}
                       </div>
@@ -284,22 +353,36 @@ export function Navbar() {
                     )}
                   </motion.div>
                 ))}
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  className="pt-6 mt-4 border-t border-border"
-                >
-                  <div className="flex items-center justify-between gap-4 px-2 mb-4">
-                    <span className="text-sm font-medium text-muted-foreground">
-                      Appearance
-                    </span>
-                    <ThemeToggle />
-                  </div>
-                  <Button asChild className="w-full bg-gradient-brand text-white h-14 rounded-2xl text-base font-semibold">
-                    <Link href="/contact">Request a Quote</Link>
-                  </Button>
-                </motion.div>
+                 <motion.div
+                   initial={{ opacity: 0, y: 10 }}
+                   animate={{ opacity: 1, y: 0 }}
+                   transition={{ delay: 0.3 }}
+                   className="pt-6 mt-4 border-t border-border"
+                 >
+                   <div className="grid grid-cols-2 gap-2 mb-4">
+                     <Link href="/portfolio" className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-muted/60 text-sm font-medium text-foreground hover:bg-muted transition-colors">
+                       Portfolio
+                     </Link>
+                     <Link href="/blogs" className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-muted/60 text-sm font-medium text-foreground hover:bg-muted transition-colors">
+                       Blogs
+                     </Link>
+                     <Link href="/services-pricing" className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-muted/60 text-sm font-medium text-foreground hover:bg-muted transition-colors">
+                       Resources
+                     </Link>
+                     <a href={siteConfig.whatsappHref} className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-muted/60 text-sm font-medium text-foreground hover:bg-muted transition-colors" target="_blank" rel="noopener noreferrer">
+                       WhatsApp
+                     </a>
+                   </div>
+                   <div className="flex items-center justify-between gap-4 px-2 mb-4">
+                     <span className="text-sm font-medium text-muted-foreground">
+                       Appearance
+                     </span>
+                     <ThemeToggle />
+                   </div>
+                   <Button asChild className="w-full bg-gradient-brand text-white h-14 rounded-2xl text-base font-semibold">
+                     <Link href="/contact">Request a Quote</Link>
+                   </Button>
+                 </motion.div>
               </div>
             </div>
           </motion.div>
