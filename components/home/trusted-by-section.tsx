@@ -6,7 +6,7 @@ import { SectionHeader } from '@/components/ui/section-header'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 
 const clients = [
-  { name: 'TechVenture Kenya', logo: '/images/bank1.png' },
+  { name: 'NovaTech', logo: '/images/bank1.png' },
   { name: 'Savanna Grill', logo: '/images/bank3.png' },
   { name: 'Wambui Fashion', logo: '/images/bank4.png' },
   { name: 'Elite Events', logo: '/images/G-F.png' },
