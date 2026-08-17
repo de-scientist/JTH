@@ -11,7 +11,7 @@ const clients = [
   { name: 'Wambui Fashion', logo: '/images/fashion.jpg' },
   { name: 'Elite Events', logo: '/images/tents.jpg' },
   { name: 'Grace Community', logo: '/images/grace.jpg' },
-  { name: 'Omondi Holdings', logo: '/images/bank8.png' },
+  { name: 'Omondi Holdings', logo: '/images/hold.jpg' },
   { name: 'Hope Foundation', logo: '/images/bank9.png' },
   { name: 'Kimani & Associates', logo: '/images/nike5.jpg' },
 ]
