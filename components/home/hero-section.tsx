@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion, useMotionValue, useSpring } from 'framer-motion'
+import { motion, useMotionValue, useSpring, useReducedMotion } from 'framer-motion'
 import {
   ArrowRight,
   Star,
@@ -177,6 +177,7 @@ function ParticleField() {
 
 export function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null)
+  const prefersReducedMotion = useReducedMotion()
 
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
@@ -205,26 +206,43 @@ export function HeroSection() {
     >
       {/* Cinematic Video Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        {/* Video Background with Fallback */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/hero-showcase.jpg"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          
-          {/* Darkened Overlay with Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-          
-          {/* JTH Blue Gradient Overlay */}
-          <div className="absolute inset-0 mix-blend-multiply" style={{
-            background: 'linear-gradient(135deg, rgba(0, 74, 173, 0.2) 0%, rgba(0, 74, 173, 0.05) 50%, rgba(255, 122, 26, 0.05) 100%)'
-          }} />
-        </div>
+        {/* Poster / fallback image — always rendered so the hero stays premium
+            even if the video file is missing or fails to load */}
+        <Image
+          src="/images/hero-showcase.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Looping, muted, autoplaying cinematic video.
+            Drop an optimized file at /public/videos/hero.webm and
+            /public/videos/hero.mp4 (8-15s, compressed). If unavailable,
+            the poster image above remains visible. */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay={!prefersReducedMotion}
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/images/hero-showcase.jpg"
+          tabIndex={-1}
+        >
+          <source src="/videos/hero.webm" type="video/webm" />
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+
+        {/* Darkened Overlay with Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/65 to-background/75" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+
+        {/* JTH Blue Gradient Overlay */}
+        <div className="absolute inset-0 mix-blend-multiply" style={{
+          background: 'linear-gradient(135deg, rgba(0, 74, 173, 0.28) 0%, rgba(0, 74, 173, 0.06) 50%, rgba(0, 74, 173, 0.04) 100%)'
+        }} />
       </div>
 
       {/* Existing Gradient Blobs & Effects */}
@@ -238,7 +256,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/50" />
       </div>
 
-      <ParticleField />
+      {!prefersReducedMotion && <ParticleField />}
 
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ perspective: '1000px' }}>
         <motion.div
