@@ -8,33 +8,33 @@ import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib
 const values = [
   {
     icon: Zap,
-    title: 'Fast, Reliable Turnaround',
-    description: 'Most projects delivered within 24–72 hours, with clear timelines from day one.',
+    title: 'Quality-First Approach',
+    description: 'Every design is production-ready. Print-ready files, optimized web assets, and professional deliverables from day one.',
   },
   {
     icon: BadgeCheck,
-    title: 'Production-Ready Quality',
-    description: 'Print and digital files prepared to professional standards — ready when you need them.',
+    title: 'Creative + Technical Expertise',
+    description: 'We blend artistic excellence with technical precision — creating designs that look stunning and perform brilliantly.',
   },
   {
     icon: Eye,
-    title: 'Detail-Obsessed Design',
-    description: 'Every pixel, color and alignment is intentional. Nothing is left to chance.',
+    title: 'Business-Focused Solutions',
+    description: 'Strategy drives every decision. We design to achieve your goals, not just create pretty work.',
   },
   {
     icon: Trophy,
-    title: 'Results That Convert',
-    description: 'Design decisions driven by business goals — not just aesthetics.',
+    title: 'Responsive Client Support',
+    description: 'Direct communication, clear timelines, and dedicated support throughout your project and beyond.',
   },
   {
     icon: Lightbulb,
-    title: 'Strategy-First Thinking',
-    description: 'We design with your brand strategy in mind, so every touchpoint stays consistent.',
+    title: 'Scalable Digital Solutions',
+    description: 'From branding to software, we build solutions that grow with your business without technical limitations.',
   },
   {
     icon: HeadphonesIcon,
-    title: 'Dedicated Client Support',
-    description: 'Direct communication throughout your project and support long after delivery.',
+    title: 'Kenyan Market Understanding',
+    description: 'Deep knowledge of the local market, cultural nuances, and what resonates with Kenyan and East African audiences.',
   },
 ]
 
