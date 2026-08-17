@@ -1,5 +1,7 @@
 // Home page - JTH Graphix Production
 import { HeroSection } from '@/components/home/hero-section'
+import { TrustedBySection } from '@/components/home/trusted-by-section'
+import { SolutionsSection } from '@/components/home/solutions-section'
 import { StatsSection } from '@/components/home/stats-section'
 import { ServicesPreview } from '@/components/home/services-preview'
 import { WhyChooseUs } from '@/components/home/why-choose-us'
@@ -16,10 +18,11 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <TrustedBySection />
+      <SolutionsSection />
       <StatsSection />
-      <ServicesPreview />
-      <WhyChooseUs />
       <AboutSection />
+      <WhyChooseUs />
       <PortfolioPreview />
       <PartnersSection />
       <TestimonialsSection />
