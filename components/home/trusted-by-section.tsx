@@ -10,7 +10,7 @@ const clients = [
   { name: 'Savanna Grill', logo: '/images/grill.jpg' },
   { name: 'Wambui Fashion', logo: '/images/fashion.jpg' },
   { name: 'Elite Events', logo: '/images/tents.jpg' },
-  { name: 'Grace Community', logo: '/images/bank7.1.png' },
+  { name: 'Grace Community', logo: '/images/grace.jpg' },
   { name: 'Omondi Holdings', logo: '/images/bank8.png' },
   { name: 'Hope Foundation', logo: '/images/bank9.png' },
   { name: 'Kimani & Associates', logo: '/images/nike5.jpg' },
