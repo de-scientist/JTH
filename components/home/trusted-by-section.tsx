@@ -7,7 +7,7 @@ import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib
 
 const clients = [
   { name: 'NovaTech Global Innovation', logo: '/images/novatech.jpg' },
-  { name: 'Savanna Grill', logo: '/images/bank3.png' },
+  { name: 'Savanna Grill', logo: '/images/grill.jpg' },
   { name: 'Wambui Fashion', logo: '/images/bank4.png' },
   { name: 'Elite Events', logo: '/images/G-F.png' },
   { name: 'Grace Community', logo: '/images/bank7.1.png' },
