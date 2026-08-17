@@ -9,7 +9,7 @@ const clients = [
   { name: 'NovaTech Global Innovation', logo: '/images/novatech.jpg' },
   { name: 'Savanna Grill', logo: '/images/grill.jpg' },
   { name: 'Wambui Fashion', logo: '/images/fashion.jpg' },
-  { name: 'Elite Events', logo: '/images/G-F.png' },
+  { name: 'Elite Events', logo: '/images/tents.jpg' },
   { name: 'Grace Community', logo: '/images/bank7.1.png' },
   { name: 'Omondi Holdings', logo: '/images/bank8.png' },
   { name: 'Hope Foundation', logo: '/images/bank9.png' },
