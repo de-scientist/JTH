@@ -1,0 +1,47 @@
+[
+  {
+    "id": "services",
+    "question": "What graphic design services does JTH Graphix Production offer?",
+    "answer": "JTH Graphix Production is a full-service creative agency and technology partner in Kenya offering logo design, brand identity and business branding, website development, software and systems development, business automation, UI/UX design, social media design, flyers, posters, business cards, brochures, banners, packaging, motion graphics, photography, videography, premium printing, digital marketing, and practical creative training for individuals, schools and organizations."
+  },
+  {
+    "id": "why-jth",
+    "question": "Why choose JTH Graphix Production over other design agencies?",
+    "answer": "Clients choose JTH because we combine fast turnaround with production-ready quality and strategy-led design. Most projects are delivered within 24 to 72 hours, every file is prepared to professional print and digital standards, and we focus on designs and digital solutions that convert — helping businesses look credible, win trust and grow. With a 5.0 average client rating and 98% satisfaction rate, our results speak for themselves."
+  },
+  {
+    "id": "cost",
+    "question": "How much does branding, a website, or software cost in Kenya?",
+    "answer": "Pricing depends on the scope of your project. A professional logo design is our most popular starting point, while full brand identity packages include logos, color palettes, typography, and brand guidelines. Website and software projects are quoted based on features and complexity. We provide free, no-obligation quotes tailored to your budget. Contact us via WhatsApp or the contact form and we will send you a clear estimate within hours."
+  },
+  {
+    "id": "time",
+    "question": "How long does it take to get a design or website delivered?",
+    "answer": "Most single designs — flyers, posters, social media graphics and business cards — are delivered within 24 to 72 hours. Branding projects typically take 5 to 7 days, websites take 1 to 3 weeks, and custom software or automation systems take 4 to 8 weeks depending on complexity. You will always receive a clear timeline before we start, and we keep you updated at every stage."
+  },
+  {
+    "id": "printing",
+    "question": "What printing services are available?",
+    "answer": "We offer premium printing services including business cards, flyers, posters, brochures, banners, roll-up stands, stickers, signage, and corporate branded materials. Every design we create is prepared in print-ready formats, and we can handle the full production process so you receive finished, professional materials."
+  },
+  {
+    "id": "website",
+    "question": "Do you develop websites and software systems?",
+    "answer": "Yes. JTH develops modern, responsive websites and custom software systems including business automation, dashboards, booking and management systems. We also provide UI/UX design and ongoing support so your digital products stay fast, secure and aligned with your brand."
+  },
+  {
+    "id": "software",
+    "question": "Does JTH offer branding, social media management, photography and videography?",
+    "answer": "Yes. Beyond design and development, JTH provides brand identity systems, ongoing social media management and content, SEO and GEO optimization, professional photography and videography, motion graphics, and practical training and mentorship programs."
+  },
+  {
+    "id": "get-started",
+    "question": "How do I get started and request a free quote?",
+    "answer": "Getting started is simple. Click \"Start Your Project\", send us a message on WhatsApp, or use the contact form with a short description of what you need. Within hours you will receive a free quote and a suggested timeline. There is no obligation — many clients begin with a single design and grow with us."
+  },
+  {
+    "id": "outside-kenya",
+    "question": "Where does JTH Graphix Production operate, and do you work with businesses outside Kenya?",
+    "answer": "JTH Graphix Production is proudly based in Nairobi, Kenya, and works with SMEs, corporates, startups, NGOs, churches, institutions and international clients across East Africa and worldwide. All digital work is delivered online, and we provide print-ready files that can be produced anywhere in the world."
+  }
+]

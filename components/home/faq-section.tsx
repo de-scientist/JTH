@@ -12,57 +12,9 @@ import {
 } from '@/components/ui/accordion'
 import { fadeUp, defaultTransition, viewportOnce } from '@/lib/animations'
 import { siteConfig } from '@/lib/site-config'
+import faqsData from '@/data/faq.json'
 
-const faqs = [
-  {
-    id: 'services',
-    question: 'What graphic design services does JTH Graphix Production offer?',
-    answer:
-      'JTH Graphix Production is a full-service creative agency in Kenya offering logo design, brand identity and business branding, website design, social media design, flyers, posters, business cards, brochures, banners, packaging, motion graphics, and premium printing services. We also provide digital marketing support and practical creative training for individuals, schools and organizations.',
-  },
-  {
-    id: 'why-jth',
-    question: 'Why choose JTH Graphix Production over other design agencies?',
-    answer:
-      'Clients choose JTH because we combine fast turnaround with production-ready quality and strategy-led design. Most projects are delivered within 24 to 72 hours, every file is prepared to professional print and digital standards, and we focus on designs that convert — helping businesses look credible, win trust and grow. With a 5.0 average client rating and 98% satisfaction rate, our results speak for themselves.',
-  },
-  {
-    id: 'cost',
-    question: 'How much does branding or logo design cost in Kenya?',
-    answer:
-      'Pricing depends on the scope of your project. A professional logo design is our most popular starting point, while full brand identity packages include logos, color palettes, typography, and brand guidelines. We provide free, no-obligation quotes tailored to your budget. Contact us via WhatsApp or the contact form and we will send you a clear estimate within hours.',
-  },
-  {
-    id: 'time',
-    question: 'How long does it take to get a design delivered?',
-    answer:
-      'Most single designs — flyers, posters, social media graphics and business cards — are delivered within 24 to 72 hours. Branding projects typically take 5 to 7 days, and website design takes 2 to 3 weeks depending on complexity. You will always receive a clear timeline before we start, and we keep you updated at every stage.',
-  },
-  {
-    id: 'printing',
-    question: 'What printing services are available?',
-    answer:
-      'We offer premium printing services including business cards, flyers, posters, brochures, banners, roll-up stands, stickers, signage, and corporate branded materials. Every design we create is prepared in print-ready formats, and we can handle the full production process so you receive finished, professional materials.',
-  },
-  {
-    id: 'website',
-    question: 'What makes a professional website?',
-    answer:
-      'A professional website is fast, mobile-friendly, secure, and clearly communicates what you do and how to contact you. It reflects your brand identity, builds trust, and guides visitors toward taking action — whether that is calling you, messaging you, or making a purchase. We design websites that look premium and convert visitors into enquiries.',
-  },
-  {
-    id: 'get-started',
-    question: 'How do I get started and request a free quote?',
-    answer:
-      'Getting started is simple. Click "Start Your Project", send us a message on WhatsApp, or use the contact form with a short description of what you need. Within hours you will receive a free quote and a suggested timeline. There is no obligation — many clients begin with a single design and grow with us.',
-  },
-  {
-    id: 'outside-kenya',
-    question: 'Do you work with businesses outside Kenya?',
-    answer:
-      'Yes. While we are proudly based in Nairobi, Kenya, we work with clients and organizations across East Africa and internationally. All digital work is delivered online, and we provide print-ready files that can be produced anywhere in the world.',
-  },
-]
+const faqs = faqsData
 
 export function FAQSection() {
   return (
