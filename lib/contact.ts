@@ -89,7 +89,6 @@ export function openEmailClient(url: string, options: OpenEmailClientOptions = {
   link.style.display = 'none'
 
   let settled = false
-  let timer: number | undefined
 
   const cleanup = () => {
     document.removeEventListener('visibilitychange', handleVisibilityChange)
@@ -122,7 +121,7 @@ export function openEmailClient(url: string, options: OpenEmailClientOptions = {
   document.addEventListener('visibilitychange', handleVisibilityChange)
   window.addEventListener('blur', handleBlur)
 
-  timer = window.setTimeout(() => finish('timed-out'), timeout)
+  const timer = window.setTimeout(() => finish('timed-out'), timeout)
 
   document.body.appendChild(link)
   link.click()
