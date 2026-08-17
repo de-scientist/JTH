@@ -49,14 +49,12 @@ export function CTASection() {
           </motion.div>
 
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 text-balance leading-tight">
-            Ready to Elevate{' '}
-            <span className="text-accent">Your Brand?</span>
+            Ready to Transform{' '}
+            <span className="text-accent">Your Business?</span>
           </h2>
 
           <p className="text-lg md:text-xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Whether you need a single design or a complete brand identity, we&apos;ll help you
-            look professional and start winning more customers. Tell us your idea — we&apos;ll
-            handle the rest.
+            Let's turn your ideas into technology, creative experiences and digital solutions that move your business forward. From branding to software, web to campaigns — we have the expertise to make it happen.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
