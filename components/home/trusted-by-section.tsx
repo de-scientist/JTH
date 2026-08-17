@@ -12,7 +12,7 @@ const clients = [
   { name: 'Elite Events', logo: '/images/tents.jpg' },
   { name: 'Grace Community', logo: '/images/grace.jpg' },
   { name: 'Omondi Holdings', logo: '/images/hold.jpg' },
-  { name: 'Hope Foundation', logo: '/images/bank9.png' },
+  { name: 'Hope Foundation', logo: '/images/hope.jpg' },
   { name: 'Kimani & Associates', logo: '/images/nike5.jpg' },
 ]
 
