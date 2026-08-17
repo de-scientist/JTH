@@ -105,13 +105,12 @@ export function WhyChooseUs() {
               Why Choose JTH
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-              Why Clients Grow With{' '}
-              <span className="text-gradient">JTH Graphix Production</span>
+              Technology.{' '}
+              <span className="text-gradient">Creativity.</span>{' '}
+              <span className="text-gradient">Results.</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-xl">
-              Businesses choose us because great design pays for itself. We combine creative
-              excellence with professional reliability so every project — from a single flyer
-              to a full brand identity — helps you look credible, win trust and sell more.
+              We are not just a design agency. We are a strategic partner that combines creative excellence, technical expertise, and business understanding to transform how your business is perceived and operates.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
