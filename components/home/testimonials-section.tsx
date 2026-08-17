@@ -110,11 +110,11 @@ export function TestimonialsSection() {
             badge="Client Success Stories"
             title={
               <>
-                Why Businesses{' '}
-                <span className="text-gradient-accent">Trust JTH</span>
+                Trusted By Businesses,{' '}
+                <span className="text-gradient">Organizations & Entrepreneurs</span>
               </>
             }
-            description="Real results from churches, startups, restaurants, NGOs and established companies across Kenya who grew their brands with our design and branding services."
+            description="From startups to corporations, churches to NGOs, institutions to government-related organizations — businesses across Kenya trust JTH to transform their brands, digital presence and business operations."
           />
 
           <motion.div
@@ -186,11 +186,11 @@ export function TestimonialsSection() {
           badge="Client Success Stories"
           title={
             <>
-              Why Businesses{' '}
-              <span className="text-gradient-accent">Trust JTH</span>
+              Trusted By Businesses,{' '}
+              <span className="text-gradient">Organizations & Entrepreneurs</span>
             </>
           }
-          description="Real results from churches, startups, restaurants, NGOs and established companies across Kenya who grew their brands with our design and branding services."
+          description="From startups to corporations, churches to NGOs, institutions to government-related organizations — businesses across Kenya trust JTH to transform their brands, digital presence and business operations."
         />
 
         <motion.div
