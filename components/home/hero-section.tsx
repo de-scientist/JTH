@@ -491,17 +491,33 @@ export function HeroSection() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:block"
-        aria-hidden="true"
+        transition={{ delay: 1.5, duration: 0.6 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 cursor-pointer"
+        onClick={() => {
+          const el = document.getElementById('solutions') || document.querySelector('[id*="services"]')
+          if (el) el.scrollIntoView({ behavior: 'smooth' })
+        }}
+        role="button"
+        tabIndex={0}
+        aria-label="Scroll to next section"
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            const el = document.getElementById('solutions') || document.querySelector('[id*="services"]')
+            if (el) el.scrollIntoView({ behavior: 'smooth' })
+          }
+        }}
       >
+        <span className="text-xs font-semibold text-muted-foreground tracking-wider uppercase">
+          Explore JTH
+        </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 1.8 }}
-          className="w-6 h-10 rounded-full border-2 border-muted-foreground/25 flex items-start justify-center p-1.5"
+          transition={{ repeat: Infinity, duration: 2 }}
+          className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-1.5 hover:border-muted-foreground/60 transition-colors"
         >
-          <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+          <div className="w-1 h-2 rounded-full bg-primary" />
         </motion.div>
+        <span className="text-xs text-muted-foreground">Scroll</span>
       </motion.div>
     </section>
   )
