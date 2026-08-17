@@ -129,14 +129,14 @@ export function SolutionsSection() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ ...defaultTransition, delay: index * 0.05 }}
                           >
-                            <Link href={`/services/${service.slug}`} className="group block h-full">
+                            <div className="group block h-full">
                               <motion.div
                                 whileHover={{ y: -8 }}
                                 transition={{ duration: 0.3 }}
                                 className="card-premium h-full overflow-hidden flex flex-col"
                               >
                                 {/* Image */}
-                                <div className="relative aspect-video overflow-hidden bg-muted/50">
+                                <Link href={`/services/${service.slug}`} className="relative aspect-video overflow-hidden bg-muted/50 block">
                                   <Image
                                     src={service.image}
                                     alt={service.title}
@@ -152,23 +152,32 @@ export function SolutionsSection() {
                                   <div className="absolute top-3 left-3 px-3 py-1.5 rounded-full text-xs font-semibold bg-white/90 text-primary backdrop-blur-sm">
                                     {service.deliveryTime}
                                   </div>
-                                </div>
+                                </Link>
 
                                 {/* Content */}
                                 <div className="flex-1 p-5 flex flex-col">
                                   <h4 className="font-display font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                                    {service.title}
+                                    <Link href={`/services/${service.slug}`}>
+                                      {service.title}
+                                    </Link>
                                   </h4>
                                   <p className="text-sm text-muted-foreground mb-4 flex-1">
                                     {service.description}
                                   </p>
-                                  <div className="flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all">
-                                    View Service
-                                    <ArrowRight className="w-4 h-4" />
-                                  </div>
+                                  <Button
+                                    asChild
+                                    size="sm"
+                                    variant="ghost"
+                                    className="self-start text-primary hover:text-primary p-0 h-auto font-semibold"
+                                  >
+                                    <Link href={`/services/${service.slug}`}>
+                                      View Service
+                                      <ArrowRight className="w-4 h-4" />
+                                    </Link>
+                                  </Button>
                                 </div>
                               </motion.div>
-                            </Link>
+                            </div>
                           </motion.div>
                         ))}
                       </div>
