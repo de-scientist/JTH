@@ -29,14 +29,14 @@ export function BlogSection() {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <SectionHeader
-          badge="Insights & Ideas"
+          badge="Insights & Resources"
           title={
             <>
-              Latest From Our{' '}
-              <span className="text-gradient">Blog</span>
+              Strategies to Grow Your{' '}
+              <span className="text-gradient">Business</span>
             </>
           }
-          description="Expert perspectives on branding, design strategy, and digital growth."
+          description="Expert perspectives on branding, design strategy, digital growth, technology, and what it takes to build a business that stands out."
         />
 
         <motion.div
