@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 import portfolioData from '@/data/portfolio.json'
 
@@ -89,8 +89,9 @@ export function PortfolioGallery() {
             {/* Tab Contents */}
             <div className="mt-12 lg:mt-16">
               <AnimatePresence mode="wait">
-                {allCategories.map((category) => (
-                  <TabsContent key={category} value={category} asChild>
+                {allCategories
+                  .filter((category) => category === activeTab)
+                  .map((category) => (
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -188,8 +189,7 @@ export function PortfolioGallery() {
                         </Button>
                       </div>
                     </motion.div>
-                  </TabsContent>
-                ))}
+                  ))}
               </AnimatePresence>
             </div>
           </Tabs>

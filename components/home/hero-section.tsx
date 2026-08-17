@@ -63,7 +63,7 @@ const floatingCards = [
 
 const polaroids = [
   {
-    image: '/images/services/branding-identity/1.jpeg',
+    image: '/images/services/branding-identity/1.svg',
     label: 'Brand Identity',
     sub: 'Logo & Guidelines',
     position: 'top-0 -left-4 lg:-left-8 rotate-[-5deg] z-10 w-28 lg:w-36',
@@ -177,7 +177,7 @@ function ParticleField() {
 
 export function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
+
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
   const springX = useSpring(mouseX, { stiffness: 50, damping: 20 })
@@ -207,18 +207,14 @@ export function HeroSection() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         {/* Video Background with Fallback */}
         <div className="absolute inset-0">
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            loop
-            playsInline
+          <Image
+            src="/images/hero-showcase.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
             className="absolute inset-0 w-full h-full object-cover"
-            poster="/images/hero-showcase.jpg"
-          >
-            <source src="/videos/hero-cinematic.mp4" type="video/mp4" />
-            <source src="/videos/hero-cinematic.webm" type="video/webm" />
-          </video>
+          />
           
           {/* Darkened Overlay with Gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/70" />

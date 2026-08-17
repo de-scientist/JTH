@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 import solutionCategories from '@/data/solution-categories.json'
 import homeServices from '@/data/home-services.json'
@@ -100,8 +100,9 @@ export function SolutionsSection() {
             {/* Tab Contents */}
             <div className="mt-12 lg:mt-16">
               <AnimatePresence mode="wait">
-                {solutionCategories.map((category) => (
-                  <TabsContent key={category.id} value={category.id} asChild>
+                {solutionCategories
+                  .filter((category) => category.id === activeTab)
+                  .map((category) => (
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -186,8 +187,7 @@ export function SolutionsSection() {
                         </Button>
                       </div>
                     </motion.div>
-                  </TabsContent>
-                ))}
+                  ))}
               </AnimatePresence>
             </div>
           </Tabs>
