@@ -82,6 +82,12 @@
         "icon": "Search"
       },
       {
+        "title": "GEO Optimization",
+        "description": "Generative-engine optimization for AI search",
+        "href": "/services/geo-optimization",
+        "icon": "Sparkles"
+      },
+      {
         "title": "Content Strategy",
         "description": "Strategic content that drives engagement",
         "href": "/services/content-strategy",

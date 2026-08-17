@@ -14,10 +14,28 @@ import { PartnersSection } from '@/components/home/partners-section'
 import { BlogSection } from '@/components/home/blog-section'
 import { FAQSection } from '@/components/home/faq-section'
 import { CTASection } from '@/components/home/cta-section'
+import faqsData from '@/data/faq.json'
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqsData.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <HeroSection />
       <TrustedBySection />
       <AboutSection />
