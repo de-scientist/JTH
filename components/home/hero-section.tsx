@@ -72,7 +72,7 @@ const polaroids = [
     floatDuration: 5,
   },
   {
-    image: '/images/services/business-card-design/1.jpeg',
+    image: '/images/services/business-card-design/ash-tech-hub.png',
     label: 'Business Cards',
     sub: 'Premium Print',
     position: 'bottom-16 -right-3 lg:-right-7 rotate-6 z-10 w-28 lg:w-36',
