@@ -51,7 +51,7 @@ const partners = [
   {
     name: 'Kimani & Associates',
     description: 'Professional services partner for corporate branding.',
-    logo: '/images/nike5.jpg',
+    logo: '/images/law.jpg',
     fallback: '/images/portfolio/19.jpeg',
   },
 ]
