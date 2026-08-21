@@ -13,7 +13,7 @@ const clients = [
   { name: 'Grace Community', logo: '/images/grace.jpg' },
   { name: 'Omondi Holdings', logo: '/images/hold.jpg' },
   { name: 'Hope Foundation', logo: '/images/hope.jpg' },
-  { name: 'Kimani & Associates', logo: '/images/logo.jpg' },
+  { name: 'Kimani & Associates', logo: '/images/law.jpg' },
 ]
 
 export function TrustedBySection() {
