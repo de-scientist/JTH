@@ -27,7 +27,7 @@ const partners = [
   {
     name: 'Elite Events',
     description: 'Event partner for campaign graphics and branding.',
-    logo: '/images/G-F.png',
+    logo: '/images/tents.jpg',
     fallback: '/images/portfolio/16.jpeg',
   },
   {
