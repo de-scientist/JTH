@@ -33,7 +33,7 @@ const partners = [
   {
     name: 'Grace Community',
     description: 'Community partner for outreach and event materials.',
-    logo: '/images/bank7.1.png',
+    logo: '/images/grace.jpg',
     fallback: '/images/portfolio/14.jpeg',
   },
   {
