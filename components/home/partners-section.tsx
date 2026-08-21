@@ -45,7 +45,7 @@ const partners = [
   {
     name: 'Hope Foundation',
     description: 'Non-profit partner for awareness campaign design.',
-    logo: '/images/bank9.png',
+    logo: '/images/hope.jpg',
     fallback: '/images/portfolio/23.jpeg',
   },
   {
