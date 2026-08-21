@@ -63,7 +63,7 @@ const floatingCards = [
 
 const polaroids = [
   {
-    image: '/images/services/branding-identity/1.svg',
+    image: '/images/services/branding-identity/ASH.png',
     label: 'Brand Identity',
     sub: 'Logo & Guidelines',
     position: 'top-0 -left-4 lg:-left-8 rotate-[-5deg] z-10 w-28 lg:w-36',
