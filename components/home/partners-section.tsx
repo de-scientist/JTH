@@ -96,8 +96,10 @@ export function PartnersSection() {
                 <Image
                   src={partner.logo}
                   alt={partner.name}
-                  fill
-                  className="object-contain p-3"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                  style={{ width: 'auto', height: 'auto', maxWidth: '100%', maxHeight: '100%' }}
                   sizes="80px"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement
