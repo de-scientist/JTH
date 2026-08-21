@@ -39,7 +39,7 @@ const partners = [
   {
     name: 'Omondi Holdings',
     description: 'Corporate partner for branding and print materials.',
-    logo: '/images/bank8.png',
+    logo: '/images/hold.jpg',
     fallback: '/images/portfolio/15.jpeg',
   },
   {
