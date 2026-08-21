@@ -115,7 +115,9 @@ export function Navbar() {
           <div className="flex items-center justify-between h-10 text-xs font-medium text-muted-foreground">
             <div className="flex items-center gap-6">
               <span className="hidden xl:inline">Welcome to JTH Graphix Production</span>
-              <span className="xl:hidden">JTH Graphix Production</span>
+             <span className="text-sm sm:text-base lg:text-lg font-semibold">
+  JTH Graphix Production
+</span>
             </div>
             <div className="flex items-center gap-5">
               <Link href="/portfolio" className="hover:text-foreground transition-colors">
