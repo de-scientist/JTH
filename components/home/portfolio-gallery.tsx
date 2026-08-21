@@ -129,16 +129,10 @@ export function PortfolioGallery() {
                                   />
                                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <Button
-                                      asChild
-                                      size="sm"
-                                      className="bg-white text-primary hover:bg-primary hover:text-white gap-2 rounded-xl"
-                                    >
-                                      <Link href="/portfolio">
-                                        View Project
-                                        <ArrowRight className="w-4 h-4" />
-                                      </Link>
-                                    </Button>
+                                    <span className="inline-flex items-center justify-center whitespace-nowrap text-sm font-semibold gap-2 rounded-xl px-4 py-2 bg-white text-primary">
+                                      View Project
+                                      <ArrowRight className="w-4 h-4" />
+                                    </span>
                                   </div>
                                 </div>
 

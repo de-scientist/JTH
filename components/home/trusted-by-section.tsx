@@ -61,7 +61,8 @@ export function TrustedBySection() {
                       alt={`${client.name} logo`}
                       width={120}
                       height={60}
-                      className="object-contain max-w-full h-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                      className="object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                      style={{ width: 'auto', height: 'auto', maxWidth: '100%' }}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.style.display = 'none'

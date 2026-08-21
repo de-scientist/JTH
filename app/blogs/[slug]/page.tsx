@@ -4,6 +4,7 @@ import blogPosts from '@/data/blog.json'
 import type { BlogPost } from '@/lib/blog-types'
 import { BlogArticle } from '@/components/blog/blog-article'
 import { BlogNewsletter } from '@/components/blog/blog-newsletter'
+import Script from 'next/script'
 
 const posts = blogPosts as BlogPost[]
 
@@ -119,8 +120,9 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <>
-      <script
+      <Script
         type="application/ld+json"
+        id="article-jsonld"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <BlogArticle

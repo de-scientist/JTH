@@ -10,6 +10,7 @@ import { PortfolioGallery } from '@/components/home/portfolio-gallery'
 import { TestimonialsSection } from '@/components/home/testimonials-section'
 import { ProcessSection } from '@/components/home/process-section'
 import { WhyChooseUs } from '@/components/home/why-choose-us'
+import Script from 'next/script'
 import { PartnersSection } from '@/components/home/partners-section'
 import { BlogSection } from '@/components/home/blog-section'
 import { FAQSection } from '@/components/home/faq-section'
@@ -32,8 +33,9 @@ const faqJsonLd = {
 export default function HomePage() {
   return (
     <>
-      <script
+      <Script
         type="application/ld+json"
+        id="faq-jsonld"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <HeroSection />

@@ -6,6 +6,7 @@ import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 import { Toaster } from '@/components/ui/sonner'
+import Script from 'next/script'
 import { siteConfig } from '@/lib/site-config'
 import './globals.css'
 
@@ -115,8 +116,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${sora.variable} font-sans antialiased`}>
-        <script
+        <Script
           type="application/ld+json"
+          id="organization-jsonld"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <ThemeProvider>
