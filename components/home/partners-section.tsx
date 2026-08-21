@@ -7,9 +7,9 @@ import Image from 'next/image'
 
 const partners = [
   {
-    name: 'TechVenture Kenya',
+    name: 'NovaTech Global Innovation',
     description: 'Strategic technology partner for digital transformation projects.',
-    logo: '/images/bank1.png',
+    logo: '/images/novatech.jpg',
     fallback: '/images/portfolio/13.jpeg',
   },
   {
