@@ -15,7 +15,7 @@ const partners = [
   {
     name: 'Savanna Grill',
     description: 'Hospitality partner for branded dining experiences.',
-    logo: '/images/bank3.png',
+    logo: '/images/grill.jpg',
     fallback: '/images/portfolio/22.jpeg',
   },
   {
