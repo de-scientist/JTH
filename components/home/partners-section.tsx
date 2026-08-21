@@ -21,7 +21,7 @@ const partners = [
   {
     name: 'Wambui Fashion',
     description: 'Fashion brand partner for identity and digital presence.',
-    logo: '/images/bank4.png',
+    logo: '/images/fashion.jpg',
     fallback: '/images/portfolio/20.jpeg',
   },
   {
