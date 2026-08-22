@@ -1,228 +1,72 @@
 'use client'
 
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion, useMotionValue, useSpring, useReducedMotion } from 'framer-motion'
-import {
-  ArrowRight,
-  Star,
-  CheckCircle2,
-  Radio,
-  PackageCheck,
-  Code,
-  UtensilsCrossed,
-  Shirt,
-  PartyPopper,
-  Church,
-  Building2,
-  HeartHandshake,
-  Briefcase,
-} from 'lucide-react'
+import { motion, useReducedMotion } from 'framer-motion'
+import { ArrowRight, Star, Play, Pause, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { fadeUp, slideInRight, slideInLeft, defaultTransition, viewportOnce } from '@/lib/animations'
+import { fadeUp, defaultTransition } from '@/lib/animations'
 
 const trustIndicators = [
   { value: '200+', label: 'Projects Delivered' },
   { value: '100+', label: 'Happy Clients' },
-  { value: '98%', label: 'Client Satisfaction' },
+  { value: '98%', label: 'Satisfaction' },
 ]
 
-const floatingCards = [
-  {
-    icon: CheckCircle2,
-    iconClass: 'text-emerald-400',
-    title: 'Corporate Branding',
-    subtitle: 'ABC Holdings Ltd',
-    status: 'Completed',
-    image: '/images/portfolio/tech-startup-branding.jpg',
-    position: 'top-6 -right-3 lg:-right-6',
-    delay: 0.6,
-  },
-  {
-    icon: Radio,
-    iconClass: 'text-secondary',
-    title: 'Website Design',
-    subtitle: 'Tech Startup',
-    status: 'Live',
-    image: '/images/portfolio/ecommerce-website.jpg',
-    position: '-bottom-6 -left-3 lg:-left-6',
-    delay: 0.9,
-  },
-  {
-    icon: PackageCheck,
-    iconClass: 'text-accent',
-    title: 'Logo Design',
-    subtitle: 'Restaurant Brand',
-    status: 'Delivered',
-    image: '/images/portfolio/fitness-brand-logo.jpg',
-    position: 'top-1/3 -right-4 lg:-right-8',
-    delay: 1.2,
-  },
-]
-
-const polaroids = [
-  {
-    image: '/images/services/branding-identity/ASH.png',
-    label: 'Brand Identity',
-    sub: 'Logo & Guidelines',
-    position: 'top-0 -left-4 lg:-left-8 rotate-[-5deg] z-10 w-28 lg:w-36',
-    delay: 0.7,
-    float: { y: [0, -6, 0] },
-    floatDuration: 5,
-  },
-  {
-    image: '/images/services/business-card-design/ash-tech-hub.png',
-    label: 'Business Cards',
-    sub: 'Premium Print',
-    position: 'bottom-16 -right-3 lg:-right-7 rotate-6 z-10 w-28 lg:w-36',
-    delay: 1,
-    float: { y: [0, 6, 0] },
-    floatDuration: 6,
-  },
-]
-
-const clientLogos = [
-  { name: 'NovaTech Global Technologies', src: '/images/novatech.jpg' },
-  { name: 'Savanna Grill', src: '/images/grill.jpg' },
-  { name: 'Wambui Fashion', src: '/images/fashion.jpg' },
-  { name: 'Elite Events', src: '/images/tents.jpg' },
-  { name: 'Grace Community', src: '/images/grace.jpg' },
-  { name: 'Omondi Holdings', src: '/images/hold.jpg' },
-  { name: 'Hope Foundation', src: '/images/hope.jpg' },
-  { name: 'Kimani & Associates', src: '/images/law.jpg' },
-]
-
-function ParticleField() {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
-  const [particles, setParticles] = useState<Array<{ x: number; y: number; vx: number; vy: number; r: number; alpha: number }>>([])
-
-  useEffect(() => {
-    const count = Math.min(40, Math.floor(window.innerWidth / 30))
-    const newParticles = Array.from({ length: count }, () => ({
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.3,
-      r: Math.random() * 2 + 1,
-      alpha: Math.random() * 0.3 + 0.1,
-    }))
-    setParticles(newParticles)
-  }, [])
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
-
-    let animationId: number
-    const resize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-    }
-    resize()
-    window.addEventListener('resize', resize)
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-      for (const p of particles) {
-        p.x += p.vx
-        p.y += p.vy
-        if (p.x < 0) p.x = canvas.width
-        if (p.x > canvas.width) p.x = 0
-        if (p.y < 0) p.y = canvas.height
-        if (p.y > canvas.height) p.y = 0
-
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(0, 74, 173, ${p.alpha})`
-        ctx.fill()
-      }
-
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x
-          const dy = particles[i].y - particles[j].y
-          const dist = Math.sqrt(dx * dx + dy * dy)
-          if (dist < 120) {
-            ctx.beginPath()
-            ctx.moveTo(particles[i].x, particles[i].y)
-            ctx.lineTo(particles[j].x, particles[j].y)
-            ctx.strokeStyle = `rgba(0, 74, 173, ${0.06 * (1 - dist / 120)})`
-            ctx.lineWidth = 0.5
-            ctx.stroke()
-          }
-        }
-      }
-
-      animationId = requestAnimationFrame(animate)
-    }
-    animate()
-    return () => {
-      cancelAnimationFrame(animationId)
-      window.removeEventListener('resize', resize)
-    }
-  }, [particles])
-
-  return (
-    <canvas
-      ref={canvasRef}
-      className="absolute inset-0 pointer-events-none"
-      aria-hidden="true"
-      style={{ opacity: 0.6 }}
-    />
-  )
+const portfolioCard = {
+  eyebrow: 'JTH Project',
+  image: '/images/portfolio/tech-startup-branding.jpg',
+  title: 'Brand Identity',
+  subtitle: 'Logo, Guidelines & Collateral',
+  status: 'Live',
 }
 
 export function HeroSection() {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const prefersReducedMotion = useReducedMotion()
+  const [isPlaying, setIsPlaying] = useState(!prefersReducedMotion)
 
-  const mouseX = useMotionValue(0)
-  const mouseY = useMotionValue(0)
-  const springX = useSpring(mouseX, { stiffness: 50, damping: 20 })
-  const springY = useSpring(mouseY, { stiffness: 50, damping: 20 })
+  const togglePlayback = useCallback(() => {
+    const video = videoRef.current
+    if (!video) return
+    if (video.paused) {
+      video.play().catch(() => {})
+      setIsPlaying(true)
+    } else {
+      video.pause()
+      setIsPlaying(false)
+    }
+  }, [])
 
-  const handleMouseMove = useCallback((e: MouseEvent) => {
-    const rect = containerRef.current?.getBoundingClientRect()
-    if (!rect) return
-    const x = (e.clientX - rect.left) / rect.width - 0.5
-    const y = (e.clientY - rect.top) / rect.height - 0.5
-    mouseX.set(x * 30)
-    mouseY.set(y * 30)
-  }, [mouseX, mouseY])
+  const scrollToNext = useCallback(() => {
+    const el = document.getElementById('trust') || document.getElementById('solutions')
+    if (el) el.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' })
+  }, [prefersReducedMotion])
 
-  useEffect(() => {
-    window.addEventListener('mousemove', handleMouseMove, { passive: true })
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [handleMouseMove])
+  // Entrance variants respect reduced motion (no transform offset).
+  const entrance = prefersReducedMotion
+    ? { hidden: { opacity: 0 }, visible: { opacity: 1 } }
+    : fadeUp
 
   return (
     <section
       id="hero"
-      ref={containerRef}
-      className="relative min-h-screen flex items-center overflow-hidden bg-background pt-20"
+      className="relative flex min-h-[78vh] items-center overflow-hidden bg-background pt-24 lg:min-h-[88vh] lg:pt-28"
     >
-      {/* Cinematic Video Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        {/* Poster / fallback image — always rendered so the hero stays premium
-            even if the video file is missing or fails to load */}
+      {/* LAYER 1 — VIDEO (full-bleed showreel) */}
+      <div className="absolute inset-0 z-0" aria-hidden="true">
         <Image
           src="/images/hero-showcase.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
         />
-
-        {/* Looping, muted, autoplaying cinematic video.
-            Drop an optimized file at /public/videos/hero.webm and
-            /public/videos/hero.mp4 (8-15s, compressed). If unavailable,
-            the poster image above remains visible. */}
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          ref={videoRef}
+          className="absolute inset-0 h-full w-full object-cover object-center"
           autoPlay={!prefersReducedMotion}
           muted
           loop
@@ -230,309 +74,201 @@ export function HeroSection() {
           preload="none"
           poster="/images/hero-showcase.jpg"
           tabIndex={-1}
+          aria-label="JTH Graphix Production showreel showcasing branding, web and software work"
         >
           <source src="/videos/hero.webm" type="video/webm" />
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
-
-        {/* Darkened Overlay with Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/65 to-background/75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-
-        {/* JTH Blue Gradient Overlay */}
-        <div className="absolute inset-0 mix-blend-multiply" style={{
-          background: 'linear-gradient(135deg, rgba(0, 74, 173, 0.28) 0%, rgba(0, 74, 173, 0.06) 50%, rgba(0, 74, 173, 0.04) 100%)'
-        }} />
       </div>
 
-      {/* Existing Gradient Blobs & Effects */}
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] animate-pulse-glow" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[120px] animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px]" />
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[100px] animate-pulse-glow" style={{ animationDelay: '3s' }} />
-        <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-accent/10 rounded-full blur-[80px] animate-pulse-glow" style={{ animationDelay: '2s' }} />
-        <div className="absolute inset-0 bg-grid opacity-20" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/50" />
+      {/* LAYER 2 — DIRECTIONAL SCRIM (text area darker, video area clear) */}
+      <div
+        className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(90deg,var(--background)_0%,color-mix(in_srgb,var(--background)_58%,transparent)_42%,color-mix(in_srgb,var(--background)_22%,transparent)_72%,transparent_100%)]"
+        aria-hidden="true"
+      />
+      {/* Bottom scrim keeps CTA / trust row readable while video stays visible */}
+      <div
+        className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(to_top,var(--background)_2%,color-mix(in_srgb,var(--background)_70%,transparent)_28%,transparent_55%)]"
+        aria-hidden="true"
+      />
+
+      {/* LAYER 3 — ATMOSPHERIC JTH BLUE GLOW (subtle, non-destructive) */}
+      <div className="pointer-events-none absolute inset-0 z-[11]" aria-hidden="true">
+        <div className="absolute -right-24 bottom-0 h-[460px] w-[460px] rounded-full bg-[radial-gradient(circle,rgba(0,74,173,0.35),transparent_70%)] opacity-70 blur-2xl" />
+        <div className="absolute left-1/3 top-10 h-[340px] w-[340px] rounded-full bg-[radial-gradient(circle,rgba(26,111,227,0.18),transparent_70%)] opacity-60 blur-2xl" />
       </div>
 
-      {!prefersReducedMotion && <ParticleField />}
-
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ perspective: '1000px' }}>
-        <motion.div
-          className="absolute top-[20%] left-[10%] w-64 h-64 rounded-full bg-primary/5 border border-primary/10 glass"
-          style={{ x: springX, y: springY }}
-          animate={{ rotateY: [0, 5, 0, -5, 0] }}
-          transition={{ repeat: Infinity, duration: 20, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute bottom-[30%] right-[10%] w-48 h-48 rounded-full bg-accent/5 border border-accent/10 glass"
-          animate={{ rotateY: [0, -8, 0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 25, ease: 'easeInOut' }}
-        />
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 lg:px-8 py-12 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-16 items-center">
+      {/* LAYER 4/5 — CONTENT */}
+      <div className="relative z-20 container mx-auto px-4 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+          {/* PRIMARY INFORMATION + ACTION */}
           <motion.div
             initial="hidden"
             animate="visible"
-            variants={slideInLeft}
-            transition={defaultTransition}
-            className="text-center lg:text-left"
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } } }}
+            className="text-left"
           >
             <motion.div
-              variants={fadeUp}
-              transition={{ ...defaultTransition, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8"
+              variants={entrance}
+              transition={{ ...defaultTransition, delay: 0.05 }}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 backdrop-blur-sm"
             >
-              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+              <span className="relative flex h-2 w-2">
+                {!prefersReducedMotion && (
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-secondary opacity-75" />
+                )}
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-secondary" />
+              </span>
               <span className="text-sm font-medium text-primary">
-                Transforming Businesses Through Technology, Creativity &amp; Innovation
+                Technology · Creativity · Innovation
               </span>
             </motion.div>
 
             <motion.h1
-              variants={fadeUp}
-              transition={{ ...defaultTransition, delay: 0.2 }}
-              className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 leading-[1.05] text-balance"
+              variants={entrance}
+              transition={{ ...defaultTransition, delay: 0.15 }}
+              className="font-display text-[clamp(2.5rem,5.2vw,4.75rem)] font-bold leading-[1.05] tracking-tight text-foreground text-balance"
             >
               Transforming Businesses Through{' '}
               <span className="text-gradient">Technology, Creativity &amp; Innovation</span>
             </motion.h1>
 
             <motion.p
-              variants={fadeUp}
+              variants={entrance}
               transition={{ ...defaultTransition, delay: 0.3 }}
-              className="text-lg lg:text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0"
+              className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
             >
-              We help businesses grow through branding, software development, website development, digital marketing, business automation, and creative solutions that deliver measurable results.
+              We help businesses grow through branding, software development, web
+              development, digital marketing, business automation and creative
+              solutions.
             </motion.p>
 
             <motion.div
-              variants={fadeUp}
-              transition={{ ...defaultTransition, delay: 0.4 }}
-              className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4"
+              variants={entrance}
+              transition={{ ...defaultTransition, delay: 0.45 }}
+              className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center"
             >
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-brand hover:opacity-90 text-white shadow-lg shadow-primary/25 h-14 px-10 rounded-2xl gap-2 text-base font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
+                className="h-14 rounded-2xl bg-gradient-brand px-10 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/30"
               >
                 <Link href="/contact">
                   Start Your Project
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
               <Button
                 asChild
                 size="lg"
                 variant="outline"
-                className="h-14 px-8 rounded-2xl gap-2 text-base border-border hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
+                className="h-14 rounded-2xl border-border bg-background/40 px-8 text-base font-medium text-foreground backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:bg-primary/5"
               >
                 <Link href="/portfolio">
-                  View Our Portfolio
-                  <ArrowRight className="w-5 h-5" />
+                  Explore Our Work
+                  <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
             </motion.div>
 
             <motion.div
-              variants={fadeUp}
-              transition={{ ...defaultTransition, delay: 0.5 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-4 mt-10"
+              variants={entrance}
+              transition={{ ...defaultTransition, delay: 0.6 }}
+              className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3"
             >
-              <div className="flex items-center gap-2">
-                <div className="flex gap-0.5" aria-label="Rated 5 stars">
+              <div className="flex items-center gap-2" aria-label="Rated 5 stars">
+                <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+                    <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
                   ))}
                 </div>
-                <span className="text-sm font-medium text-foreground">Rated 5.0</span>
+                <span className="text-sm font-semibold text-foreground">Rated 5.0</span>
               </div>
               {trustIndicators.map((item) => (
                 <div key={item.label} className="flex items-center gap-2">
-                  <span className="font-display font-bold text-foreground">{item.value}</span>
+                  <span className="font-display text-lg font-bold text-foreground">{item.value}</span>
                   <span className="text-sm text-muted-foreground">{item.label}</span>
                 </div>
               ))}
             </motion.div>
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={slideInRight}
-            transition={{ ...defaultTransition, delay: 0.2 }}
-            className="relative mx-auto w-full max-w-lg lg:max-w-none"
-          >
-            <div className="relative aspect-[4/5] max-h-[680px]">
+          {/* PROOF — single premium floating portfolio card (secondary to video) */}
+          <div className="relative hidden md:flex lg:justify-end">
+            <motion.div
+              initial={{ opacity: 0, y: 28, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ ...defaultTransition, delay: 0.8 }}
+              className="relative w-full max-w-sm"
+            >
               <motion.div
-                className="absolute inset-0 rounded-3xl overflow-hidden card-premium"
-                style={{
-                  x: springX,
-                  y: springY,
-                }}
-                whileHover={{ scale: 1.01 }}
-                transition={{ duration: 0.4 }}
+                animate={prefersReducedMotion ? undefined : { y: [0, -8, 0] }}
+                transition={prefersReducedMotion ? undefined : { duration: 6, ease: 'easeInOut', repeat: Infinity }}
+                className="overflow-hidden rounded-3xl border border-white/15 bg-card/85 shadow-2xl shadow-primary/20 backdrop-blur-xl"
               >
-                <Image
-                  src="/images/hero-showcase.jpg"
-                  alt="Premium portfolio of JTH Graphix Production creative work — brand identities, print design and website design"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
-              </motion.div>
-
-              <div className="absolute -inset-2 rounded-[2rem] border border-primary/10 pointer-events-none" />
-              <div className="absolute -inset-4 rounded-[2.25rem] border border-accent/5 pointer-events-none" />
-
-              {polaroids.map((card) => (
-                <motion.div
-                  key={card.label}
-                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ delay: card.delay, duration: 0.6 }}
-                  className={`absolute ${card.position}`}
-                >
-                  <motion.div
-                    animate={{ y: card.float.y }}
-                    transition={{ repeat: Infinity, duration: card.floatDuration, ease: 'easeInOut' }}
-                    className="glass rounded-2xl p-2 shadow-xl shadow-primary/20"
-                  >
-                    <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                      <Image
-                        src={card.image}
-                        alt={card.label}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 40vw, 20vw"
-                      />
-                    </div>
-                    <div className="px-2 py-1.5">
-                      <p className="text-xs font-semibold text-foreground leading-tight">{card.label}</p>
-                      <p className="text-[10px] text-muted-foreground">{card.sub}</p>
-                    </div>
-                  </motion.div>
-                </motion.div>
-              ))}
-
-              {floatingCards.map((card) => (
-                <motion.div
-                  key={card.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: card.delay, duration: 0.6 }}
-                  className={`absolute ${card.position} z-20`}
-                >
-                  <motion.div
-                    animate={{ y: [0, -8, 0] }}
-                    transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
-                    className="glass rounded-2xl p-2.5 shadow-xl shadow-primary/20 w-44"
-                  >
-                    <div className="flex items-start gap-2.5">
-                      <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0">
-                        <Image
-                          src={card.image}
-                          alt={card.title}
-                          fill
-                          className="object-cover"
-                          sizes="64px"
-                        />
-                      </div>
-                      <div className="min-w-0">
-                        <p className="text-xs font-semibold text-foreground leading-tight">
-                          {card.title}
-                        </p>
-                        <p className="text-[10px] text-muted-foreground truncate">{card.subtitle}</p>
-                        <p className="flex items-center gap-1 text-[10px] font-medium text-emerald-500 mt-0.5">
-                          <card.icon className="w-3 h-3" />
-                          {card.status}
-                        </p>
-                      </div>
-                    </div>
-                  </motion.div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2 }}
-          className="mt-16 lg:mt-20"
-        >
-          <p className="text-center text-sm text-muted-foreground tracking-wider uppercase mb-6">
-            Trusted By
-          </p>
-          <div className="relative overflow-hidden mask-fade-edges">
-            <div className="flex w-max animate-marquee gap-8 lg:gap-12 items-center">
-              {[...clientLogos, ...clientLogos].map((client, i) => (
-                <div
-                  key={`${client.name}-${i}`}
-                  className="flex items-center gap-2 opacity-55 hover:opacity-100 transition-opacity duration-300"
-                  aria-hidden={i >= clientLogos.length}
-                >
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center overflow-hidden">
-                    <Image
-                      src={client.src}
-                      alt={client.name}
-                      width={40}
-                      height={40}
-                      className="object-contain"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement
-                        target.style.display = 'none'
-                      }}
-                    />
-                  </div>
-                  <span className="font-display font-semibold text-foreground/70 text-sm whitespace-nowrap hidden sm:block">
-                    {client.name}
+                <div className="flex items-center justify-between px-4 pt-4">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+                    {portfolioCard.eyebrow}
+                  </span>
+                  <span className="flex items-center gap-1.5 text-[11px] font-medium text-emerald-500">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                    {portfolioCard.status}
                   </span>
                 </div>
-              ))}
-            </div>
+                <div className="relative mt-3 aspect-[4/3] w-full overflow-hidden">
+                  <Image
+                    src={portfolioCard.image}
+                    alt={`${portfolioCard.title} project by JTH Graphix Production`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 40vw, 380px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+                </div>
+                <div className="flex items-center gap-2 px-4 pb-4 pt-3">
+                  <Sparkles className="h-4 w-4 text-primary" />
+                  <div>
+                    <p className="text-sm font-semibold leading-tight text-foreground">
+                      {portfolioCard.title}
+                    </p>
+                    <p className="text-xs text-muted-foreground">{portfolioCard.subtitle}</p>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 cursor-pointer"
-        onClick={() => {
-          const el = document.getElementById('solutions') || document.querySelector('[id*="services"]')
-          if (el) el.scrollIntoView({ behavior: 'smooth' })
-        }}
-        role="button"
-        tabIndex={0}
-        aria-label="Scroll to next section"
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            const el = document.getElementById('solutions') || document.querySelector('[id*="services"]')
-            if (el) el.scrollIntoView({ behavior: 'smooth' })
-          }
-        }}
+      {/* LAYER 6 — VIDEO CONTROL (bottom-right, accessible) */}
+      <button
+        type="button"
+        onClick={togglePlayback}
+        aria-label={isPlaying ? 'Pause showreel' : 'Play showreel'}
+        aria-pressed={isPlaying}
+        className="absolute bottom-6 right-4 z-30 flex items-center gap-2 rounded-full border border-white/15 bg-background/55 px-4 py-2 text-sm font-medium text-foreground backdrop-blur-md transition-colors hover:border-primary/40 hover:bg-background/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent lg:right-8"
       >
-        <span className="text-xs font-semibold text-muted-foreground tracking-wider uppercase">
-          Explore JTH
-        </span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-1.5 hover:border-muted-foreground/60 transition-colors"
+        {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+        <span>{isPlaying ? 'Pause' : 'Showreel'}</span>
+      </button>
+
+      {/* LAYER 6 — SCROLL INDICATOR (bottom-center) */}
+      <button
+        type="button"
+        onClick={scrollToNext}
+        aria-label="Scroll to next section"
+        className="absolute bottom-6 left-1/2 z-30 hidden -translate-x-1/2 flex-col items-center gap-1.5 text-foreground/70 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent sm:flex"
+      >
+        <span className="text-[11px] font-semibold uppercase tracking-[0.22em]">Explore JTH</span>
+        <motion.span
+          animate={prefersReducedMotion ? undefined : { y: [0, 7, 0] }}
+          transition={prefersReducedMotion ? undefined : { duration: 2, ease: 'easeInOut', repeat: Infinity }}
+          className="flex h-9 w-5 items-start justify-center rounded-full border border-foreground/25 p-1.5"
         >
-          <div className="w-1 h-2 rounded-full bg-primary" />
-        </motion.div>
-        <span className="text-xs text-muted-foreground">Scroll</span>
-      </motion.div>
+          <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+        </motion.span>
+        <span className="text-[11px] text-muted-foreground">Scroll</span>
+      </button>
     </section>
   )
 }
