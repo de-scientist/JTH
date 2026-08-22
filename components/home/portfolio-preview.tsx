@@ -1,15 +1,30 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, TrendingUp, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { SectionHeader } from '@/components/ui/section-header'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useIsMobile } from '@/components/ui/use-mobile'
 import { fadeUp, defaultTransition, viewportOnce } from '@/lib/animations'
 
-const caseStudies = [
+type CaseStudy = {
+  id: string
+  title: string
+  category: string
+  industry: string
+  tags: string[]
+  image: string
+  fallback: string
+  challenge: string
+  solution: string
+  outcome: string
+}
+
+const caseStudies: CaseStudy[] = [
   {
     id: '1',
     title: 'Tech Startup Brand Identity',
@@ -84,9 +99,22 @@ const caseStudies = [
   },
 ]
 
+// Categories derived from the actual data (no empty categories).
+const categories = [
+  'All',
+  ...Array.from(new Set(caseStudies.map((item) => item.category))),
+]
+
+function getCaseStudiesByCategory(category: string) {
+  if (category === 'All') return caseStudies
+  return caseStudies.filter((item) => item.category === category)
+}
+
 export function PortfolioPreview() {
   const isMobile = useIsMobile()
-  const displayedProjects = isMobile ? caseStudies.slice(0, 4) : caseStudies
+  const [activeTab, setActiveTab] = useState('All')
+  const filtered = getCaseStudiesByCategory(activeTab)
+  const displayedProjects = isMobile ? filtered.slice(0, 4) : filtered
 
   return (
     <section id="portfolio" className="py-20 lg:py-32 bg-background relative overflow-hidden">
@@ -102,137 +130,170 @@ export function PortfolioPreview() {
               <span className="text-gradient">Real Results.</span>
             </>
           }
-          description="Every design we deliver solves a business problem. Here's what our clients needed, what we created, and the outcomes their brands achieved."
+          description="Every design we deliver solves a business problem. Filter by discipline, then explore what our clients needed, what we created, and the outcomes their brands achieved."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {displayedProjects.map((item, index) => (
-            <motion.article
-              key={item.id}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportOnce}
-              variants={fadeUp}
-              transition={{ ...defaultTransition, delay: (index % 3) * 0.1 }}
-              className="group"
-            >
-              <div className="card-premium overflow-hidden h-full group-hover:-translate-y-2 transition-all duration-500 flex flex-col">
-                <Link href="/portfolio" aria-label={`View case study: ${item.title}`}>
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement
-                        target.src = item.fallback
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/10 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-                    <div className="absolute top-4 left-4 z-10">
-                      <span className="px-3 py-1.5 rounded-full text-xs font-medium bg-white/90 text-primary backdrop-blur-sm shadow-lg">
-                        {item.industry}
-                      </span>
-                    </div>
-                  </div>
-                </Link>
+        {/* Category Filter Tabs — same interaction model as Solutions/Services */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={viewportOnce}
+          transition={defaultTransition}
+          className="flex justify-center mb-12 lg:mb-16 overflow-x-auto md:overflow-visible pb-2 md:pb-0"
+        >
+          <Tabs
+            value={activeTab}
+            onValueChange={setActiveTab}
+            className="w-full md:w-auto"
+          >
+            <TabsList className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center md:gap-2 w-full md:w-auto bg-transparent h-auto p-0 border-b border-border md:border-b-0">
+              {categories.map((category) => (
+                <TabsTrigger
+                  key={category}
+                  value={category}
+                  className="px-4 md:px-6 py-3 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold border-b-2 md:border-0 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent md:data-[state=active]:bg-primary/10 transition-all duration-300 whitespace-nowrap"
+                >
+                  {category}
+                </TabsTrigger>
+              ))}
+            </TabsList>
 
-                <div className="p-6 lg:p-7 flex flex-col flex-1">
-                  <div className="flex flex-wrap gap-1.5 mb-3">
-                    {item.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-1 rounded-md bg-primary/8 text-primary text-[11px] font-medium"
+            {/* Filtered Content */}
+            <div className="mt-12 lg:mt-16">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTab}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {displayedProjects.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                      {displayedProjects.map((item, index) => (
+                        <motion.article
+                          key={item.id}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ ...defaultTransition, delay: (index % 3) * 0.1 }}
+                          className="group"
+                        >
+                          <div className="card-premium overflow-hidden h-full group-hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                            <Link href="/portfolio" aria-label={`View case study: ${item.title}`}>
+                              <div className="relative aspect-[16/10] overflow-hidden">
+                                <Image
+                                  src={item.image}
+                                  alt={item.title}
+                                  fill
+                                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                  onError={(e) => {
+                                    const target = e.target as HTMLImageElement
+                                    target.src = item.fallback
+                                  }}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/10 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                                <div className="absolute top-4 left-4 z-10">
+                                  <span className="px-3 py-1.5 rounded-full text-xs font-medium bg-white/90 text-primary backdrop-blur-sm shadow-lg">
+                                    {item.category}
+                                  </span>
+                                </div>
+                              </div>
+                            </Link>
+
+                            <div className="p-6 lg:p-7 flex flex-col flex-1">
+                              <div className="flex flex-wrap gap-1.5 mb-3">
+                                {item.tags.map((tag) => (
+                                  <span
+                                    key={tag}
+                                    className="px-2.5 py-1 rounded-md bg-primary/8 text-primary text-[11px] font-medium"
+                                  >
+                                    {tag}
+                                  </span>
+                                ))}
+                              </div>
+                              <h3 className="font-display text-lg font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">
+                                {item.title}
+                              </h3>
+
+                              <div className="space-y-3 text-sm flex-1">
+                                <div className="flex items-start gap-2.5">
+                                  <span className="text-xs font-bold text-muted-foreground/60 uppercase tracking-wide mt-0.5 shrink-0 w-20">
+                                    Challenge
+                                  </span>
+                                  <p className="text-muted-foreground leading-relaxed">{item.challenge}</p>
+                                </div>
+                                <div className="flex items-start gap-2.5">
+                                  <span className="flex items-center gap-1 text-xs font-bold text-primary uppercase tracking-wide mt-0.5 shrink-0 w-20">
+                                    <Sparkles className="w-3 h-3" />
+                                    Solution
+                                  </span>
+                                  <p className="text-muted-foreground leading-relaxed">{item.solution}</p>
+                                </div>
+                                <div className="flex items-start gap-2.5">
+                                  <span className="flex items-center gap-1 text-xs font-bold text-secondary uppercase tracking-wide mt-0.5 shrink-0 w-20">
+                                    <TrendingUp className="w-3 h-3" />
+                                    Outcome
+                                  </span>
+                                  <p className="text-foreground font-medium leading-relaxed">{item.outcome}</p>
+                                </div>
+                              </div>
+
+                              <Link
+                                href="/portfolio"
+                                className="inline-flex items-center text-sm font-medium text-primary gap-2 mt-5 opacity-70 group-hover:opacity-100 transition-all duration-300"
+                              >
+                                View Case Study
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                              </Link>
+                            </div>
+                          </div>
+                        </motion.article>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-center py-16">
+                      <p className="text-muted-foreground text-lg mb-6">
+                        No projects available in this category yet.
+                      </p>
+                      <Button
+                        asChild
+                        size="lg"
+                        className="bg-gradient-brand text-white rounded-xl gap-2 h-12 px-8 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
                       >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">
-                    {item.title}
-                  </h3>
+                        <Link href="/portfolio">
+                          Explore All Projects
+                          <ArrowRight className="w-4 h-4" />
+                        </Link>
+                      </Button>
+                    </div>
+                  )}
 
-                  <div className="space-y-3 text-sm flex-1">
-                    <div className="flex items-start gap-2.5">
-                      <span className="text-xs font-bold text-muted-foreground/60 uppercase tracking-wide mt-0.5 shrink-0 w-20">
-                        Challenge
-                      </span>
-                      <p className="text-muted-foreground leading-relaxed">{item.challenge}</p>
-                    </div>
-                    <div className="flex items-start gap-2.5">
-                      <span className="flex items-center gap-1 text-xs font-bold text-primary uppercase tracking-wide mt-0.5 shrink-0 w-20">
-                        <Sparkles className="w-3 h-3" />
-                        Solution
-                      </span>
-                      <p className="text-muted-foreground leading-relaxed">{item.solution}</p>
-                    </div>
-                    <div className="flex items-start gap-2.5">
-                      <span className="flex items-center gap-1 text-xs font-bold text-secondary uppercase tracking-wide mt-0.5 shrink-0 w-20">
-                        <TrendingUp className="w-3 h-3" />
-                        Outcome
-                      </span>
-                      <p className="text-foreground font-medium leading-relaxed">{item.outcome}</p>
-                    </div>
-                  </div>
-
-                  <Link
-                    href="/portfolio"
-                    className="inline-flex items-center text-sm font-medium text-primary gap-2 mt-5 opacity-70 group-hover:opacity-100 transition-all duration-300"
+                  {/* View Full Portfolio CTA */}
+                  <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={viewportOnce}
+                    variants={fadeUp}
+                    transition={defaultTransition}
+                    className="text-center mt-14"
                   >
-                    View Case Study
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
-                  </Link>
-                </div>
-              </div>
-            </motion.article>
-          ))}
-        </div>
-
-        {isMobile && (
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportOnce}
-            variants={fadeUp}
-            transition={defaultTransition}
-            className="text-center mt-10"
-          >
-            <Button
-              asChild
-              size="lg"
-              className="bg-gradient-brand text-white rounded-xl gap-2 h-12 px-8 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
-            >
-              <Link href="/portfolio">
-                View Portfolio
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </Button>
-          </motion.div>
-        )}
-
-        {!isMobile && (
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportOnce}
-            variants={fadeUp}
-            transition={defaultTransition}
-            className="text-center mt-14"
-          >
-            <Button
-              asChild
-              size="lg"
-              className="bg-gradient-brand text-white rounded-xl gap-2 h-12 px-8 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
-            >
-              <Link href="/portfolio">
-                View Full Portfolio
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </Button>
-          </motion.div>
-        )}
+                    <Button
+                      asChild
+                      size="lg"
+                      className="bg-gradient-brand text-white rounded-xl gap-2 h-12 px-8 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
+                    >
+                      <Link href="/portfolio">
+                        View Full Portfolio
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </Button>
+                  </motion.div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </Tabs>
+        </motion.div>
       </div>
     </section>
   )
