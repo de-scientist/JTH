@@ -91,6 +91,11 @@ export function HeroSection() {
         className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(to_top,var(--background)_2%,color-mix(in_srgb,var(--background)_70%,transparent)_28%,transparent_55%)]"
         aria-hidden="true"
       />
+      {/* Mobile legibility layer — light uniform tint, video still clearly visible */}
+      <div
+        className="pointer-events-none absolute inset-0 z-10 bg-background/25 max-md:bg-background/35"
+        aria-hidden="true"
+      />
 
       {/* LAYER 3 — ATMOSPHERIC JTH BLUE GLOW (subtle, non-destructive) */}
       <div className="pointer-events-none absolute inset-0 z-[11]" aria-hidden="true">
