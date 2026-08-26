@@ -158,9 +158,7 @@ export function AboutContent() {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
               <p className="text-muted-foreground">
-                To be the leading creative studio in East Africa, known for delivering 
-                exceptional design quality, innovative solutions, and transformative 
-                brand experiences that set the standard for visual excellence.
+                To become a leading creative and technology partner in Africa and the world at large, transforming businesses through exceptional design, innovative technology and solutions that create lasting impact.
               </p>
             </motion.div>
           </div>
