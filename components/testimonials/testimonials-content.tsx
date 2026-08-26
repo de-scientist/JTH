@@ -46,46 +46,19 @@ export function TestimonialsContent() {
       <section className="py-12 bg-muted/30 border-y border-border">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-center"
-            >
-              <p className="text-4xl font-bold text-primary mb-1">200+</p>
-              <p className="text-muted-foreground">Happy Clients</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-center"
-            >
-              <p className="text-4xl font-bold text-primary mb-1">5.0</p>
-              <p className="text-muted-foreground">Average Rating</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-center"
-            >
-              <p className="text-4xl font-bold text-primary mb-1">98%</p>
-              <p className="text-muted-foreground">Client Satisfaction</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-center"
-            >
-              <p className="text-4xl font-bold text-primary mb-1">80%</p>
-              <p className="text-muted-foreground">Repeat Clients</p>
-            </motion.div>
+            {journeyStats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <p className="text-4xl font-bold text-primary mb-1">{stat.value}</p>
+                <p className="text-muted-foreground">{stat.label}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -194,7 +167,7 @@ export function TestimonialsContent() {
             className="max-w-3xl mx-auto text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Join Our Happy Clients
+              Join Our Clients
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Experience the JTH difference. Let&apos;s create something amazing 

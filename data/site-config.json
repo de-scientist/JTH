@@ -53,13 +53,8 @@
     "Book Training"
   ],
   "trainingTeaser": {
-    "title": "Training That Builds Creative Confidence",
+    "title":     "Training That Builds Creative Confidence",
     "text": "JTH Graphix Production delivers practical digital and creative training for individuals, schools, institutions, and teams through virtual sessions, workshops, and recorded learning resources.",
     "buttons": ["Explore Training", "Book a Session"]
-  },
-  "metrics": {
-    "projectsCompleted": 200,
-    "clientsServed": 100,
-    "satisfactionRate": "98%"
   }
 }
