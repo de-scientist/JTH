@@ -176,7 +176,9 @@ export function Navbar() {
                 <span className="text-xs lg:text-sm font-display font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
                   JTH  Graphix Production
                 </span>
-                
+                <span className="text-[10px] lg:text-[11px] text-muted-foreground leading-tight">
+                  Creative &amp; Technology Partner
+                </span>
               </div>
             </Link>
 

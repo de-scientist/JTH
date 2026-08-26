@@ -201,14 +201,17 @@ export function Footer() {
               </div>
               <div>
                 <span className="text-lg font-display font-bold text-white">
-                   JTH Graphix Production
-                 </span>
-                 <p className="text-xs text-white/50 tracking-wider uppercase">Quality is our Priority</p>
+                    JTH Graphix Production
+                  </span>
+                  <p className="text-xs text-white/50 tracking-wider uppercase">Quality is our Priority</p>
               </div>
             </Link>
-            <p className="text-white/60 mb-4 max-w-sm leading-relaxed text-sm">
-              We do not just create designs. We build brands, experiences, and digital solutions
-              that drive measurable business growth.
+            <p className="text-white/60 mb-2 max-w-sm leading-relaxed text-sm">
+              Your creative and technology partner. We don&apos;t just create designs — we
+              build brands, experiences, and digital solutions that drive measurable business growth.
+            </p>
+            <p className="text-xs text-white/40 max-w-sm leading-relaxed">
+              JTH Graphix Production — Your Creative &amp; Technology Partner.
             </p>
             <p className="text-white/50 max-w-sm leading-relaxed text-sm mb-6">
               <span className="font-medium text-white/70">Our mission:</span> to help businesses
