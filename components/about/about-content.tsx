@@ -13,7 +13,7 @@ const values = [
     description: 'We challenge conventional thinking and transform ideas into compelling, meaningful and impactful creative solutions.'
   },
    {
-    icon: Lightbulb,
+    icon: Heart,
     title: 'Innovation',
     description: 'We embrace emerging technologies, new ideas and better ways of working to deliver solutions that keep our clients ahead of the curve.'
   },
