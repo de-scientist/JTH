@@ -7,6 +7,12 @@ import Image from 'next/image'
 
 const partners = [
   {
+    name: 'Muranga University of Technology CU',
+    description: 'Strategic technology partner for digital transformation projects.',
+    logo: '/images/best logo-DIs8pPJL.webp',
+    fallback: '/images/portfolio/13.jpeg',
+  },
+  {
     name: 'NovaTech Global Innovation',
     description: 'Strategic technology partner for digital transformation projects.',
     logo: '/images/novatech.jpg',
