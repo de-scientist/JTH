@@ -45,7 +45,7 @@ const values = [
   {
     icon: Award,
     title: 'Quality Assured',
-    description: 'From concept to delivery, we maintain the highest standards in every project.'
+    description: 'We pay attention to detail and consistently deliver reliable, polished and professional solutions that meet or exceed expectations.'
   }
 ]
 
