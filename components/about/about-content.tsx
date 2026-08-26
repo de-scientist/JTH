@@ -18,6 +18,11 @@ const values = [
     description: 'We embrace emerging technologies, new ideas and better ways of working to deliver solutions that keep our clients ahead of the curve.'
   },
   {
+    icon: Heart,
+    title: 'Excellence',
+    description: 'We are committed to high standards in design, technology, service delivery and every interaction with our clients.'
+  },
+  {
     icon: Target,
     title: 'Results Driven',
     description: 'We design with purpose, ensuring every visual communicates effectively and drives results.'
