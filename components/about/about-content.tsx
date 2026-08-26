@@ -23,6 +23,16 @@ const values = [
     description: 'We are committed to high standards in design, technology, service delivery and every interaction with our clients.'
   },
   {
+    icon: Badge,
+    title: 'Integrity',
+    description: 'We operate with honesty, transparency, accountability and professionalism, building relationships founded on trust.'
+  },
+  {
+    icon: Badge,
+    title: 'Excellence',
+    description: 'We are committed to high standards in design, technology, service delivery and every interaction with our clients.'
+  },
+  {
     icon: Target,
     title: 'Results Driven',
     description: 'We design with purpose, ensuring every visual communicates effectively and drives results.'
