@@ -61,7 +61,11 @@ export function ContactContent() {
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Ready to bring your brand to life? Tell us about your project and we&apos;ll
-              respond with a free quote within hours — no obligation, just great design.
+              respond with a free quote within hours — no obligation, just great work.
+            </p>
+            <p className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary">
+              <BadgeCheck className="w-4 h-4" aria-hidden="true" />
+              Quality is our Priority.
             </p>
           </motion.div>
         </div>
