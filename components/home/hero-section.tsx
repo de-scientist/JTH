@@ -135,8 +135,8 @@ export function HeroSection() {
               transition={{ ...defaultTransition, delay: 0.15 }}
               className="font-display text-[clamp(2.5rem,5.2vw,4.75rem)] font-bold leading-[1.05] tracking-tight text-foreground text-balance"
             >
-              Transforming Businesses Through{' '}
-              <span className="text-gradient">Technology, Creativity &amp; Innovation</span>
+              We Turn Ideas Into{' '}
+              <span className="text-gradient">Brands, Experiences &amp; Digital Solutions.</span>
             </motion.h1>
 
             <motion.p
@@ -144,9 +144,9 @@ export function HeroSection() {
               transition={{ ...defaultTransition, delay: 0.3 }}
               className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
             >
-              We help businesses grow through branding, software development, web
-              development, digital marketing, business automation and creative
-              solutions.
+              From brand identity and visual communication to websites, UI/UX,
+              software and digital growth — JTH helps businesses transform ideas
+              into meaningful digital experiences.
             </motion.p>
 
             <motion.div
