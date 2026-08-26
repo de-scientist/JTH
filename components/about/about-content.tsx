@@ -19,7 +19,6 @@ import {
   Rocket,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { siteConfig } from '@/lib/site-config'
 
 const values = [
   {
