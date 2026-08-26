@@ -16,7 +16,8 @@ import {
   TrendingUp,
   BadgeCheck,
   Sparkles,
-  Rocket,
+  Building2,
+  BriefcaseBusiness,
   GraduationCap,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -98,7 +99,7 @@ const milestones = [
     title: 'Client Services Expanded',
     description:
       'JTH expanded beyond training and began actively serving clients, delivering professional creative solutions and building relationships across different business and organizational sectors.',
-    icon: Users,
+    icon: BriefcaseBusiness,
     current: false,
   },
   {
@@ -106,7 +107,7 @@ const milestones = [
     title: 'Registered & Growing',
     description:
       'JTH Graphix Production became a registered Private Limited Company, marking a major step in its formal growth while continuing to expand its creative, digital and technology capabilities.',
-    icon: Rocket,
+    icon: Building2,
     current: true,
   },
 ]
