@@ -334,36 +334,30 @@ export function Navbar() {
                     )}
                   </motion.div>
                 ))}
-                 <motion.div
-                   initial={{ opacity: 0, y: 10 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   transition={{ delay: 0.3 }}
-                   className="pt-6 mt-4 border-t border-border"
-                 >
-                   <div className="grid grid-cols-2 gap-2 mb-4">
-                     <Link href="/portfolio" className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-muted/60 text-sm font-medium text-foreground hover:bg-muted transition-colors">
-                       Portfolio
-                     </Link>
-                     <Link href="/blogs" className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-muted/60 text-sm font-medium text-foreground hover:bg-muted transition-colors">
-                       Blogs
-                     </Link>
-                     <Link href="/services-pricing" className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-muted/60 text-sm font-medium text-foreground hover:bg-muted transition-colors">
-                       Resources
-                     </Link>
-                     <a href={siteConfig.whatsappHref} className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-muted/60 text-sm font-medium text-foreground hover:bg-muted transition-colors" target="_blank" rel="noopener noreferrer">
-                       WhatsApp
-                     </a>
-                   </div>
-                   <div className="flex items-center justify-between gap-4 px-2 mb-4">
-                     <span className="text-sm font-medium text-muted-foreground">
-                       Appearance
-                     </span>
-                     <ThemeToggle />
-                   </div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    className="pt-6 mt-4 border-t border-border"
+                  >
+                    <div className="grid grid-cols-2 gap-2 mb-4">
+                      <a href={siteConfig.whatsappHref} className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-muted/60 text-sm font-medium text-foreground hover:bg-muted transition-colors" target="_blank" rel="noopener noreferrer">
+                        WhatsApp
+                      </a>
+                      <a href={`mailto:${siteConfig.email}`} className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-muted/60 text-sm font-medium text-foreground hover:bg-muted transition-colors">
+                        Email
+                      </a>
+                    </div>
+                    <div className="flex items-center justify-between gap-4 px-2 mb-4">
+                      <span className="text-sm font-medium text-muted-foreground">
+                        Appearance
+                      </span>
+                      <ThemeToggle />
+                    </div>
                     <Button asChild className="w-full bg-gradient-brand text-white h-14 rounded-2xl text-base font-semibold">
                       <Link href="/contact">Start a Project</Link>
                     </Button>
-                 </motion.div>
+                  </motion.div>
               </div>
             </div>
           </motion.div>
