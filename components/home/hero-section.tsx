@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowRight, Star, Play, Pause, Sparkles } from 'lucide-react'
+import { ArrowRight, Star, Play, Pause, Sparkles, BadgeCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { fadeUp, defaultTransition } from '@/lib/animations'
 
@@ -125,8 +125,8 @@ export function HeroSection() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-secondary" />
               </span>
               <span className="text-sm font-medium text-primary">
-                Technology · Creativity · Innovation
-              </span>
+                 Your Creative &amp; Technology Partner
+               </span>
             </motion.div>
 
             <motion.h1
