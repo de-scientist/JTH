@@ -26,24 +26,25 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://jthgraphixproduction.com'),
   title: {
     default:
-      'JTH Graphix Production | Branding, Web & Software Development in Kenya',
+      'JTH Graphix Production | Creative & Technology Partner',
     template: '%s | JTH Graphix Production',
   },
   description:
-    'JTH Graphix Production is a Kenyan creative agency and technology partner offering graphic design, branding, website development, software development, digital marketing, business automation, photography, videography and training.',
+    'JTH Graphix Production is your creative and technology partner — branding, graphic design, UI/UX, website and software development, automation, and digital growth solutions that help businesses grow.',
   keywords: [
-    'Graphic Design Agency Kenya',
+    'Creative Agency Kenya',
+    'Technology Partner Kenya',
     'Branding Agency Kenya',
+    'Graphic Design Kenya',
+    'UI/UX Design Kenya',
     'Website Development Kenya',
     'Software Development Kenya',
+    'Business Automation Kenya',
     'Digital Marketing Kenya',
     'Social Media Management Kenya',
-    'Business Automation Kenya',
-    'Photography and Videography Kenya',
-    'Printing Services Kenya',
-    'Creative Agency Kenya',
-    'UI/UX Design Kenya',
     'SEO Kenya',
+    'GEO Optimization Kenya',
+    'Creative Technology Solutions Kenya',
     'Nairobi',
   ],
   authors: [{ name: 'JTH Graphix Production' }],
@@ -56,15 +57,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'JTH Graphix Production',
-    title: 'JTH Graphix Production | Branding, Web & Software Development in Kenya',
+    title: 'JTH Graphix Production | Creative & Technology Partner',
     description:
-      'A technology, creativity and innovation partner helping businesses build stronger brands, better digital experiences and smarter business solutions.',
+      'Your creative and technology partner. We transform ideas into brands, digital experiences and technology solutions that help businesses grow.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JTH Graphix Production',
+    title: 'JTH Graphix Production | Creative & Technology Partner',
     description:
-      'Branding, web & software development, digital marketing and creative solutions in Kenya.',
+      'Branding, UI/UX, web & software development, automation and digital growth solutions in Kenya.',
   },
 }
 

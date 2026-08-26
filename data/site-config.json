@@ -1,10 +1,12 @@
 {
   "brandName": "JTH Graphix Production",
-  "tagline": "Designs That Sell. Branding That Speaks.",
-  "description": "Bold design. Strong branding. Premium visual solutions for print and digital.",
-  "premiumDescription": "JTH Graphix Production is a modern creative agency delivering bold design, strategic branding, digital visuals, premium print communication, and practical training solutions for businesses, institutions, events, and growing brands.",
+  "positioning": "Your Creative & Technology Partner",
+  "tagline": "Quality is our Priority.",
+  "corePromise": "We don't just create designs or develop technology. We transform ideas into brands, experiences and digital solutions that help businesses grow.",
+  "description": "Creative branding, graphic design, UI/UX, website and software development, automation and digital growth solutions for modern businesses.",
+  "premiumDescription": "JTH Graphix Production is your creative and technology partner — combining branding, graphic design, UI/UX, website and software development, automation, digital marketing and training to transform ideas into brands, experiences and digital solutions that help businesses grow.",
   "heroHeadline": "Transforming Businesses Through Technology, Creativity & Innovation",
-  "heroSubtext": "We help businesses grow through branding, software development, web development, digital marketing, business automation and creative solutions.",
+  "heroSubtext": "From branding, UI/UX and websites to software, automation and digital growth — JTH helps businesses turn ideas into brands, experiences and technology that drive results.",
   "phone": "+254117537015",
   "whatsapp": "+254117537015",
   "email": "jthgraphixproduction@gmail.com",
@@ -36,10 +38,11 @@
     ]
   },
   "serviceCategories": [
-    "Design",
-    "Branding",
-    "Digital",
-    "Web",
+    "Creative & Branding",
+    "Digital Experience",
+    "Technology",
+    "Digital Growth",
+    "Media & Content",
     "Training"
   ],
   "defaultCTAs": [
