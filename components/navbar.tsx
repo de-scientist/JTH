@@ -265,7 +265,7 @@ export function Navbar() {
                 asChild
                 className="bg-gradient-brand hover:opacity-90 text-white shadow-lg shadow-primary/25 rounded-xl px-6 h-11 font-medium transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
               >
-                <Link href="/contact">Request a Quote</Link>
+                <Link href="/contact">Start a Project</Link>
               </Button>
             </div>
 
@@ -360,9 +360,9 @@ export function Navbar() {
                      </span>
                      <ThemeToggle />
                    </div>
-                   <Button asChild className="w-full bg-gradient-brand text-white h-14 rounded-2xl text-base font-semibold">
-                     <Link href="/contact">Request a Quote</Link>
-                   </Button>
+                    <Button asChild className="w-full bg-gradient-brand text-white h-14 rounded-2xl text-base font-semibold">
+                      <Link href="/contact">Start a Project</Link>
+                    </Button>
                  </motion.div>
               </div>
             </div>
