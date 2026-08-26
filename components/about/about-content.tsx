@@ -10,6 +10,11 @@ const values = [
   {
     icon: Lightbulb,
     title: 'Creativity First',
+    description: 'We challenge conventional thinking and transform ideas into compelling, meaningful and impactful creative solutions.'
+  },
+   {
+    icon: Lightbulb,
+    title: 'Creativity First',
     description: 'Every project starts with fresh ideas and innovative thinking to deliver unique solutions.'
   },
   {
