@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { MessageCircle, Phone, Mail, Facebook, Instagram, Linkedin, Sparkles } from 'lucide-react'
+import { MessageCircle, Phone, Mail, Facebook, Instagram, Linkedin, Sparkles, BadgeCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { siteConfig } from '@/lib/site-config'
 import { ContactForm } from '@/components/contact-form'
