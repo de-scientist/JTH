@@ -32,14 +32,14 @@ export function SolutionsOverview() {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <SectionHeader
-          badge="Our Solutions"
+          badge="Your Creative & Technology Partner"
           title={
             <>
-              End-to-End Solutions for{' '}
-              <span className="text-gradient">Modern Businesses</span>
+              Creative Thinking. Technology.{' '}
+              <span className="text-gradient">Real Results.</span>
             </>
           }
-          description="From brand building and technology to digital growth, media and learning — we group our capabilities into focused solution areas so you can find exactly what your business needs."
+          description="JTH Graphix Production combines creative, branding, UI/UX, web, software, automation, digital marketing and media into one connected solution — so you can find exactly what your business needs to grow."
         />
 
         <motion.div

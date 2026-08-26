@@ -3,62 +3,84 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowRight, Target, Eye, Heart, Lightbulb, Users, Award, Sparkles, Badge, Handshake, UsersRoundIcon } from 'lucide-react'
+import {
+  ArrowRight,
+  Target,
+  Eye,
+  Palette,
+  Lightbulb,
+  Award,
+  ShieldCheck,
+  Users,
+  HeartHandshake,
+  TrendingUp,
+  BadgeCheck,
+  Sparkles,
+  Rocket,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { siteConfig } from '@/lib/site-config'
 
 const values = [
   {
-    icon: Lightbulb,
+    icon: Palette,
     title: 'Creativity First',
-    description: 'We challenge conventional thinking and transform ideas into compelling, meaningful and impactful creative solutions.'
+    description: 'We challenge conventional thinking and transform ideas into compelling, meaningful and impactful creative solutions.',
   },
-   {
-    icon: Heart,
+  {
+    icon: Lightbulb,
     title: 'Innovation',
-    description: 'We embrace emerging technologies, new ideas and better ways of working to deliver solutions that keep our clients ahead of the curve.'
+    description: 'We embrace emerging technologies, new ideas and better ways of working to deliver solutions that keep our clients ahead of the curve.',
   },
   {
-    icon: Badge,
+    icon: Award,
     title: 'Excellence',
-    description: 'We are committed to high standards in design, technology, service delivery and every interaction with our clients.'
+    description: 'We are committed to high standards in design, technology, service delivery and every interaction with our clients.',
   },
   {
-    icon: Handshake,
+    icon: ShieldCheck,
     title: 'Integrity',
-    description: 'We operate with honesty, transparency, accountability and professionalism, building relationships founded on trust.'
+    description: 'We operate with honesty, transparency, accountability and professionalism, building relationships founded on trust.',
   },
   {
-    icon: UsersRoundIcon,
+    icon: Users,
     title: 'Collaboration',
-    description: 'We believe great results come from listening, sharing ideas and working closely with clients, partners and our team.'
+    description: 'We believe great results come from listening, sharing ideas and working closely with clients, partners and our team.',
   },
   {
     icon: Target,
     title: 'Results Driven',
-    description: 'We design with purpose, ensuring every visual communicates effectively and drives results.'
+    description: 'We design and build with purpose, ensuring every solution communicates effectively and drives measurable results.',
   },
   {
-    icon: Users,
+    icon: HeartHandshake,
     title: 'Client Success',
-    description: 'We put our clients goals at the heart of what we do, creating solutions designed to deliver genuine business value and measurable results.'
+    description: 'We put our clients goals at the heart of what we do, creating solutions designed to deliver genuine business value and measurable results.',
   },
   {
-    icon: Users,
+    icon: TrendingUp,
     title: 'Continuous Growth',
-    description: 'We continuously learn, adapt and improve our skills, processes and solutions to remain relevant in a rapidly changing digital world.'
+    description: 'We continuously learn, adapt and improve our skills, processes and solutions to remain relevant in a rapidly changing digital world.',
   },
   {
-    icon: Award,
+    icon: BadgeCheck,
     title: 'Quality Assured',
-    description: 'We pay attention to detail and consistently deliver reliable, polished and professional solutions that meet or exceed expectations.'
-  }
+    description: 'We pay attention to detail and consistently deliver reliable, polished and professional solutions that meet or exceed expectations.',
+  },
+]
+
+const creates = [
+  'Branding & Identity',
+  'Graphic & Visual Design',
+  'UI/UX & Digital Experiences',
+  'Websites, Software & Automation',
 ]
 
 const milestones = [
   { year: '2022', title: 'Founded', description: 'JTH Graphix Production was established with a vision to transform visual communication.' },
   { year: '2023', title: 'First 100 Clients', description: 'Reached our first major milestone, serving businesses across multiple industries.' },
-  { year: '2025', title: 'Digital Expansion', description: 'Expanded services to include web design and comprehensive digital solutions.' },
-  { year: '2026', title: 'Growing Strong', description: 'Continuing to grow with 500+ projects completed and counting.' },
+  { year: '2025', title: 'Digital Expansion', description: 'Expanded services to include web design, software and comprehensive digital solutions.' },
+  { year: '2026', title: 'Growing Strong', description: 'Continuing to grow as a creative and technology partner with 200+ projects delivered.' },
 ]
 
 export function AboutContent() {
@@ -70,20 +92,20 @@ export function AboutContent() {
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
         </div>
-        
+
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              About Us
+              About JTH
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              Crafting Visual{' '}
-              <span className="text-primary">Excellence</span>
+              More Than a Design Studio —{' '}
+              <span className="text-primary">A Technology Partner</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              JTH Graphix Production is a modern creative brand dedicated to helping 
-              businesses, institutions, campaigns, and individuals communicate with 
-              clarity, confidence, and excellence.
+              JTH Graphix Production is your creative and technology partner. We help
+              businesses turn ideas into brands, digital experiences and technology
+              solutions that drive real, measurable growth.
             </p>
           </div>
         </div>
@@ -103,26 +125,25 @@ export function AboutContent() {
                 Our Story
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Bold Design. Strong Branding.
+                From Studio to Creative &amp; Technology Partner
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  JTH Graphix Production was born from a passion for visual storytelling 
-                  and a commitment to helping brands communicate their unique value. 
-                  What started as a small design studio has grown into a full-service 
-                  creative agency serving clients across Kenya and beyond.
+                  JTH Graphix Production was born from a passion for visual storytelling
+                  and a commitment to helping brands communicate their unique value.
+                  What started as a small design studio has grown into a full-service
+                  creative and technology partner serving clients across Kenya and beyond.
                 </p>
                 <p>
-                  We believe that great design is more than aesthetics — it&apos;s about 
-                  creating meaningful connections between brands and their audiences. 
-                  Every flyer, logo, and website we create is crafted to make an 
-                  impact and deliver results.
+                  We believe that great design is more than aesthetics — it&apos;s about
+                  creating meaningful connections between brands and their audiences.
+                  Today we pair that creative foundation with technology, building
+                  websites, software and automation that help businesses operate smarter.
                 </p>
                 <p>
-                  Our team combines creative expertise with strategic thinking to 
-                  deliver visual solutions that not only look stunning but also 
-                  effectively communicate your brand message and drive your 
-                  business goals.
+                  Our team combines creative expertise with strategic thinking and
+                  engineering to deliver solutions that not only look stunning but also
+                  effectively communicate your brand message and drive your business goals.
                 </p>
               </div>
             </motion.div>
@@ -151,10 +172,90 @@ export function AboutContent() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-16 lg:py-24 bg-background">
+      {/* Our Core Promise */}
+      <section className="py-16 lg:py-24 bg-background relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl mx-auto text-center mb-14"
+          >
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-[0.18em] mb-6">
+              OUR CORE PROMISE
+            </span>
+            <p className="font-display text-2xl md:text-3xl lg:text-[2.6rem] font-bold leading-tight text-foreground text-balance">
+              We don&apos;t just create designs or develop technology. We transform ideas
+              into{' '}
+              <span className="text-gradient">brands, experiences</span> and{' '}
+              <span className="text-gradient">digital solutions</span> that help
+              businesses <span className="text-gradient-accent">grow</span>.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto"
+          >
+            <div className="rounded-3xl border border-border bg-card p-8">
+              <h3 className="font-display text-lg font-semibold text-muted-foreground mb-5 uppercase tracking-wide">
+                What we create
+              </h3>
+              <ul className="space-y-3">
+                {creates.map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-foreground font-medium">
+                    <span className="w-2 h-2 rounded-full bg-primary/40" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-3xl bg-gradient-brand p-8 text-white relative overflow-hidden">
+              <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none" />
+              <h3 className="font-display text-lg font-semibold text-white/70 mb-5 uppercase tracking-wide relative z-10">
+                What you get
+              </h3>
+              <p className="font-display text-5xl md:text-6xl font-bold text-white leading-none relative z-10">
+                Growth
+              </p>
+              <p className="text-white/80 mt-4 text-sm relative z-10">
+                Not just deliverables — outcomes that move your business forward.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Mission, Vision & Core Values — three distinct layers */}
+      <section className="py-16 lg:py-24 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-14"
+          >
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+              Who We Are
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              Mission, Vision &amp; Core Values
+            </h2>
+          </motion.div>
+
+          {/* Mission & Vision */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -183,16 +284,12 @@ export function AboutContent() {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
               <p className="text-muted-foreground">
-                To become a leading creative and technology partner in Africa and the world at large, transforming businesses through exceptional design, innovative technology and solutions that create lasting impact.
+                To be a trusted creative and technology partner that helps businesses build stronger brands, better digital experiences and technology-driven solutions that create lasting impact.
               </p>
             </motion.div>
           </div>
-        </div>
-      </section>
 
-      {/* Values */}
-      <section className="py-16 lg:py-24 bg-muted/30">
-        <div className="container mx-auto px-4 lg:px-8">
+          {/* Core Values */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -200,26 +297,26 @@ export function AboutContent() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              Our Values
+            <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
+              How We Operate
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              What Drives Us
+              Our Core Values
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.06 }}
                 className="p-6 rounded-2xl bg-card border border-border text-center hover:border-primary/30 transition-colors"
               >
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
-                  <value.icon className="w-7 h-7 text-primary" />
+                  <value.icon className="w-7 h-7 text-primary" aria-hidden="true" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{value.title}</h3>
                 <p className="text-sm text-muted-foreground">{value.description}</p>
@@ -289,16 +386,16 @@ export function AboutContent() {
           >
             <Sparkles className="w-12 h-12 text-accent mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Ready to Work Together?
+              Ready to Build With JTH?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Let&apos;s create something amazing for your brand. 
-              Get in touch and let&apos;s start your project today.
+              Let&apos;s transform your idea into a brand, an experience, or a digital
+              solution. Start a project with your creative and technology partner today.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 gap-2 h-12 px-8">
+              <Button asChild size="lg" className="bg-gradient-brand hover:opacity-90 gap-2 h-12 px-8 text-white">
                 <Link href="/contact">
-                  Get in Touch
+                  Start a Project
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
