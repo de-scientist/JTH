@@ -14,8 +14,8 @@ const values = [
   },
    {
     icon: Lightbulb,
-    title: 'Creativity First',
-    description: 'Every project starts with fresh ideas and innovative thinking to deliver unique solutions.'
+    title: 'Innovation',
+    description: 'We embrace emerging technologies, new ideas and better ways of working to deliver solutions that keep our clients ahead of the curve.'
   },
   {
     icon: Target,
