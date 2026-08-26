@@ -51,7 +51,7 @@ export function AboutSection() {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <SectionHeader
-          badge="Your Growth Partner"
+          badge="Your Creative & Technology Partner"
           title={
             <>
               Technology.{' '}
@@ -59,7 +59,7 @@ export function AboutSection() {
               Results.
             </>
           }
-          description="JTH Graphix Production is a creative agency + technology partner. We transform how businesses are perceived and operate through strategic branding, world-class digital solutions, and creative excellence that drives real business results."
+          description="JTH Graphix Production is your creative and technology partner. We transform how businesses are perceived and operate through strategic branding, world-class digital experiences, and technology solutions that drive real business growth."
         />
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">

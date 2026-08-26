@@ -195,6 +195,10 @@ export function HeroSection() {
                   <span className="text-sm text-muted-foreground">{item.label}</span>
                 </div>
               ))}
+              <div className="flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5">
+                <BadgeCheck className="h-4 w-4 text-primary" aria-hidden="true" />
+                <span className="text-sm font-medium text-foreground">Quality is our Priority.</span>
+              </div>
             </motion.div>
           </motion.div>
 
