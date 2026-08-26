@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowRight, Target, Eye, Heart, Lightbulb, Users, Award, Sparkles } from 'lucide-react'
+import { ArrowRight, Target, Eye, Heart, Lightbulb, Users, Award, Sparkles, Badge } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const values = [
@@ -18,7 +18,7 @@ const values = [
     description: 'We embrace emerging technologies, new ideas and better ways of working to deliver solutions that keep our clients ahead of the curve.'
   },
   {
-    icon: Heart,
+    icon: Badge,
     title: 'Excellence',
     description: 'We are committed to high standards in design, technology, service delivery and every interaction with our clients.'
   },
