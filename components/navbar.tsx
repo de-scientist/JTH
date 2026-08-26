@@ -177,7 +177,7 @@ export function Navbar() {
                   JTH  Graphix Production
                 </span>
                 <span className="text-[10px] lg:text-[11px] text-muted-foreground leading-tight">
-                  Creative &amp; Technology Partner
+                  Quality is our Priority
                 </span>
               </div>
             </Link>
