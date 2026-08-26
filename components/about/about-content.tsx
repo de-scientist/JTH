@@ -142,9 +142,7 @@ export function AboutContent() {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
               <p className="text-muted-foreground">
-                To empower businesses and organizations with bold, high-impact visual 
-                solutions that build trust, drive engagement, and communicate value 
-                effectively in both print and digital spaces.
+                To empower businesses and organizations through innovative design, technology and digital solutions that strengthen brands, improve experiences and drive sustainable growth.
               </p>
             </motion.div>
 
