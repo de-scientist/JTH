@@ -17,6 +17,7 @@ import {
   BadgeCheck,
   Sparkles,
   Rocket,
+  GraduationCap,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -76,10 +77,38 @@ const creates = [
 ]
 
 const milestones = [
-  { year: '2022', title: 'Founded', description: 'JTH Graphix Production was established with a vision to transform visual communication.' },
-  { year: '2023', title: 'First 100 Clients', description: 'Reached our first major milestone, serving businesses across multiple industries.' },
-  { year: '2025', title: 'Digital Expansion', description: 'Expanded services to include web design, software and comprehensive digital solutions.' },
-  { year: '2026', title: 'Growing Strong', description: 'Continuing to grow as a creative and technology partner with 200+ projects delivered.' },
+  {
+    year: '2021',
+    title: 'JTH Was Born',
+    description:
+      'The founding directors came together with a shared vision to build a creative company that would transform ideas into impactful visual and digital solutions.',
+    icon: Lightbulb,
+    current: false,
+  },
+  {
+    year: '2023',
+    title: 'Operations & Training Began',
+    description:
+      'JTH began its operations and expanded its impact through practical graphics design training, including sessions for students at Murang’a University of Technology Christian Union (CU).',
+    icon: GraduationCap,
+    current: false,
+  },
+  {
+    year: '2024',
+    title: 'Client Services Expanded',
+    description:
+      'JTH expanded beyond training and began actively serving clients, delivering professional creative solutions and building relationships across different business and organizational sectors.',
+    icon: Users,
+    current: false,
+  },
+  {
+    year: '2026',
+    title: 'Registered & Growing',
+    description:
+      'JTH Graphix Production became a registered Private Limited Company, marking a major step in its formal growth while continuing to expand its creative, digital and technology capabilities.',
+    icon: Rocket,
+    current: true,
+  },
 ]
 
 export function AboutContent() {
@@ -326,49 +355,108 @@ export function AboutContent() {
       </section>
 
       {/* Timeline */}
-      <section className="py-16 lg:py-24 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-16 lg:py-24 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-12"
+            className="text-center mb-14 max-w-2xl mx-auto"
           >
             <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
               Our Journey
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Key Milestones
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+              From an Idea to a{' '}
+              <span className="text-gradient">Growing Enterprise</span>
             </h2>
+            <p className="text-muted-foreground text-lg mt-4 leading-relaxed">
+              Every great company starts with a vision. JTH&apos;s journey began with a
+              shared idea, grew through action and learning, and continues to evolve into
+              a creative and technology partner for businesses and organizations.
+            </p>
           </motion.div>
 
-          <div className="max-w-3xl mx-auto">
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={milestone.year}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex gap-6 mb-8 last:mb-0"
-              >
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
-                    {milestone.year}
+          <div className="relative max-w-4xl mx-auto">
+            {/* Central / left timeline line */}
+            <div
+              className="absolute left-6 md:left-1/2 top-2 bottom-2 w-0.5 -translate-x-1/2 bg-gradient-to-b from-primary/40 via-border to-primary/40"
+              aria-hidden="true"
+            />
+
+            {milestones.map((milestone, index) => {
+              const isLeft = index % 2 === 0
+              return (
+                <motion.div
+                  key={milestone.year}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-60px' }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  className="relative grid md:grid-cols-2 md:gap-x-16 mb-10 last:mb-0"
+                >
+                  {/* Node */}
+                  <div className="absolute left-6 md:left-1/2 top-1 -translate-x-1/2 z-10">
+                    <div
+                      className={
+                        milestone.current
+                          ? 'flex h-12 w-12 items-center justify-center rounded-full bg-gradient-brand text-white shadow-lg shadow-primary/30 ring-4 ring-primary/15'
+                          : 'flex h-12 w-12 items-center justify-center rounded-full bg-card border border-border text-primary shadow-sm'
+                      }
+                    >
+                      <milestone.icon className="h-5 w-5" aria-hidden="true" />
+                    </div>
                   </div>
-                  {index < milestones.length - 1 && (
-                    <div className="w-px h-full bg-border mt-2" />
-                  )}
-                </div>
-                <div className="flex-1 pb-8">
-                  <h3 className="text-lg font-semibold text-foreground mb-1">
-                    {milestone.title}
-                  </h3>
-                  <p className="text-muted-foreground">{milestone.description}</p>
-                </div>
-              </motion.div>
-            ))}
+
+                  {/* Card */}
+                  <div
+                    className={
+                      isLeft
+                        ? 'pl-16 md:pl-0 md:pr-16 md:text-right'
+                        : 'pl-16 md:pl-16 md:col-start-2'
+                    }
+                  >
+                    <div
+                      className={
+                        milestone.current
+                          ? 'card-premium p-6 rounded-2xl border-primary/30 shadow-lg shadow-primary/10 hover:border-primary/40 transition-all duration-300'
+                          : 'card-premium p-6 rounded-2xl hover:border-primary/20 transition-all duration-300'
+                      }
+                    >
+                      <div
+                        className={
+                          isLeft
+                            ? 'flex items-center gap-3 md:justify-end'
+                            : 'flex items-center gap-3'
+                        }
+                      >
+                        <span className="font-display text-3xl font-bold text-gradient">
+                          {milestone.year}
+                        </span>
+                        {milestone.current && (
+                          <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                            <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+                            Current
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="mt-2 text-lg font-semibold text-foreground">
+                        {milestone.title}
+                      </h3>
+                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                        {milestone.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
