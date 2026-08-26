@@ -39,8 +39,8 @@ const values = [
   },
   {
     icon: Users,
-    title: 'Client Focused',
-    description: 'Your vision is our priority. We collaborate closely to bring your ideas to life.'
+    title: 'Client Success',
+    description: 'We put our clients goals at the heart of what we do, creating solutions designed to deliver genuine business value and measurable results.'
   },
   {
     icon: Award,
