@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Zap, BadgeCheck, Eye, HeadphonesIcon, Trophy, Lightbulb, Star } from 'lucide-react'
+import { Zap, BadgeCheck, Eye, HeadphonesIcon, Trophy, Lightbulb } from 'lucide-react'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 
 const values = [
@@ -39,9 +39,9 @@ const values = [
 ]
 
 const outcomes = [
-  { value: '5.0', label: 'Average client rating' },
-  { value: '200+', label: 'Projects delivered' },
-  { value: '98%', label: 'Clients who come back' },
+  { value: 'Creative + Tech', label: 'Integrated capability' },
+  { value: 'End-to-End', label: 'Idea → Growth' },
+  { value: 'Quality First', label: 'Our core promise' },
 ]
 
 export function WhyChooseUs() {
@@ -79,10 +79,7 @@ export function WhyChooseUs() {
               <div className="flex gap-6">
                 {outcomes.map((stat) => (
                   <div key={stat.label} className="text-center">
-                    <p className="flex items-center justify-center gap-1 font-display text-2xl font-bold text-gradient-accent">
-                      {stat.label === 'Average client rating' && (
-                        <Star className="w-5 h-5 fill-secondary text-secondary" />
-                      )}
+                    <p className="font-display text-2xl font-bold text-gradient-accent">
                       {stat.value}
                     </p>
                     <p className="text-xs text-muted-foreground max-w-[90px]">{stat.label}</p>

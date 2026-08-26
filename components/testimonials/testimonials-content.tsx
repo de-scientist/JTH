@@ -6,6 +6,14 @@ import { Star, Quote, ArrowRight, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import testimonials from '@/data/testimonials.json'
 import { siteConfig } from '@/lib/site-config'
+import { companyJourney } from '@/lib/company'
+
+const journeyStats = [
+  { value: companyJourney[0].year, label: 'Established' },
+  { value: companyJourney[1].year, label: 'Training Began' },
+  { value: companyJourney[2].year, label: 'Client Services' },
+  { value: companyJourney[3].year, label: 'Registered Ltd.' },
+]
 
 export function TestimonialsContent() {
   return (

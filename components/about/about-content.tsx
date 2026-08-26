@@ -16,11 +16,9 @@ import {
   TrendingUp,
   BadgeCheck,
   Sparkles,
-  Building2,
-  BriefcaseBusiness,
-  GraduationCap,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { companyJourney } from '@/lib/company'
 
 const values = [
   {
@@ -77,40 +75,7 @@ const creates = [
   'Websites, Software & Automation',
 ]
 
-const milestones = [
-  {
-    year: '2021',
-    title: 'JTH Was Born',
-    description:
-      'The founding directors came together with a shared vision to build a creative company that would transform ideas into impactful visual and digital solutions.',
-    icon: Lightbulb,
-    current: false,
-  },
-  {
-    year: '2023',
-    title: 'Operations & Training Began',
-    description:
-      'JTH began its operations and expanded its impact through practical graphics design training, including sessions for students at Murang’a University of Technology Christian Union (CU).',
-    icon: GraduationCap,
-    current: false,
-  },
-  {
-    year: '2024',
-    title: 'Client Services Expanded',
-    description:
-      'JTH expanded beyond training and began actively serving clients, delivering professional creative solutions and building relationships across different business and organizational sectors.',
-    icon: BriefcaseBusiness,
-    current: false,
-  },
-  {
-    year: '2026',
-    title: 'Registered & Growing',
-    description:
-      'JTH Graphix Production became a registered Private Limited Company, marking a major step in its formal growth while continuing to expand its creative, digital and technology capabilities.',
-    icon: Building2,
-    current: true,
-  },
-]
+const milestones = companyJourney
 
 export function AboutContent() {
   return (

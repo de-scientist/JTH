@@ -38,9 +38,9 @@ const steps = [
 ]
 
 const aboutStats = [
-  { value: '200+', label: 'Projects' },
-  { value: '100+', label: 'Clients' },
-  { value: '98%', label: 'Satisfaction' },
+  { value: '2021', label: 'Established' },
+  { value: '2023', label: 'Operations Began' },
+  { value: '2026', label: 'Registered Ltd.' },
 ]
 
 export function AboutSection() {

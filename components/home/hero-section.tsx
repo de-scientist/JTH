@@ -4,14 +4,15 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowRight, Star, Play, Pause, Sparkles, BadgeCheck } from 'lucide-react'
+import { ArrowRight, Play, Pause, Sparkles, BadgeCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { fadeUp, defaultTransition } from '@/lib/animations'
+import { companyProfile } from '@/lib/company'
 
 const trustIndicators = [
-  { value: '200+', label: 'Projects Delivered' },
-  { value: '100+', label: 'Happy Clients' },
-  { value: '98%', label: 'Satisfaction' },
+  { value: companyProfile.founded, label: 'Established' },
+  { value: companyProfile.registered, label: 'Registered Ltd.' },
+  { value: 'Creative + Tech', label: 'Partner' },
 ]
 
 const portfolioCard = {
@@ -181,14 +182,6 @@ export function HeroSection() {
               transition={{ ...defaultTransition, delay: 0.6 }}
               className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3"
             >
-              <div className="flex items-center gap-2" aria-label="Rated 5 stars">
-                <div className="flex gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
-                  ))}
-                </div>
-                <span className="text-sm font-semibold text-foreground">Rated 5.0</span>
-              </div>
               {trustIndicators.map((item) => (
                 <div key={item.label} className="flex items-center gap-2">
                   <span className="font-display text-lg font-bold text-foreground">{item.value}</span>
