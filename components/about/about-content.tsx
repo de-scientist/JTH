@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowRight, Target, Eye, Heart, Lightbulb, Users, Award, Sparkles, Badge, Handshake } from 'lucide-react'
+import { ArrowRight, Target, Eye, Heart, Lightbulb, Users, Award, Sparkles, Badge, Handshake, UsersRoundIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const values = [
@@ -28,9 +28,9 @@ const values = [
     description: 'We operate with honesty, transparency, accountability and professionalism, building relationships founded on trust.'
   },
   {
-    icon: I,
-    title: 'Excellence',
-    description: 'We are committed to high standards in design, technology, service delivery and every interaction with our clients.'
+    icon: UsersRoundIcon,
+    title: 'Collaboration',
+    description: 'We believe great results come from listening, sharing ideas and working closely with clients, partners and our team.'
   },
   {
     icon: Target,
@@ -41,6 +41,11 @@ const values = [
     icon: Users,
     title: 'Client Success',
     description: 'We put our clients goals at the heart of what we do, creating solutions designed to deliver genuine business value and measurable results.'
+  },
+  {
+    icon: Users,
+    title: 'Continuous Growth',
+    description: 'We continuously learn, adapt and improve our skills, processes and solutions to remain relevant in a rapidly changing digital world.'
   },
   {
     icon: Award,
