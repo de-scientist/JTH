@@ -109,26 +109,13 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Utility Bar - Desktop Only */}
+      {/* Utility Bar - Desktop Only (contact info only, no navigation) */}
       <div className="hidden lg:block bg-gradient-to-r from-primary/5 to-transparent border-b border-border/40 backdrop-blur-md">
         <div className="container mx-auto px-8">
           <div className="flex items-center justify-between h-10 text-xs font-medium text-muted-foreground">
-            <div className="flex items-center gap-6">
-              <span className="hidden xl:inline">Welcome to JTH Graphix Production</span>
-            <span className="xl:hidden">
-    JTH Graphix Production
-  </span>
-            </div>
+            <span className="hidden xl:inline">Your Creative &amp; Technology Partner</span>
+            <span className="xl:hidden" />
             <div className="flex items-center gap-5">
-              <Link href="/portfolio" className="hover:text-foreground transition-colors">
-                Portfolio
-              </Link>
-              <Link href="/blogs" className="hover:text-foreground transition-colors">
-                Blogs
-              </Link>
-              <Link href="/services-pricing" className="hover:text-foreground transition-colors">
-                Resources
-              </Link>
               <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-1.5 hover:text-foreground transition-colors">
                 <Mail className="w-3.5 h-3.5" />
                 <span className="hidden xl:inline">{siteConfig.email}</span>
@@ -138,14 +125,6 @@ export function Navbar() {
                 <MessageCircle className="w-3.5 h-3.5" />
                 WhatsApp
               </a>
-              <ThemeToggle />
-              <Button
-                asChild
-                size="sm"
-                className="h-7 px-3 rounded-lg bg-gradient-brand hover:opacity-90 text-white text-xs font-semibold"
-              >
-                <Link href="/contact">Request a Quote</Link>
-              </Button>
             </div>
           </div>
         </div>
