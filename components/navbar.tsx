@@ -170,7 +170,7 @@ export function Navbar() {
                   onMouseEnter={() => link.hasMegamenu && setShowMegamenu(true)}
                   onMouseLeave={() => link.hasMegamenu && setShowMegamenu(false)}
                 >
-                  {link.scroll ? (
+                  {link.href.startsWith('#') ? (
                     <button
                       onClick={() => {
                         const el = document.getElementById(link.href.slice(1))
@@ -308,7 +308,7 @@ export function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.06 }}
                   >
-                    {link.scroll ? (
+                    {link.href.startsWith('#') ? (
                       <button
                         onClick={() => {
                           const el = document.getElementById(link.href.slice(1))
