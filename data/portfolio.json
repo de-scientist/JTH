@@ -274,41 +274,41 @@
   },
   {
     "id": "22",
-    "slug": "cafe-identity-and-packaging",
-    "title": "Café Identity and Packaging",
+    "slug": "safaricom-brand-study",
+    "title": "Safaricom Brand Study",
     "category": "Brand Identity",
-    "description": "Café identity and packaging for a specialty coffee roaster, pairing a hand-crafted logo with cup and bag artwork for stronger shelf presence.",
+    "description": "A brand study examining Safaricom's visual identity, breaking down logo treatment, color, and communication style to illustrate how a leading telecom builds recognition and consistency across channels.",
     "tags": [
-      "Branding",
-      "Packaging",
-      "Logo Design"
+      "Brand Study",
+      "Visual Identity",
+      "Case Study"
     ],
     "image": "/images/portfolio/safaricom-brand-study.png"
   },
   {
     "id": "23",
-    "slug": "charity-awareness-poster",
-    "title": "Charity Awareness Poster",
+    "slug": "why-choose-us-promo-graphic",
+    "title": "Why Choose Us Promo Graphic",
     "category": "Graphic Design",
-    "description": "Charity awareness poster for a community nonprofit, using a single bold visual idea and short copy to motivate passers-by to get involved.",
+    "description": "A Why Choose Us promo graphic highlighting service strengths, combining concise benefit points with clear typography to help an audience understand the value and difference at a glance.",
     "tags": [
-      "Poster Design",
-      "Awareness Campaign",
-      "Non-profit"
+      "Graphic Design",
+      "Promotional",
+      "Visual Communication"
     ],
     "image": "/images/portfolio/why-choose-us.png"
   },
   {
     "id": "24",
-    "slug": "product-launch-social-rollout",
-    "title": "Product Launch Social Rollout",
-    "category": "Social Media",
-    "description": "Product launch social rollout for a consumer brand, with a hero announcement frame and follow-up post templates planned for the campaign calendar.",
+    "slug": "typography-lesson",
+    "title": "Typography Lesson",
+    "category": "Graphic Design",
+    "description": "A typography lesson graphic exploring type hierarchy, spacing, and font pairing, using annotated examples to explain how letterforms and layout choices shape clear, effective visual communication.",
     "tags": [
-      "Social Media",
-      "Digital Campaign",
-      "Product Launch"
+      "Typography",
+      "Design Study",
+      "Visual Communication"
     ],
-    "image": "/images/portfolio/typography-lesson.png"
+    "image": "/images/portfolio/typography-lesson.jpg"
   }
 ]
