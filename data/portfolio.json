@@ -157,62 +157,62 @@
   },
   {
     "id": "13",
-    "slug": "modern-tech-venture-identity",
-    "title": "Modern Tech Venture Identity",
+    "slug": "digital-solutions-brand-identity",
+    "title": "Digital Solutions Brand Identity",
     "category": "Brand Identity",
-    "description": "Venture brand kit for a software startup, featuring a monogram logo, supporting icon set, and a concise brand guide so internal teams can apply the identity consistently.",
+    "description": "A brand identity concept for a digital solutions provider, presenting a clean logotype and supporting marks built to communicate technical capability and reliable service across web and print touchpoints.",
     "tags": [
+      "Logo Design",
       "Visual Identity",
-      "Logo System",
-      "Brand Guidelines"
+      "Brand System"
     ],
     "image": "/images/portfolio/digital-solutions.png"
   },
   {
     "id": "14",
-    "slug": "community-church-outreach-flyer",
-    "title": "Community Church Outreach Flyer",
-    "category": "Graphic Design",
-    "description": "Event flyer for a church community revival, laid out with strong headlines and inviting color to share service details and welcome newcomers.",
+    "slug": "business-card-design-suite",
+    "title": "Business Card Design Suite",
+    "category": "Print",
+    "description": "A set of business card designs exploring layout, typography, and finish options, created to give a professional first impression and keep contact details clear across print and networking use.",
     "tags": [
-      "Flyer Design",
-      "Event Graphics",
-      "Community"
+      "Business Cards",
+      "Branding",
+      "Print Design"
     ],
     "image": "/images/portfolio/bs-cards.png"
   },
   {
     "id": "15",
-    "slug": "corporate-year-review-report",
-    "title": "Corporate Year Review Report",
-    "category": "Print",
-    "description": "Year-in-review report for a corporate client, structured with editorial spreads, charts, and photography placeholders to communicate results clearly to shareholders.",
+    "slug": "responsive-web-design",
+    "title": "Responsive Web Design",
+    "category": "Web Development",
+    "description": "A responsive website design demonstrating structured layouts, clear navigation, and a consistent visual system across screen sizes, built to present content with strong hierarchy and a polished user experience.",
     "tags": [
-      "Print Design",
-      "Editorial Design",
-      "Report"
+      "Web Design",
+      "UI/UX",
+      "Responsive Design"
     ],
     "image": "/images/portfolio/web-design.png"
   },
   {
     "id": "16",
-    "slug": "dining-venue-social-kit",
-    "title": "Dining Venue Social Kit",
-    "category": "Social Media",
-    "description": "Social content kit for a dining venue, with reusable templates for daily specials, reviews, and behind-the-scenes posts tuned for Instagram and Facebook.",
+    "slug": "we-build-brands-identity",
+    "title": "We Build Brands Identity Promo",
+    "category": "Brand Identity",
+    "description": "A brand-building promo graphic stating the agency's positioning, pairing bold type with a confident layout to communicate identity, strategy, and visual communication services at a glance.",
     "tags": [
-      "Social Media",
-      "Content Templates",
-      "Food & Hospitality"
+      "Branding",
+      "Visual Identity",
+      "Graphic Design"
     ],
     "image": "/images/portfolio/we-build-brands.png"
   },
   {
     "id": "17",
-    "slug": "live-music-concert-poster",
-    "title": "Live Music Concert Poster",
+    "slug": "madaraka-festival-poster",
+    "title": "Madaraka Festival Poster",
     "category": "Graphic Design",
-    "description": "Concert poster artwork for a live music event, built around layered type and atmospheric imagery to capture the lineup's energy and mood.",
+    "description": "An event poster for Madaraka Festival, using energetic type and layered artwork to capture the line-up's mood and share date, venue, and ticketing details with the audience.",
     "tags": [
       "Poster Design",
       "Event Graphics",
@@ -222,53 +222,53 @@
   },
   {
     "id": "18",
-    "slug": "retail-brand-web-build",
-    "title": "Retail Brand Web Build",
-    "category": "Web Development",
-    "description": "Web build for a retail brand, delivering a responsive storefront with simplified checkout flows and a component library for ongoing page updates.",
+    "slug": "happy-sunday-social-graphic",
+    "title": "Happy Sunday Social Graphic",
+    "category": "Social Media",
+    "description": "A Happy Sunday social media graphic with warm typography and a friendly layout, designed as an engaging day-post to keep an audience connected and encourage routine community interaction.",
     "tags": [
-      "Web Development",
-      "UI/UX",
-      "E-commerce"
+      "Social Media",
+      "Content Design",
+      "Engagement"
     ],
     "image": "/images/portfolio/happy-sunday.png"
   },
   {
     "id": "19",
-    "slug": "property-sales-brochure",
-    "title": "Property Sales Brochure",
-    "category": "Print",
-    "description": "Sales brochure for a property development, presenting floor plans and lifestyle photography within a polished layout aimed at prospective buyers.",
+    "slug": "social-media-growth-graphic",
+    "title": "Social Media Growth Graphic",
+    "category": "Social Media",
+    "description": "A social growth graphic outlining audience-building ideas, using clear icons and upbeat copy to present tips and momentum for brands working to strengthen their presence on social platforms.",
     "tags": [
-      "Brochure",
-      "Print Design",
-      "Real Estate"
+      "Social Media",
+      "Digital Marketing",
+      "Growth"
     ],
     "image": "/images/portfolio/social-growth.png"
   },
   {
     "id": "20",
-    "slug": "athletic-fitness-logo-mark",
-    "title": "Athletic Fitness Logo Mark",
-    "category": "Brand Identity",
-    "description": "Athletic logo mark for a fitness label, designed for high impact at small sizes across apparel, badges, and profile avatars.",
+    "slug": "celebration-event-flyer",
+    "title": "Celebration Event Flyer",
+    "category": "Graphic Design",
+    "description": "A celebration flyer designed for a festive gathering, with bold headlines and vivid color to announce the occasion and invite attendance while keeping the key details easy to scan.",
     "tags": [
-      "Logo Design",
-      "Branding",
-      "Fitness"
+      "Flyer Design",
+      "Event Graphics",
+      "Celebration"
     ],
     "image": "/images/portfolio/celebrate-flyer.png"
   },
   {
     "id": "21",
-    "slug": "election-campaign-collateral",
-    "title": "Election Campaign Collateral",
-    "category": "Graphic Design",
-    "description": "Election campaign collateral for a local candidate, with coordinated flyers, posters, and digital graphics to keep messaging recognizable door to door.",
+    "slug": "happy-new-month-social-graphic",
+    "title": "Happy New Month Social Graphic",
+    "category": "Social Media",
+    "description": "A Happy New Month social media graphic offering a warm monthly greeting, styled with approachable type and positive messaging to maintain audience rapport and encourage steady engagement.",
     "tags": [
-      "Campaign Design",
-      "Print Graphics",
-      "Political"
+      "Social Media",
+      "Content Design",
+      "Greeting"
     ],
     "image": "/images/portfolio/happy-new-month.png"
   },
