@@ -9,32 +9,36 @@ import Link from 'next/link'
 import portfolio from '@/data/portfolio.json'
 import { siteConfig } from '@/lib/site-config'
 
-const categories = ['All', 'Branding', 'Flyers', 'Posters', 'Logos', 'Social Media', 'Print', 'Web']
+const categories = Array.from(new Set(portfolio.map((item) => item.category))).sort()
+const allCategories = ['All', ...categories]
 
 const categoryColors: Record<string, string> = {
-  'Branding': 'bg-primary/10 text-primary',
-  'Flyers': 'bg-brand-light/15 text-primary',
-  'Posters': 'bg-brand-lighter/20 text-primary',
-  'Logos': 'bg-primary/15 text-primary',
-  'Social Media': 'bg-brand-light/10 text-primary',
+  'Brand Identity': 'bg-primary/10 text-primary',
+  'Graphic Design': 'bg-brand-light/15 text-primary',
   'Print': 'bg-brand-lighter/15 text-primary',
-  'Web': 'bg-brand-light/15 text-primary',
+  'Social Media': 'bg-brand-light/10 text-primary',
+  'Web Development': 'bg-brand-light/15 text-primary',
+  'Software Development': 'bg-primary/15 text-primary',
+  'Photography': 'bg-brand-lighter/20 text-primary',
+  'Videography': 'bg-primary/10 text-primary',
+  'Digital Marketing': 'bg-brand-light/10 text-primary',
+  'Packaging': 'bg-brand-lighter/20 text-primary',
 }
 
 export function PortfolioGallery() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [selectedItem, setSelectedItem] = useState<typeof portfolio[0] | null>(null)
 
-  const filteredItems = selectedCategory === 'All' 
-    ? portfolio 
-    : portfolio.filter(item => item.category === selectedCategory)
+  const filteredItems = selectedCategory === 'All'
+    ? portfolio
+    : portfolio.filter((item) => item.category === selectedCategory)
 
   return (
     <section className="py-16 lg:py-24 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Category Filters */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
-          {categories.map((category) => (
+          {allCategories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
