@@ -4,7 +4,7 @@
 
 ---
 
-## 1️⃣ HERO VIDEO SETUP (15 minutes)
+## 1 HERO VIDEO SETUP (15 minutes)
 
 ### What You Need:
 - A 8-15 second video showcasing:
@@ -66,17 +66,17 @@ ffmpeg -i input_video.mp4 -c:v libvpx-vp9 -b:v 1M -c:a libopus output.webm
 
 ### Testing:
 ```
-✓ Video plays on desktop Chrome
-✓ Video plays on desktop Firefox
-✓ Video autoplays on mobile Safari
-✓ Video falls back to poster image if load fails
-✓ Audio is muted
-✓ No layout shift when video loads
+ Video plays on desktop Chrome
+ Video plays on desktop Firefox
+ Video autoplays on mobile Safari
+ Video falls back to poster image if load fails
+ Audio is muted
+ No layout shift when video loads
 ```
 
 ---
 
-## 2️⃣ RESPONSIVE DESIGN TESTING (30 minutes)
+## 2 RESPONSIVE DESIGN TESTING (30 minutes)
 
 ### Test Breakpoints:
 
@@ -144,7 +144,7 @@ ffmpeg -i input_video.mp4 -c:v libvpx-vp9 -b:v 1M -c:a libopus output.webm
 
 ---
 
-## 3️⃣ SEO/GEO OPTIMIZATION (45 minutes)
+## 3 SEO/GEO OPTIMIZATION (45 minutes)
 
 ### Update Homepage Metadata
 
@@ -155,7 +155,7 @@ export const metadata: Metadata = {
   title: 'JTH Graphix Production | Creative Agency + Technology Solutions',
   description: 'Transform your business through strategic branding, web development, software solutions, and digital marketing. Trusted by SMEs, corporates, NGOs and startups across Kenya.',
   keywords: 'graphic design Kenya, branding agency Kenya, web development Kenya, software development Kenya, digital marketing Kenya, creative agency Kenya',
-  
+
   openGraph: {
     title: 'JTH Graphix Production | Creative Agency + Technology Solutions',
     description: 'Transform your business through branding, web development, and digital solutions.',
@@ -168,7 +168,7 @@ export const metadata: Metadata = {
     }],
     type: 'website',
   },
-  
+
   twitter: {
     card: 'summary_large_image',
     title: 'JTH Graphix Production',
@@ -236,7 +236,7 @@ export function HomePageSchema() {
 
 ---
 
-## 4️⃣ PERFORMANCE OPTIMIZATION (30 minutes)
+## 4 PERFORMANCE OPTIMIZATION (30 minutes)
 
 ### Image Optimization
 
@@ -282,7 +282,7 @@ npx imagemin public/images/**/*.png --out-dir=public/images --plugin=imageminPng
 
 ---
 
-## 5️⃣ ACCESSIBILITY AUDIT (45 minutes)
+## 5 ACCESSIBILITY AUDIT (45 minutes)
 
 ### Automated Testing:
 ```bash
@@ -324,7 +324,7 @@ npm install axe-core
 
 ---
 
-## 6️⃣ BROWSER & DEVICE TESTING (30 minutes)
+## 6 BROWSER & DEVICE TESTING (30 minutes)
 
 ### Browser Testing:
 - [ ] Chrome (latest)
@@ -347,7 +347,7 @@ npm install axe-core
 
 ---
 
-## 7️⃣ FINAL QA CHECKLIST
+## 7 FINAL QA CHECKLIST
 
 ### Functionality:
 - [ ] All links work
@@ -388,7 +388,7 @@ npm install axe-core
 
 ---
 
-## 📋 DEPLOYMENT CHECKLIST
+##  DEPLOYMENT CHECKLIST
 
 Before going live:
 
@@ -410,7 +410,7 @@ Before going live:
 
 ---
 
-## 🚀 ROLLOUT STRATEGY
+##  ROLLOUT STRATEGY
 
 ### Stage 1: Internal Testing (1 day)
 - Team tests all features
@@ -435,7 +435,7 @@ Before going live:
 
 ---
 
-## 📞 Support & Maintenance
+##  Support & Maintenance
 
 ### Monthly Tasks:
 - [ ] Check analytics trends
@@ -453,7 +453,7 @@ Before going live:
 
 ---
 
-## ⚡ Quick Commands
+##  Quick Commands
 
 ```bash
 # Development
@@ -474,7 +474,7 @@ npm run format
 
 ---
 
-## 📚 Resources
+##  Resources
 
 - Next.js Docs: https://nextjs.org/docs
 - TypeScript: https://www.typescriptlang.org/docs

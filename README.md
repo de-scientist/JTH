@@ -398,14 +398,14 @@ The site uses Tailwind's default font system with `Inter` as the primary sans-se
 3. Vercel automatically detects Next.js and uses the correct build settings
 4. Environment variables (if any) can be configured in the Vercel dashboard
 
-## 🌐 Live Website
+##  Live Website
 
 | Version | Link |
 |----------|------|
 | Production | https://jthgraphixproduction.com |
 | Preview | https://your-vercel-url.vercel.app |
 
-## 📸 Preview
+##  Preview
 
 | Home | Services |
 |------|----------|
@@ -415,7 +415,7 @@ The site uses Tailwind's default font system with `Inter` as the primary sans-se
 |------------|----------|
 | ![](public/images/portfolio.png) | ![](public/images/contact.png) |
 
-## ⚡ Performance
+##  Performance
 
 | Metric | Score |
 |---------|------:|
@@ -424,7 +424,7 @@ The site uses Tailwind's default font system with `Inter` as the primary sans-se
 | Best Practices | 100 |
 | SEO | 100 |
 
-## 🎨 Design Philosophy
+##  Design Philosophy
 
 The website was designed around five principles:
 
@@ -436,7 +436,7 @@ The website was designed around five principles:
 
 Every component exists to improve communication rather than distract from it.
 
-## 💡 Why this Project?
+##  Why this Project?
 
 JTH Graphix Production needed more than a brochure website.
 
@@ -451,7 +451,7 @@ The goal was to create a platform that:
 
 This project demonstrates how modern frontend technologies can deliver a premium business website without the complexity of a traditional CMS.
 
-## 👨‍💻 Developer Experience
+## ‍ Developer Experience
 
 - TypeScript
 - ESLint
@@ -462,7 +462,7 @@ This project demonstrates how modern frontend technologies can deliver a premium
 - Static Generation
 - Modular Architecture
 
-## 🚀 Roadmap
+##  Roadmap
 
 - [ ] Admin Dashboard
 - [ ] CMS Integration
@@ -508,7 +508,7 @@ A GitHub Actions workflow is configured at `.github/workflows/ci.yml` for automa
 - Run `pnpm lint` before committing to catch code quality issues
 - Test responsive behavior across mobile, tablet, and desktop breakpoints
 
-## 📬 Contact
+##  Contact
 
 Mark Kinyanjui Gitau
 
@@ -522,13 +522,13 @@ Email:
 jthgraphixproduction@gmail.com
 
 GitHub:
-https://github.com/yourusername  
+https://github.com/yourusername
 
 ---
 
 <div align="center">
 
-# Built with ❤️
+# Built with
 
 by
 
@@ -536,6 +536,6 @@ by
 
 *"Learn. Earn. Return. Iterate."*
 
-⭐ If you enjoyed this project, consider starring the repository.
+ If you enjoyed this project, consider starring the repository.
 
 </div>
