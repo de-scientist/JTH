@@ -451,7 +451,7 @@ The goal was to create a platform that:
 
 This project demonstrates how modern frontend technologies can deliver a premium business website without the complexity of a traditional CMS.
 
-## ‍ Developer Experience
+## Developer Experience
 
 - TypeScript
 - ESLint
