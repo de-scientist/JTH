@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Sparkles, Code, TrendingUp, Camera, GraduationCap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
@@ -12,11 +12,11 @@ import solutionCategories from '@/data/solution-categories.json'
 import homeServices from '@/data/home-services.json'
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Sparkles: () => <span>✨</span>,
-  Code: () => <span>💻</span>,
-  TrendingUp: () => <span>📈</span>,
-  Camera: () => <span>📷</span>,
-  GraduationCap: () => <span>🎓</span>,
+  Sparkles,
+  Code,
+  TrendingUp,
+  Camera,
+  GraduationCap,
 }
 
 function getCategoryServices(categoryId: string) {
