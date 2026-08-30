@@ -1,6 +1,6 @@
 # JTH Graphix Production - Design Reference Guide
 
-##  Color Palette & Brand Guidelines
+## Color Palette & Brand Guidelines
 
 ### Primary Colors:
 ```
@@ -32,7 +32,7 @@ text-gradient:         Multi-color text effect
 
 ---
 
-##  Typography System
+## Typography System
 
 ### Font Stack:
 - **Display**: Custom display font (JTH branding)
@@ -57,7 +57,7 @@ Tiny: 12px (metadata)
 
 ---
 
-##  Component Spacing
+## Component Spacing
 
 ### Section Padding:
 ```
@@ -81,7 +81,7 @@ Desktop: gap-8 (32px)
 
 ---
 
-##  Interactive Elements
+## Interactive Elements
 
 ### Button Styles:
 
@@ -117,7 +117,7 @@ Desktop: gap-8 (32px)
 
 ---
 
-##  Responsive Breakpoints
+## Responsive Breakpoints
 
 ### Tailwind Classes Used:
 ```
@@ -149,7 +149,7 @@ Desktop: pt-20 to pt-24 (80-96px)
 
 ---
 
-##  Animation & Motion
+## Animation & Motion
 
 ### Framer Motion Variants:
 - **fadeUp**: Opacity 0 → 1, Y 20px → 0
@@ -173,7 +173,7 @@ Slow: 0.6-0.8s
 
 ---
 
-##  Image Best Practices
+## Image Best Practices
 
 ### Image Optimization:
 ```
@@ -202,7 +202,7 @@ onError={(e) => {
 
 ---
 
-##  Card Styles
+## Card Styles
 
 ### Glass Card:
 ```
@@ -225,7 +225,7 @@ Same as glass, often with:
 
 ---
 
-##  Section Backgrounds
+## Section Backgrounds
 
 ### Pattern Options:
 ```
@@ -252,7 +252,7 @@ pointer-events-none
 
 ---
 
-##  Navigation Patterns
+## Navigation Patterns
 
 ### Desktop Menu:
 - Mega-menu on hover
@@ -279,7 +279,7 @@ aria-hidden for decorative elements
 
 ---
 
-##  Data Structures
+## Data Structures
 
 ### Site Config (`site-config.json`):
 ```json
@@ -315,7 +315,7 @@ aria-hidden for decorative elements
 
 ---
 
-##  Special Effects
+## Special Effects
 
 ### Particle Field:
 - Used in hero section
@@ -338,7 +338,7 @@ aria-hidden for decorative elements
 
 ---
 
-##  Copy & Messaging Templates
+## Copy & Messaging Templates
 
 ### Section Headers Format:
 ```
@@ -363,7 +363,7 @@ Example: "98% Client Satisfaction"
 
 ---
 
-##  Performance Optimization Checklist
+## Performance Optimization Checklist
 
 ### Images:
 - [ ] Using Next.js Image component
@@ -392,7 +392,7 @@ Example: "98% Client Satisfaction"
 
 ---
 
-##  Testing Checklist
+## Testing Checklist
 
 ### Functionality:
 - [ ] All links work (internal/external)
@@ -422,7 +422,7 @@ Example: "98% Client Satisfaction"
 
 ---
 
-##  Quick Fixes Guide
+## Quick Fixes Guide
 
 ### Video Not Playing:
 1. Check file format (MP4 + WebM)
@@ -451,7 +451,7 @@ Example: "98% Client Satisfaction"
 
 ---
 
-##  Component Import Reference
+## Component Import Reference
 
 ```typescript
 // UI Components
@@ -475,7 +475,7 @@ import { motion } from 'framer-motion'
 
 ---
 
-##  Key Metrics & Targets
+## Key Metrics & Targets
 
 ### Performance:
 - LCP (Largest Contentful Paint): < 2.5s
