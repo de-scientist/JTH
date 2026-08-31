@@ -98,6 +98,30 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
 
 export function TestimonialsSection() {
   const isMobile = useIsMobile()
+  const [current, setCurrent] = useState(0)
+  const [autoplay, setAutoplay] = useState(true)
+  const [direction, setDirection] = useState(0)
+
+  const next = useCallback(() => {
+    setDirection(1)
+    setAutoplay(false)
+    setCurrent((prev) => (prev + 1) % testimonials.length)
+  }, [])
+
+  const prev = useCallback(() => {
+    setDirection(-1)
+    setAutoplay(false)
+    setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  }, [])
+
+  useEffect(() => {
+    if (!autoplay) return
+    const timer = setInterval(() => {
+      setDirection(1)
+      setCurrent((prev) => (prev + 1) % testimonials.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [autoplay])
 
   if (isMobile) {
     return (
@@ -144,31 +168,6 @@ export function TestimonialsSection() {
       </section>
     )
   }
-
-  const [current, setCurrent] = useState(0)
-  const [autoplay, setAutoplay] = useState(true)
-  const [direction, setDirection] = useState(0)
-
-  const next = useCallback(() => {
-    setDirection(1)
-    setAutoplay(false)
-    setCurrent((prev) => (prev + 1) % testimonials.length)
-  }, [])
-
-  const prev = useCallback(() => {
-    setDirection(-1)
-    setAutoplay(false)
-    setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }, [])
-
-  useEffect(() => {
-    if (!autoplay) return
-    const timer = setInterval(() => {
-      setDirection(1)
-      setCurrent((prev) => (prev + 1) % testimonials.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [autoplay])
 
   const variants = {
     enter: (dir: number) => ({ opacity: 0, x: dir > 0 ? 60 : -60 }),

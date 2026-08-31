@@ -1,0 +1,23 @@
+
+> my-project@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.0 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.105:3000
+✓ Ready in 6.2s
+⚠ Slow filesystem detected. The benchmark took 382ms. If E:\JTH-Portfolio\.next/dev is a network drive, consider moving it to a local folder.
+See more: https://nextjs.org/docs/app/guides/local-development
+
+○ Compiling / ...
+✓ Finished writing to filesystem cache in 98s
+ GET / 200 in 26.1s (next.js: 838ms, application-code: 25.3s)
+ GET / 200 in 6.7s (next.js: 1222ms, application-code: 5.5s)
+✓ Finished writing to filesystem cache in 16.5s
+ GET / 200 in 10.7s (next.js: 664ms, application-code: 10.0s)
+[browser] Image with src "http://localhost:3000/images/best%20logo-DIs8pPJL.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Image with src "http://localhost:3000/images/novatech.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Image with src "http://localhost:3000/images/grill.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Image with src "http://localhost:3000/images/grace.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Image with src "http://localhost:3000/images/hope.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+✓ Finished writing to filesystem cache in 18.0s
