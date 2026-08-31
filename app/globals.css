@@ -53,14 +53,30 @@
   --brand-lighter: #4B8EF0;
   --brand-soft: #EAF2FD;
 
+  /* Brand orange scale — secondary accent #FF7A00 (energy/creativity/action) */
+  --orange: #FF7A00;
+  --orange-dark: #CC6200;
+  --orange-light: #FF8F1F;
+  --orange-soft: #FFF2E0;
+  --orange-foreground: #FFFFFF;
+  --orange-ring: #FF7A00;
+
+  /* Semantic interaction tokens — BLUE = primary/structure, ORANGE = accent/energy */
+  --action-primary: var(--brand);
+  --action-primary-foreground: #FFFFFF;
+  --action-secondary: var(--orange);
+  --action-secondary-foreground: #FFFFFF;
+  --accent-line: var(--orange);
+  --focus-ring: var(--brand);
+
   /* Theme-aware gradient text endpoints */
   --text-gradient-from: #003380;
   --text-gradient-via: #1A6FE3;
   --text-gradient-to: #004AAD;
 
-  /* Footer-only orange accent (#FF7A1A) */
-  --footer-accent: #FF7A1A;
-  --footer-accent-hover: #E56400;
+  /* Footer accent — now aligned to #FF7A00 (was #FF7A1A) */
+  --footer-accent: #FF7A00;
+  --footer-accent-hover: #CC6200;
   --footer-accent-foreground: #FFFFFF;
   --footer-bg: #0B1220;
   --footer-foreground: #F8FAFC;
@@ -109,6 +125,13 @@
   --text-gradient-from: #7FB0F5;
   --text-gradient-via: #4B8EF0;
   --text-gradient-to: #1A6FE3;
+
+  /* Orange accent persists in dark (same vibrant #FF7A00, restrained) */
+  --orange: #FF7A00;
+  --orange-dark: #CC6200;
+  --orange-light: #FF8F1F;
+  --orange-soft: #2A1A00;
+  --orange-foreground: #FFFFFF;
 }
 
 @theme inline {
@@ -145,6 +168,13 @@
   --color-brand-light: var(--brand-light);
   --color-brand-lighter: var(--brand-lighter);
   --color-brand-soft: var(--brand-soft);
+  --color-orange: var(--orange);
+  --color-orange-dark: var(--orange-dark);
+  --color-orange-light: var(--orange-light);
+  --color-orange-soft: var(--orange-soft);
+  --color-orange-foreground: var(--orange-foreground);
+  --color-action-primary: var(--action-primary);
+  --color-action-secondary: var(--action-secondary);
   --color-footer-accent: var(--footer-accent);
   --color-footer-accent-hover: var(--footer-accent-hover);
   --color-footer-accent-foreground: var(--footer-accent-foreground);
@@ -239,6 +269,10 @@
     background-image: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
   }
 
+  .bg-gradient-brand-orange {
+    background-image: linear-gradient(135deg, var(--brand) 0%, var(--orange) 100%);
+  }
+
   .bg-gradient-brand-subtle {
     background: linear-gradient(
       135deg,
@@ -246,6 +280,10 @@
       rgba(26, 111, 227, 0.05) 50%,
       rgba(0, 74, 173, 0.03) 100%
     );
+  }
+
+  .bg-gradient-orange-subtle {
+    background: linear-gradient(135deg, rgba(255, 122, 0, 0.08) 0%, rgba(255, 122, 0, 0.03) 100%);
   }
 
   .bg-gradient-dark {
@@ -257,7 +295,11 @@
   }
 
   .bg-gradient-cta {
-    background: linear-gradient(135deg, #004AAD 0%, #003380 40%, #081120 100%);
+    background: linear-gradient(135deg, #004AAD 0%, #003380 50%, #0B1220 100%);
+  }
+
+  .bg-gradient-premium {
+    background: linear-gradient(135deg, #002F6E 0%, #004AAD 40%, #0B1220 100%);
   }
 
   .glow-primary {
@@ -266,6 +308,14 @@
 
   .glow-secondary {
     box-shadow: 0 0 40px rgba(0, 74, 173, 0.25), 0 0 80px rgba(0, 74, 173, 0.1);
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 40px rgba(255, 122, 0, 0.28), 0 0 80px rgba(255, 122, 0, 0.12);
+  }
+
+  .glow-orange-subtle {
+    box-shadow: 0 0 24px rgba(255, 122, 0, 0.18);
   }
 
   .glow-accent {
