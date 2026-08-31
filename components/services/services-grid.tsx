@@ -1,8 +1,9 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, FileImage, Image as ImageIcon, Palette, Sparkles, Share2, CreditCard, BookOpen, Printer, Globe, Flag, Calendar, Building2 } from 'lucide-react'
 import services from '@/data/services.json'
 
@@ -30,28 +31,47 @@ const categoryColors: Record<string, string> = {
   'Print': 'bg-primary/10 text-primary',
 }
 
+const allCategories = ['All', 'Design', 'Branding', 'Digital', 'Web', 'Training'] as const
+
 export function ServicesGrid() {
+  const [activeCategory, setActiveCategory] = useState<typeof allCategories[number]>('All')
+
+  const filtered = activeCategory === 'All'
+    ? services
+    : services.filter((s) => s.category === activeCategory)
+
   return (
-    <section className="py-16 lg:py-24 bg-muted/30">
+    <section className="py-16 lg:py-24 bg-muted/30" aria-labelledby="services-heading">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
-          <span className="px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium">
-            All Services
-          </span>
-          {['Design', 'Branding', 'Digital', 'Web', 'Training'].map((category) => (
-            <span
-              key={category}
-              className={`px-4 py-2 rounded-full text-sm font-medium ${categoryColors[category]} cursor-pointer hover:opacity-80 transition-opacity`}
-            >
-              {category}
-            </span>
-          ))}
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-12" role="tablist" aria-label="Filter services by category">
+          {allCategories.map((category) => {
+            const isActive = activeCategory === category
+            return (
+              <button
+                key={category}
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => setActiveCategory(category)}
+                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
+                  isActive
+                    ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/20'
+                    : category === 'All'
+                      ? 'bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/30'
+                      : `${categoryColors[category]} hover:opacity-80`
+                }`}
+              >
+                {category === 'All' ? 'All Services' : category}
+              </button>
+            )
+          })}
         </div>
+        <h2 id="services-heading" className="sr-only">Our services</h2>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => {
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <AnimatePresence mode="popLayout">
+          {filtered.map((service, index) => {
             const Icon = iconMap[service.icon] || FileImage
             return (
               <motion.div
