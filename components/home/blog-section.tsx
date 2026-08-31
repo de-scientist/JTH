@@ -20,7 +20,7 @@ function formatDate(dateStr: string) {
 
 export function BlogSection() {
   const isMobile = useIsMobile()
-  const displayedPosts = isMobile ? blogPosts.slice(0, 3) : blogPosts.slice(0, 6)
+  const displayedPosts = isMobile ? blogPosts.slice(0, 2) : blogPosts.slice(0, 3)
 
   return (
     <section id="blog" className="py-20 lg:py-32 bg-background relative overflow-hidden">
