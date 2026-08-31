@@ -1,7 +1,8 @@
 'use client'
 
+import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Search, Compass, PenTool, Eye, Rocket, Headphones, ArrowRight } from 'lucide-react'
+import { Search, PenTool, Rocket, ArrowRight } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/section-header'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 
@@ -9,58 +10,39 @@ const steps = [
   {
     icon: Search,
     title: 'Discover',
-    description: 'We learn your brand, goals, audience, and competitive landscape.',
-    detail: 'Free consultation to understand what you want to achieve.',
-  },
-  {
-    icon: Compass,
-    title: 'Strategy',
-    description: 'We define a clear creative direction that supports your business goals.',
-    detail: 'A roadmap that keeps your brand consistent and focused.',
+    description: 'Understand the challenge, audience and goals.',
+    detail: 'Brief, research and clear direction.',
   },
   {
     icon: PenTool,
-    title: 'Design',
-    description: 'Concepts refined into stunning visuals aligned with your vision.',
-    detail: 'High-quality design tailored to your audience and industry.',
-  },
-  {
-    icon: Eye,
-    title: 'Review',
-    description: 'You give feedback, we refine until every detail is perfect.',
-    detail: 'Clear revisions and honest communication at every step.',
+    title: 'Create',
+    description: 'Design, develop and refine the solution.',
+    detail: 'Strategy-led design and builds, review and iteration.',
   },
   {
     icon: Rocket,
-    title: 'Delivery',
-    description: 'Production-ready files delivered on time, in every format you need.',
-    detail: 'Print and digital files prepared to professional standards.',
-  },
-  {
-    icon: Headphones,
-    title: 'Long-Term Support',
-    description: 'Ongoing help so your brand keeps growing and stays consistent.',
-    detail: 'We stay available long after launch for tweaks and new work.',
+    title: 'Grow',
+    description: 'Launch, optimize and support the next stage.',
+    detail: 'Delivery, launch and ongoing support.',
   },
 ]
 
 export function ProcessSection() {
   return (
-    <section id="process" className="py-20 lg:py-32 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-brand-subtle pointer-events-none opacity-50" />
-      <div className="absolute top-1/2 left-0 w-72 h-72 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
+    <section id="process" className="py-20 lg:py-28 bg-background relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <SectionHeader
           badge="How We Work"
           title={
             <>
-              A Simple Process.{' '}
-              <span className="text-gradient">Premium Results.</span>
+              Three Steps.{' '}
+              <span className="text-gradient">One Clear Journey.</span>
             </>
           }
-          description="From first conversation to final delivery — here's exactly what happens when you work with JTH. No guesswork, no surprises, just a clear path to a brand you're proud of."
+          description="From first conversation to launch and beyond — a simple, transparent process for every project."
         />
 
         <div className="relative">
@@ -71,7 +53,7 @@ export function ProcessSection() {
             whileInView="visible"
             viewport={viewportOnce}
             variants={staggerContainer}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
           >
             {steps.map((step, index) => (
               <motion.div
@@ -104,21 +86,27 @@ export function ProcessSection() {
                     </p>
                   </div>
                 </div>
-
-                {index < steps.length - 1 && (
-                  <div
-                    className="hidden lg:block absolute -bottom-4 left-1/2 -translate-x-1/2 z-20"
-                    aria-hidden="true"
-                  >
-                    <div className="w-8 h-8 rounded-full bg-background border-2 border-primary/20 flex items-center justify-center group-hover:border-primary transition-colors">
-                      <ArrowRight className="w-4 h-4 text-primary rotate-90" />
-                    </div>
-                  </div>
-                )}
               </motion.div>
             ))}
           </motion.div>
         </div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={fadeUp}
+          transition={defaultTransition}
+          className="text-center mt-12"
+        >
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"
+          >
+            See our full process &amp; services
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   )
