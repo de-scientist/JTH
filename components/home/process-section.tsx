@@ -29,7 +29,7 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section id="process" className="py-20 lg:py-28 bg-background relative overflow-hidden">
+    <section id="process" className="py-16 lg:py-24 bg-background relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
