@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { ServicesGrid } from '@/components/services/services-grid'
 import { ServicesCTA } from '@/components/services/services-cta'
+import { ProcessSteps } from '@/components/services/process-steps'
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -36,6 +37,7 @@ export default function ServicesPage() {
       </section>
 
       <ServicesGrid />
+      <ProcessSteps />
       <ServicesCTA />
     </>
   )
