@@ -56,12 +56,14 @@ export function PortfolioGallery() {
     <section className="py-16 lg:py-24 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-12" role="tablist" aria-label="Filter portfolio by category">
           {allCategories.map((category) => (
             <button
               key={category}
+              role="tab"
+              aria-selected={selectedCategory === category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
                 selectedCategory === category
                   ? 'bg-primary text-primary-foreground'
                   : 'bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/30'
@@ -93,10 +95,11 @@ export function PortfolioGallery() {
                   {/* Portfolio Image */}
                   <Image
                     src={item.image}
-                    alt={item.title}
+                    alt={`${item.title} — ${item.category} by JTH Graphix Production`}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    loading="lazy"
                   />
                   
                   {/* Hover Overlay */}
@@ -132,28 +135,31 @@ export function PortfolioGallery() {
               exit={{ opacity: 0 }}
               className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm"
               onClick={() => setSelectedItem(null)}
+              role="dialog"
+              aria-modal="true"
+              aria-label={`${selectedItem.title} details`}
             >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                className="relative w-full max-w-3xl bg-card rounded-3xl border border-border shadow-2xl overflow-hidden"
+                className="relative w-full max-w-3xl bg-card rounded-3xl border border-border shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Close Button */}
                 <button
                   onClick={() => setSelectedItem(null)}
-                  className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-background/80 flex items-center justify-center text-foreground hover:bg-background transition-colors"
+                  className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-background/80 flex items-center justify-center text-foreground hover:bg-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
                   aria-label="Close modal"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-5 h-5" aria-hidden="true" />
                 </button>
 
                 {/* Image Area */}
                 <div className="relative aspect-video">
                   <Image
                     src={selectedItem.image}
-                    alt={selectedItem.title}
+                    alt={`${selectedItem.title} — ${selectedItem.category} portfolio image`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 800px"
