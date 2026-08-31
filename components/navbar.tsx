@@ -81,15 +81,17 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
       if (pathname !== '/') return
-      const sections = ['hero', 'trust', 'services', 'about', 'portfolio', 'partners', 'testimonials', 'process', 'blog', 'cta']
+      const sections = ['hero', 'trust', 'solutions', 'work', 'why', 'process', 'client-proof', 'blog', 'cta']
       const scrollPos = window.scrollY + 120
+      let found = ''
       for (const id of [...sections].reverse()) {
         const el = document.getElementById(id)
         if (el && el.offsetTop <= scrollPos) {
-          setActiveSection(id)
+          found = id
           break
         }
       }
+      setActiveSection(found)
     }
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -98,11 +100,17 @@ export function Navbar() {
 
   useEffect(() => {
     setIsOpen(false)
+    setShowMegamenu(false)
   }, [pathname])
 
   useEffect(() => {
     if (!isOpen) return
     const originalOverflow = document.body.style.overflow
+    const originalPaddingRight = document.body.style.paddingRight
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`
+    }
     document.body.style.overflow = 'hidden'
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setIsOpen(false)
@@ -110,6 +118,7 @@ export function Navbar() {
     window.addEventListener('keydown', handleKeyDown)
     return () => {
       document.body.style.overflow = originalOverflow
+      document.body.style.paddingRight = originalPaddingRight
       window.removeEventListener('keydown', handleKeyDown)
     }
   }, [isOpen])
@@ -182,41 +191,35 @@ export function Navbar() {
                   className="relative group"
                   onMouseEnter={() => link.hasMegamenu && setShowMegamenu(true)}
                   onMouseLeave={() => link.hasMegamenu && setShowMegamenu(false)}
+                  onFocus={() => link.hasMegamenu && setShowMegamenu(true)}
+                  onBlur={(e) => {
+                    if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                      setShowMegamenu(false)
+                    }
+                  }}
                 >
-                  {link.href.startsWith('#') ? (
-                    <button
-                      onClick={() => {
-                        const el = document.getElementById(link.href.slice(1))
-                        el?.scrollIntoView({ behavior: 'smooth' })
-                      }}
-                      className={cn(
-                        'relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 inline-flex items-center gap-1',
-                        'text-muted-foreground hover:text-foreground'
-                      )}
-                    >
-                      {link.label}
-                    </button>
-                  ) : (
-                    <Link
-                      href={link.href}
-                      className={cn(
-                        'relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 inline-flex items-center gap-1',
-                        isActive(link.href)
-                          ? 'text-primary'
-                          : 'text-muted-foreground hover:text-foreground'
-                      )}
-                    >
-                      {link.label}
-                      {link.hasMegamenu && <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />}
-                      {isActive(link.href) && (
-                        <motion.span
-                          layoutId="nav-indicator"
-                          className="absolute inset-0 bg-primary/10 rounded-lg -z-10"
-                          transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                        />
-                      )}
-                    </Link>
-                  )}
+                  <Link
+                    href={link.href}
+                    onClick={() => setShowMegamenu(false)}
+                    className={cn(
+                      'relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 inline-flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40',
+                      isActive(link.href)
+                        ? 'text-primary'
+                        : 'text-muted-foreground hover:text-foreground'
+                    )}
+                    aria-expanded={link.hasMegamenu ? showMegamenu : undefined}
+                    aria-haspopup={link.hasMegamenu ? 'menu' : undefined}
+                  >
+                    {link.label}
+                    {link.hasMegamenu && <ChevronDown className={cn('w-3.5 h-3.5 transition-transform', showMegamenu && 'rotate-180')} aria-hidden="true" />}
+                    {isActive(link.href) && (
+                      <motion.span
+                        layoutId="nav-indicator"
+                        className="absolute inset-0 bg-primary/10 rounded-lg -z-10"
+                        transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                  </Link>
 
                   {/* Mega Menu */}
                   {link.hasMegamenu && showMegamenu && (
@@ -226,6 +229,7 @@ export function Navbar() {
                       exit={{ opacity: 0, y: 8, scale: 0.96 }}
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-screen max-w-5xl glass-card rounded-3xl p-8 shadow-2xl"
+                      role="menu"
                     >
                       <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
                         {megamenuData.map((column, idx) => (
@@ -245,7 +249,9 @@ export function Navbar() {
                                    <Link
                                      key={i}
                                      href={item.href}
-                                     className="flex items-start gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors group"
+                                     onClick={() => setShowMegamenu(false)}
+                                     className="flex items-start gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+                                     role="menuitem"
                                    >
                                      <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
                                        {ItemIcon ? <ItemIcon className="w-4 h-4" /> : null}
@@ -264,6 +270,12 @@ export function Navbar() {
                              </div>
                           </div>
                         ))}
+                      </div>
+                      <div className="mt-6 pt-6 border-t border-border/40 flex items-center justify-between">
+                        <p className="text-xs text-muted-foreground">Not sure where to start? We&apos;ll guide you.</p>
+                        <Link href="/services" onClick={() => setShowMegamenu(false)} className="text-xs font-semibold text-primary hover:gap-1 flex items-center gap-1.5">
+                          Explore all services <ChevronDown className="w-3 h-3 rotate-[-90deg]" />
+                        </Link>
                       </div>
                     </motion.div>
                   )}
