@@ -297,11 +297,12 @@ export function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2.5 rounded-xl text-foreground hover:bg-muted transition-colors relative z-10 ml-auto"
+              className="lg:hidden p-2.5 rounded-xl text-foreground hover:bg-muted transition-colors relative z-20 ml-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -311,11 +312,15 @@ export function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
             className="lg:hidden fixed inset-0 top-0 z-0 pointer-events-auto"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Navigation menu"
           >
             <motion.div
               initial={{ opacity: 0 }}
@@ -323,9 +328,10 @@ export function Navbar() {
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
               className="absolute inset-0 bg-background/95 backdrop-blur-2xl"
+              aria-hidden="true"
             />
-            <div className="relative z-10 container mx-auto px-4 pt-32 pb-8 h-full overflow-y-auto">
-              <div className="flex flex-col gap-2 max-w-sm mx-auto">
+            <div className="relative z-10 container mx-auto px-4 pt-28 pb-8 h-full overflow-y-auto">
+              <nav className="flex flex-col gap-2 max-w-sm mx-auto" aria-label="Mobile navigation">
                 {navLinks.map((link, i) => (
                   <motion.div
                     key={link.href}
@@ -333,30 +339,18 @@ export function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.06 }}
                   >
-                    {link.href.startsWith('#') ? (
-                      <button
-                        onClick={() => {
-                          const el = document.getElementById(link.href.slice(1))
-                          el?.scrollIntoView({ behavior: 'smooth' })
-                          setIsOpen(false)
-                        }}
-                        className="w-full text-left px-6 py-4 text-lg font-medium rounded-2xl transition-all duration-300 text-muted-foreground hover:text-foreground hover:bg-muted"
-                      >
-                        {link.label}
-                      </button>
-                    ) : (
-                      <Link
-                        href={link.href}
-                        className={cn(
-                          'block px-6 py-4 text-lg font-medium rounded-2xl transition-all duration-300',
-                          isActive(link.href)
-                            ? 'text-primary bg-primary/10'
-                            : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                        )}
-                      >
-                        {link.label}
-                      </Link>
-                    )}
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className={cn(
+                        'block px-6 py-4 text-lg font-medium rounded-2xl transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40',
+                        isActive(link.href)
+                          ? 'text-primary bg-primary/10'
+                          : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                      )}
+                    >
+                      {link.label}
+                    </Link>
                   </motion.div>
                 ))}
                   <motion.div
@@ -380,10 +374,10 @@ export function Navbar() {
                       <ThemeToggle />
                     </div>
                     <Button asChild className="w-full bg-gradient-brand text-white h-14 rounded-2xl text-base font-semibold">
-                      <Link href="/contact">Start a Project</Link>
+                      <Link href="/contact" onClick={() => setIsOpen(false)}>Start a Project</Link>
                     </Button>
                   </motion.div>
-              </div>
+              </nav>
             </div>
           </motion.div>
         )}

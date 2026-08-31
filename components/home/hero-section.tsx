@@ -26,18 +26,66 @@ const portfolioCard = {
 export function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const prefersReducedMotion = useReducedMotion()
-  const [isPlaying, setIsPlaying] = useState(!prefersReducedMotion)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [videoFailed, setVideoFailed] = useState(false)
+  const [canPlay, setCanPlay] = useState(false)
+
+  // Initialize playback respecting reduced-motion and handle autoplay safely
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video || prefersReducedMotion || videoFailed) {
+      setIsPlaying(false)
+      return
+    }
+    // Only attempt autoplay if not reduced-motion
+    const playPromise = video.play()
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          setIsPlaying(true)
+          setCanPlay(true)
+        })
+        .catch(() => {
+          setIsPlaying(false)
+        })
+    }
+    const handleError = () => setVideoFailed(true)
+    const handleCanPlay = () => setCanPlay(true)
+    video.addEventListener('error', handleError)
+    video.addEventListener('canplay', handleCanPlay)
+    return () => {
+      video.removeEventListener('error', handleError)
+      video.removeEventListener('canplay', handleCanPlay)
+      // cleanup: pause on unmount to avoid leaks
+      try { video.pause() } catch {}
+    }
+  }, [prefersReducedMotion, videoFailed])
+
+  // Sync reduced-motion changes: pause when user prefers reduced motion
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    if (prefersReducedMotion) {
+      video.pause()
+      setIsPlaying(false)
+    }
+  }, [prefersReducedMotion])
 
   const togglePlayback = useCallback(() => {
     const video = videoRef.current
-    if (!video) return
+    if (!video || videoFailed) return
     if (video.paused) {
-      video.play().catch(() => {})
+      video.play().catch(() => setVideoFailed(true))
       setIsPlaying(true)
     } else {
       video.pause()
       setIsPlaying(false)
     }
+  }, [videoFailed])
+
+  const handleVideoError = useCallback(() => {
+    setVideoFailed(true)
+    setIsPlaying(false)
   }, [])
 
   const scrollToNext = useCallback(() => {
@@ -54,7 +102,7 @@ export function HeroSection() {
       id="hero"
       className="relative flex min-h-[78vh] items-center overflow-hidden bg-background pt-24 lg:min-h-[88vh] lg:pt-28"
     >
-      {/* LAYER 1 — VIDEO (full-bleed showreel) */}
+      {/* LAYER 1 — VIDEO (full-bleed showreel) with graceful poster fallback */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <Image
           src="/images/hero-showcase.jpg"
@@ -64,21 +112,25 @@ export function HeroSection() {
           sizes="100vw"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <video
-          ref={videoRef}
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          autoPlay={!prefersReducedMotion}
-          muted
-          loop
-          playsInline
-          preload="none"
-          poster="/images/hero-showcase.jpg"
-          tabIndex={-1}
-          aria-label="JTH Graphix Production showreel showcasing branding, web and software work"
-        >
-          <source src="/videos/hero.webm" type="video/webm" />
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
+        {!prefersReducedMotion && !videoFailed && (
+          <video
+            ref={videoRef}
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/images/hero-showcase.jpg"
+            tabIndex={-1}
+            aria-label="JTH Graphix Production showreel showcasing branding, web and software work"
+            onError={handleVideoError}
+            // hide until canPlay to avoid flash
+            style={{ opacity: canPlay ? 1 : 0, transition: 'opacity 600ms ease' }}
+          >
+            <source src="/videos/hero.webm" type="video/webm" />
+            <source src="/videos/hero.mp4" type="video/mp4" />
+          </video>
+        )}
       </div>
 
       {/* LAYER 2 — DIRECTIONAL SCRIM */}
@@ -238,17 +290,19 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* VIDEO CONTROL */}
-      <button
-        type="button"
-        onClick={togglePlayback}
-        aria-label={isPlaying ? 'Pause showreel' : 'Play showreel'}
-        aria-pressed={isPlaying}
-        className="absolute bottom-6 right-4 z-30 flex items-center gap-2 rounded-full border border-white/15 bg-background/55 px-4 py-2 text-sm font-medium text-foreground backdrop-blur-md transition-colors hover:border-primary/40 hover:bg-background/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent lg:right-8"
-      >
-        {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
-        <span>{isPlaying ? 'Pause' : 'Showreel'}</span>
-      </button>
+      {/* VIDEO CONTROL — hidden when reduced-motion or video failed */}
+      {!prefersReducedMotion && !videoFailed && (
+        <button
+          type="button"
+          onClick={togglePlayback}
+          aria-label={isPlaying ? 'Pause showreel' : 'Play showreel'}
+          aria-pressed={isPlaying}
+          className="absolute bottom-6 right-4 z-30 flex items-center gap-2 rounded-full border border-white/15 bg-background/55 px-4 py-2 text-sm font-medium text-foreground backdrop-blur-md transition-colors hover:border-primary/40 hover:bg-background/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent lg:right-8"
+        >
+          {isPlaying ? <Pause className="h-4 w-4" aria-hidden="true" /> : <Play className="h-4 w-4" aria-hidden="true" />}
+          <span>{isPlaying ? 'Pause' : 'Showreel'}</span>
+        </button>
+      )}
 
       {/* SCROLL INDICATOR */}
       <button
