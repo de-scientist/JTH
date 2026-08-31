@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowRight, Play, Pause, Sparkles, BadgeCheck } from 'lucide-react'
+import { ArrowRight, Play, Pause, BadgeCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { fadeUp, defaultTransition } from '@/lib/animations'
 import { companyProfile } from '@/lib/company'
@@ -45,7 +45,6 @@ export function HeroSection() {
     if (el) el.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' })
   }, [prefersReducedMotion])
 
-  // Entrance variants respect reduced motion (no transform offset).
   const entrance = prefersReducedMotion
     ? { hidden: { opacity: 0 }, visible: { opacity: 1 } }
     : fadeUp
@@ -82,23 +81,21 @@ export function HeroSection() {
         </video>
       </div>
 
-      {/* LAYER 2 — DIRECTIONAL SCRIM (text area darker, video area clear) */}
+      {/* LAYER 2 — DIRECTIONAL SCRIM */}
       <div
         className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(90deg,var(--background)_0%,color-mix(in_srgb,var(--background)_58%,transparent)_42%,color-mix(in_srgb,var(--background)_22%,transparent)_72%,transparent_100%)]"
         aria-hidden="true"
       />
-      {/* Bottom scrim keeps CTA / trust row readable while video stays visible */}
       <div
         className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(to_top,var(--background)_2%,color-mix(in_srgb,var(--background)_70%,transparent)_28%,transparent_55%)]"
         aria-hidden="true"
       />
-      {/* Mobile legibility layer — light uniform tint, video still clearly visible */}
       <div
         className="pointer-events-none absolute inset-0 z-10 bg-background/25 max-md:bg-background/35"
         aria-hidden="true"
       />
 
-      {/* LAYER 3 — ATMOSPHERIC JTH BLUE GLOW (subtle, non-destructive) */}
+      {/* LAYER 3 — ATMOSPHERIC JTH BLUE GLOW */}
       <div className="pointer-events-none absolute inset-0 z-[11]" aria-hidden="true">
         <div className="absolute -right-24 bottom-0 h-[460px] w-[460px] rounded-full bg-[radial-gradient(circle,rgba(0,74,173,0.35),transparent_70%)] opacity-70 blur-2xl" />
         <div className="absolute left-1/3 top-10 h-[340px] w-[340px] rounded-full bg-[radial-gradient(circle,rgba(26,111,227,0.18),transparent_70%)] opacity-60 blur-2xl" />
@@ -126,8 +123,8 @@ export function HeroSection() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-secondary" />
               </span>
               <span className="text-sm font-medium text-primary">
-                 Your Creative &amp; Technology Partner
-               </span>
+                Your Creative &amp; Technology Partner
+              </span>
             </motion.div>
 
             <motion.h1
@@ -135,8 +132,8 @@ export function HeroSection() {
               transition={{ ...defaultTransition, delay: 0.15 }}
               className="font-display text-[clamp(2.5rem,5.2vw,4.75rem)] font-bold leading-[1.05] tracking-tight text-foreground text-balance"
             >
-              We Turn Ideas Into{' '}
-              <span className="text-gradient">Brands, Experiences &amp; Digital Solutions.</span>
+              Transforming Businesses Through{' '}
+              <span className="text-gradient">Technology, Creativity &amp; Innovation</span>
             </motion.h1>
 
             <motion.p
@@ -144,9 +141,8 @@ export function HeroSection() {
               transition={{ ...defaultTransition, delay: 0.3 }}
               className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
             >
-              From brand identity and visual communication to websites, UI/UX,
-              software and digital growth — JTH helps businesses transform ideas
-              into meaningful digital experiences.
+              We help businesses grow through Branding, Software Development, Web Development,
+              Digital Marketing, Business Automation and Creative Solutions.
             </motion.p>
 
             <motion.div
@@ -195,7 +191,7 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* PROOF — single premium floating portfolio card (secondary to video) */}
+          {/* PROOF — floating portfolio card */}
           <div className="relative hidden md:flex lg:justify-end">
             <motion.div
               initial={{ opacity: 0, y: 28, scale: 0.96 }}
@@ -228,7 +224,7 @@ export function HeroSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
                 </div>
                 <div className="flex items-center gap-2 px-4 pb-4 pt-3">
-                  <Sparkles className="h-4 w-4 text-primary" />
+                  <BadgeCheck className="h-4 w-4 text-primary" />
                   <div>
                     <p className="text-sm font-semibold leading-tight text-foreground">
                       {portfolioCard.title}
@@ -242,7 +238,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* LAYER 6 — VIDEO CONTROL (bottom-right, accessible) */}
+      {/* VIDEO CONTROL */}
       <button
         type="button"
         onClick={togglePlayback}
@@ -254,7 +250,7 @@ export function HeroSection() {
         <span>{isPlaying ? 'Pause' : 'Showreel'}</span>
       </button>
 
-      {/* LAYER 6 — SCROLL INDICATOR (bottom-center) */}
+      {/* SCROLL INDICATOR */}
       <button
         type="button"
         onClick={scrollToNext}

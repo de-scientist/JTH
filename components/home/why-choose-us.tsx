@@ -1,146 +1,121 @@
 'use client'
 
-import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Zap, BadgeCheck, Eye, HeadphonesIcon, Trophy, Lightbulb } from 'lucide-react'
+import { ArrowRight, Palette, Eye, Zap, TrendingUp } from 'lucide-react'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 
-const values = [
+const differentiators = [
   {
-    icon: Zap,
-    title: 'Quality-First Approach',
-    description: 'Every design is production-ready. Print-ready files, optimized web assets, and professional deliverables from day one.',
-  },
-  {
-    icon: BadgeCheck,
-    title: 'Creative + Technical Expertise',
-    description: 'We blend artistic excellence with technical precision — creating designs that look stunning and perform brilliantly.',
+    icon: Palette,
+    title: 'Creative + Technology',
+    description: 'Design and development working together under one roof.',
   },
   {
     icon: Eye,
-    title: 'Business-Focused Solutions',
-    description: 'Strategy drives every decision. We design to achieve your goals, not just create pretty work.',
+    title: 'Business-Focused',
+    description: 'Solutions built around actual business objectives, not just aesthetics.',
   },
   {
-    icon: Trophy,
-    title: 'Responsive Client Support',
-    description: 'Direct communication, clear timelines, and dedicated support throughout your project and beyond.',
+    icon: Zap,
+    title: 'Quality First',
+    description: 'Professional, polished and production-ready work from day one.',
   },
   {
-    icon: Lightbulb,
-    title: 'Scalable Digital Solutions',
-    description: 'From branding to software, we build solutions that grow with your business without technical limitations.',
+    icon: TrendingUp,
+    title: 'Built for Growth',
+    description: 'Solutions designed to evolve and scale with your business.',
   },
-  {
-    icon: HeadphonesIcon,
-    title: 'Kenyan Market Understanding',
-    description: 'Deep knowledge of the local market, cultural nuances, and what resonates with Kenyan and East African audiences.',
-  },
-]
-
-const outcomes = [
-  { value: 'Creative + Tech', label: 'Integrated capability' },
-  { value: 'End-to-End', label: 'Idea → Growth' },
-  { value: 'Quality First', label: 'Our core promise' },
 ]
 
 export function WhyChooseUs() {
   return (
-    <section className="py-20 lg:py-32 bg-background relative overflow-hidden">
+    <section id="why" className="py-20 lg:py-32 bg-background relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none" />
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
-          <motion.div
+        <div className="text-center mb-12 lg:mb-16">
+          <motion.span
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
             variants={fadeUp}
             transition={defaultTransition}
-            className="relative order-2 lg:order-1"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-5"
           >
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden card-premium">
-              <Image
-                src="/images/services/branding-identity/2.jpeg"
-                alt="Brand identity design and logo presentation by JTH Graphix Production"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement
-                  target.src = '/images/services/branding-identity/ASH Global Initiatives.png'
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
-            </div>
-
-            <div className="absolute -bottom-6 -right-4 lg:right-6 glass rounded-2xl p-5 shadow-xl backdrop-blur-xl">
-              <div className="flex gap-6">
-                {outcomes.map((stat) => (
-                  <div key={stat.label} className="text-center">
-                    <p className="font-display text-2xl font-bold text-gradient-accent">
-                      {stat.value}
-                    </p>
-                    <p className="text-xs text-muted-foreground max-w-[90px]">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
+            <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
+            Why Choose JTH
+          </motion.span>
+          <motion.h2
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
             variants={fadeUp}
             transition={defaultTransition}
-            className="order-1 lg:order-2"
+            className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
-              Why Choose JTH
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-              Technology.{' '}
-              <span className="text-gradient">Creativity.</span>{' '}
-              <span className="text-gradient">Results.</span>
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-xl">
-              We are not just a design agency. We are a strategic partner that combines creative excellence, technical expertise, and business understanding to transform how your business is perceived and operates.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {values.map((value, index) => (
-                <motion.div
-                  key={value.title}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={viewportOnce}
-                  variants={fadeUp}
-                  transition={{ ...defaultTransition, delay: index * 0.05 }}
-                >
-                  <div className="card-premium p-5 h-full relative overflow-hidden group">
-                    <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-brand scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
-                        <value.icon className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
-                      </div>
-                      <div>
-                        <h3 className="font-display text-sm font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
-                          {value.title}
-                        </h3>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
-                          {value.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+            Technology.{' '}
+            <span className="text-gradient">Creativity.</span>{' '}
+            <span className="text-gradient">Results.</span>
+          </motion.h2>
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={fadeUp}
+            transition={defaultTransition}
+            className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto"
+          >
+            We are a strategic partner that combines creative excellence, technical expertise, and business understanding to transform how your brand is perceived and operates.
+          </motion.p>
         </div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={staggerContainer}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          {differentiators.map((item, index) => (
+            <motion.div
+              key={item.title}
+              variants={fadeUp}
+              transition={{ ...defaultTransition, delay: index * 0.08 }}
+              className="group"
+            >
+              <div className="card-premium p-6 h-full relative overflow-hidden group-hover:-translate-y-1 transition-all duration-300">
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-brand scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                  <item.icon className="w-6 h-6" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={fadeUp}
+          transition={defaultTransition}
+          className="text-center mt-12"
+        >
+          <Link
+            href="/about"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"
+          >
+            Why Choose JTH
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   )

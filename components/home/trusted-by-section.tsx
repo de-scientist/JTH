@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { SectionHeader } from '@/components/ui/section-header'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 
 const clients = [
@@ -14,14 +13,13 @@ const clients = [
   { name: 'Grace Community', logo: '/images/grace.jpg' },
   { name: 'Omondi Holdings', logo: '/images/hold.jpg' },
   { name: 'Hope Foundation', logo: '/images/hope.jpg' },
-  { name: 'Kimani & Associates', logo: '/images/law.jpg' },
 ]
 
 export function TrustedBySection() {
   return (
     <section
       id="trust"
-      className="relative py-16 lg:py-24 overflow-hidden"
+      className="relative py-12 lg:py-16 overflow-hidden border-y border-border/40"
     >
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
@@ -31,62 +29,44 @@ export function TrustedBySection() {
           variants={staggerContainer}
           className="text-center"
         >
-          <motion.div variants={fadeUp} className="mb-8 lg:mb-12">
-            <p className="text-sm lg:text-base font-semibold text-primary tracking-wide uppercase mb-3">
-              Building Trust
-            </p>
-            <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Trusted By Leading Businesses & Organizations
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From startups to established organizations, churches to institutions — businesses trust JTH to deliver creative and technical excellence.
-            </p>
-          </motion.div>
+          <motion.p
+            variants={fadeUp}
+            transition={defaultTransition}
+            className="text-sm font-semibold text-muted-foreground tracking-wide uppercase mb-8"
+          >
+            Trusted by leading businesses &amp; organizations
+          </motion.p>
 
           <motion.div
             variants={staggerContainer}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8 mt-12"
+            className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 lg:gap-x-12"
           >
             {clients.map((client, index) => (
               <motion.div
                 key={client.name}
                 variants={fadeUp}
-                className="flex items-center justify-center"
+                transition={{ ...defaultTransition, delay: (index % 4) * 0.06 }}
+                className="flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300"
               >
-                <div className="relative w-full aspect-video bg-muted/30 rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 overflow-hidden group cursor-pointer">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
-                  <div className="w-full h-full flex items-center justify-center p-4">
-                    <Image
-                      src={client.logo}
-                      alt={`${client.name} logo`}
-                      width={120}
-                      height={60}
-                      className="object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
-                      style={{ width: 'auto', height: 'auto', maxWidth: '100%' }}
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement
-                        target.style.display = 'none'
-                        e.currentTarget.parentElement!.innerHTML = `<span class="text-xs font-semibold text-muted-foreground">${client.name}</span>`
-                      }}
-                    />
-                  </div>
-                  
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center bg-background/90 backdrop-blur-sm">
-                    <p className="text-sm font-semibold text-foreground text-center px-3">
-                      {client.name}
-                    </p>
-                  </div>
-                </div>
+                <Image
+                  src={client.logo}
+                  alt={`${client.name} logo`}
+                  width={100}
+                  height={40}
+                  className="object-contain h-8 w-auto lg:h-10"
+                  style={{ width: 'auto', height: 'auto', maxHeight: '2.5rem' }}
+                  sizes="100px"
+                />
               </motion.div>
             ))}
           </motion.div>
 
           <motion.p
             variants={fadeUp}
-            className="text-center text-sm text-muted-foreground mt-12 font-medium"
+            transition={defaultTransition}
+            className="text-center text-xs text-muted-foreground mt-6 font-medium"
           >
-            + Many more businesses trust us to transform their visual identity and digital presence
+            + Many more businesses trust JTH to transform their digital presence
           </motion.p>
         </motion.div>
       </div>

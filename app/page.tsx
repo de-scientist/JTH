@@ -1,26 +1,20 @@
 // Home page - JTH Graphix Production
 import { HeroSection } from '@/components/home/hero-section'
 import { TrustedBySection } from '@/components/home/trusted-by-section'
-import { AboutSection } from '@/components/home/about-section'
-import { StatsSection } from '@/components/home/stats-section'
 import { SolutionsOverview } from '@/components/home/solutions-overview'
-import { SolutionsSection } from '@/components/home/solutions-section'
-import { PortfolioPreview } from '@/components/home/portfolio-preview'
-import { PortfolioGallery } from '@/components/home/portfolio-gallery'
-import { TestimonialsSection } from '@/components/home/testimonials-section'
-import { ProcessSection } from '@/components/home/process-section'
+import { SelectedWork } from '@/components/home/selected-work'
 import { WhyChooseUs } from '@/components/home/why-choose-us'
-import Script from 'next/script'
-import { PartnersSection } from '@/components/home/partners-section'
+import { ProcessSection } from '@/components/home/process-section'
+import { ClientProof } from '@/components/home/client-proof'
 import { BlogSection } from '@/components/home/blog-section'
-import { FAQSection } from '@/components/home/faq-section'
 import { CTASection } from '@/components/home/cta-section'
+import Script from 'next/script'
 import faqsData from '@/data/faq.json'
 
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqsData.map((faq) => ({
+  mainEntity: faqsData.slice(0, 5).map((faq) => ({
     '@type': 'Question',
     name: faq.question,
     acceptedAnswer: {
@@ -40,18 +34,12 @@ export default function HomePage() {
       />
       <HeroSection />
       <TrustedBySection />
-      <AboutSection />
-      <StatsSection />
       <SolutionsOverview />
-      <SolutionsSection />
-      <PortfolioPreview />
-      <PortfolioGallery />
-      <TestimonialsSection />
-      <ProcessSection />
+      <SelectedWork />
       <WhyChooseUs />
-      <PartnersSection />
+      <ProcessSection />
+      <ClientProof />
       <BlogSection />
-      <FAQSection />
       <CTASection />
     </>
   )
