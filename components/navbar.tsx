@@ -66,7 +66,6 @@ const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services', hasMegamenu: true },
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/solutions', label: 'Solutions' },
   { href: '/blogs', label: 'Insights' },
   { href: '/contact', label: 'Contact' },
 ]
