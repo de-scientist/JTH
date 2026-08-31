@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: '%s | JTH Graphix Production',
   },
   description:
-    'JTH Graphix Production is your creative and technology partner — branding, graphic design, UI/UX, website and software development, automation, and digital growth solutions that help businesses grow.',
+    'JTH Graphix Production is your creative and technology partner in Kenya — branding, graphic design, UI/UX, website and software development, automation, and digital growth solutions that help businesses grow.',
   keywords: [
     'Creative Agency Kenya',
     'Technology Partner Kenya',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     siteName: 'JTH Graphix Production',
     title: 'JTH Graphix Production | Creative & Technology Partner',
     description:
-      'Your creative and technology partner. We transform ideas into brands, digital experiences and technology solutions that help businesses grow.',
+      'Your creative and technology partner in Kenya. We transform ideas into brands, digital experiences and technology solutions that help businesses grow.',
   },
   twitter: {
     card: 'summary_large_image',
