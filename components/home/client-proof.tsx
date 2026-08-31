@@ -12,7 +12,7 @@ export function ClientProof() {
   return (
     <section
       id="client-proof"
-      className="relative py-20 lg:py-28 overflow-hidden bg-muted/30"
+      className="relative py-16 lg:py-24 overflow-hidden bg-muted/30"
     >
       {/* Ambient brand glow */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">

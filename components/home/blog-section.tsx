@@ -21,7 +21,7 @@ export function BlogSection() {
   const displayedPosts = blogPosts.slice(0, 3)
 
   return (
-    <section id="blog" className="py-20 lg:py-32 bg-background relative overflow-hidden">
+    <section id="blog" className="py-16 lg:py-24 bg-background relative overflow-hidden">
       <div className="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
 
