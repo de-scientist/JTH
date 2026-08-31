@@ -44,7 +44,7 @@ export function BlogSection() {
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
         >
           {displayedPosts.map((post, index) => (
             <motion.article
@@ -100,51 +100,26 @@ export function BlogSection() {
           ))}
         </motion.div>
 
-        {isMobile && (
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportOnce}
-            variants={fadeUp}
-            transition={defaultTransition}
-            className="text-center mt-10"
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={fadeUp}
+          transition={defaultTransition}
+          className="text-center mt-14"
+        >
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="rounded-xl gap-2 h-12 px-8 border-primary/20 hover:border-primary/40 transition-all duration-300"
           >
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="rounded-xl gap-2 h-12 px-8 border-primary/20 hover:border-primary/40 transition-all duration-300"
-            >
-              <Link href="/blogs">
-                View All Articles
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </Button>
-          </motion.div>
-        )}
-
-        {!isMobile && blogPosts.length > 6 && (
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportOnce}
-            variants={fadeUp}
-            transition={defaultTransition}
-            className="text-center mt-14"
-          >
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="rounded-xl gap-2 h-12 px-8 border-primary/20 hover:border-primary/40 transition-all duration-300"
-            >
-              <Link href="/blogs">
-                View All Articles
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </Button>
-          </motion.div>
-        )}
+            <Link href="/blogs">
+              Explore All Insights
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </Button>
+        </motion.div>
       </div>
     </section>
   )

@@ -101,6 +101,20 @@ export function Navbar() {
     setIsOpen(false)
   }, [pathname])
 
+  useEffect(() => {
+    if (!isOpen) return
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsOpen(false)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.body.style.overflow = originalOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isOpen])
+
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/' && !activeSection
     if (href.startsWith('#')) return false
@@ -153,7 +167,7 @@ export function Navbar() {
               </div>
               <div className="hidden sm:flex flex-col">
                 <span className="text-xs lg:text-sm font-display font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
-                  JTH  Graphix Production
+                  JTH Graphix Production
                 </span>
                 <span className="text-[10px] lg:text-[11px] text-muted-foreground leading-tight">
                   Quality is our Priority
