@@ -10,7 +10,7 @@ import { siteConfig } from '@/lib/site-config'
 
 export function CTASection() {
   return (
-    <section id="cta" className="py-24 lg:py-36 relative overflow-hidden">
+    <section id="cta" className="py-16 lg:py-24 relative overflow-hidden">
       <div className="absolute inset-0" aria-hidden="true">
         <Image
           src="/images/portfolio/product-launch-social.jpg"

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ExternalLink, ArrowRight, MessageCircle } from 'lucide-react'
@@ -32,6 +32,25 @@ export function PortfolioGallery() {
   const filteredItems = selectedCategory === 'All'
     ? portfolio
     : portfolio.filter((item) => item.category === selectedCategory)
+
+  // Body scroll lock & ESC handling for modal
+  useEffect(() => {
+    if (!selectedItem) return
+    const originalOverflow = document.body.style.overflow
+    const originalPaddingRight = document.body.style.paddingRight
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+    if (scrollbarWidth > 0) document.body.style.paddingRight = `${scrollbarWidth}px`
+    document.body.style.overflow = 'hidden'
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedItem(null)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = originalOverflow
+      document.body.style.paddingRight = originalPaddingRight
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [selectedItem])
 
   return (
     <section className="py-16 lg:py-24 bg-muted/30">
