@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowRight, Phone, Sparkles, MessageCircle, Mail } from 'lucide-react'
+import { ArrowRight, Phone, Sparkles, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { fadeUp, defaultTransition, viewportOnce } from '@/lib/animations'
 import { siteConfig } from '@/lib/site-config'
@@ -49,12 +49,12 @@ export function CTASection() {
           </motion.div>
 
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 text-balance leading-tight">
-            Ready to Transform{' '}
-            <span className="text-accent">Your Business?</span>
+            Ready to Build Something{' '}
+            <span className="text-accent">That Matters?</span>
           </h2>
 
           <p className="text-lg md:text-xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Let's turn your ideas into technology, creative experiences and digital solutions that move your business forward. From branding to software, web to campaigns — we have the expertise to make it happen.
+            Whether you need a stronger brand, a better website, a digital campaign or a complete technology solution, let&apos;s build it together.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -74,21 +74,10 @@ export function CTASection() {
               variant="outline"
               className="border-white/30 text-white hover:bg-white/10 h-14 px-8 rounded-2xl gap-2 text-base bg-transparent backdrop-blur-sm transition-all duration-300"
             >
-              <a href={`https://wa.me/${siteConfig.whatsapp.replace(/\s/g, '')}`} target="_blank" rel="noopener noreferrer">
+              <Link href="/contact">
                 <MessageCircle className="w-5 h-5" />
-                Chat on WhatsApp
-              </a>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 h-14 px-8 rounded-2xl gap-2 text-base bg-transparent backdrop-blur-sm transition-all duration-300"
-            >
-              <a href={`mailto:${siteConfig.email}`}>
-                <Mail className="w-5 h-5" />
-                Email Us
-              </a>
+                Talk to JTH
+              </Link>
             </Button>
           </div>
 

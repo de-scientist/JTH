@@ -34,7 +34,7 @@ export function TrustedBySection() {
             transition={defaultTransition}
             className="text-sm font-semibold text-muted-foreground tracking-wide uppercase mb-8"
           >
-            Trusted by leading businesses &amp; organizations
+            Trusted by businesses &amp; organizations
           </motion.p>
 
           <motion.div
