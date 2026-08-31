@@ -9,7 +9,7 @@ import { SectionHeader } from '@/components/ui/section-header'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 import portfolioData from '@/data/portfolio.json'
 
-const curatedIds = ['1', '6', '10', '8', '4', '15']
+const curatedIds = ['1', '6', '17', '8', '4', '15']
 
 const selectedProjects = curatedIds
   .map((id) => portfolioData.find((item) => item.id === id))
@@ -49,19 +49,20 @@ export function SelectedWork() {
               variants={fadeUp}
               transition={{ ...defaultTransition, delay: (index % 3) * 0.1 }}
             >
-              <Link href="/portfolio" className="group block h-full">
+              <Link href="/portfolio" className="group block h-full" aria-label={`View ${item.title} in portfolio`}>
                 <motion.div
-                  whileHover={{ y: -8 }}
+                  whileHover={{ y: -4 }}
                   transition={{ duration: 0.3 }}
                   className="card-premium overflow-hidden h-full flex flex-col"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden bg-muted/50">
                     <Image
                       src={item.image}
-                      alt={item.title}
+                      alt={`${item.title} — ${item.category} by JTH Graphix Production`}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

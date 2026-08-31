@@ -30,7 +30,7 @@ const differentiators = [
 
 export function WhyChooseUs() {
   return (
-    <section id="why" className="py-20 lg:py-32 bg-background relative overflow-hidden">
+    <section id="why" className="py-16 lg:py-24 bg-background relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">

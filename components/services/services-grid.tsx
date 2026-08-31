@@ -76,12 +76,13 @@ export function ServicesGrid() {
             return (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                layout
+                initial={{ opacity: 0, y: 16, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.35, delay: index * 0.03 }}
               >
-                <Link href={`/services/${service.slug}`} className="group block h-full">
+                <Link href={`/services/${service.slug}`} className="group block h-full" aria-label={`View ${service.title} details`}>
                   <div className="relative h-full rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 overflow-hidden">
                     {/* Service Image */}
                     <div className="relative aspect-[16/9] overflow-hidden">
@@ -148,7 +149,13 @@ export function ServicesGrid() {
               </motion.div>
             )
           })}
-        </div>
+          </AnimatePresence>
+        </motion.div>
+        {filtered.length === 0 && (
+          <div className="text-center py-12 col-span-full">
+            <p className="text-muted-foreground">No services in this category.</p>
+          </div>
+        )}
       </div>
     </section>
   )

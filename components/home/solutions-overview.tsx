@@ -26,7 +26,7 @@ const descriptions: Record<string, string> = {
 
 export function SolutionsOverview() {
   return (
-    <section id="solutions" className="py-20 lg:py-32 bg-background relative overflow-hidden">
+    <section id="solutions" className="py-16 lg:py-24 bg-background relative overflow-hidden">
       <div className="absolute top-1/4 -right-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 -left-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
 

@@ -7,7 +7,6 @@ import { ArrowRight, Calendar, Clock } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/section-header'
 import { Button } from '@/components/ui/button'
 import blogPosts from '@/data/blog.json'
-import { useIsMobile } from '@/components/ui/use-mobile'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
 
 function formatDate(dateStr: string) {
@@ -19,8 +18,7 @@ function formatDate(dateStr: string) {
 }
 
 export function BlogSection() {
-  const isMobile = useIsMobile()
-  const displayedPosts = isMobile ? blogPosts.slice(0, 2) : blogPosts.slice(0, 3)
+  const displayedPosts = blogPosts.slice(0, 3)
 
   return (
     <section id="blog" className="py-20 lg:py-32 bg-background relative overflow-hidden">
@@ -44,23 +42,25 @@ export function BlogSection() {
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
           {displayedPosts.map((post, index) => (
             <motion.article
               key={post.id}
               variants={fadeUp}
               transition={{ ...defaultTransition, delay: index * 0.1 }}
+              className={index === 2 ? 'hidden md:block' : ''}
             >
-              <Link href={`/blogs/${post.slug}`} className="group block h-full">
+              <Link href={`/blogs/${post.slug}`} className="group block h-full" aria-label={`Read article: ${post.title}`}>
                 <div className="card-premium overflow-hidden h-full group-hover:-translate-y-2 transition-all duration-500">
-                  <div className="relative aspect-[16/10] overflow-hidden">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-muted/30">
                     <Image
                       src={post.featuredImage}
-                      alt={post.title}
+                      alt={`${post.title} — ${post.category} article by JTH Graphix Production`}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                       sizes="(max-width: 768px) 100vw, 33vw"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="absolute top-4 left-4">
