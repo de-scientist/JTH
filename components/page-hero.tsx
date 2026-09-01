@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { fadeUp, defaultTransition, viewportOnce } from '@/lib/animations'
+import { fadeUp, defaultTransition } from '@/lib/animations'
 
 interface PageHeroProps {
   badge?: string
