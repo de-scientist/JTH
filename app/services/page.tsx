@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { PageHero } from '@/components/page-hero'
+import { FeaturedShowcase } from '@/components/services/featured-showcase'
 import { ServicesGrid } from '@/components/services/services-grid'
 import { ServicesCTA } from '@/components/services/services-cta'
 import { ProcessSteps } from '@/components/services/process-steps'
@@ -21,6 +22,7 @@ export default function ServicesPage() {
         imageAlt="JTH Graphix Production creative services — design, branding, web development, and digital marketing"
       />
 
+      <FeaturedShowcase />
       <ServicesGrid />
       <ProcessSteps />
       <ServicesCTA />
