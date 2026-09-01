@@ -90,22 +90,30 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
   const processSteps = service.process ?? []
   const faqs = service.faq?.length ? service.faq : defaultFaqs
 
+  // Build carousel images from gallery data
+  const carouselImages = (service.galleryImages ?? []).map((src, i) => ({
+    src,
+    alt: `${service.title} — project ${i + 1}`,
+    title: service.title,
+    category: service.category,
+  }))
+
   return (
     <>
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-background relative overflow-hidden">
+      {/* Hero Section — side-by-side on desktop */}
+      <section className="pt-32 pb-12 lg:pt-40 lg:pb-16 bg-background relative overflow-hidden">
         <div className="absolute inset-0">
           <NextImage
             src={heroImage}
-            alt={service.title}
+            alt=""
             fill
-            className="object-cover opacity-10"
+            className="object-cover opacity-5"
             priority
+            aria-hidden="true"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
-          <div className="absolute inset-0 bg-black/10 dark:bg-black/20" />
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
         </div>
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -117,34 +125,35 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
             All Services
           </Link>
 
-          <div className="max-w-4xl">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Service content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <Icon className="w-8 h-8 text-primary" />
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Icon className="w-7 h-7 text-primary" />
                 </div>
                 <span className="px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-sm font-medium">
                   {service.category}
                 </span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 {service.title}
               </h1>
               {service.tagline && (
-                <p className="text-xl md:text-2xl text-primary font-medium mb-6">
+                <p className="text-lg md:text-xl text-primary font-medium mb-4">
                   {service.tagline}
                 </p>
               )}
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
+              <p className="text-base md:text-lg text-muted-foreground max-w-xl mb-8">
                 {service.fullDescription || service.shortDescription}
               </p>
 
-              <div className="flex flex-wrap gap-4 mt-8">
+              <div className="flex flex-wrap gap-3">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 gap-2">
                   <Link href="/contact">
                     {service.ctaPrimary || 'Request a Custom Quote'}
@@ -165,32 +174,19 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
                 </Button>
               </div>
             </motion.div>
+
+            {/* Service carousel */}
+            {carouselImages.length > 0 && (
+              <div className="lg:order-last">
+                <ServiceCarousel
+                  images={carouselImages}
+                  serviceName={service.title}
+                />
+              </div>
+            )}
           </div>
         </div>
       </section>
-
-      {/* Gallery */}
-      {service.galleryImages && service.galleryImages.length > 0 && (
-        <section className="py-12 lg:py-16 bg-background">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="max-w-5xl mx-auto">
-              <Carousel>
-                <CarouselContent className="grid grid-flow-col auto-cols-[100%]">
-                  {service.galleryImages.map((src, i) => (
-                    <CarouselItem key={i} className="px-0">
-                      <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-card">
-                        <NextImage src={src} alt={`${service.title} ${i + 1}`} fill className="object-cover" />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* What You Get (Benefits) */}
       {benefits.length > 0 && (
