@@ -253,12 +253,17 @@
   --orange-soft: var(--color-secondary-soft);
   --orange-foreground: var(--color-secondary-foreground);
 
-  /* Footer accent — aligned to #FF7A00 */
+  /* Footer accent — aligned to #FF7A00 (used sparingly for hover/highlight) */
   --footer-accent: var(--color-secondary);
   --footer-accent-hover: var(--color-secondary-dark);
   --footer-accent-foreground: var(--color-secondary-foreground);
   --footer-bg: var(--color-surface-dark);
   --footer-foreground: var(--color-text-inverse);
+
+  /* Footer CTA band — premium blue gradient (dark mode) */
+  --footer-cta-bg: var(--color-primary-deep);
+  --footer-cta-text: #FFFFFF;
+  --footer-cta-text-secondary: rgba(255, 255, 255, 0.75);
 
   /* --- FINAL CTA SECTION (dark mode) --- */
   --cta-bg: var(--color-primary-deep);
