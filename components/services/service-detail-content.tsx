@@ -498,9 +498,10 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="gap-2 h-12 px-8">
+              <Button asChild size="lg" className="bg-secondary hover:bg-secondary-dark text-white gap-2 h-12 px-8">
                 <Link href="/portfolio">
                   View Our Work
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
             </div>
