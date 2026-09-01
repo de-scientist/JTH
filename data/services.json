@@ -1379,5 +1379,657 @@
     "metaTitle": "Digital Skills Workshops | JTH Graphix Production",
     "metaDescription": "Practical workshops on digital communication and creative tools in Kenya.",
     "icon": "Calendar"
+  },
+  {
+    "id": "software-development",
+    "slug": "software-development",
+    "title": "Software & Systems Development",
+    "tagline": "Custom software solutions built to solve real business problems.",
+    "shortDescription": "Custom software, web applications, and system development for businesses that need more than a website.",
+    "fullDescription": "JTH Graphix Production builds custom software, web applications, and digital systems that help businesses operate more efficiently. From internal tools and customer-facing platforms to complex integrations, we design and develop solutions that solve specific business problems. Every project starts with understanding your workflow, users, and goals — so the software actually works for you.",
+    "category": "Technology",
+    "coverImage": "/images/portfolio/ecommerce-website.jpg",
+    "galleryImages": [
+      "/images/portfolio/ecommerce-website.jpg",
+      "/images/portfolio/web-design.png",
+      "/images/services/website-design/1.jpeg",
+      "/images/services/website-design/2.jpeg"
+    ],
+    "videos": [],
+    "featured": false,
+    "benefits": [
+      "Custom-built solutions tailored to your exact workflow",
+      "Scalable architecture that grows with your business",
+      "Clean, maintainable code with documentation",
+      "Integration with existing tools and platforms",
+      "Ongoing support and iteration after launch"
+    ],
+    "deliverables": [
+      "Custom software application or web platform",
+      "Source code and technical documentation",
+      "Deployment and hosting setup",
+      "User training and onboarding materials",
+      "Post-launch support and maintenance plan"
+    ],
+    "useCases": [
+      "Businesses needing internal tools or dashboards",
+      "Companies automating manual processes",
+      "Startups building MVPs or digital products",
+      "Organizations requiring customer-facing platforms",
+      "Teams needing custom data management systems"
+    ],
+    "process": [
+      "Discovery and requirements gathering",
+      "Architecture design and planning",
+      "Development, testing, and iteration",
+      "Deployment, training, and ongoing support"
+    ],
+    "faq": [
+      {
+        "q": "What types of software do you build?",
+        "a": "We build web applications, internal tools, dashboards, customer portals, APIs, and custom integrations — anything that solves a specific business problem."
+      },
+      {
+        "q": "Do you work with startups?",
+        "a": "Yes — we build MVPs and full products for startups, as well as enterprise solutions for established businesses."
+      }
+    ],
+    "relatedServices": [
+      "website-design",
+      "ux-design",
+      "business-automation"
+    ],
+    "ctaPrimary": "Discuss Your Project",
+    "ctaSecondary": "Request a Quote",
+    "badge": "Technology",
+    "metaTitle": "Software & Systems Development | JTH Graphix Production",
+    "metaDescription": "Custom software, web applications, and system development for businesses in Kenya.",
+    "icon": "Code"
+  },
+  {
+    "id": "business-automation",
+    "slug": "business-automation",
+    "title": "Business Automation",
+    "tagline": "Automate the repetitive. Focus on what matters.",
+    "shortDescription": "Workflow automation, process optimization, and custom automation solutions for businesses that want to work smarter.",
+    "fullDescription": "JTH Graphix Production helps businesses automate repetitive tasks, streamline workflows, and build custom automation solutions that save time and reduce errors. From simple task automation to complex multi-step workflows, we design systems that handle the routine so your team can focus on high-value work.",
+    "category": "Technology",
+    "coverImage": "/images/portfolio/digital-solutions.png",
+    "galleryImages": [
+      "/images/portfolio/digital-solutions.png",
+      "/images/services/website-design/3.jpeg",
+      "/images/services/website-design/4.jpeg"
+    ],
+    "videos": [],
+    "featured": false,
+    "benefits": [
+      "Reduce manual work and human error",
+      "Save time on repetitive tasks",
+      "Streamline complex workflows",
+      "Integrate disconnected tools and systems",
+      "Scale operations without proportional cost increases"
+    ],
+    "deliverables": [
+      "Automation workflow design and documentation",
+      "Custom automation implementation",
+      "Integration with existing tools",
+      "Testing and quality assurance",
+      "Training and support documentation"
+    ],
+    "useCases": [
+      "Businesses with repetitive manual processes",
+      "Teams spending excessive time on data entry",
+      "Organizations needing tool integrations",
+      "Companies scaling operations",
+      "Businesses automating customer communications"
+    ],
+    "process": [
+      "Process audit and workflow analysis",
+      "Automation strategy and design",
+      "Implementation and integration",
+      "Testing, training, and optimization"
+    ],
+    "faq": [
+      {
+        "q": "What processes can be automated?",
+        "a": "Most repetitive tasks can be automated — data entry, email sequences, report generation, lead routing, social media posting, invoice processing, and more."
+      },
+      {
+        "q": "Do I need to change my existing tools?",
+        "a": "Not necessarily. We often build automation on top of your existing tools using APIs and integrations."
+      }
+    ],
+    "relatedServices": [
+      "software-development",
+      "website-design",
+      "social-media-management"
+    ],
+    "ctaPrimary": "Automate Your Workflow",
+    "ctaSecondary": "Contact Us",
+    "badge": "Efficiency",
+    "metaTitle": "Business Automation Services | JTH Graphix Production",
+    "metaDescription": "Workflow automation and custom automation solutions for businesses in Kenya.",
+    "icon": "Zap"
+  },
+  {
+    "id": "ux-design",
+    "slug": "ux-design",
+    "title": "UI/UX Design",
+    "tagline": "Design that works as good as it looks.",
+    "shortDescription": "User research, wireframing, prototyping, and interface design for websites and applications that people actually enjoy using.",
+    "fullDescription": "JTH Graphix Production designs digital experiences that are intuitive, accessible, and visually compelling. Our UI/UX design process is grounded in user research, information architecture, and iterative prototyping — ensuring every screen serves a purpose and every interaction feels natural. We design for people first, aesthetics second.",
+    "category": "Web",
+    "coverImage": "/images/portfolio/web-design.png",
+    "galleryImages": [
+      "/images/portfolio/web-design.png",
+      "/images/portfolio/ecommerce-website.jpg",
+      "/images/services/website-design/1.jpeg",
+      "/images/services/website-design/3.jpeg"
+    ],
+    "videos": [],
+    "featured": false,
+    "benefits": [
+      "Research-driven design decisions",
+      "Intuitive information architecture",
+      "Wireframes and prototypes before development",
+      "Accessible, responsive interfaces",
+      "Reduced development rework through upfront design"
+    ],
+    "deliverables": [
+      "User research findings and personas",
+      "Information architecture and sitemap",
+      "Wireframes for key screens and flows",
+      "High-fidelity UI mockups",
+      "Interactive prototype for testing"
+    ],
+    "useCases": [
+      "New website or app design",
+      "Redesigning existing digital products",
+      "SaaS and dashboard design",
+      "E-commerce experience optimization",
+      "Mobile app interface design"
+    ],
+    "process": [
+      "User research and discovery",
+      "Information architecture and wireframing",
+      "Visual design and prototyping",
+      "Usability testing and refinement"
+    ],
+    "faq": [
+      {
+        "q": "Do you do just the design or also the development?",
+        "a": "We offer both. Many clients use our UI/UX design service independently, then take the designs to any developer. We also build what we design."
+      },
+      {
+        "q": "How do you test usability?",
+        "a": "We conduct moderated testing sessions, review analytics, and use heuristic evaluation to validate design decisions before development begins."
+      }
+    ],
+    "relatedServices": [
+      "website-design",
+      "software-development",
+      "branding-identity"
+    ],
+    "ctaPrimary": "Start Designing",
+    "ctaSecondary": "View Our Work",
+    "badge": "Design",
+    "metaTitle": "UI/UX Design Services | JTH Graphix Production",
+    "metaDescription": "User research, wireframing, prototyping, and interface design in Kenya.",
+    "icon": "PenTool"
+  },
+  {
+    "id": "content-strategy",
+    "slug": "content-strategy",
+    "title": "Content Strategy",
+    "tagline": "Content that connects, communicates, and converts.",
+    "shortDescription": "Strategic content planning, messaging, editorial direction, and content pillar development for brands that want to communicate with purpose.",
+    "fullDescription": "JTH Graphix Production develops content strategies that align your messaging with your business goals. We help brands define their voice, identify their audience, plan content pillars, and create editorial calendars that drive engagement. Content strategy is not about posting more — it is about posting with intention and clarity.",
+    "category": "Digital",
+    "coverImage": "/images/portfolio/social-growth.png",
+    "galleryImages": [
+      "/images/portfolio/social-growth.png",
+      "/images/services/social-media-management/1.jpeg",
+      "/images/services/social-media-management/2.jpeg"
+    ],
+    "videos": [],
+    "featured": false,
+    "benefits": [
+      "Clear brand messaging and voice",
+      "Audience-aligned content pillars",
+      "Structured editorial planning",
+      "Content that supports business objectives",
+      "Measurable content performance framework"
+    ],
+    "deliverables": [
+      "Content strategy document",
+      "Brand voice and messaging guidelines",
+      "Content pillar framework",
+      "Editorial calendar and publishing schedule",
+      "Content performance metrics framework"
+    ],
+    "useCases": [
+      "Brands launching or refreshing their voice",
+      "Businesses struggling with inconsistent messaging",
+      "Organizations planning content campaigns",
+      "Companies expanding into new audiences",
+      "Teams needing editorial direction"
+    ],
+    "process": [
+      "Brand and audience research",
+      "Messaging and voice development",
+      "Content pillar and calendar creation",
+      "Implementation support and review"
+    ],
+    "faq": [
+      {
+        "q": "What is content strategy vs content creation?",
+        "a": "Content strategy defines what to say, when, where, and why. Content creation is the actual production. We offer both, but strategy-first ensures creation is effective."
+      },
+      {
+        "q": "Do you create the content too?",
+        "a": "Yes — we can develop the strategy and then execute it with copywriting, design, and social content creation."
+      }
+    ],
+    "relatedServices": [
+      "social-media-management",
+      "social-media-graphics",
+      "seo-optimization"
+    ],
+    "ctaPrimary": "Build Your Strategy",
+    "ctaSecondary": "Contact Us",
+    "badge": "Strategy",
+    "metaTitle": "Content Strategy Services | JTH Graphix Production",
+    "metaDescription": "Strategic content planning, messaging, and editorial direction for brands in Kenya.",
+    "icon": "FileText"
+  },
+  {
+    "id": "photography",
+    "slug": "photography",
+    "title": "Photography",
+    "tagline": "Visual storytelling through the lens.",
+    "shortDescription": "Professional photography for events, products, branding, corporate profiles, and creative campaigns.",
+    "fullDescription": "JTH Graphix Production provides professional photography services that capture the essence of your brand, events, and products. From corporate headshots and product photography to event coverage and creative shoots, we deliver images that communicate your story with clarity and impact.",
+    "category": "Media & Content",
+    "coverImage": "/images/portfolio/typography-lesson.jpg",
+    "galleryImages": [
+      "/images/portfolio/typography-lesson.jpg",
+      "/images/portfolio/coffee-shop-branding.jpg",
+      "/images/services/event-publicity-graphics/1.jpeg"
+    ],
+    "videos": [],
+    "featured": false,
+    "benefits": [
+      "Professional-grade imagery for all use cases",
+      "Consistent visual style aligned with your brand",
+      "High-resolution delivery for print and digital",
+      "Quick turnaround for time-sensitive events",
+      "Creative direction included with every shoot"
+    ],
+    "deliverables": [
+      "Professionally edited high-resolution images",
+      "Digital-ready versions for web and social media",
+      "Print-ready versions where applicable",
+      "Creative direction and styling guidance"
+    ],
+    "useCases": [
+      "Corporate events and conferences",
+      "Product photography for e-commerce",
+      "Brand and lifestyle photography",
+      "Team headshots and profiles",
+      "Event coverage and documentation"
+    ],
+    "process": [
+      "Creative brief and shot planning",
+      "On-location or studio photography",
+      "Professional editing and retouching",
+      "Delivery in multiple formats"
+    ],
+    "faq": [
+      {
+        "q": "Do you travel for shoots?",
+        "a": "Yes — we cover events and shoots across Kenya and can arrange travel for projects outside Nairobi."
+      },
+      {
+        "q": "How many photos do we receive?",
+        "a": "Delivery volume depends on the project scope. We discuss expected deliverables upfront so there are no surprises."
+      }
+    ],
+    "relatedServices": [
+      "videography",
+      "social-media-graphics",
+      "event-publicity-graphics"
+    ],
+    "ctaPrimary": "Book a Shoot",
+    "ctaSecondary": "View Our Work",
+    "badge": "Creative",
+    "metaTitle": "Professional Photography Services | JTH Graphix Production",
+    "metaDescription": "Professional photography for events, products, branding, and corporate use in Kenya.",
+    "icon": "Camera"
+  },
+  {
+    "id": "videography",
+    "slug": "videography",
+    "title": "Videography",
+    "tagline": "Video that tells your story and captures attention.",
+    "shortDescription": "Professional video production for promotional content, events, social media, brand storytelling, and corporate communications.",
+    "fullDescription": "JTH Graphix Production produces professional video content that engages audiences and communicates messages with impact. From promotional videos and event coverage to social media content and corporate communications, we handle concept development, filming, editing, and post-production to deliver polished video that performs.",
+    "category": "Media & Content",
+    "coverImage": "/images/portfolio/madaraka-festival.png",
+    "galleryImages": [
+      "/images/portfolio/madaraka-festival.png",
+      "/images/portfolio/product-launch-social.jpg",
+      "/images/services/event-publicity-graphics/2.jpeg"
+    ],
+    "videos": [],
+    "featured": false,
+    "benefits": [
+      "Full-service production from concept to delivery",
+      "Professional filming with quality equipment",
+      "Expert editing and post-production",
+      "Optimized for multiple platforms and formats",
+      "Creative storytelling that resonates with audiences"
+    ],
+    "deliverables": [
+      "Professionally edited video in required formats",
+      "Platform-optimized versions (social, web, broadcast)",
+      "Raw footage where requested",
+      "Music, graphics, and title overlays",
+      "Subtitle and caption files where needed"
+    ],
+    "useCases": [
+      "Promotional and brand videos",
+      "Event coverage and highlight reels",
+      "Social media video content",
+      "Corporate training and communications",
+      "Product demonstrations and launches"
+    ],
+    "process": [
+      "Creative brief and concept development",
+      "Pre-production planning and scheduling",
+      "Filming and production",
+      "Editing, post-production, and delivery"
+    ],
+    "faq": [
+      {
+        "q": "How long does video production take?",
+        "a": "Typical turnaround is 1-3 weeks depending on complexity. Simple social media content can be delivered in days."
+      },
+      {
+        "q": "Do you provide the script?",
+        "a": "We can develop scripts and storyboards, or work with your existing material."
+      }
+    ],
+    "relatedServices": [
+      "photography",
+      "social-media-graphics",
+      "event-publicity-graphics"
+    ],
+    "ctaPrimary": "Start Your Video Project",
+    "ctaSecondary": "Request a Quote",
+    "badge": "Production",
+    "metaTitle": "Professional Videography Services | JTH Graphix Production",
+    "metaDescription": "Professional video production for events, promotions, and brand storytelling in Kenya.",
+    "icon": "Clapperboard"
+  },
+  {
+    "id": "mentorship",
+    "slug": "mentorship",
+    "title": "Mentorship Programs",
+    "tagline": "Guided growth for creative and technology professionals.",
+    "shortDescription": "Personalized mentorship in design, technology, digital skills, and professional development for individuals and teams.",
+    "fullDescription": "JTH Graphix Production offers personalized mentorship programs for aspiring designers, developers, and digital professionals. Our mentorship goes beyond tutorials — we provide practical guidance, portfolio reviews, career direction, and hands-on support that helps you build real skills and confidence in design, technology, and digital growth.",
+    "category": "Training",
+    "coverImage": "/images/services/virtual-training-sessions/1.jpeg",
+    "galleryImages": [
+      "/images/services/virtual-training-sessions/1.jpeg",
+      "/images/services/virtual-training-sessions/2.jpeg",
+      "/images/services/design-skill-training/1.jpeg"
+    ],
+    "videos": [],
+    "featured": false,
+    "benefits": [
+      "Personalized guidance tailored to your goals",
+      "Practical, hands-on skill development",
+      "Portfolio and project feedback",
+      "Career direction and professional growth support",
+      "Ongoing relationship and accountability"
+    ],
+    "deliverables": [
+      "Personalized mentorship plan",
+      "Regular one-on-one sessions",
+      "Portfolio and project reviews",
+      "Actionable feedback and resources",
+      "Career development guidance"
+    ],
+    "useCases": [
+      "Aspiring designers building their skills",
+      "Developers transitioning to new technologies",
+      "Professionals seeking career direction",
+      "Students preparing for the creative industry",
+      "Teams building internal capability"
+    ],
+    "process": [
+      "Initial assessment and goal setting",
+      "Customized mentorship plan creation",
+      "Regular sessions with practical assignments",
+      "Ongoing review and plan adjustment"
+    ],
+    "faq": [
+      {
+        "q": "How long does the mentorship program last?",
+        "a": "Programs typically run 3-6 months, but we adjust based on your goals and pace."
+      },
+      {
+        "q": "Is mentorship virtual or in-person?",
+        "a": "We offer both. Most mentorship sessions are virtual for flexibility, with optional in-person meetings."
+      }
+    ],
+    "relatedServices": [
+      "design-skill-training",
+      "digital-skills-workshops",
+      "virtual-training-sessions"
+    ],
+    "ctaPrimary": "Start Your Journey",
+    "ctaSecondary": "Contact Us",
+    "badge": "Growth",
+    "metaTitle": "Mentorship Programs | JTH Graphix Production",
+    "metaDescription": "Personalized mentorship in design, technology, and digital skills in Kenya.",
+    "icon": "Users"
+  },
+  {
+    "id": "workshops",
+    "slug": "workshops",
+    "title": "Corporate Workshops",
+    "tagline": "Hands-on training that builds real capability.",
+    "shortDescription": "Customized corporate workshops in design, digital tools, branding, and technology for teams and organizations.",
+    "fullDescription": "JTH Graphix Production delivers customized corporate workshops that build practical skills in design, digital communication, branding, and technology. Our workshops are interactive, hands-on, and tailored to your team's specific needs — not generic presentations. We focus on skills your team can apply immediately.",
+    "category": "Training",
+    "coverImage": "/images/services/digital-skills-workshops/1.jpeg",
+    "galleryImages": [
+      "/images/services/digital-skills-workshops/1.jpeg",
+      "/images/services/digital-skills-workshops/2.jpeg",
+      "/images/services/virtual-training-sessions/3.jpeg"
+    ],
+    "videos": [],
+    "featured": false,
+    "benefits": [
+      "Customized content for your team's needs",
+      "Hands-on, practical learning format",
+      "Immediate skill application",
+      "Group learning that builds team capability",
+      "Follow-up resources and support"
+    ],
+    "deliverables": [
+      "Customized workshop curriculum",
+      "Hands-on session with exercises",
+      "Practice projects and reference materials",
+      "Post-workshop resource guide",
+      "Certificate of completion where applicable"
+    ],
+    "useCases": [
+      "Teams building design skills",
+      "Organizations onboarding new tools",
+      "Companies running innovation sessions",
+      "Departments needing digital capability building",
+      "Leadership teams exploring technology"
+    ],
+    "process": [
+      "Needs assessment and goal alignment",
+      "Custom curriculum development",
+      "Interactive workshop delivery",
+      "Follow-up resources and evaluation"
+    ],
+    "faq": [
+      {
+        "q": "How long is a typical workshop?",
+        "a": "Workshops range from half-day sessions to multi-day programs depending on scope and depth."
+      },
+      {
+        "q": "Can workshops be customized for our industry?",
+        "a": "Absolutely — every workshop is tailored to your team's context, tools, and goals."
+      }
+    ],
+    "relatedServices": [
+      "digital-skills-workshops",
+      "design-skill-training",
+      "mentorship"
+    ],
+    "ctaPrimary": "Plan Your Workshop",
+    "ctaSecondary": "Contact Us",
+    "badge": "Team Training",
+    "metaTitle": "Corporate Workshops | JTH Graphix Production",
+    "metaDescription": "Customized corporate workshops in design, digital tools, and technology in Kenya.",
+    "icon": "GraduationCap"
+  },
+  {
+    "id": "learning-resources",
+    "slug": "learning-resources",
+    "title": "Recorded Learning Resources",
+    "tagline": "Learn at your pace, on your schedule.",
+    "shortDescription": "Pre-recorded courses, tutorials, and learning materials for design, digital tools, and creative technology skills.",
+    "fullDescription": "JTH Graphix Production creates recorded learning resources that let you build skills at your own pace. Our courses, tutorials, and learning materials cover design tools, digital communication, creative technology, and professional development — all created by practitioners who use these skills daily.",
+    "category": "Training",
+    "coverImage": "/images/services/recorded-courses/1.jpeg",
+    "galleryImages": [
+      "/images/services/recorded-courses/1.jpeg",
+      "/images/services/recorded-courses/2.jpeg",
+      "/images/services/digital-skills-workshops/3.jpeg"
+    ],
+    "videos": [],
+    "featured": false,
+    "benefits": [
+      "Learn at your own pace and schedule",
+      "Practical, project-based learning",
+      "Created by active industry practitioners",
+      "Reusable reference material",
+      "Access to updated content as tools evolve"
+    ],
+    "deliverables": [
+      "Recorded video lessons with exercises",
+      "Downloadable practice files and resources",
+      "Course outline and learning path",
+      "Access to supplementary materials",
+      "Certificate of completion where applicable"
+    ],
+    "useCases": [
+      "Individuals learning design tools",
+      "Teams building skills asynchronously",
+      "Students supplementing formal education",
+      "Professionals upskilling in new technologies",
+      "Organizations training remote teams"
+    ],
+    "process": [
+      "Course topic and audience definition",
+      "Content creation and production",
+      "Quality review and publishing",
+      "Ongoing updates and learner support"
+    ],
+    "faq": [
+      {
+        "q": "How long do I have access to the materials?",
+        "a": "Access is ongoing — you can revisit the materials as many times as you need."
+      },
+      {
+        "q": "Are the courses beginner-friendly?",
+        "a": "Yes — our courses are designed for practical learning and accommodate various skill levels."
+      }
+    ],
+    "relatedServices": [
+      "virtual-training-sessions",
+      "design-skill-training",
+      "digital-skills-workshops"
+    ],
+    "ctaPrimary": "Explore Courses",
+    "ctaSecondary": "Contact Us",
+    "badge": "Self-Paced",
+    "metaTitle": "Recorded Learning Resources | JTH Graphix Production",
+    "metaDescription": "Pre-recorded courses and learning materials for design and digital skills in Kenya.",
+    "icon": "BookOpen"
+  },
+  {
+    "id": "photography-videography",
+    "slug": "photography-videography",
+    "title": "Photography & Videography",
+    "tagline": "Complete visual storytelling for your brand.",
+    "shortDescription": "Professional photography and videography services for events, branding, products, and creative campaigns.",
+    "fullDescription": "JTH Graphix Production offers comprehensive photography and videography services that capture your brand, events, and stories with professional quality. From single-day shoots to full production campaigns, we handle concept, capture, editing, and delivery — giving you visual content that performs across every platform.",
+    "category": "Media & Content",
+    "coverImage": "/images/portfolio/product-launch-social.jpg",
+    "galleryImages": [
+      "/images/portfolio/product-launch-social.jpg",
+      "/images/portfolio/madaraka-festival.png",
+      "/images/portfolio/typography-lesson.jpg",
+      "/images/portfolio/coffee-shop-branding.jpg"
+    ],
+    "videos": [],
+    "featured": false,
+    "benefits": [
+      "Unified visual storytelling across photo and video",
+      "Professional quality for all platforms",
+      "Consistent brand aesthetic across media",
+      "Efficient production combining both services",
+      "Delivery in formats optimized for web, social, and print"
+    ],
+    "deliverables": [
+      "Professionally edited photographs",
+      "Edited video content in multiple formats",
+      "Platform-optimized versions",
+      "Creative direction and styling",
+      "Music, graphics, and post-production"
+    ],
+    "useCases": [
+      "Brand launches and campaigns",
+      "Event coverage requiring both photo and video",
+      "Product photography and video for e-commerce",
+      "Corporate communications and training content",
+      "Social media content production"
+    ],
+    "process": [
+      "Creative brief and production planning",
+      "Photography and video capture",
+      "Professional editing and post-production",
+      "Delivery in all required formats"
+    ],
+    "faq": [
+      {
+        "q": "Can I book photography and video together?",
+        "a": "Yes — combined packages are often more efficient and cost-effective than booking separately."
+      },
+      {
+        "q": "What is the typical turnaround?",
+        "a": "Photo delivery is typically 3-5 business days. Video editing takes 1-3 weeks depending on complexity."
+      }
+    ],
+    "relatedServices": [
+      "photography",
+      "videography",
+      "social-media-graphics"
+    ],
+    "ctaPrimary": "Book a Session",
+    "ctaSecondary": "Request a Quote",
+    "badge": "Full Service",
+    "metaTitle": "Photography & Videography Services | JTH Graphix Production",
+    "metaDescription": "Professional photography and videography for events, branding, and creative campaigns in Kenya.",
+    "icon": "Camera"
   }
 ]
