@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { PageHero } from '@/components/page-hero'
 import { ServicesGrid } from '@/components/services/services-grid'
 import { ServicesCTA } from '@/components/services/services-cta'
 import { ProcessSteps } from '@/components/services/process-steps'
@@ -11,30 +12,14 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-background relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
-        </div>
-        
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              Our Services
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              Quality is our Priority for{' '}
-              <span className="text-primary">Your Brand</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              From eye-catching flyers to complete brand identities, software development,
-              and digital marketing — we deliver premium solutions that help your business
-              stand out and succeed.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="Our Services"
+        title="Quality is our Priority for Your Brand"
+        highlightedWord="Your Brand"
+        description="From eye-catching flyers to complete brand identities, software development, and digital marketing — we deliver premium solutions that help your business stand out and succeed."
+        imageSrc="/images/services/branding.jpg"
+        imageAlt="JTH Graphix Production creative services — design, branding, web development, and digital marketing"
+      />
 
       <ServicesGrid />
       <ProcessSteps />

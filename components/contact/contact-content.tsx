@@ -6,18 +6,8 @@ import { Button } from '@/components/ui/button'
 import { siteConfig } from '@/lib/site-config'
 import { ContactForm } from '@/components/contact-form'
 import { ContactCards } from '@/components/contact-cards'
-
-const TikTokIcon = () => (
-  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-  </svg>
-)
-
-const XIcon = () => (
-  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-  </svg>
-)
+import { TikTokIcon, XIcon, WhatsAppIcon } from '@/components/social-icons'
+import { PageHero } from '@/components/page-hero'
 
 const socialLinks = [
   { href: siteConfig.socialLinks.facebook, icon: Facebook, label: 'Facebook' },
@@ -37,39 +27,19 @@ export function ContactContent() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-background relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
-          <div className="absolute inset-0 bg-grid opacity-20" />
-        </div>
-
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4" />
-              Contact Us
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              Let&apos;s Start Your{' '}
-              <span className="text-gradient">Project</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Ready to bring your brand to life? Tell us about your project and we&apos;ll
-              respond with a free quote within hours — no obligation, just great work.
-            </p>
-            <p className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary">
-              <BadgeCheck className="w-4 h-4" aria-hidden="true" />
-              Quality is our Priority.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        badge="Contact Us"
+        title="Let's Start Your Project"
+        highlightedWord="Project"
+        description="Ready to bring your brand to life? Tell us about your project and we'll respond with a free quote within hours — no obligation, just great work."
+        imageSrc="/images/portfolio/product-launch-social.jpg"
+        imageAlt="Get in touch with JTH Graphix Production — creative agency consultation"
+      >
+        <p className="inline-flex items-center gap-2 text-sm font-medium text-primary">
+          <BadgeCheck className="w-4 h-4" aria-hidden="true" />
+          Quality is our Priority.
+        </p>
+      </PageHero>
 
       {/* Contact Section */}
       <section className="py-16 lg:py-24 bg-muted/30 relative overflow-hidden">
@@ -106,7 +76,7 @@ export function ContactContent() {
                   aria-label={`Chat with us on WhatsApp at ${siteConfig.phone}`}
                 >
                   <div className="w-12 h-12 rounded-xl bg-[#25D366] flex items-center justify-center shrink-0 shadow-lg shadow-[#25D366]/25">
-                    <MessageCircle className="w-6 h-6 text-white" />
+                    <WhatsAppIcon className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">WhatsApp</p>
@@ -136,10 +106,10 @@ export function ContactContent() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-xl bg-card border border-border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                      className="w-10 h-10 rounded-xl bg-secondary/15 flex items-center justify-center text-secondary hover:bg-secondary hover:text-white border border-secondary/20 hover:border-secondary transition-colors"
                       aria-label={social.label}
                     >
-                      <social.icon />
+                      <social.icon className="w-5 h-5" />
                     </a>
                   ))}
                 </div>

@@ -19,18 +19,7 @@ import { Button } from '@/components/ui/button'
 import { Newsletter } from '@/components/newsletter'
 import { siteConfig } from '@/lib/site-config'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
-
-const TikTokIcon = () => (
-  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
-  </svg>
-)
-
-const XIcon = () => (
-  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-  </svg>
-)
+import { TikTokIcon, XIcon, WhatsAppIcon } from '@/components/social-icons'
 
 const quickLinks = [
   { href: '/', label: 'Home' },
@@ -91,7 +80,7 @@ const contactInfo = [
 
 const ColumnHeading = ({ children }: { children: React.ReactNode }) => (
   <h3 className="font-display font-semibold text-white mb-6 flex items-center gap-2">
-    <span className="w-1.5 h-5 rounded-full bg-primary-light inline-block" />
+    <span className="w-1.5 h-5 rounded-full bg-secondary inline-block" />
     {children}
   </h3>
 )
@@ -225,10 +214,10 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded-xl bg-white/8 text-white/60 hover:bg-secondary hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-secondary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light"
+                  className="p-2.5 rounded-xl bg-secondary/15 text-secondary hover:bg-secondary hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-secondary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
                   aria-label={`Follow us on ${social.label}`}
                 >
-                  <social.icon />
+                  <social.icon className="w-4 h-4" />
                 </a>
               ))}
             </div>
@@ -346,7 +335,14 @@ export function Footer() {
           </nav>
           <p className="text-sm text-white/40 text-center lg:text-right">
             Designed &amp; Developed by{' '}
-            <span className="text-secondary font-medium">JTH Graphix Production</span>
+            <a
+              href="https://github.com/de-scientist"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-secondary font-medium hover:text-secondary-light transition-colors underline-offset-2 hover:underline"
+            >
+              JTH Graphix Production Limited
+            </a>
           </p>
         </div>
       </div>

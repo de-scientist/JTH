@@ -49,11 +49,24 @@ export function BlogBrowser({ posts }: { posts: BlogPost[] }) {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-12 lg:pt-40 lg:pb-16 bg-background relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+      <section className="relative min-h-[420px] lg:min-h-[480px] flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/blog/blog1.jpg"
+            alt="JTH Graphix Production insights and ideas"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+        </div>
 
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+        <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-32 pb-16 lg:pt-40 lg:pb-24">
           <motion.div
             initial="hidden"
             animate="visible"

@@ -19,6 +19,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { companyJourney } from '@/lib/company'
+import { PageHero } from '@/components/page-hero'
 
 const values = [
   {
@@ -81,29 +82,14 @@ export function AboutContent() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-background relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
-        </div>
-
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              About JTH
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              More Than a Design Studio —{' '}
-              <span className="text-primary">A Technology Partner</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              JTH Graphix Production is your creative and technology partner. We help
-              businesses turn ideas into brands, digital experiences and technology
-              solutions that drive real, measurable growth.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="About JTH"
+        title="More Than a Design Studio — A Technology Partner"
+        highlightedWord="A Technology Partner"
+        description="JTH Graphix Production is your creative and technology partner. We help businesses turn ideas into brands, digital experiences and technology solutions that drive real, measurable growth."
+        imageSrc="/images/about-studio.jpg"
+        imageAlt="JTH Graphix Production team collaborating in a creative studio environment"
+      />
 
       {/* Story Section */}
       <section className="py-16 lg:py-24 bg-muted/30">
@@ -452,9 +438,10 @@ export function AboutContent() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="gap-2 h-12 px-8">
+              <Button asChild size="lg" className="bg-secondary hover:bg-secondary-dark text-white gap-2 h-12 px-8">
                 <Link href="/portfolio">
                   View Our Work
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
             </div>
