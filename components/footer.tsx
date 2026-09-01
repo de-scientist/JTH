@@ -19,7 +19,7 @@ import { Button } from '@/components/ui/button'
 import { Newsletter } from '@/components/newsletter'
 import { siteConfig } from '@/lib/site-config'
 import { fadeUp, staggerContainer, defaultTransition, viewportOnce } from '@/lib/animations'
-import { TikTokIcon, XIcon, WhatsAppIcon } from '@/components/social-icons'
+import { TikTokIcon, XIcon } from '@/components/social-icons'
 
 const quickLinks = [
   { href: '/', label: 'Home' },
