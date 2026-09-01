@@ -71,12 +71,11 @@ export function CTASection() {
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 h-14 px-8 rounded-2xl gap-2 text-base bg-transparent backdrop-blur-sm transition-all duration-300"
+              className="bg-secondary hover:bg-secondary-dark text-white h-14 px-8 rounded-2xl gap-2 text-base font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-secondary/30"
             >
-              <Link href="/contact">
-                <MessageCircle className="w-5 h-5" />
-                Talk to JTH
+              <Link href="/portfolio">
+                Explore Our Work
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
           </div>
