@@ -264,7 +264,7 @@ export function AboutContent() {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
               <p className="text-muted-foreground">
-                To be a trusted creative and technology partner that helps businesses build stronger brands, better digital experiences and technology-driven solutions that create lasting impact.
+                To become a leading creative and technology partner in Africa, transforming businesses through exceptional design, innovative technology and solutions that create lasting impact. 
               </p>
             </motion.div>
           </div>
