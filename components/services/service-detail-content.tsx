@@ -5,7 +5,7 @@ import NextImage from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowRight, ArrowLeft, Check, FileImage, Image, Palette, Sparkles, Share2, CreditCard, BookOpen, Printer, Globe, Flag, Calendar, Building2, MessageCircle, Target, Zap, Shield } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel'
+import { ServiceCarousel } from '@/components/services/service-carousel'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { siteConfig } from '@/lib/site-config'
 
