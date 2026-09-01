@@ -61,7 +61,7 @@ export function CTASection() {
             <Button
               asChild
               size="lg"
-              className="bg-secondary hover:bg-secondary/90 text-white shadow-xl shadow-secondary/25 h-14 px-10 rounded-2xl gap-2 text-base font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-secondary/40 hover:scale-[1.02]"
+              className="bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/30 h-14 px-10 rounded-2xl gap-2 text-base font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-primary/40 hover:scale-[1.02]"
             >
               <Link href="/contact">
                 Start Your Project

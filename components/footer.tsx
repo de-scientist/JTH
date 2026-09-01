@@ -91,7 +91,7 @@ const contactInfo = [
 
 const ColumnHeading = ({ children }: { children: React.ReactNode }) => (
   <h3 className="font-display font-semibold text-white mb-6 flex items-center gap-2">
-    <span className="w-1.5 h-5 rounded-full bg-secondary inline-block" />
+    <span className="w-1.5 h-5 rounded-full bg-primary-light inline-block" />
     {children}
   </h3>
 )
@@ -102,13 +102,14 @@ export function Footer() {
       {/* Decorative background */}
       <div className="absolute inset-0 bg-gradient-dark pointer-events-none" />
       <div className="absolute inset-0 bg-grid opacity-[0.03] pointer-events-none" />
-      <div className="absolute -top-24 -right-24 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute -top-24 -right-24 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Orange CTA band — the signature section */}
-      <div className="relative bg-footer-accent overflow-hidden">
+      {/* Premium blue CTA band — the signature closing section */}
+      <div className="relative overflow-hidden" style={{ background: 'linear-gradient(135deg, var(--color-primary-deep) 0%, var(--color-primary-dark) 40%, var(--color-primary) 70%, var(--color-primary-dark) 100%)' }}>
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-black/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(255,122,0,0.08),transparent_70%)] pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none" />
 
         <motion.div
@@ -224,7 +225,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded-xl bg-white/8 text-white/60 hover:bg-secondary hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-secondary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+                  className="p-2.5 rounded-xl bg-white/8 text-white/60 hover:bg-secondary hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-secondary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light"
                   aria-label={`Follow us on ${social.label}`}
                 >
                   <social.icon />
@@ -247,7 +248,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 hover:text-secondary transition-colors duration-300 inline-flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded"
+                    className="text-sm text-white/60 hover:text-secondary transition-colors duration-300 inline-flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light rounded"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
                     {link.label}
@@ -271,7 +272,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 hover:text-secondary transition-colors duration-300 inline-flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded"
+                    className="text-sm text-white/60 hover:text-secondary transition-colors duration-300 inline-flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light rounded"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
                     {link.label}
@@ -294,8 +295,8 @@ export function Footer() {
               {contactInfo.map((item) => {
                 const inner = (
                   <>
-                    <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center shrink-0 transition-colors group-hover:bg-secondary">
-                      <item.icon className="w-4 h-4 text-secondary" />
+                    <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center shrink-0 transition-colors group-hover:bg-primary">
+                      <item.icon className="w-4 h-4 text-primary-light" />
                     </div>
                     <span className="min-w-0">
                       <span className="block text-[11px] text-white/40 uppercase tracking-wider mb-0.5">
@@ -309,7 +310,7 @@ export function Footer() {
                 )
 
                 const classes =
-                  'flex items-start gap-3 text-sm group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded'
+                  'flex items-start gap-3 text-sm group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light rounded'
 
                 return (
                   <li key={item.label}>
@@ -337,7 +338,7 @@ export function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-white/40 hover:text-secondary transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded"
+                className="text-sm text-white/40 hover:text-secondary transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light rounded"
               >
                 {link.label}
               </Link>

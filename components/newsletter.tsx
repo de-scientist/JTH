@@ -82,14 +82,14 @@ export function Newsletter({ variant = 'card' }: NewsletterProps) {
                     aria-label="Email address for newsletter"
                     aria-invalid={Boolean(error)}
                     aria-describedby={error ? 'newsletter-error' : undefined}
-                    className={`w-full bg-white/8 border-white/15 text-white placeholder:text-white/40 h-12 rounded-xl focus:border-secondary/70 transition-colors ${
+                    className={`w-full bg-white/8 border-white/15 text-white placeholder:text-white/40 h-12 rounded-xl focus:border-primary/70 transition-colors ${
                       error ? 'border-red-400/70 focus:border-red-400' : ''
                     }`}
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="bg-secondary hover:bg-[#0A5BC8]/90 text-white rounded-xl h-12 px-8 gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/20 shrink-0"
+                  className="bg-primary hover:bg-primary/90 text-white rounded-xl h-12 px-8 gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 shrink-0"
                 >
                   Subscribe
                   <Send className="w-4 h-4" />
@@ -147,7 +147,7 @@ export function Newsletter({ variant = 'card' }: NewsletterProps) {
               aria-label="Email address for newsletter"
               aria-invalid={Boolean(error)}
               aria-describedby={error ? 'newsletter-error' : undefined}
-              className={`bg-white/8 border-white/15 text-white placeholder:text-white/40 h-11 rounded-xl focus:border-secondary/70 transition-colors ${
+              className={`bg-white/8 border-white/15 text-white placeholder:text-white/40 h-11 rounded-xl focus:border-primary/70 transition-colors ${
                 error ? 'border-red-400/70 focus:border-red-400' : ''
               }`}
             />
@@ -159,7 +159,7 @@ export function Newsletter({ variant = 'card' }: NewsletterProps) {
           </div>
           <Button
             type="submit"
-            className="w-full bg-secondary hover:bg-[#0A5BC8]/90 text-white rounded-xl h-11 gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/20"
+            className="w-full bg-primary hover:bg-primary/90 text-white rounded-xl h-11 gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
           >
             Subscribe
             <Send className="w-4 h-4" />

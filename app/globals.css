@@ -125,34 +125,34 @@
   --text-gradient-via: var(--color-primary-light);
   --text-gradient-to: var(--color-primary);
 
-  /* Footer accent — aligned to #FF7A00 (used sparingly for hover/highlight) */
-  --footer-accent: var(--color-secondary);
-  --footer-accent-hover: var(--color-secondary-dark);
-  --footer-accent-foreground: var(--color-secondary-foreground);
+  /* Footer accent — JTH Blue for structure/identity (secondary orange kept for hover micro-interactions) */
+  --footer-accent: var(--color-primary-dark);
+  --footer-accent-hover: var(--color-primary);
+  --footer-accent-foreground: #FFFFFF;
   --footer-bg: var(--color-surface-dark);
   --footer-foreground: var(--color-text-inverse);
 
-  /* Footer CTA band — premium blue gradient */
-  --footer-cta-bg: var(--color-primary-dark);
+  /* Footer CTA band — premium deep blue gradient */
+  --footer-cta-bg: var(--color-primary-deep);
   --footer-cta-text: #FFFFFF;
   --footer-cta-text-secondary: rgba(255, 255, 255, 0.8);
 
-  /* --- FINAL CTA SECTION (replaces orange block) --- */
+  /* --- FINAL CTA SECTION (premium blue-led, orange accent) --- */
   --cta-bg: var(--color-primary-deep);
   --cta-bg-gradient-from: var(--color-primary-deep);
   --cta-bg-gradient-via: var(--color-primary-dark);
   --cta-bg-gradient-to: var(--color-surface-dark);
   --cta-text-primary: var(--color-text-inverse);
   --cta-text-secondary: rgba(255, 255, 255, 0.75);
-  --cta-primary-btn-bg: var(--color-text-inverse);
-  --cta-primary-btn-text: var(--color-primary);
-  --cta-primary-btn-hover: var(--color-surface-muted);
+  --cta-primary-btn-bg: var(--color-primary);
+  --cta-primary-btn-text: #FFFFFF;
+  --cta-primary-btn-hover: var(--color-primary-dark);
   --cta-secondary-btn-bg: transparent;
   --cta-secondary-btn-border: rgba(255, 255, 255, 0.35);
   --cta-secondary-btn-text: var(--color-text-inverse);
   --cta-secondary-btn-hover: rgba(255, 255, 255, 0.1);
-  --cta-glow-orange: rgba(255, 122, 0, 0.18);
-  --cta-glow-blue: rgba(0, 74, 173, 0.25);
+  --cta-glow-orange: rgba(255, 122, 0, 0.12);
+  --cta-glow-blue: rgba(0, 74, 173, 0.35);
 }
 
 .dark {
@@ -253,10 +253,10 @@
   --orange-soft: var(--color-secondary-soft);
   --orange-foreground: var(--color-secondary-foreground);
 
-  /* Footer accent — aligned to #FF7A00 (used sparingly for hover/highlight) */
-  --footer-accent: var(--color-secondary);
-  --footer-accent-hover: var(--color-secondary-dark);
-  --footer-accent-foreground: var(--color-secondary-foreground);
+  /* Footer accent — JTH Blue for structure/identity (dark mode) */
+  --footer-accent: var(--color-primary);
+  --footer-accent-hover: var(--color-primary-light);
+  --footer-accent-foreground: #0B1220;
   --footer-bg: var(--color-surface-dark);
   --footer-foreground: var(--color-text-inverse);
 
@@ -272,15 +272,15 @@
   --cta-bg-gradient-to: var(--color-surface-dark);
   --cta-text-primary: var(--color-text-inverse);
   --cta-text-secondary: rgba(255, 255, 255, 0.75);
-  --cta-primary-btn-bg: var(--color-text-inverse);
-  --cta-primary-btn-text: var(--color-primary-deep);
-  --cta-primary-btn-hover: var(--color-surface-muted);
+  --cta-primary-btn-bg: var(--color-primary);
+  --cta-primary-btn-text: #FFFFFF;
+  --cta-primary-btn-hover: var(--color-primary-light);
   --cta-secondary-btn-bg: transparent;
   --cta-secondary-btn-border: rgba(255, 255, 255, 0.35);
   --cta-secondary-btn-text: var(--color-text-inverse);
   --cta-secondary-btn-hover: rgba(255, 255, 255, 0.1);
-  --cta-glow-orange: rgba(255, 122, 0, 0.15);
-  --cta-glow-blue: rgba(75, 142, 240, 0.25);
+  --cta-glow-orange: rgba(255, 122, 0, 0.10);
+  --cta-glow-blue: rgba(75, 142, 240, 0.30);
 }
 
 @theme inline {
@@ -512,11 +512,11 @@
   }
 
   .glow-orange {
-    box-shadow: 0 0 40px rgba(255, 122, 0, 0.28), 0 0 80px rgba(255, 122, 0, 0.12);
+    box-shadow: 0 0 40px rgba(255, 122, 0, 0.20), 0 0 80px rgba(255, 122, 0, 0.08);
   }
 
   .glow-orange-subtle {
-    box-shadow: 0 0 24px rgba(255, 122, 0, 0.18);
+    box-shadow: 0 0 24px rgba(255, 122, 0, 0.14);
   }
 
   .glow-accent {
