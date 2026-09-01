@@ -5,7 +5,7 @@
     "title": "Flyer Design",
     "tagline": "Promotional visuals that stop the scroll and move people to action.",
     "shortDescription": "Eye-catching flyer designs for promotions, launches, announcements, church events, business marketing, and campaigns.",
-    "fullDescription": "JTH Graphix Production creates bold and professional flyer designs that help businesses, churches, organizations, and event planners communicate clearly and attract attention.",
+    "fullDescription": "JTH Graphix Production creates bold and professional flyer designs that help businesses, churches, organizations, and event planners communicate clearly and attract attention. Every flyer is built around your message, audience, and goal — so it does not just look good, it performs.",
     "category": "Design",
     "coverImage": "/images/services/flyer-design/saf1.png",
     "galleryImages": [
@@ -17,42 +17,43 @@
     "videos": [],
     "featured": true,
     "benefits": [
-      "Clean, persuasive visual communication",
-      "Fast turnaround for urgent campaigns",
-      "Print-ready and digital-ready delivery",
-      "Professional layout and content hierarchy"
+      "Strategic visual direction aligned with your campaign goals",
+      "Clean, persuasive layout that guides the reader to action",
+      "Fast turnaround for time-sensitive promotions",
+      "Print-ready and digital-ready delivery in one package",
+      "Professional content hierarchy for maximum readability"
     ],
     "deliverables": [
-      "High-resolution flyer design",
-      "Social-media-ready export if needed",
-      "Print-ready file",
-      "Revision round summary"
+      "High-resolution print-ready flyer (PDF/AI)",
+      "Social-media-optimized digital version",
+      "Source files for future edits",
+      "Platform-specific export sizes if needed"
     ],
     "useCases": [
-      "Church events",
-      "Business promotions",
-      "Product launches",
-      "Awareness campaigns",
-      "Public notices"
+      "Church events and programs",
+      "Business promotions and sales",
+      "Product and service launches",
+      "Awareness and advocacy campaigns",
+      "Public notices and community events"
     ],
     "process": [
-      "Brief submission",
-      "Concept direction",
-      "Design execution",
-      "Review and final delivery"
+      "Brief submission and goal review",
+      "Concept direction and layout planning",
+      "Design execution and refinement",
+      "Final review and delivery"
     ],
     "faq": [
       {
         "q": "Can you design for both print and social media?",
-        "a": "Yes, we provide print-ready and social-ready exports tailored to each platform."
+        "a": "Yes — we provide print-ready and social-ready exports tailored to each platform's specifications."
       },
       {
         "q": "Do you offer revisions?",
-        "a": "Yes — revisions are included and scoped per project."
+        "a": "Yes — revisions are included and scoped per project so the final flyer meets your expectations."
       },
       {
         "q": "Can I provide my own text and images?",
-        "a": "Absolutely — we can work with provided content or develop copy and imagery for you."
+        "a": "Absolutely — we can work with your provided content or develop copy and imagery for you."
       }
     ],
     "relatedServices": [
@@ -64,7 +65,7 @@
     "ctaSecondary": "Request a Quote",
     "badge": "Popular",
     "metaTitle": "Flyer Design Services | JTH Graphix Production",
-    "metaDescription": "Professional flyer design for promotions, events, campaigns, and business communication.",
+    "metaDescription": "Professional flyer design for promotions, events, campaigns, and business communication in Kenya.",
     "icon": "FileImage"
   },
   {
@@ -73,7 +74,7 @@
     "title": "Poster Design",
     "tagline": "Posters that command attention from a distance.",
     "shortDescription": "Bold posters for events, campaigns, promotions, product awareness, and public communication.",
-    "fullDescription": "JTH Graphix Production designs premium posters that combine strong visuals, strategic hierarchy, and clear communication for both print and digital use.",
+    "fullDescription": "JTH Graphix Production designs premium posters that combine strong visuals, strategic hierarchy, and clear communication for both print and digital use. Whether for a concert, conference, product launch, or community campaign — your poster will stand out.",
     "category": "Design",
     "coverImage": "/images/services/poster-design/brands.png",
     "galleryImages": [
@@ -85,29 +86,41 @@
     "videos": [],
     "featured": true,
     "benefits": [
-      "Strong visual impact",
-      "Suitable for print and digital use",
-      "Clear hierarchy for readability",
-      "Built for awareness and visibility"
+      "Strong visual impact that commands attention",
+      "Optimized for both print and digital distribution",
+      "Clear content hierarchy for instant readability",
+      "Designed to drive awareness and attendance",
+      "Versatile formats for multiple campaign channels"
     ],
     "deliverables": [
-      "Final poster artwork",
-      "High-resolution export",
-      "Print-ready file"
+      "Final poster artwork in print-ready format",
+      "High-resolution digital export",
+      "Social-media-adapted version if needed",
+      "Source files for future modifications"
     ],
     "useCases": [
-      "Event promotion",
-      "Church posters",
-      "Campaign communication",
-      "Product awareness"
+      "Event promotion and announcements",
+      "Church and community posters",
+      "Campaign and advocacy communication",
+      "Product awareness and launches",
+      "Conference and workshop publicity"
     ],
     "process": [
-      "Brief",
-      "Concepts",
-      "Design",
-      "Delivery"
+      "Brief and campaign objective review",
+      "Concept exploration and layout design",
+      "Design execution and client review",
+      "Final refinement and delivery"
     ],
-    "faq": [],
+    "faq": [
+      {
+        "q": "What sizes do you design posters in?",
+        "a": "We design in standard and custom sizes based on your distribution needs — from A3 to large-format banners."
+      },
+      {
+        "q": "Can you match an existing brand style?",
+        "a": "Yes — we work within your established brand guidelines to ensure visual consistency."
+      }
+    ],
     "relatedServices": [
       "flyer-design",
       "banner-design",
@@ -117,7 +130,7 @@
     "ctaSecondary": "Contact Us",
     "badge": "High Impact",
     "metaTitle": "Poster Design Services | JTH Graphix Production",
-    "metaDescription": "Premium poster design for events, promotions, and branded communication.",
+    "metaDescription": "Premium poster design for events, promotions, and branded communication in Kenya.",
     "icon": "Image"
   },
   {
@@ -126,7 +139,7 @@
     "title": "Logo Design",
     "tagline": "Distinctive visual marks built for recognition and trust.",
     "shortDescription": "Memorable and professional logo design for businesses, brands, institutions, and personal ventures.",
-    "fullDescription": "Our logo design service helps brands establish identity with clean, memorable, and versatile logo systems that work across print and digital applications.",
+    "fullDescription": "Our logo design service helps brands establish identity with clean, memorable, and versatile logo systems that work across print and digital applications. Every logo is crafted to represent who you are and how you want to be remembered.",
     "category": "Branding",
     "coverImage": "/images/services/logo-design/logo-blue.png",
     "galleryImages": [
@@ -138,31 +151,46 @@
     "videos": [],
     "featured": true,
     "benefits": [
-      "Strong first impression",
-      "Brand recognition foundation",
-      "Professional and scalable identity",
-      "Versatile application across platforms"
+      "A distinctive mark that sets you apart from competitors",
+      "Strong foundation for all brand touchpoints",
+      "Scalable design that works from favicon to billboard",
+      "Versatile application across print, digital, and merchandise",
+      "Professional impression that builds immediate trust"
     ],
     "deliverables": [
-      "Primary logo",
-      "Alternative variations",
-      "Transparent exports",
-      "Print and digital files"
+      "Primary logo design",
+      "Alternative logo variations",
+      "Transparent and solid background exports",
+      "Print-ready and digital file formats",
+      "Basic usage guidelines"
     ],
     "useCases": [
-      "Startups",
-      "Small businesses",
-      "Events",
-      "Institutions",
-      "Personal brands"
+      "Startups building their first identity",
+      "Small businesses upgrading their image",
+      "Events needing branded visual marks",
+      "Institutions and organizations",
+      "Personal brands and portfolios"
     ],
     "process": [
-      "Discovery",
-      "Concepts",
-      "Refinement",
-      "Delivery"
+      "Discovery and brand personality review",
+      "Concept exploration and sketching",
+      "Client presentation and feedback",
+      "Refinement and final delivery"
     ],
-    "faq": [],
+    "faq": [
+      {
+        "q": "How many logo concepts do you present?",
+        "a": "We typically present 2–3 distinct concepts, each exploring a different creative direction."
+      },
+      {
+        "q": "Do I own the final logo?",
+        "a": "Yes — upon project completion you receive full usage rights and source files for your logo."
+      },
+      {
+        "q": "Can you redesign my existing logo?",
+        "a": "Yes — we offer logo refinement and full redesign services depending on your needs."
+      }
+    ],
     "relatedServices": [
       "branding-identity",
       "business-card-design",
@@ -172,7 +200,7 @@
     "ctaSecondary": "Request Concepts",
     "badge": "Essential",
     "metaTitle": "Logo Design Services | JTH Graphix Production",
-    "metaDescription": "Professional logo design for modern brands, businesses, and organizations.",
+    "metaDescription": "Professional logo design for modern brands, businesses, and organizations in Kenya.",
     "icon": "Palette"
   },
   {
@@ -181,7 +209,7 @@
     "title": "Branding & Visual Identity",
     "tagline": "Build a brand that looks coherent, credible, and unforgettable.",
     "shortDescription": "Complete visual identity systems including brand colors, typography, logo usage, and consistency tools.",
-    "fullDescription": "JTH Graphix Production develops premium brand identity systems that help businesses and organizations look consistent, professional, and market-ready across every touchpoint.",
+    "fullDescription": "JTH Graphix Production develops premium brand identity systems that help businesses and organizations look consistent, professional, and market-ready across every touchpoint. From strategy to visual execution — we build brands that earn recognition and trust.",
     "category": "Branding",
     "coverImage": "/images/services/branding-identity/ASH.png",
     "galleryImages": [
@@ -193,31 +221,45 @@
     "videos": [],
     "featured": true,
     "benefits": [
-      "Strong and consistent brand presence",
-      "Professional identity across channels",
-      "Better recognition and trust",
-      "Scalable foundation for growth"
+      "Cohesive brand presence across every customer touchpoint",
+      "Professional identity that builds instant credibility",
+      "Better recognition, recall, and market differentiation",
+      "Scalable system that grows with your business",
+      "Clear guidelines that keep your team consistent"
     ],
     "deliverables": [
-      "Logo system",
-      "Brand color palette",
-      "Typography direction",
-      "Brand usage guide",
-      "Core branded asset direction"
+      "Logo system with primary and secondary variations",
+      "Brand color palette with usage specifications",
+      "Typography system and hierarchy rules",
+      "Brand usage and style guide",
+      "Core branded asset direction (business cards, letterhead, etc.)"
     ],
     "useCases": [
-      "New business setup",
-      "Rebranding",
-      "Institutional identity refresh",
-      "Professional market positioning"
+      "New businesses building their first professional identity",
+      "Companies undergoing a rebrand or refresh",
+      "Institutions modernizing their visual presence",
+      "Organizations seeking stronger market positioning"
     ],
     "process": [
-      "Research",
-      "Strategy",
-      "Identity design",
-      "Guidelines"
+      "Research and brand audit",
+      "Strategy and positioning development",
+      "Identity design and exploration",
+      "Guidelines documentation and final delivery"
     ],
-    "faq": [],
+    "faq": [
+      {
+        "q": "How long does a branding project take?",
+        "a": "A complete brand identity typically takes 3–6 weeks depending on scope, complexity, and revision rounds."
+      },
+      {
+        "q": "Do I get source files?",
+        "a": "Yes — you receive all source files, exports, and a comprehensive brand guide."
+      },
+      {
+        "q": "Can you work with my existing logo?",
+        "a": "Yes — we can build a full identity system around an existing logo or develop everything from scratch."
+      }
+    ],
     "relatedServices": [
       "logo-design",
       "business-profile-design",
@@ -227,7 +269,7 @@
     "ctaSecondary": "Request Proposal",
     "badge": "Premium",
     "metaTitle": "Brand Identity Services | JTH Graphix Production",
-    "metaDescription": "Complete brand identity design for businesses, institutions, and premium brands.",
+    "metaDescription": "Complete brand identity design for businesses, institutions, and premium brands in Kenya.",
     "icon": "Sparkles"
   },
   {
@@ -248,29 +290,40 @@
     "videos": [],
     "featured": false,
     "benefits": [
-      "Professional corporate presentation",
-      "Better credibility during pitching",
-      "Structured business communication",
-      "Suitable for digital or print use"
+      "Professional corporate presentation for high-stakes meetings",
+      "Stronger credibility during pitching and proposals",
+      "Structured narrative that communicates your value clearly",
+      "Suitable for both digital distribution and print",
+      "Tailored to your industry and audience"
     ],
     "deliverables": [
-      "Designed company profile",
-      "Print-ready file",
-      "Presentation-ready PDF"
+      "Designed company profile document",
+      "Print-ready PDF version",
+      "Presentation-ready version for meetings",
+      "Source files for future updates"
     ],
     "useCases": [
-      "Company introductions",
-      "Pitch decks support materials",
-      "Tender support documents",
-      "Institutional profiles"
+      "Company introductions to investors and partners",
+      "Pitch deck supporting materials",
+      "Tender and procurement support documents",
+      "Institutional and organizational profiles"
     ],
     "process": [
-      "Brief",
-      "Content gathering",
-      "Design",
-      "Delivery"
+      "Brief and content requirements review",
+      "Content gathering and structure planning",
+      "Design execution and layout refinement",
+      "Final review and delivery"
     ],
-    "faq": [],
+    "faq": [
+      {
+        "q": "How many pages is a typical business profile?",
+        "a": "Most profiles range from 8–20 pages depending on your content, services, and goals."
+      },
+      {
+        "q": "Do you write the content?",
+        "a": "We can work with your provided content or help structure and refine your copy for maximum impact."
+      }
+    ],
     "relatedServices": [
       "branding-identity",
       "brochure-design",
@@ -280,7 +333,7 @@
     "ctaSecondary": "Contact Us",
     "badge": "Business Ready",
     "metaTitle": "Business Profile Design | JTH Graphix Production",
-    "metaDescription": "Professional business profile design for companies, institutions, and growing brands.",
+    "metaDescription": "Professional business profile design for companies, institutions, and growing brands in Kenya.",
     "icon": "BookOpen"
   },
   {
@@ -289,7 +342,7 @@
     "title": "Business Card Design",
     "tagline": "Small format, strong impression.",
     "shortDescription": "Clean, premium business card design for networking and brand presentation.",
-    "fullDescription": "JTH Graphix Production designs elegant business cards that strengthen brand presentation and leave a confident, memorable impression in meetings, networking, and client interactions.",
+    "fullDescription": "JTH Graphix Production designs elegant business cards that strengthen brand presentation and leave a confident, memorable impression in meetings, networking, and client interactions. Every card is crafted to reflect your professionalism in a compact format.",
     "category": "Branding",
     "coverImage": "/images/services/business-card-design/ash-tech-hub.png",
     "galleryImages": [
@@ -300,11 +353,41 @@
     ],
     "videos": [],
     "featured": false,
-    "benefits": [],
-    "deliverables": [],
-    "useCases": [],
-    "process": [],
-    "faq": [],
+    "benefits": [
+      "Professional first impression in every networking encounter",
+      "Brand-consistent design that reinforces your identity",
+      "Print-optimized layout for crisp, clean output",
+      "Compact format that communicates who you are at a glance",
+      "Memorable design that makes people keep your card"
+    ],
+    "deliverables": [
+      "Front and back card design",
+      "Print-ready PDF with bleed and crop marks",
+      "Digital version for email and messaging",
+      "Source file for future edits"
+    ],
+    "useCases": [
+      "New businesses launching their brand",
+      "Professionals upgrading their networking materials",
+      "Companies refreshing corporate identity",
+      "Teams and organizations standardizing cards"
+    ],
+    "process": [
+      "Brief and brand guideline review",
+      "Layout and concept design",
+      "Client feedback and refinement",
+      "Print-ready file delivery"
+    ],
+    "faq": [
+      {
+        "q": "What print size do you design for?",
+        "a": "We design for standard business card dimensions (3.5×2 inches / 85×55mm) and can accommodate custom sizes."
+      },
+      {
+        "q": "Do you handle printing?",
+        "a": "We deliver print-ready files. We can recommend trusted print partners or coordinate printing on your behalf."
+      }
+    ],
     "relatedServices": [
       "logo-design",
       "branding-identity",
@@ -314,7 +397,7 @@
     "ctaSecondary": "Contact Us",
     "badge": "Custom Quote",
     "metaTitle": "Business Card Design | JTH Graphix Production",
-    "metaDescription": "Elegant business card design for professional networking.",
+    "metaDescription": "Elegant business card design for professional networking in Kenya.",
     "icon": "CreditCard"
   },
   {
@@ -323,7 +406,7 @@
     "title": "Brochure Design",
     "tagline": "Structured information presented with clarity and polish.",
     "shortDescription": "Informative and persuasive brochure design for products, services, institutions, and marketing campaigns.",
-    "fullDescription": "Brochures help businesses and institutions communicate more detail in a professional, persuasive format. JTH designs brochures that balance readability, branding, and visual elegance.",
+    "fullDescription": "Brochures help businesses and institutions communicate more detail in a professional, persuasive format. JTH designs brochures that balance readability, branding, and visual elegance — turning your information into a compelling narrative.",
     "category": "Design",
     "coverImage": "/images/services/brochure-design/3.jpeg",
     "galleryImages": [
@@ -334,20 +417,51 @@
     ],
     "videos": [],
     "featured": false,
-    "benefits": [],
-    "deliverables": [],
-    "useCases": [],
-    "process": [],
-    "faq": [],
+    "benefits": [
+      "Professional format for detailed business communication",
+      "Persuasive layout that guides readers through your story",
+      "Print and digital distribution ready",
+      "Brand-consistent design across all pages",
+      "Ideal for sales meetings, events, and mailing"
+    ],
+    "deliverables": [
+      "Multi-page brochure design",
+      "Print-ready PDF with bleed specifications",
+      "Digital-optimized PDF for online sharing",
+      "Source files for content updates"
+    ],
+    "useCases": [
+      "Product and service marketing",
+      "Institutional and organizational profiles",
+      "Event and conference materials",
+      "Sales and pitch support documents"
+    ],
+    "process": [
+      "Brief and content structure review",
+      "Content gathering and page planning",
+      "Design execution and layout refinement",
+      "Final proofing and delivery"
+    ],
+    "faq": [
+      {
+        "q": "What brochure formats do you design?",
+        "a": "We design bi-fold, tri-fold, multi-page, and custom-format brochures based on your content and goals."
+      },
+      {
+        "q": "How many pages can a brochure have?",
+        "a": "Typically 4–24 pages depending on your content volume and distribution method."
+      }
+    ],
     "relatedServices": [
       "business-profile-design",
-      "premium-printing"
+      "premium-printing",
+      "flyer-design"
     ],
     "ctaPrimary": "Request Brochure Quote",
     "ctaSecondary": "Contact Us",
     "badge": "Print Ready",
     "metaTitle": "Brochure Design | JTH Graphix Production",
-    "metaDescription": "Informative brochure design for marketing and company profiles.",
+    "metaDescription": "Informative brochure design for marketing and company profiles in Kenya.",
     "icon": "BookOpen"
   },
   {
@@ -356,7 +470,7 @@
     "title": "Social Media Graphics",
     "tagline": "Content visuals built for reach, clarity, and engagement.",
     "shortDescription": "Creative social graphics for promotions, announcements, product campaigns, awareness content, and branded communication.",
-    "fullDescription": "JTH creates social media graphics tailored for Instagram, Facebook, WhatsApp, TikTok, LinkedIn, and X, helping brands communicate with consistency and modern relevance.",
+    "fullDescription": "JTH creates social media graphics tailored for Instagram, Facebook, WhatsApp, TikTok, LinkedIn, and X, helping brands communicate with consistency and modern relevance. Every design is optimized for the platform it lives on.",
     "category": "Digital",
     "coverImage": "/images/services/social-media-graphics/saf1.png",
     "galleryImages": [
@@ -367,20 +481,52 @@
     ],
     "videos": [],
     "featured": true,
-    "benefits": [],
-    "deliverables": [],
-    "useCases": [],
-    "process": [],
-    "faq": [],
+    "benefits": [
+      "Platform-optimized designs for maximum engagement",
+      "Consistent visual identity across all social channels",
+      "Scroll-stopping visuals that increase reach",
+      "Fast production for time-sensitive campaigns",
+      "Cohesive content library you can repurpose"
+    ],
+    "deliverables": [
+      "Platform-specific social media graphics",
+      "Post and story format exports",
+      "Campaign-consistent visual set",
+      "Source files for future modifications"
+    ],
+    "useCases": [
+      "Business page content and promotions",
+      "Product launch campaigns",
+      "Event and awareness content",
+      "Seasonal and holiday campaigns",
+      "Ongoing brand communication"
+    ],
+    "process": [
+      "Content brief and platform review",
+      "Visual concept and layout design",
+      "Design execution and client review",
+      "Final exports and delivery"
+    ],
+    "faq": [
+      {
+        "q": "Which platforms do you design for?",
+        "a": "We design for Instagram, Facebook, WhatsApp, TikTok, LinkedIn, X (Twitter), and YouTube thumbnails."
+      },
+      {
+        "q": "Can you design a content pack?",
+        "a": "Yes — we offer monthly and campaign-based content packs with multiple graphics per delivery."
+      }
+    ],
     "relatedServices": [
       "social-media-management",
-      "flyer-design"
+      "flyer-design",
+      "branding-identity"
     ],
     "ctaPrimary": "Request Social Graphics",
     "ctaSecondary": "Contact Us",
     "badge": "Digital First",
     "metaTitle": "Social Media Graphics | JTH Graphix Production",
-    "metaDescription": "Creative social graphics for modern brands and campaigns.",
+    "metaDescription": "Creative social media graphics for modern brands and campaigns in Kenya.",
     "icon": "Share2"
   },
   {
@@ -389,7 +535,7 @@
     "title": "Social Media Management",
     "tagline": "More than posts — a stronger digital presence.",
     "shortDescription": "Ongoing social media content and management support for brands that need consistency, visibility, and growth.",
-    "fullDescription": "Social media management at JTH combines content planning, visual consistency, brand communication, and platform presence support to help businesses and organizations stay visible and engaging online.",
+    "fullDescription": "Social media management at JTH combines content planning, visual consistency, brand communication, and platform presence support to help businesses and organizations stay visible and engaging online. We do not just post — we build presence.",
     "category": "Digital",
     "coverImage": "/images/services/social-media-management/1.jpeg",
     "galleryImages": [
@@ -401,29 +547,45 @@
     "videos": [],
     "featured": true,
     "benefits": [
-      "Consistent online presence",
-      "Better content planning",
-      "Improved brand professionalism",
-      "Scalable communication support"
+      "Consistent, professional online presence across platforms",
+      "Strategic content planning aligned with your business goals",
+      "Improved brand perception and audience engagement",
+      "Scalable communication support as you grow",
+      "Data-informed decisions for better content performance"
     ],
     "deliverables": [
-      "Content support",
-      "Scheduled visuals",
-      "Campaign-aligned creative direction",
-      "Brand consistency guidance"
+      "Monthly content calendar and planning",
+      "Custom-designed social media visuals",
+      "Content scheduling and publishing support",
+      "Brand consistency guidelines for social channels",
+      "Monthly performance summary and insights"
     ],
     "useCases": [
-      "Business pages",
-      "Campaign pages",
-      "Institutional communication"
+      "Business pages needing consistent content",
+      "Campaign-driven organizations",
+      "Institutions building digital presence",
+      "Startups establishing social credibility"
     ],
     "process": [
-      "Discovery",
-      "Strategy",
-      "Content production",
-      "Scheduling & Reporting"
+      "Discovery and brand audit",
+      "Content strategy development",
+      "Content production and design",
+      "Scheduling, publishing, and reporting"
     ],
-    "faq": [],
+    "faq": [
+      {
+        "q": "How many posts per month do you manage?",
+        "a": "We offer flexible plans — from 12 to 30+ posts per month depending on your goals and platforms."
+      },
+      {
+        "q": "Do you write the captions too?",
+        "a": "Yes — we create captions, hashtags, and visual content as part of our management service."
+      },
+      {
+        "q": "Can I approve content before it goes live?",
+        "a": "Absolutely — we share content calendars for your review and approval before publishing."
+      }
+    ],
     "relatedServices": [
       "social-media-graphics",
       "branding-identity",
@@ -433,7 +595,7 @@
     "ctaSecondary": "Request Proposal",
     "badge": "Recurring Service",
     "metaTitle": "Social Media Management | JTH Graphix Production",
-    "metaDescription": "Professional social media management for modern businesses and organizations.",
+    "metaDescription": "Professional social media management for modern businesses and organizations in Kenya.",
     "icon": "Share2"
   },
   {
@@ -453,22 +615,40 @@
     ],
     "featured": false,
     "benefits": [
-      "Higher visibility in search results",
-      "More qualified organic traffic",
-      "Stronger local discovery",
-      "Better return on marketing spend"
+      "Higher visibility in Google and other search engines",
+      "More qualified organic traffic to your website",
+      "Stronger local discovery for location-based businesses",
+      "Better return on marketing spend over time",
+      "Sustainable growth that compounds month over month"
     ],
     "deliverables": [
-      "Technical SEO audit",
-      "On-page optimization",
-      "Local SEO setup",
-      "Performance and ranking reporting"
+      "Technical SEO audit and recommendations",
+      "On-page optimization for key pages",
+      "Local SEO setup and Google Business optimization",
+      "Keyword research and content strategy",
+      "Monthly ranking and performance reports"
     ],
     "useCases": [
-      "Business websites",
-      "Local service providers",
-      "Institutional pages",
-      "E-commerce stores"
+      "Business websites competing locally",
+      "Service providers wanting organic leads",
+      "E-commerce stores improving product visibility",
+      "Institutions building online authority"
+    ],
+    "process": [
+      "Website and SEO audit",
+      "Strategy and keyword research",
+      "Technical and on-page implementation",
+      "Monitoring, reporting, and optimization"
+    ],
+    "faq": [
+      {
+        "q": "How long before I see SEO results?",
+        "a": "SEO is a long-term strategy. Most clients see meaningful improvements within 3–6 months of consistent work."
+      },
+      {
+        "q": "Do you guarantee first-page rankings?",
+        "a": "No one can ethically guarantee rankings. We focus on proven strategies that build sustainable visibility over time."
+      }
     ],
     "relatedServices": [
       "geo-optimization",
@@ -499,22 +679,39 @@
     ],
     "featured": false,
     "benefits": [
-      "Accurate brand representation in AI answers",
-      "Discovery through generative search",
-      "Structured, machine-readable content",
-      "Future-proof visibility strategy"
+      "Accurate brand representation in AI-generated answers",
+      "Discovery through the fastest-growing search channel",
+      "Structured content that machines can understand and cite",
+      "Future-proof visibility as search behavior evolves",
+      "Competitive advantage in an emerging digital landscape"
     ],
     "deliverables": [
-      "Content and entity optimization",
-      "Structured data implementation",
-      "Knowledge-panel readiness",
-      "AI-search visibility reporting"
+      "Content and entity optimization audit",
+      "Structured data and schema implementation",
+      "Knowledge-panel readiness assessment",
+      "AI-search visibility monitoring and reporting"
     ],
     "useCases": [
-      "Forward-thinking brands",
-      "Service businesses",
-      "Institutions",
-      "International clients"
+      "Forward-thinking brands staying ahead of search trends",
+      "Service businesses competing in AI-driven recommendations",
+      "Institutions building authoritative digital profiles",
+      "International clients seeking Kenyan market visibility"
+    ],
+    "process": [
+      "Current AI-search visibility audit",
+      "Content and entity optimization",
+      "Structured data implementation",
+      "Monitoring and iterative improvement"
+    ],
+    "faq": [
+      {
+        "q": "What is GEO and how is it different from SEO?",
+        "a": "GEO focuses on how AI search tools (like ChatGPT and Gemini) find and cite your business, while SEO targets traditional search engine rankings. Both work together for maximum visibility."
+      },
+      {
+        "q": "Is GEO relevant for small businesses?",
+        "a": "Yes — as more people use AI assistants to find services, having structured, optimized content helps even small businesses get recommended."
+      }
     ],
     "relatedServices": [
       "seo-optimization",
@@ -534,7 +731,7 @@
     "title": "Website Design",
     "tagline": "Clean digital experiences that present your brand with credibility.",
     "shortDescription": "Modern responsive websites for businesses and brands.",
-    "fullDescription": "JTH offers website design for businesses and organizations that need a strong digital presence with modern UI, responsive layouts, and clear communication.",
+    "fullDescription": "JTH offers website design for businesses and organizations that need a strong digital presence with modern UI, responsive layouts, and clear communication. Every website is built to perform — fast, accessible, and designed to convert visitors into clients.",
     "category": "Web",
     "coverImage": "/images/services/website-design/4.jpeg",
     "galleryImages": [
@@ -545,20 +742,56 @@
     ],
     "videos": [],
     "featured": true,
-    "benefits": [],
-    "deliverables": [],
-    "useCases": [],
-    "process": [],
-    "faq": [],
+    "benefits": [
+      "Modern, professional design that builds trust instantly",
+      "Responsive layouts that work on every device",
+      "Fast loading speeds for better user experience and SEO",
+      "Clear information architecture that guides visitors to action",
+      "Conversion-focused design that drives business results"
+    ],
+    "deliverables": [
+      "Custom-designed responsive website",
+      "Mobile-optimized layout",
+      "SEO-ready structure and metadata",
+      "Contact forms and integration setup",
+      "Performance optimization and deployment"
+    ],
+    "useCases": [
+      "Businesses building their first website",
+      "Companies refreshing an outdated site",
+      "Organizations needing a professional online presence",
+      "Startups launching with digital credibility"
+    ],
+    "process": [
+      "Discovery and requirements gathering",
+      "Wireframing and UI/UX design",
+      "Development and content integration",
+      "Testing, launch, and post-launch support"
+    ],
+    "faq": [
+      {
+        "q": "How long does it take to build a website?",
+        "a": "Most business websites take 3–6 weeks from kickoff to launch, depending on scope and content readiness."
+      },
+      {
+        "q": "Do you build on specific platforms?",
+        "a": "We work with modern frameworks and can build custom solutions or work with platforms like WordPress based on your needs."
+      },
+      {
+        "q": "Will my website be mobile-friendly?",
+        "a": "Absolutely — every website we build is fully responsive and tested across devices and screen sizes."
+      }
+    ],
     "relatedServices": [
       "branding-identity",
+      "seo-optimization",
       "business-profile-design"
     ],
     "ctaPrimary": "Request Website Quote",
     "ctaSecondary": "Book Discovery",
     "badge": "Digital Presence",
     "metaTitle": "Website Design | JTH Graphix Production",
-    "metaDescription": "Responsive website design for businesses and portfolios.",
+    "metaDescription": "Responsive website design for businesses and portfolios in Kenya.",
     "icon": "Globe"
   },
   {
@@ -567,7 +800,7 @@
     "title": "Banner Design",
     "tagline": "Large-format visuals built to be seen.",
     "shortDescription": "Promotional and branded banners for business visibility, events, and campaigns.",
-    "fullDescription": "Our banner design service supports strong visual visibility for promotions, launches, institutions, and events with layouts optimized for large-format communication.",
+    "fullDescription": "Our banner design service supports strong visual visibility for promotions, launches, institutions, and events with layouts optimized for large-format communication. From pull-up banners to stage backdrops — we design for impact.",
     "category": "Design",
     "coverImage": "/images/services/banner-design/3.jpeg",
     "galleryImages": [
@@ -578,15 +811,52 @@
     ],
     "videos": [],
     "featured": false,
+    "benefits": [
+      "High-visibility design for events and storefronts",
+      "Optimized for large-format print production",
+      "Clear messaging readable from a distance",
+      "Durable design concepts for repeated use",
+      "Brand-consistent large-format presence"
+    ],
+    "deliverables": [
+      "Print-ready banner artwork",
+      "High-resolution large-format files",
+      "Size-specific exports for your printer",
+      "Source files for future updates"
+    ],
+    "useCases": [
+      "Business storefront and office branding",
+      "Event and conference backdrops",
+      "Church and organization programs",
+      "Trade shows and exhibition displays",
+      "Campaign and awareness visibility"
+    ],
+    "process": [
+      "Brief and size specification review",
+      "Concept design and layout",
+      "Client review and adjustments",
+      "Final print-ready file delivery"
+    ],
+    "faq": [
+      {
+        "q": "What banner sizes do you design for?",
+        "a": "We design for standard pull-up banners (85×200cm), roll-up banners, backdrops, and custom sizes based on your needs."
+      },
+      {
+        "q": "Do you coordinate with printers?",
+        "a": "We deliver print-ready files. We can also recommend print partners and coordinate production if needed."
+      }
+    ],
     "relatedServices": [
       "poster-design",
-      "premium-printing"
+      "premium-printing",
+      "event-publicity-graphics"
     ],
     "ctaPrimary": "Request Banner Quote",
     "ctaSecondary": "Contact Us",
     "badge": "Large Format",
     "metaTitle": "Banner Design | JTH Graphix Production",
-    "metaDescription": "Promotional banner design for events and visibility.",
+    "metaDescription": "Promotional banner design for events, storefronts, and visibility in Kenya.",
     "icon": "Flag"
   },
   {
@@ -595,7 +865,7 @@
     "title": "Event & Publicity Graphics",
     "tagline": "Publicity assets built to create momentum.",
     "shortDescription": "Designs for launches, gatherings, conferences, promotions, and public messaging.",
-    "fullDescription": "Make your events unforgettable with comprehensive graphic packages that create buzz and drive attendance.",
+    "fullDescription": "Make your events unforgettable with comprehensive graphic packages that create buzz and drive attendance. JTH designs complete event visual systems — from initial announcement to post-event content.",
     "category": "Digital",
     "coverImage": "/images/services/event-publicity-graphics/1.jpeg",
     "galleryImages": [
@@ -606,6 +876,43 @@
     ],
     "videos": [],
     "featured": false,
+    "benefits": [
+      "Cohesive visual system across all event touchpoints",
+      "Announcement-to-recap content coverage",
+      "Formats optimized for both social and print channels",
+      "Professional presentation that builds event credibility",
+      "Reusable design assets for future events"
+    ],
+    "deliverables": [
+      "Event announcement graphics",
+      "Social media promotional assets",
+      "Print-ready event materials",
+      "Stage and backdrop design direction",
+      "Post-event recap graphics"
+    ],
+    "useCases": [
+      "Conferences and seminars",
+      "Product and brand launches",
+      "Community and charity events",
+      "Corporate gatherings and AGMs",
+      "Church and organization programs"
+    ],
+    "process": [
+      "Event brief and timeline review",
+      "Visual concept and asset planning",
+      "Design production across formats",
+      "Final delivery and launch support"
+    ],
+    "faq": [
+      {
+        "q": "Can you handle all event graphics in one package?",
+        "a": "Yes — we offer complete event graphic packages covering announcement, promotion, on-site, and post-event content."
+      },
+      {
+        "q": "How far in advance should I contact you?",
+        "a": "We recommend reaching out at least 2–3 weeks before your event for optimal planning and design time."
+      }
+    ],
     "relatedServices": [
       "flyer-design",
       "poster-design",
@@ -615,7 +922,7 @@
     "ctaSecondary": "Contact Us",
     "badge": "Campaign Ready",
     "metaTitle": "Event Graphics | JTH Graphix Production",
-    "metaDescription": "Event and publicity graphics for launches and campaigns.",
+    "metaDescription": "Event and publicity graphics for launches, conferences, and campaigns in Kenya.",
     "icon": "Calendar"
   },
   {
@@ -624,7 +931,7 @@
     "title": "Corporate Branding Materials",
     "tagline": "Consistency that makes your organization look established.",
     "shortDescription": "Stationery, presentation visuals, profiles, and branded communication tools.",
-    "fullDescription": "Present a unified, professional image with comprehensive corporate materials that reinforce your brand at every touchpoint.",
+    "fullDescription": "Present a unified, professional image with comprehensive corporate materials that reinforce your brand at every touchpoint. From letterheads to presentation templates — we ensure every piece of your communication looks intentional and polished.",
     "category": "Branding",
     "coverImage": "/images/services/corporate-branding-materials/2.jpeg",
     "galleryImages": [
@@ -635,6 +942,42 @@
     ],
     "videos": [],
     "featured": false,
+    "benefits": [
+      "Unified professional appearance across all business touchpoints",
+      "Stronger brand recall through consistent visual elements",
+      "Ready-to-use templates that save your team time",
+      "Polished impression for clients, partners, and investors",
+      "Scalable system that grows with your organization"
+    ],
+    "deliverables": [
+      "Business card design",
+      "Letterhead and envelope design",
+      "Email signature template",
+      "Presentation slide template",
+      "Invoice and document templates"
+    ],
+    "useCases": [
+      "Corporations standardizing brand materials",
+      "Growing businesses professionalizing their image",
+      "Organizations preparing for investor meetings",
+      "Institutions refreshing corporate identity"
+    ],
+    "process": [
+      "Brand audit and material requirements review",
+      "Template design and layout development",
+      "Client review and refinement",
+      "Final file delivery and usage guide"
+    ],
+    "faq": [
+      {
+        "q": "Do I need a brand identity first?",
+        "a": "It helps — corporate materials are most effective when built on an established brand system. We can also develop both together."
+      },
+      {
+        "q": "Can you match our existing brand?",
+        "a": "Yes — we work within your existing brand guidelines to create consistent, on-brand corporate materials."
+      }
+    ],
     "relatedServices": [
       "branding-identity",
       "business-card-design",
@@ -644,7 +987,7 @@
     "ctaSecondary": "Contact Us",
     "badge": "Professional Systems",
     "metaTitle": "Corporate Branding Materials | JTH Graphix Production",
-    "metaDescription": "Branded stationery and presentation assets for organizations.",
+    "metaDescription": "Branded stationery and presentation assets for organizations in Kenya.",
     "icon": "Building2"
   },
   {
@@ -653,7 +996,7 @@
     "title": "Premium Printing",
     "tagline": "Designed with production quality in mind.",
     "shortDescription": "Print-ready creative support for premium branded materials and promotional communication.",
-    "fullDescription": "JTH supports premium printing by preparing creative assets that are polished, production-ready, and aligned with strong visual presentation standards.",
+    "fullDescription": "JTH supports premium printing by preparing creative assets that are polished, production-ready, and aligned with strong visual presentation standards. We ensure your designs translate beautifully from screen to print.",
     "category": "Design",
     "coverImage": "/images/services/premium-printing/1.jpeg",
     "galleryImages": [
@@ -664,15 +1007,52 @@
     ],
     "videos": [],
     "featured": false,
+    "benefits": [
+      "Production-optimized files that print perfectly",
+      "Color accuracy and consistency across materials",
+      "Professional finish that reflects your brand quality",
+      "Expert guidance on paper, finish, and production specs",
+      "Streamlined process from design to final product"
+    ],
+    "deliverables": [
+      "Print-ready artwork files",
+      "Color-separated files if needed",
+      "Production specification guide",
+      "Printer-ready PDF with bleed and crop marks"
+    ],
+    "useCases": [
+      "Premium corporate stationery",
+      "Marketing collateral and campaigns",
+      "Event materials and publications",
+      "Product packaging and labels",
+      "Institutional and annual reports"
+    ],
+    "process": [
+      "Print requirements and specification review",
+      "Design preparation and production optimization",
+      "Proof review and color verification",
+      "Final file delivery and printer coordination"
+    ],
+    "faq": [
+      {
+        "q": "Do you handle the actual printing?",
+        "a": "We prepare production-ready files and can coordinate with trusted print partners on your behalf."
+      },
+      {
+        "q": "What file formats do you deliver for print?",
+        "a": "We deliver high-resolution PDFs, AI/EPS files, and any format your printer requires."
+      }
+    ],
     "relatedServices": [
       "brochure-design",
-      "banner-design"
+      "banner-design",
+      "corporate-branding-materials"
     ],
     "ctaPrimary": "Request Print Quote",
     "ctaSecondary": "Contact Us",
     "badge": "Production Ready",
     "metaTitle": "Premium Printing | JTH Graphix Production",
-    "metaDescription": "Print-ready production services and specifications.",
+    "metaDescription": "Print-ready production services and creative specifications in Kenya.",
     "icon": "Printer"
   },
   {
@@ -681,7 +1061,7 @@
     "title": "Virtual Training Sessions",
     "tagline": "Accessible learning that turns skill into opportunity.",
     "shortDescription": "Affordable virtual training sessions for learners seeking practical digital and creative skills.",
-    "fullDescription": "JTH Graphix Production provides virtual training sessions designed to build practical creative and digital skills for students, individuals, and teams.",
+    "fullDescription": "JTH Graphix Production provides virtual training sessions designed to build practical creative and digital skills for students, individuals, and teams. Learn from industry practitioners through interactive, project-based sessions.",
     "category": "Training",
     "coverImage": "/images/services/virtual-training-sessions/3.jpeg",
     "galleryImages": [
@@ -693,38 +1073,42 @@
     "videos": [],
     "featured": true,
     "benefits": [
-      "Affordable per-person pricing",
-      "Flexible virtual access",
-      "Practical digital and creative skills",
-      "Suitable for groups and individuals"
+      "Affordable per-person pricing accessible to individuals",
+      "Flexible virtual access from anywhere",
+      "Practical, project-based skill development",
+      "Suitable for both groups and individual learners",
+      "Direct access to experienced practitioners"
     ],
     "deliverables": [
       "Live or guided training session",
-      "Structured learning support",
-      "Relevant practical instruction"
+      "Structured learning materials and exercises",
+      "Practical project-based instruction",
+      "Post-session resource access"
     ],
     "useCases": [
-      "Student learning",
-      "Team upskilling",
-      "Creative skill exposure"
+      "Students building creative and digital skills",
+      "Teams upskilling for business needs",
+      "Individuals exploring new career paths",
+      "Organizations investing in staff development"
     ],
     "process": [
-      "Enrollment",
-      "Session delivery",
-      "Follow-up resources"
+      "Enrollment and skill level assessment",
+      "Session scheduling and preparation",
+      "Live training delivery with hands-on practice",
+      "Follow-up resources and continued learning support"
     ],
     "faq": [
       {
         "q": "Who is this training for?",
-        "a": "Individuals, students, teams, and institutions seeking practical digital and creative skills."
+        "a": "Individuals, students, teams, and institutions seeking practical digital and creative skills at any level."
       },
       {
         "q": "Is training online or physical?",
-        "a": "We offer flexible virtual delivery; institutional sessions can be physical on request."
+        "a": "We offer flexible virtual delivery. Institutional sessions can be arranged physically on request."
       },
       {
-        "q": "How is pricing determined for institutions?",
-        "a": "Institutional pricing depends on participants, duration, location, and certification requirements."
+        "q": "How is pricing determined for groups?",
+        "a": "Group pricing depends on participants, duration, topic depth, and certification requirements."
       }
     ],
     "relatedServices": [
@@ -736,7 +1120,7 @@
     "ctaSecondary": "Request Group Quote",
     "badge": "Training",
     "metaTitle": "Virtual Training Sessions | JTH Graphix Production",
-    "metaDescription": "Affordable virtual training sessions in creative and digital skills.",
+    "metaDescription": "Affordable virtual training sessions in creative and digital skills in Kenya.",
     "icon": "BookOpen"
   },
   {
@@ -745,7 +1129,7 @@
     "title": "Recorded Courses",
     "tagline": "Learn at your own pace, on your own time.",
     "shortDescription": "Self-paced recorded learning products designed for flexible access after payment.",
-    "fullDescription": "JTH is building a recorded course offering to help learners access practical design and digital training materials after payment through a flexible self-paced format.",
+    "fullDescription": "JTH is building a recorded course offering to help learners access practical design and digital training materials after payment through a flexible self-paced format. Learn anywhere, anytime, at your own speed.",
     "category": "Training",
     "coverImage": "/images/services/recorded-courses/2.jpeg",
     "galleryImages": [
@@ -756,15 +1140,51 @@
     ],
     "videos": [],
     "featured": false,
+    "benefits": [
+      "Learn at your own pace with no schedule pressure",
+      "Access content repeatedly for reinforcement",
+      "Affordable pricing for self-directed learners",
+      "Practical skills you can apply immediately",
+      "Lifetime access to purchased course materials"
+    ],
+    "deliverables": [
+      "Recorded video lessons with demonstrations",
+      "Practice exercises and project files",
+      "Downloadable reference materials",
+      "Certificate of completion"
+    ],
+    "useCases": [
+      "Self-directed learners building skills independently",
+      "Professionals fitting learning around work schedules",
+      "Students supplementing formal education",
+      "Teams needing flexible training options"
+    ],
+    "process": [
+      "Course selection and enrollment",
+      "Payment and account access",
+      "Self-paced learning with guided structure",
+      "Practice, project completion, and certification"
+    ],
+    "faq": [
+      {
+        "q": "How do I access the courses after payment?",
+        "a": "You receive instant access to the course materials through your account, with lifetime viewing privileges."
+      },
+      {
+        "q": "Are the courses beginner-friendly?",
+        "a": "Yes — our courses are designed for beginners through intermediate learners with practical, hands-on instruction."
+      }
+    ],
     "relatedServices": [
       "virtual-training-sessions",
-      "design-skill-training"
+      "design-skill-training",
+      "digital-skills-workshops"
     ],
     "ctaPrimary": "Notify Me",
     "ctaSecondary": "Contact Us",
     "badge": "Coming Soon",
     "metaTitle": "Recorded Courses | JTH Graphix Production",
-    "metaDescription": "Self-paced recorded courses for practical design and digital skills.",
+    "metaDescription": "Self-paced recorded courses for practical design and digital skills in Kenya.",
     "icon": "Video"
   },
   {
@@ -773,7 +1193,7 @@
     "title": "Institutional Training",
     "tagline": "Structured training solutions for larger groups and organizations.",
     "shortDescription": "Training programs for schools, universities, county governments, and institutions.",
-    "fullDescription": "JTH offers institutional training designed for schools, campuses, teams, county governments, and organizations that need practical learning experiences tailored to specific audiences and goals.",
+    "fullDescription": "JTH offers institutional training designed for schools, campuses, teams, county governments, and organizations that need practical learning experiences tailored to specific audiences and goals. We deliver capacity-building programs that create real skill development.",
     "category": "Training",
     "coverImage": "/images/services/institutional-training/4.jpeg",
     "galleryImages": [
@@ -784,15 +1204,52 @@
     ],
     "videos": [],
     "featured": false,
+    "benefits": [
+      "Tailored curriculum aligned with institutional goals",
+      "Scalable delivery for large groups and departments",
+      "Practical, outcome-focused learning approach",
+      "Professional facilitation by industry practitioners",
+      "Certificates and documentation for participants"
+    ],
+    "deliverables": [
+      "Customized training curriculum",
+      "Interactive workshop sessions",
+      "Learning materials and handouts",
+      "Participant assessments and feedback",
+      "Certificates of completion"
+    ],
+    "useCases": [
+      "Schools and universities building digital literacy",
+      "County governments training staff",
+      "Corporate teams developing new capabilities",
+      "NGOs building community capacity"
+    ],
+    "process": [
+      "Institutional needs assessment",
+      "Curriculum design and approval",
+      "Training delivery and facilitation",
+      "Evaluation, certification, and follow-up"
+    ],
+    "faq": [
+      {
+        "q": "Can the training be customized for our institution?",
+        "a": "Yes — we design every institutional training program around your specific goals, audience, and timeline."
+      },
+      {
+        "q": "Do you provide certificates?",
+        "a": "Yes — all participants receive certificates of completion. We can also coordinate with your certification requirements."
+      }
+    ],
     "relatedServices": [
       "virtual-training-sessions",
-      "digital-skills-workshops"
+      "digital-skills-workshops",
+      "design-skill-training"
     ],
     "ctaPrimary": "Request Institutional Quote",
     "ctaSecondary": "Contact Us",
     "badge": "Institutional",
     "metaTitle": "Institutional Training | JTH Graphix Production",
-    "metaDescription": "Structured training programs for schools, institutions, and organizations.",
+    "metaDescription": "Structured training programs for schools, institutions, and organizations in Kenya.",
     "icon": "Building2"
   },
   {
@@ -801,7 +1258,7 @@
     "title": "Design Skill Training",
     "tagline": "Learn the craft behind effective visual communication.",
     "shortDescription": "Practical creative design training for learners and teams building real-world visual communication skills.",
-    "fullDescription": "Design skill training at JTH helps learners grow in practical design thinking, layout, branding, and content presentation skills through guided sessions and workshops.",
+    "fullDescription": "Design skill training at JTH helps learners grow in practical design thinking, layout, branding, and content presentation skills through guided sessions and workshops. Build the creative confidence to produce professional visual work.",
     "category": "Training",
     "coverImage": "/images/services/design-skill-training/1.jpeg",
     "galleryImages": [
@@ -812,15 +1269,51 @@
     ],
     "videos": [],
     "featured": false,
+    "benefits": [
+      "Hands-on learning with real-world design projects",
+      "Practical skills applicable to immediate work needs",
+      "Understanding of design principles, not just tools",
+      "Confidence to produce professional visual content",
+      "Portfolio-worthy projects from training sessions"
+    ],
+    "deliverables": [
+      "Structured training sessions with hands-on practice",
+      "Design project exercises and templates",
+      "Reference materials and design guides",
+      "Skill assessment and progress feedback"
+    ],
+    "useCases": [
+      "Individuals pursuing creative career paths",
+      "Teams needing in-house design capability",
+      "Marketing staff improving visual output",
+      "Students supplementing design education"
+    ],
+    "process": [
+      "Skill level assessment and goal setting",
+      "Customized curriculum development",
+      "Interactive training delivery",
+      "Practice, feedback, and skill verification"
+    ],
+    "faq": [
+      {
+        "q": "Do I need prior design experience?",
+        "a": "No — we offer beginner through advanced training tailored to your current skill level and goals."
+      },
+      {
+        "q": "What tools do you teach?",
+        "a": "We teach industry-standard tools including Adobe Photoshop, Illustrator, InDesign, Canva, and Figma based on your needs."
+      }
+    ],
     "relatedServices": [
       "virtual-training-sessions",
-      "digital-skills-workshops"
+      "digital-skills-workshops",
+      "institutional-training"
     ],
     "ctaPrimary": "Request Training Quote",
     "ctaSecondary": "Contact Us",
     "badge": "Skills Development",
     "metaTitle": "Design Skill Training | JTH Graphix Production",
-    "metaDescription": "Practical design training for learners and teams.",
+    "metaDescription": "Practical design training for learners and teams in Kenya.",
     "icon": "Palette"
   },
   {
@@ -829,7 +1322,7 @@
     "title": "Digital Skills Workshops",
     "tagline": "Workshops built for relevance, confidence, and practical application.",
     "shortDescription": "Practical workshops covering digital communication, creative tools, and modern skill-building needs.",
-    "fullDescription": "JTH digital skills workshops support learners, teams, and institutions that want structured, practical exposure to digital tools and communication practices.",
+    "fullDescription": "JTH digital skills workshops support learners, teams, and institutions that want structured, practical exposure to digital tools and communication practices. Each workshop is designed around real-world application, not theory.",
     "category": "Training",
     "coverImage": "/images/services/digital-skills-workshops/3.jpeg",
     "galleryImages": [
@@ -840,15 +1333,51 @@
     ],
     "videos": [],
     "featured": false,
+    "benefits": [
+      "Practical skills you can apply the same day",
+      "Interactive, engaging workshop format",
+      "Relevant topics covering today's digital landscape",
+      "Suitable for all skill levels from beginner upward",
+      "Group learning that builds team capability"
+    ],
+    "deliverables": [
+      "Structured workshop session with hands-on exercises",
+      "Digital tools and technique demonstrations",
+      "Practice projects and reference materials",
+      "Post-workshop resource guide"
+    ],
+    "useCases": [
+      "Teams building digital communication skills",
+      "Organizations modernizing workforce capabilities",
+      "Individuals learning new digital tools",
+      "Schools and universities supplementing curricula"
+    ],
+    "process": [
+      "Workshop topic and audience consultation",
+      "Curriculum design and preparation",
+      "Interactive workshop delivery",
+      "Resources, feedback, and follow-up support"
+    ],
+    "faq": [
+      {
+        "q": "How long is a typical workshop?",
+        "a": "Workshops range from 2-hour focused sessions to full-day intensive programs depending on the topic."
+      },
+      {
+        "q": "Can workshops be conducted at our location?",
+        "a": "Yes — we offer both virtual and on-site workshop delivery based on your preference and group size."
+      }
+    ],
     "relatedServices": [
       "institutional-training",
-      "virtual-training-sessions"
+      "virtual-training-sessions",
+      "design-skill-training"
     ],
     "ctaPrimary": "Request Workshop Quote",
     "ctaSecondary": "Contact Us",
     "badge": "Workshop",
     "metaTitle": "Digital Skills Workshops | JTH Graphix Production",
-    "metaDescription": "Practical workshops on digital communication and creative tools.",
+    "metaDescription": "Practical workshops on digital communication and creative tools in Kenya.",
     "icon": "Calendar"
   }
 ]
