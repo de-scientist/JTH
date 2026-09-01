@@ -37,7 +37,7 @@ export function ServicesCTA() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="gap-2 h-12 px-8 bg-[#25D366]/10 border-[#25D366]/30 text-[#25D366] hover:bg-[#25D366]/20">
+              <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#25D366]/90 text-white gap-2 h-12 px-8">
                 <a 
                   href={`https://wa.me/${siteConfig.whatsapp}`}
                   target="_blank"
