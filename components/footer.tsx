@@ -204,8 +204,7 @@ export function Footer() {
               JTH Graphix Production —Always Builds a Brand People Remember.
             </p>
             <p className="text-white/50 max-w-sm leading-relaxed text-sm mb-6">
-              <span className="font-medium text-white/70">Our mission:</span> to help businesses
-              and brands look exceptional, communicate clearly, and grow confidently.
+              <span className="font-medium text-white/70">Our mission:</span> To empower businesses and organizations through innovative design, technology and digital solutions that strengthen brands, improve experiences and drive sustainable growth.
             </p>
             <div className="flex items-center gap-2">
               {socialLinks.map((social) => (
