@@ -193,8 +193,7 @@ export function HeroSection() {
               transition={{ ...defaultTransition, delay: 0.3 }}
               className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
             >
-              We help businesses grow through Branding, Software Development, Web Development,
-              Digital Marketing, Business Automation and Creative Solutions.
+              JTH Graphix Production helps businesses, institutions and organizations build strong brands, professional digital experiences and practical technology solutions from strategy and design to development and growth.
             </motion.p>
 
             <motion.div
