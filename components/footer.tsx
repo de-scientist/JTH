@@ -201,7 +201,7 @@ export function Footer() {
               build brands, experiences, and digital solutions that drive measurable business growth.
             </p>
             <p className="text-xs text-white/40 max-w-sm leading-relaxed">
-              JTH Graphix Production — Your Creative &amp; Technology Partner.
+              JTH Graphix Production —Always Builds a Brand People Remember.
             </p>
             <p className="text-white/50 max-w-sm leading-relaxed text-sm mb-6">
               <span className="font-medium text-white/70">Our mission:</span> to help businesses
