@@ -175,7 +175,7 @@ export function HeroSection() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-secondary" />
               </span>
               <span className="text-sm font-medium text-primary">
-                Your Creative &amp; Technology Partner
+                We Build Digital Solutions That Move Your Business Forward
               </span>
             </motion.div>
 
