@@ -135,7 +135,7 @@ export function Navbar() {
       <div className="hidden lg:block bg-gradient-to-r from-primary/5 to-transparent border-b border-border/40 backdrop-blur-md">
         <div className="container mx-auto px-8">
           <div className="flex items-center justify-between h-10 text-xs font-medium text-muted-foreground">
-            <span className="hidden xl:inline">Your Creative &amp; Technology Partner</span>
+            <span className="hidden xl:inline">Build Digital Solutions That Move Your Business Forward</span>
             <span className="xl:hidden" />
             <div className="flex items-center gap-5">
               <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-1.5 hover:text-foreground transition-colors">
