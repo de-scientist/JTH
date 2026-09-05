@@ -4,11 +4,9 @@
 
 ![GitHub Stars](https://img.shields.io/github/stars/YOUR_USERNAME/JTH-Portfolio?style=for-the-badge)
 
-![GitHub Forks](https://img.shields.io/github/forks/YOUR_USERNAME/JTH-Portfolio?style=for-the-badge)
+![GitHub Forks]117 537015https://img.shields.io/github/forks/YOUR_USERNAME/JTH-Portfolio?style=for-the-badge)
 
-![Issues](https://img.shields.io/github/issues/YOUR_USERNAME/JTH-Portfolio?style=for-the-badge)
-
-![License](https://img.shields.io/github/license/YOUR_USERNAME/JTH-Portfolio?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues/YOUR_USERNAME/JTH-Portfolio?style
 
 </p>
 
