@@ -4,7 +4,7 @@
 
 ![GitHub Stars](https://img.shields.io/github/stars/YOUR_USERNAME/JTH-Portfolio?style=for-the-badge)
 
-![GitHub Forks]117 537015https://img.shields.io/github/forks/YOUR_USERNAME/JTH-Portfolio?style=for-the-badge)
+
 
 
 
