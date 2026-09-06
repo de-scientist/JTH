@@ -335,7 +335,7 @@ export function Footer() {
           <p className="text-sm text-white/40 text-center lg:text-right">
             Designed &amp; Developed by{' '}
             <a
-              href="https://github.com/de-scientist"
+              href="https://github.com/jthproductionke-lab/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary font-medium hover:text-secondary-light transition-colors underline-offset-2 hover:underline"
