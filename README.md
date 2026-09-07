@@ -2,7 +2,7 @@
 
 <p align="center">
 
-![GitHub Stars](https://img.shields.io/github/stars/YOUR_USERNAME/JTH-Portfolio?style=for-the-badge)
+![GitHub Stars](https://img.shields.io/github/stars/de-scientist/JTH?style=for-the-badge)
 
 
 
