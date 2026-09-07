@@ -16,9 +16,7 @@
 [![pnpm](https://img.shields.io/badge/Package_Manager-pnpm-blue?logo=pnpm&logoColor=white)](https://pnpm.io)
 [![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com)
 
-<p align="center">
-  <img src="public/images/github-banner.png" alt="JTH Graphix Production Banner" />
-</p>
+
 
 <h1 align="center">
 JTH Graphix Production
