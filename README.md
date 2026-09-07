@@ -4,10 +4,6 @@
 
 ![GitHub Stars](https://img.shields.io/github/stars/de-scientist/JTH?style=for-the-badge)
 
-
-
-
-
 </p>
 
 
