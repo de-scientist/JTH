@@ -8,7 +8,7 @@ import Script from 'next/script'
 
 const posts = blogPosts as BlogPost[]
 
-const BASE_URL = 'https://jthgraphixproduction.com'
+const BASE_URL = 'https://www.jthgraphixproduction.com'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       type: 'article',
       locale: 'en_US',
-      siteName: 'JTH Graphix Production',
+      siteName: 'JTH Graphix Production LTD',
       title: post.seoTitle,
       description: post.metaDescription,
       url,
@@ -102,7 +102,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'JTH Graphix Production',
+      name: 'JTH Graphix Production LTD',
       logo: {
         '@type': 'ImageObject',
         url: `${BASE_URL}/images/logo.png`,

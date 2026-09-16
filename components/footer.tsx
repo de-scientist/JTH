@@ -143,7 +143,7 @@ export function Footer() {
               >
                 <a
                   href={`${siteConfig.whatsappHref}?text=${encodeURIComponent(
-                    'Hello JTH Graphix Production! I would like to book a consultation.',
+                    'Hello JTH Graphix Production LTD! I would like to book a consultation.',
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -183,7 +183,7 @@ export function Footer() {
               <div className="relative w-12 h-12 rounded-2xl bg-gradient-brand flex items-center justify-center overflow-hidden shadow-lg shadow-primary/20 group-hover:shadow-secondary/30 transition-shadow">
                 <Image
                   src="/images/logo-white.png"
-                  alt="JTH Graphix Production"
+                  alt="JTH Graphix Production LTD"
                   fill
                   className="object-contain p-1.5"
                   sizes="48px"
@@ -191,7 +191,7 @@ export function Footer() {
               </div>
               <div>
                 <span className="text-lg font-display font-bold text-white">
-                    JTH Graphix Production
+                    JTH Graphix Production LTD
                   </span>
                   <p className="text-xs text-white/50 tracking-wider uppercase">Quality is our Priority</p>
               </div>
@@ -201,7 +201,7 @@ export function Footer() {
               build brands, experiences, and digital solutions that drive measurable business growth.
             </p>
             <p className="text-xs text-white/40 max-w-sm leading-relaxed">
-              JTH Graphix Production —Always Builds a Brand People Remember.
+              JTH Graphix Production LTD —Always Builds a Brand People Remember.
             </p>
             <p className="text-white/50 max-w-sm leading-relaxed text-sm mb-6">
               <span className="font-medium text-white/70">Our mission:</span> To empower businesses and organizations through innovative design, technology and digital solutions that strengthen brands, improve experiences and drive sustainable growth.
@@ -340,7 +340,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="text-secondary font-medium hover:text-secondary-light transition-colors underline-offset-2 hover:underline"
             >
-              JTH Graphix Production Limited
+              JTH Graphix Production LTD
             </a>
           </p>
         </div>

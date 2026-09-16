@@ -33,7 +33,7 @@ export function ContactContent() {
         highlightedWord="Project"
         description="Ready to bring your brand to life? Tell us about your project and we'll respond with a free quote within hours — no obligation, just great work."
         imageSrc="/images/portfolio/product-launch-social.jpg"
-        imageAlt="Get in touch with JTH Graphix Production — creative agency consultation"
+        imageAlt="Get in touch with JTH Graphix Production LTD — creative agency consultation"
       >
         <p className="inline-flex items-center gap-2 text-sm font-medium text-primary">
           <BadgeCheck className="w-4 h-4" aria-hidden="true" />
@@ -58,7 +58,7 @@ export function ContactContent() {
             >
               <h2 className="text-2xl font-bold text-foreground mb-4">Get in Touch</h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                JTH Graphix Production is a full-service creative agency in Kenya — from logo
+                JTH Graphix Production LTD is a full-service creative agency in Kenya — from logo
                 design and branding to websites, social media and premium printing. We&apos;d
                 love to hear about your project.
               </p>
@@ -68,7 +68,7 @@ export function ContactContent() {
               <div className="mt-8">
                 <a
                   href={`${siteConfig.whatsappHref}?text=${encodeURIComponent(
-                    'Hello JTH Graphix Production! I would like to discuss a project.',
+                    'Hello JTH Graphix Production LTD! I would like to discuss a project.',
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -163,7 +163,7 @@ export function ContactContent() {
               <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#25D366]/90 text-white gap-2 h-12 px-8">
                 <a
                   href={`${siteConfig.whatsappHref}?text=${encodeURIComponent(
-                    'Hello JTH Graphix Production! I would like to discuss a project.',
+                    'Hello JTH Graphix Production LTD! I would like to discuss a project.',
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"

@@ -1,12 +1,14 @@
 {
-  "brandName": "JTH Graphix Production",
+  "brandName": "JTH Graphix Production LTD",
+  "legalName": "JTH Graphix Production LTD",
+  "domain": "https://www.jthgraphixproduction.com",
   "positioning": "Your Creative & Technology Partner",
   "tagline": "Quality is our Priority.",
   "corePromise": "We don't just create designs or develop technology. We transform ideas into brands, experiences and digital solutions that help businesses grow.",
   "description": "Creative branding, graphic design, UI/UX, website and software development, automation and digital growth solutions for modern businesses.",
-  "premiumDescription": "JTH Graphix Production is your creative and technology partner — combining branding, graphic design, UI/UX, website and software development, automation, digital marketing and training to transform ideas into brands, experiences and digital solutions that help businesses grow.",
+  "premiumDescription": "JTH Graphix Production LTD is your creative and technology partner — combining branding, graphic design, UI/UX, website and software development, automation, digital marketing and training to transform ideas into brands, experiences and digital solutions that help businesses grow.",
   "heroHeadline": "Transforming Businesses Through Technology, Creativity & Innovation",
-  "heroSubtext": "From branding, UI/UX and websites to software, automation and digital growth — JTH helps businesses turn ideas into brands, experiences and technology that drive results.",
+  "heroSubtext": "From branding, UI/UX and websites to software, automation and digital growth — JTH Graphix Production LTD helps businesses turn ideas into brands, experiences and technology that drive results.",
   "phone": "+254117537015",
   "whatsapp": "+254117537015",
   "email": "jthgraphixproduction@gmail.com",
@@ -54,7 +56,7 @@
   ],
   "trainingTeaser": {
     "title":     "Training That Builds Creative Confidence",
-    "text": "JTH Graphix Production delivers practical digital and creative training for individuals, schools, institutions, and teams through virtual sessions, workshops, and recorded learning resources.",
+    "text": "JTH Graphix Production LTD delivers practical digital and creative training for individuals, schools, institutions, and teams through virtual sessions, workshops, and recorded learning resources.",
     "buttons": ["Explore Training", "Book a Session"]
   }
 }

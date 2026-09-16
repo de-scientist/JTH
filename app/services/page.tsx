@@ -6,8 +6,9 @@ import { ServicesCTA } from '@/components/services/services-cta'
 import { ProcessSteps } from '@/components/services/process-steps'
 
 export const metadata: Metadata = {
-  title: 'Services',
+  title: 'Services | JTH Graphix Production LTD',
   description: 'Explore our comprehensive range of creative services including flyer design, logo design, branding, social media graphics, premium printing, and website design.',
+  alternates: { canonical: '/services' },
 }
 
 export default function ServicesPage() {
@@ -19,7 +20,7 @@ export default function ServicesPage() {
         highlightedWord="Your Brand"
         description="From eye-catching flyers to complete brand identities, software development, and digital marketing — we deliver premium solutions that help your business stand out and succeed."
         imageSrc="/images/services/branding.jpg"
-        imageAlt="JTH Graphix Production creative services — design, branding, web development, and digital marketing"
+        imageAlt="JTH Graphix Production LTD creative services — design, branding, web development, and digital marketing"
       />
 
       <FeaturedShowcase />

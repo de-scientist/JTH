@@ -56,7 +56,7 @@ export function BlogSection() {
                   <div className="relative aspect-[16/10] overflow-hidden bg-muted/30">
                     <Image
                       src={post.featuredImage}
-                      alt={`${post.title} — ${post.category} article by JTH Graphix Production`}
+                      alt={`${post.title} — ${post.category} article by JTH Graphix Production LTD`}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                       sizes="(max-width: 768px) 100vw, 33vw"

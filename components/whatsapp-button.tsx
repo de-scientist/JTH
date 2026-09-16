@@ -12,14 +12,14 @@ export function WhatsAppButton() {
     <div className="fixed bottom-6 right-6 z-50">
       <a
        href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
-  "Hello JTH Graphix Production. I would like to request a custom quotation. Please guide me on the requirements and next steps."
+  "Hello JTH Graphix Production LTD. I would like to request a custom quotation. Please guide me on the requirements and next steps."
 )}`}
         target="_blank"
         rel="noopener noreferrer"
         className="relative block"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        aria-label="Contact JTH Graphix Production on WhatsApp"
+        aria-label="Contact JTH Graphix Production LTD on WhatsApp"
       >
         {/* Glow effect */}
         <div className="absolute inset-0 rounded-full bg-[#25D366] blur-lg opacity-40 animate-pulse" />

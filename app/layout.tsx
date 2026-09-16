@@ -22,15 +22,16 @@ const sora = Sora({
   display: 'swap',
 })
 
+const SITE_URL = 'https://www.jthgraphixproduction.com'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://jthgraphixproduction.com'),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default:
-      'JTH Graphix Production | Creative & Technology Partner',
-    template: '%s | JTH Graphix Production',
+    default: 'JTH Graphix Production LTD | Creative & Technology Partner',
+    template: '%s | JTH Graphix Production LTD',
   },
   description:
-    'JTH Graphix Production is your creative and technology partner in Kenya — branding, graphic design, UI/UX, website and software development, automation, and digital growth solutions that help businesses grow.',
+    'JTH Graphix Production LTD is your creative and technology partner in Kenya — branding, graphic design, UI/UX, website and software development, automation, and digital growth solutions that help businesses grow.',
   keywords: [
     'Creative Agency Kenya',
     'Technology Partner Kenya',
@@ -45,10 +46,9 @@ export const metadata: Metadata = {
     'SEO Kenya',
     'GEO Optimization Kenya',
     'Creative Technology Solutions Kenya',
-    'Nairobi',
   ],
-  authors: [{ name: 'JTH Graphix Production' }],
-  creator: 'JTH Graphix Production',
+  authors: [{ name: 'JTH Graphix Production LTD' }],
+  creator: 'JTH Graphix Production LTD',
   category: 'business',
   alternates: {
     canonical: '/',
@@ -56,14 +56,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'JTH Graphix Production',
-    title: 'JTH Graphix Production | Creative & Technology Partner',
+    siteName: 'JTH Graphix Production LTD',
+    title: 'JTH Graphix Production LTD | Creative & Technology Partner',
     description:
       'Your creative and technology partner in Kenya. We transform ideas into brands, digital experiences and technology solutions that help businesses grow.',
+    url: SITE_URL,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JTH Graphix Production | Creative & Technology Partner',
+    title: 'JTH Graphix Production LTD | Creative & Technology Partner',
     description:
       'Branding, UI/UX, web & software development, automation and digital growth solutions in Kenya.',
   },
@@ -73,15 +74,15 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': ['Organization', 'LocalBusiness'],
-      '@id': 'https://jthgraphixproduction.com/#organization',
-      name: 'JTH Graphix Production',
-      url: 'https://jthgraphixproduction.com',
+      '@type': 'Organization',
+      '@id': `${SITE_URL}/#organization`,
+      name: 'JTH Graphix Production LTD',
+      url: SITE_URL,
       email: siteConfig.email,
       telephone: siteConfig.phone,
       description: siteConfig.premiumDescription,
-      image: 'https://jthgraphixproduction.com/images/logo-white.png',
-      logo: 'https://jthgraphixproduction.com/images/logo-white.png',
+      image: `${SITE_URL}/images/logo-white.png`,
+      logo: `${SITE_URL}/images/logo-white.png`,
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Nairobi',
@@ -92,10 +93,10 @@ const jsonLd = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://jthgraphixproduction.com/#website',
-      url: 'https://jthgraphixproduction.com',
-      name: 'JTH Graphix Production',
-      publisher: { '@id': 'https://jthgraphixproduction.com/#organization' },
+      '@id': `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: 'JTH Graphix Production LTD',
+      publisher: { '@id': `${SITE_URL}/#organization` },
     },
   ],
 }

@@ -85,7 +85,7 @@ function ServiceCard({ service, index }: { service: typeof homeServices[0]; inde
             <div className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src={service.image}
-                alt={`${service.title} by JTH Graphix Production`}
+                alt={`${service.title} by JTH Graphix Production LTD`}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

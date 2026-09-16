@@ -24,7 +24,7 @@ import { Button } from '@/components/ui/button'
 export const metadata: Metadata = {
   title: 'Request a Custom Quote',
   description:
-    'Get a transparent, itemized custom quotation from JTH Graphix Production for design, branding, digital, web, and training services. No hidden fees, no surprises.',
+    'Get a transparent, itemized custom quotation from JTH Graphix Production LTD for design, branding, digital, web, and training services. No hidden fees, no surprises.',
 }
 
 const processIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -75,7 +75,7 @@ export default function ServicesPricingPage() {
               <Button asChild size="lg" variant="outline" className="rounded-xl gap-2">
                 <a
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    'Hello JTH Graphix Production. I would like to request a custom quotation for a project.'
+                    'Hello JTH Graphix Production LTD. I would like to request a custom quotation for a project.'
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -226,7 +226,7 @@ export default function ServicesPricingPage() {
               <Button asChild size="lg" variant="outline" className="rounded-xl gap-2">
                 <a
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    'Hello JTH Graphix Production. I would like to request a custom quotation for a project.'
+                    'Hello JTH Graphix Production LTD. I would like to request a custom quotation for a project.'
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"

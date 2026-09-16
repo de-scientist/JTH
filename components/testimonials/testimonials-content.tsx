@@ -139,7 +139,7 @@ export function TestimonialsContent() {
                 </div>
 
                 <blockquote className="text-xl md:text-2xl lg:text-3xl text-foreground mb-8 leading-relaxed font-medium">
-                  &ldquo;JTH Graphix Production has been instrumental in elevating our 
+                  &ldquo;JTH Graphix Production LTD has been instrumental in elevating our 
                   church&apos;s visual communication. Their flyers and posters for our 
                   events always capture the spirit of our message and draw amazing 
                   attendance.&rdquo;

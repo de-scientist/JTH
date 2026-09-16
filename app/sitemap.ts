@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import services from '@/data/services.json'
 import blogPosts from '@/data/blog.json'
 
-const BASE_URL = 'https://jthgraphixproduction.com'
+const BASE_URL = 'https://www.jthgraphixproduction.com'
 
 const staticRoutes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] }[] = [
   { path: '', priority: 1.0, changeFrequency: 'weekly' },

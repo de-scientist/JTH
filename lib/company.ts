@@ -6,8 +6,8 @@ import {
 } from 'lucide-react'
 
 export const companyProfile = {
-  name: 'JTH Graphix Production',
-  legalName: 'JTH Graphix Production Ltd.',
+  name: 'JTH Graphix Production LTD',
+  legalName: 'JTH Graphix Production LTD',
   positioning: 'Your Creative & Technology Partner.',
   tagline: 'Quality is our Priority.',
   founded: '2021',
@@ -52,7 +52,7 @@ export const companyJourney: JourneyMilestone[] = [
     year: '2026',
     title: 'Registered & Growing',
     description:
-      'JTH Graphix Production became a registered Private Limited Company, marking a major step in its formal growth while continuing to expand its creative, digital and technology capabilities.',
+      'JTH Graphix Production LTD became a registered Private Limited Company, marking a major step in its formal growth while continuing to expand its creative, digital and technology capabilities.',
     icon: Building2,
     current: true,
   },

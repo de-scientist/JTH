@@ -9,7 +9,7 @@
     "featuredImage": "/images/blog/blog1.jpg",
     "gallery": ["/images/blog/blog1.jpg"],
     "author": {
-      "name": "JTH Graphix Production Team",
+      "name": "JTH Graphix Production LTD Team",
       "avatar": "/images/logo.png"
     },
     "publishDate": "2026-05-12",
@@ -113,7 +113,7 @@
       },
       {
         "type": "paragraph",
-        "text": "At JTH Graphix Production we help businesses build and enforce consistent visual identities. If you'd like a professional review of your brand, reach out — we'll show you exactly where the leaks are and how to fix them."
+        "text": "At JTH Graphix Production LTD we help businesses build and enforce consistent visual identities. If you'd like a professional review of your brand, reach out — we'll show you exactly where the leaks are and how to fix them."
       }
     ],
     "relatedPosts": ["how-strategic-design-drives-roi"]
@@ -128,7 +128,7 @@
     "featuredImage": "/images/blog/blog2.jpg",
     "gallery": ["/images/blog/blog2.jpg"],
     "author": {
-      "name": "JTH Graphix Production Team",
+      "name": "JTH Graphix Production LTD Team",
       "avatar": "/images/logo.png"
     },
     "publishDate": "2026-04-28",
@@ -221,7 +221,7 @@
     "featuredImage": "/images/blog/blog3.jpg",
     "gallery": ["/images/blog/blog3.jpg"],
     "author": {
-      "name": "JTH Graphix Production Team",
+      "name": "JTH Graphix Production LTD Team",
       "avatar": "/images/logo.png"
     },
     "publishDate": "2026-04-15",

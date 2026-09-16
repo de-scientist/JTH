@@ -31,7 +31,7 @@ export function FAQSection() {
               <span className="text-gradient">We&apos;ve Got Answers.</span>
             </>
           }
-          description="Everything businesses usually ask before starting a design or branding project with JTH Graphix Production."
+          description="Everything businesses usually ask before starting a design or branding project with JTH Graphix Production LTD."
         />
 
         <motion.div

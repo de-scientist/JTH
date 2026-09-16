@@ -2,21 +2,22 @@ import type { Metadata } from 'next'
 import blogPosts from '@/data/blog.json'
 import type { BlogPost } from '@/lib/blog-types'
 import { BlogBrowser } from '@/components/blog/blog-browser'
+import { siteConfig } from '@/lib/site-config'
 
 export const metadata: Metadata = {
   title: 'Blog',
   description:
-    'Expert insights on branding, design strategy, and digital growth from the JTH Graphix Production team.',
+    'Expert insights on branding, design strategy, and digital growth from the JTH Graphix Production LTD team.',
   openGraph: {
-    title: 'Blog | JTH Graphix Production',
+    title: 'Blog | JTH Graphix Production LTD',
     description:
-      'Expert insights on branding, design strategy, and digital growth from the JTH Graphix Production team.',
+      'Expert insights on branding, design strategy, and digital growth from the JTH Graphix Production LTD team.',
     type: 'website',
-    url: 'https://jthgraphixproduction.com/blogs',
+    url: `${siteConfig.domain}/blogs`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog | JTH Graphix Production',
+    title: 'Blog | JTH Graphix Production LTD',
     description:
       'Expert insights on branding, design strategy, and digital growth.',
   },

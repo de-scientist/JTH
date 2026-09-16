@@ -54,7 +54,7 @@ export function BlogBrowser({ posts }: { posts: BlogPost[] }) {
         <div className="absolute inset-0">
           <Image
             src="/images/blog/blog1.jpg"
-            alt="JTH Graphix Production insights and ideas"
+            alt="JTH Graphix Production LTD insights and ideas"
             fill
             className="object-cover"
             priority
@@ -94,7 +94,7 @@ export function BlogBrowser({ posts }: { posts: BlogPost[] }) {
               transition={defaultTransition}
               className="text-muted-foreground text-lg lg:text-xl leading-relaxed text-pretty"
             >
-              Expert perspectives on branding, design strategy, and digital growth — written by the team at JTH Graphix Production.
+              Expert perspectives on branding, design strategy, and digital growth — written by the team at JTH Graphix Production LTD.
             </motion.p>
 
             {/* Search */}

@@ -86,7 +86,7 @@ export function BlogArticle({ post, relatedPosts, prevPost, nextPost }: Props) {
     .map((block) => ({ id: (block as { id: string }).id, text: (block as { text: string }).text }))
 
   const whatsappHref = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
-    `Hello JTH Graphix Production. I read your article "${post.title}" and I would like to discuss a project.`
+    `Hello JTH Graphix Production LTD. I read your article "${post.title}" and I would like to discuss a project.`
   )}`
 
   return (

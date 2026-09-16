@@ -58,7 +58,7 @@ export function SelectedWork() {
                   <div className="relative aspect-[4/3] overflow-hidden bg-muted/50">
                     <Image
                       src={item.image}
-                      alt={`${item.title} — ${item.category} by JTH Graphix Production`}
+                      alt={`${item.title} — ${item.category} by JTH Graphix Production LTD`}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

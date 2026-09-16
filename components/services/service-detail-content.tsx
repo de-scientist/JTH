@@ -163,7 +163,7 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
                 <Button asChild size="lg" variant="outline" className="gap-2">
                   <a
                     href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
-                      `Hello JTH Graphix Production. I would like to request a custom quotation for your ${service.title} service.`
+                      `Hello JTH Graphix Production LTD. I would like to request a custom quotation for your ${service.title} service.`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -354,7 +354,7 @@ export function ServiceDetailContent({ service, relatedServices }: Props) {
           >
             <h2 className="text-3xl font-bold text-foreground mb-4">Why Choose JTH</h2>
             <p className="text-muted-foreground">
-              What makes JTH Graphix Production the right partner for your {service.title.toLowerCase()} project.
+              What makes JTH Graphix Production LTD the right partner for your {service.title.toLowerCase()} project.
             </p>
           </motion.div>
 

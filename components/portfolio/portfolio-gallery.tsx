@@ -95,7 +95,7 @@ export function PortfolioGallery() {
                   {/* Portfolio Image */}
                   <Image
                     src={item.image}
-                    alt={`${item.title} — ${item.category} by JTH Graphix Production`}
+                    alt={`${item.title} — ${item.category} by JTH Graphix Production LTD`}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

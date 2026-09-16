@@ -86,9 +86,9 @@ export function AboutContent() {
         badge="About JTH"
         title="More Than a Design Studio — A Technology Partner"
         highlightedWord="A Technology Partner"
-        description="JTH Graphix Production is your creative and technology partner. We help businesses turn ideas into brands, digital experiences and technology solutions that drive real, measurable growth."
+        description="JTH Graphix Production LTD is your creative and technology partner. We help businesses turn ideas into brands, digital experiences and technology solutions that drive real, measurable growth."
         imageSrc="/images/about-studio.jpg"
-        imageAlt="JTH Graphix Production team collaborating in a creative studio environment"
+        imageAlt="JTH Graphix Production LTD team collaborating in a creative studio environment"
       />
 
       {/* Story Section */}
@@ -109,7 +109,7 @@ export function AboutContent() {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  JTH Graphix Production was born from a passion for visual storytelling
+                  JTH Graphix Production LTD was born from a passion for visual storytelling
                   and a commitment to helping brands communicate their unique value.
                   What started as a small design studio has grown into a full-service
                   creative and technology partner serving clients across Kenya and beyond.
@@ -138,7 +138,7 @@ export function AboutContent() {
               <div className="relative aspect-square rounded-3xl overflow-hidden">
                 <Image
                   src="/images/about-studio.jpg"
-                  alt="JTH Graphix Production Studio"
+                  alt="JTH Graphix Production LTD Studio"
                   fill
                   className="object-cover"
                 />

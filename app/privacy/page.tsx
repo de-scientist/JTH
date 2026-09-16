@@ -4,7 +4,7 @@ import { siteConfig } from '@/lib/site-config'
 
 const title = 'Privacy Policy'
 const description =
-  'Read the JTH Graphix Production Privacy Policy to learn how we collect, use, protect, and manage your personal information when you use our website and services.'
+  'Read the JTH Graphix Production LTD Privacy Policy to learn how we collect, use, protect, and manage your personal information when you use our website and services.'
 
 export const metadata: Metadata = {
   title,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'privacy policy',
     'data protection',
     'personal information',
-    'JTH Graphix Production privacy',
+    'JTH Graphix Production LTD privacy',
     'data privacy Kenya',
     'cookie policy',
   ],
@@ -40,14 +40,14 @@ const data: LegalPageData = {
   title: 'Privacy',
   titleAccent: 'Policy',
   description:
-    'At JTH Graphix Production, your privacy matters. This policy explains what information we collect when you use our website and services, how we use and protect it, and the choices you have. We are committed to keeping your personal data safe, transparent, and under your control.',
+    'At JTH Graphix Production LTD, your privacy matters. This policy explains what information we collect when you use our website and services, how we use and protect it, and the choices you have. We are committed to keeping your personal data safe, transparent, and under your control.',
   lastUpdated: 'August 1, 2026',
   sections: [
     {
       id: 'introduction',
       title: 'Introduction',
       paragraphs: [
-        'When you visit jthgraphixproduction.com or engage JTH Graphix Production for design, branding, digital, or printing services, you trust us with your information. This Privacy Policy describes how JTH Graphix Production ("we", "us", or "our") collects, uses, stores, and protects personal information when you use our website, communicate with us, or use our services.',
+        'When you visit https://www.jthgraphixproduction.com or engage JTH Graphix Production LTD for design, branding, digital, or printing services, you trust us with your information. This Privacy Policy describes how JTH Graphix Production LTD ("we", "us", or "our") collects, uses, stores, and protects personal information when you use our website, communicate with us, or use our services.',
         'By accessing our website or providing your information to us, you agree to the practices described in this policy. We only use your personal information in the ways described here and in accordance with applicable data protection laws, including the Kenya Data Protection Act, 2019.',
         'Please read this policy carefully. If you have any questions, contact us using the details in the "Contact Information" section below.',
       ],

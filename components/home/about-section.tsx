@@ -59,7 +59,7 @@ export function AboutSection() {
               Results.
             </>
           }
-          description="JTH Graphix Production is your creative and technology partner. We transform how businesses are perceived and operate through strategic branding, world-class digital experiences, and technology solutions that drive real business growth."
+          description="JTH Graphix Production LTD is your creative and technology partner. We transform how businesses are perceived and operate through strategic branding, world-class digital experiences, and technology solutions that drive real business growth."
         />
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
@@ -74,7 +74,7 @@ export function AboutSection() {
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden card-premium">
               <Image
                 src="/images/about-studio.jpg"
-                alt="JTH Graphix Production creative studio and design workspace"
+                alt="JTH Graphix Production LTD creative studio and design workspace"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

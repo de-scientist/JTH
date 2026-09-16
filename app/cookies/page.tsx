@@ -4,7 +4,7 @@ import { siteConfig } from '@/lib/site-config'
 
 const title = 'Cookie Policy'
 const description =
-  'Learn how JTH Graphix Production uses cookies on our website, the types of cookies we set, and how you can manage your cookie preferences.'
+  'Learn how JTH Graphix Production LTD uses cookies on our website, the types of cookies we set, and how you can manage your cookie preferences.'
 
 export const metadata: Metadata = {
   title,
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'cookies',
     'analytics cookies',
     'cookie preferences',
-    'JTH Graphix Production cookies',
+    'JTH Graphix Production LTD cookies',
     'browser cookie settings',
   ],
   openGraph: {
@@ -40,7 +40,7 @@ const data: LegalPageData = {
   title: 'Cookie',
   titleAccent: 'Policy',
   description:
-    'This Cookie Policy explains what cookies are, how JTH Graphix Production uses them on our website, and how you can manage your cookie preferences. It works together with our Privacy Policy to give you full control over your data.',
+    'This Cookie Policy explains what cookies are, how JTH Graphix Production LTD uses them on our website, and how you can manage your cookie preferences. It works together with our Privacy Policy to give you full control over your data.',
   lastUpdated: 'August 1, 2026',
   sections: [
     {

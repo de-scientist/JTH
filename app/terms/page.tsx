@@ -4,7 +4,7 @@ import { siteConfig } from '@/lib/site-config'
 
 const title = 'Terms & Conditions'
 const description =
-  'Review the JTH Graphix Production Terms & Conditions governing website use and our design, branding, digital, printing, and training services.'
+  'Review the JTH Graphix Production LTD Terms & Conditions governing website use and our design, branding, digital, printing, and training services.'
 
 export const metadata: Metadata = {
   title,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   keywords: [
     'terms and conditions',
     'service terms',
-    'JTH Graphix Production terms',
+    'JTH Graphix Production LTD terms',
     'terms of service',
     'client agreement',
   ],
@@ -39,14 +39,14 @@ const data: LegalPageData = {
   title: 'Terms &',
   titleAccent: 'Conditions',
   description:
-    'These Terms & Conditions govern your use of the JTH Graphix Production website and our design, branding, digital, printing, and training services. By engaging us or using our website, you agree to these terms. Please read them carefully before proceeding.',
+    'These Terms & Conditions govern your use of the JTH Graphix Production LTD website and our design, branding, digital, printing, and training services. By engaging us or using our website, you agree to these terms. Please read them carefully before proceeding.',
   lastUpdated: 'August 1, 2026',
   sections: [
     {
       id: 'acceptance-of-terms',
       title: 'Acceptance of Terms',
       paragraphs: [
-        'These Terms & Conditions ("Terms") form a legally binding agreement between you and JTH Graphix Production. By accessing our website, requesting a quote, or commissioning any service, you confirm that you have read, understood, and agreed to be bound by these Terms.',
+        'These Terms & Conditions ("Terms") form a legally binding agreement between you and JTH Graphix Production LTD. By accessing our website, requesting a quote, or commissioning any service, you confirm that you have read, understood, and agreed to be bound by these Terms.',
         'If you do not agree with any part of these Terms, you should not use our website or services. We may update these Terms from time to time, and the most current version will always be available on this page.',
       ],
     },
@@ -54,7 +54,7 @@ const data: LegalPageData = {
       id: 'services',
       title: 'Services',
       paragraphs: [
-        'JTH Graphix Production provides a range of creative services including logo design, brand identity and branding, website design, social media design and management, graphic design (flyers, posters, business cards, brochures, banners, and more), packaging design, motion graphics, premium printing, and digital and creative training.',
+        'JTH Graphix Production LTD provides a range of creative services including logo design, brand identity and branding, website design, social media design and management, graphic design (flyers, posters, business cards, brochures, banners, and more), packaging design, motion graphics, premium printing, and digital and creative training.',
         'Each project is unique, and the specific scope, deliverables, and timelines for your project will be confirmed in your quotation or project brief. By accepting a quotation, you agree to the scope described in it.',
         'Any services, features, or deliverables not listed in your quotation are considered out of scope and may incur additional charges.',
       ],
@@ -90,7 +90,7 @@ const data: LegalPageData = {
       id: 'intellectual-property',
       title: 'Intellectual Property',
       paragraphs: [
-        'Unless otherwise agreed in writing, all original designs and creative work we produce remain the intellectual property of JTH Graphix Production until full payment has been received for the project.',
+        'Unless otherwise agreed in writing, all original designs and creative work we produce remain the intellectual property of JTH Graphix Production LTD until full payment has been received for the project.',
         'Once full payment is made, ownership of the final deliverables is transferred to you for the agreed purpose. Drafts, concepts, and unfinished work remain our property unless otherwise agreed.',
         'We retain the right to display completed projects in our portfolio, case studies, and marketing materials, unless you have requested otherwise in writing at the start of the project.',
       ],
@@ -108,7 +108,7 @@ const data: LegalPageData = {
       id: 'limitation-of-liability',
       title: 'Limitation of Liability',
       paragraphs: [
-        'To the maximum extent permitted by law, JTH Graphix Production shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or business opportunities, arising from your use of our services or website.',
+        'To the maximum extent permitted by law, JTH Graphix Production LTD shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or business opportunities, arising from your use of our services or website.',
         'Our total liability for any claim arising from a project or your use of our website shall not exceed the total amount you paid for the specific service giving rise to the claim.',
         'Nothing in these Terms limits liability that cannot be excluded or limited under applicable law.',
       ],

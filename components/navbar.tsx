@@ -162,11 +162,11 @@ export function Navbar() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group relative z-10 flex-shrink-0" aria-label="JTH Graphix Production home">
+            <Link href="/" className="flex items-center gap-3 group relative z-10 flex-shrink-0" aria-label="JTH Graphix Production LTD home">
               <div className="relative w-10 h-10 lg:w-11 lg:h-11 rounded-xl bg-gradient-brand flex items-center justify-center overflow-hidden shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-all duration-300">
                 <Image
                   src="/images/logo-white.png"
-                  alt="JTH Graphix Production"
+                  alt="JTH Graphix Production LTD"
                   fill
                   className="object-contain p-1.5"
                   priority
@@ -175,7 +175,7 @@ export function Navbar() {
               </div>
               <div className="hidden sm:flex flex-col">
                 <span className="text-xs lg:text-sm font-display font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
-                  JTH Graphix Production
+                  JTH Graphix Production LTD
                 </span>
                 <span className="text-[10px] lg:text-[11px] text-muted-foreground leading-tight">
                   Quality is our Priority

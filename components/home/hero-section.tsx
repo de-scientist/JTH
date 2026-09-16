@@ -122,7 +122,7 @@ export function HeroSection() {
             preload="metadata"
             poster="/images/hero-showcase.jpg"
             tabIndex={-1}
-            aria-label="JTH Graphix Production showreel showcasing branding, web and software work"
+            aria-label="JTH Graphix Production LTD showreel showcasing branding, web and software work"
             onError={handleVideoError}
             // hide until canPlay to avoid flash
             style={{ opacity: canPlay ? 1 : 0, transition: 'opacity 600ms ease' }}
@@ -193,7 +193,7 @@ export function HeroSection() {
               transition={{ ...defaultTransition, delay: 0.3 }}
               className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
             >
-              JTH Graphix Production helps businesses, institutions and organizations build strong brands, professional digital experiences and practical technology solutions from strategy and design to development and growth.
+              JTH Graphix Production LTD helps businesses, institutions and organizations build strong brands, professional digital experiences and practical technology solutions from strategy and design to development and growth.
             </motion.p>
 
             <motion.div
@@ -267,7 +267,7 @@ export function HeroSection() {
                 <div className="relative mt-3 aspect-[4/3] w-full overflow-hidden">
                   <Image
                     src={portfolioCard.image}
-                    alt={`${portfolioCard.title} project by JTH Graphix Production`}
+                    alt={`${portfolioCard.title} project by JTH Graphix Production LTD`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 40vw, 380px"
