@@ -1,7 +1,7 @@
 # JTH Graphix Production — Creative & Technology Partner
 
 <p align="center">
-  <img src="/public/images/" alt="JTH Graphix Production Logo" width="180" />
+  <img src="/public/images/logo-blue.png" alt="JTH Graphix Production Logo" width="180" />
 </p>
 
 <h3 align="center">
